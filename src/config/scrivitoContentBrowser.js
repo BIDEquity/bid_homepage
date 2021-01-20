@@ -52,6 +52,23 @@ function filtersForObjClasses(objClasses) {
 
 function defaultFilters() {
   return {
+    lang: {
+      title: "Language",
+      type: "radioButton",
+      expanded: true,
+      field: "_path",
+      operator: "startsWith",
+      options: {
+        de: {
+          title: "German",
+          value: "/lang/de",
+        },
+        en: {
+          title: "English",
+          value: "/lang/en",
+        },
+      },
+    },
     _objClass: {
       options: {
         All: {
@@ -110,7 +127,9 @@ const FILTER_PRESENTATIONS = {
   Image: { title: "Images", icon: "image" },
   Job: { title: "Jobs", icon: "suitcase" },
   LandingPage: { title: "Landing pages", icon: "inbox" },
+  NewsPost: { title: "News posts", icon: "pen" },
   Page: { title: "Standard pages", icon: "sheet" },
+  PortfolioPost: { title: "Portfolio posts", icon: "pen" },
   Redirect: { title: "Redirects", icon: "link" },
   SearchResults: { title: "Search results", icon: "lens" },
   Video: { title: "Videos", icon: "video" },
@@ -123,6 +142,8 @@ const PAGES = [
   "Author",
   "Event",
   "Job",
+  "NewsPost",
+  "PortfolioPost",
   "Redirect",
   "Homepage",
   "Blog",
