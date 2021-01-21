@@ -1,6 +1,6 @@
 import * as Scrivito from "scrivito";
 
-const config = { tenant: process.env.SCRIVITO_TENANT, adoptUi: true };
+//const config = { tenant: process.env.SCRIVITO_TENANT, adoptUi: true };
 
 function baseUrlForSite(siteId) {
   switch (siteId) {
@@ -27,6 +27,8 @@ Scrivito.configure({
   siteForUrl,
   baseUrlForSite,
   tenant: process.env.SCRIVITO_TENANT,
+  homepage: () => Scrivito.Obj.getByPath("/en"),
+  adoptUi: true,
   // other keys …
 });
 
