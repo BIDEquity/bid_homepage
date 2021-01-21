@@ -2,7 +2,35 @@ import * as Scrivito from "scrivito";
 
 const config = { tenant: process.env.SCRIVITO_TENANT, adoptUi: true };
 
-if (process.env.SCRIVITO_ORIGIN) {
+function baseUrlForSite(siteId) {
+  switch (siteId) {
+    case "en":
+      return `${window.location.origin}/en`;
+    case "de":
+      return `${window.location.origin}/de`;
+  }
+}
+
+function siteForUrl(url) {
+  let siteId;
+  switch (new URL(url).pathname.split("/")[1]) {
+    case "en":
+      siteId = "en";
+      return { siteId, baseUrl: baseUrlForSite(siteId) };
+    case "de":
+      siteId = "de";
+      return { siteId, baseUrl: baseUrlForSite(siteId) };
+  }
+}
+
+Scrivito.configure({
+  siteForUrl,
+  baseUrlForSite,
+  tenant: process.env.SCRIVITO_TENANT,
+  // other keys …
+});
+
+/*if (process.env.SCRIVITO_ORIGIN) {
   config.origin = process.env.SCRIVITO_ORIGIN;
 }
 
@@ -12,6 +40,6 @@ if (process.env.SCRIVITO_ENDPOINT) {
 
 if (process.env.SCRIVITO_PRERENDER) {
   config.priority = "background";
-}
+}*/
 
-Scrivito.configure(config);
+//Scrivito.configure(config);

@@ -56,16 +56,16 @@ function defaultFilters() {
       title: "Language",
       type: "radioButton",
       expanded: true,
-      field: "_path",
+      field: "siteId",
       operator: "startsWith",
       options: {
         de: {
           title: "German",
-          value: "/lang/de",
+          value: "/de",
         },
         en: {
           title: "English",
-          value: "/lang/en",
+          value: "/en",
         },
       },
     },
