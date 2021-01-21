@@ -56,7 +56,7 @@ function defaultFilters() {
       title: "Language",
       type: "radioButton",
       expanded: true,
-      field: "siteId",
+      field: "_path",
       operator: "startsWith",
       options: {
         de: {
