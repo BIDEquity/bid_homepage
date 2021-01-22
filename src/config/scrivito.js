@@ -5,11 +5,11 @@ import * as Scrivito from "scrivito";
 function baseUrlForSite(siteId) {
   switch (siteId) {
     case "en":
-      return `${window.location.origin}/en`;
+      return `${window.location.origin}`;
     case "de":
       return `${window.location.origin}/de`;
     default:
-      return `${window.location.origin}/en`;
+      return `${window.location.origin}`;
   }
 }
 
@@ -34,6 +34,7 @@ Scrivito.configure({
   tenant: process.env.SCRIVITO_TENANT,
   homepage: () => Scrivito.Obj.getByPath("/en"),
   adoptUi: true,
+  
   // other keys …
 });
 
