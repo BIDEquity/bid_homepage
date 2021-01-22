@@ -8,8 +8,7 @@ function baseUrlForSite(siteId) {
       return `${window.location.origin}`;
     case "de":
       return `${window.location.origin}/de`;
-    default:
-      return `${window.location.origin}`;
+    
   }
 }
 
@@ -24,6 +23,7 @@ function siteForUrl(url) {
       return { siteId, baseUrl: baseUrlForSite(siteId) };
     default:
       siteId = "en";
+      console.log("default", baseUrlForSite(siteId))
       return { siteId, baseUrl: baseUrlForSite(siteId) };
   }
 }
