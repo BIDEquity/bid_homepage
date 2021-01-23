@@ -25,10 +25,10 @@ const CurrentPageMetadata = Scrivito.connect(() => {
 
   return (
     <Helmet
-      meta={meta}
+      //meta={meta}
       htmlAttributes={htmlAttributes}
       title={title}
-      link={links}
+      //link={links}
     />
   );
 });
