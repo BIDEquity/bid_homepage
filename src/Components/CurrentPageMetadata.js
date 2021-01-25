@@ -20,15 +20,15 @@ const CurrentPageMetadata = Scrivito.connect(() => {
   if (page) {
     title = page.get("title") || "";
     meta = getMetadata(page);
-    //links.push({ rel: "canonical", href: Scrivito.urlFor(page) });
+    links.push({ rel: "canonical", href: Scrivito.urlFor(page) });
   }
 
   return (
     <Helmet
-      //meta={meta}
+      meta={meta}
       htmlAttributes={htmlAttributes}
       title={title}
-      //link={links}
+      link={links}
     />
   );
 });

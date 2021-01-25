@@ -6,6 +6,17 @@ const SectionWidget = Scrivito.provideWidgetClass("SectionWidget", {
     useFullWidth: ["enum", { values: ["yes", "no"] }],
     useFullHeight: ["enum", { values: ["yes", "no"] }],
     showPadding: ["enum", { values: ["yes", "no"] }],
+    backgroundGradientImage: [
+      "enum",
+      {
+        values: [
+          "full-stripes",
+          "left-block-stripes",
+          "dark-blue",
+          "light-blue",
+        ]
+      }
+    ],
     backgroundColor: [
       "enum",
       {

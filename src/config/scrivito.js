@@ -5,7 +5,7 @@ import * as Scrivito from "scrivito";
 function baseUrlForSite(siteId) {
   switch (siteId) {
     case "en":
-      return `${window.location.origin}`;
+      return `${window.location.origin}/en`;
     case "de":
       return `${window.location.origin}/de`;
     

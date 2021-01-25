@@ -17,6 +17,10 @@ Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
     classNames.push("no-margin");
   }
 
+  if (widget.get("width")) {
+    classNames.push(`w-${widget.get("with")}`)
+  }
+
   return (
     <>
       <span

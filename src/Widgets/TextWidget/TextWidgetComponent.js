@@ -7,6 +7,10 @@ Scrivito.provideComponent("TextWidget", ({ widget }) => {
     classNames.push(`text-${widget.get("alignment")}`);
   }
 
+  if (widget.get("width")) {
+    classNames.push(`w-${widget.get("width")}`)
+  }
+
   return (
     <Scrivito.ContentTag
       tag="div"

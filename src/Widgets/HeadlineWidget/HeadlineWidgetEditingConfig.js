@@ -31,6 +31,19 @@ Scrivito.provideEditingConfig("HeadlineWidget", {
         { value: "h6", title: "h6" },
       ],
     },
+    width: {
+      title: "Width of the heading (optional)",
+      values: [
+        { value: "25", title: "25%" },
+        { value: "33", title: "33%" },
+        { value: "40", title: "40%" },
+        { value: "45", title: "45%" },
+        { value: "50", title: "50%" },
+        { value: "60", title: "60%" },
+        { value: "66", title: "66%" },
+        { value: "75", title: "75%" },
+      ],
+    },
     alignment: {
       title: "Alignment",
       description: "Default: Left",
@@ -57,7 +70,7 @@ Scrivito.provideEditingConfig("HeadlineWidget", {
       ],
     },
   },
-  properties: ["style", "level", "alignment", "showDividingLine", "showMargin"],
+  properties: ["style", "level", "alignment", "width", "showDividingLine", "showMargin"],
   initialContent: {
     alignment: "left",
     headline: "Lorem Ipsum",

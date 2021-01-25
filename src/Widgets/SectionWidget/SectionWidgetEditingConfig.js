@@ -1,4 +1,5 @@
 import * as Scrivito from "scrivito";
+import * as ScrivitoPicks from 'scrivito-picks';
 import sectionWidgetIcon from "../../assets/images/section_widget.svg";
 
 Scrivito.provideEditingConfig("SectionWidget", {
@@ -48,14 +49,30 @@ Scrivito.provideEditingConfig("SectionWidget", {
     },
   },
   properties: [
-    "backgroundColor",
     "backgroundImage",
     "useFullWidth",
     "useFullHeight",
     "showPadding",
   ],
+  propertiesGroups: [
+    {
+      title: 'Background Image',
+      component: ScrivitoPicks.createComponent([
+
+        {
+          attribute: 'backgroundGradientImage',
+              values: [
+                { value: "full-stripes", title: "Full stripes", previewClassName: 'picks-full-stripes picks-preview' },
+                { value: "left-block-stripes", title: "Left block stripes", previewClassName: 'picks-left-block-stripes picks-preview' },
+                { value: "dark-blue", title: "Dark blue", previewClassName: 'dark-blue picks-preview' },
+                { value: "light-blue", title: "Light blue", previewClassName: 'light-blue picks-preview' },
+              ],
+            }
+
+          ]),
+        },
+      ],
   initialContent: {
-    backgroundColor: "white",
     showPadding: "yes",
     useFullHeight: "no",
     useFullWidth: "no",
