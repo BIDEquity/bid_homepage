@@ -18,7 +18,7 @@ Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
   }
 
   if (widget.get("width")) {
-    classNames.push(`w-${widget.get("with")}`)
+    classNames.push(`w-${widget.get("width")}`)
   }
 
   return (

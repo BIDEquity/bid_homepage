@@ -17,16 +17,16 @@
 
 /* .scrolled.bg-dark-image .navbar-brand { background: $logo-dark no-repeat center center / contain; } */
 
-.scrolled {
+
   .navbar {
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  }
+    background: transparent;
+    
+  
 
   &.bg-dark-image {
     .navbar-nav > {
       li > a {
-        color: $theme-greydark !important;
+        color: #fff !important;
       }
 
       li.active > a {
@@ -46,6 +46,7 @@
     }
   }
 }
+
 
 .nav {
   margin: 0;
@@ -70,7 +71,7 @@
     &.open > {
       a,
       .menu-toggle {
-        background: $nav-hover !important;
+        //background: $nav-hover !important;
         color: #fff !important;
       }
     }
@@ -91,7 +92,7 @@
       right: auto;
       text-align: left;
       position: absolute !important;
-      transform: translate(-50%, 20px);
+      transform: translate(-50%, 0);
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1),
         0 -20px 10px rgba(44, 44, 44, 0.04);
       padding: 10px;
@@ -161,7 +162,7 @@
 .navbar {
   padding: 0;
   min-height: 75px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background: transparent;
 
   &-brand {
     /* background: $logo-dark no-repeat center center / contain; */
@@ -182,7 +183,7 @@
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
-    color: $theme-greydark;
+    color: #fff;
     display: inline-block;
   }
 
@@ -199,7 +200,7 @@
     &:after {
       font-size: 18px;
       content: "|";
-      color: #ddd;
+      color: #fff;
       position: absolute;
       top: 22px;
       left: -9px;
@@ -215,14 +216,14 @@
       }
 
       .fa {
-        color: $btn-link-disabled-color;
+        color: #fff;
       }
     }
 
     .fa {
       font-size: 22px;
       padding: 0;
-      color: $secondary;
+      color: #fff;
     }
   }
 
@@ -279,7 +280,7 @@
     cursor: pointer;
 
     .fa {
-      color: darken($primary, 15%);
+      color: #fff;
     }
   }
 
@@ -291,7 +292,7 @@
     font-size: 22px;
     text-align: center;
     margin: 0 auto;
-    color: $primary;
+    color: #fff;
     @include transition(transform 0.2s ease-in-out);
   }
 }
@@ -352,7 +353,7 @@
       .fa {
         font-size: 20px;
         padding: 0 0 3px 0;
-        color: $secondary;
+        color: #fff;
         text-align: center;
       }
     }

@@ -108,7 +108,7 @@ body {
 }
 
 .container .container {
-  width: auto;
+  width: 100%;
 }
 
 a {
@@ -156,8 +156,8 @@ h6,
   margin: 0 0 15px 0;
   padding-bottom: 30px;
   line-height: 1.5;
-  width: fit-content;
-  width: -moz-fit-content;
+  /*width: fit-content;
+  width: -moz-fit-content;*/
 }
 
 h1,
@@ -506,6 +506,10 @@ section {
   color: #fff;
 }
 
+#mainContent:first-of-type + div {
+  margin-top: -70px;
+}
+
 .section {
   padding: 60px 0;
   clear: both;
@@ -688,10 +692,14 @@ footer {
 
 /* nav section adaptions */
 section.navbar-fixed {
-  padding-top: 80px;
+  padding-top: 0 !important;
   overflow: hidden;
-  background-color: $light-blue;
+  background-color: transparent !important;
   color: #fff;
+} 
+
+.navbar {
+  background-color: transparent !important;
 }
 
 /* blog detail navbar
@@ -752,6 +760,9 @@ section.navbar-fixed {
 
 .row.align-items-stretch .card:only-of-type {
   @extend .h-100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-links i {
@@ -1232,22 +1243,134 @@ img.cookie-img {
   background-repeat: no-repeat, no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
-  background-attachment: fixed;
+  //background-attachment: fixed;
 }
 
+.small-full-stripes {
+  background-image: 
+  repeating-linear-gradient(120deg,
+    $stripe-dark,
+    $stripe-dark 5px,
+    $stripe-light 5px,
+    $stripe-light 10px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  //background-attachment: fixed;
+}
+
+
+.top-stripes {
+  background-image: 
+  repeating-linear-gradient(120deg,
+    $stripe-dark,
+    $stripe-dark 5px,
+    $stripe-light 5px,
+    $stripe-light 10px),
+  linear-gradient(to bottom,$mid-blue 25%, $mid-blue 25%);   
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 0;
+  background-size: 100% 45%, 100% 100%;
+  padding-top: 50%;
+  //background-attachment: fixed;
+}
 
 .left-block-stripes {
   background-image: 
   linear-gradient(to bottom,$dark-blue 25%, $dark-blue 25%), 
   repeating-linear-gradient(120deg,
-    $light-blue,
-    $light-blue 20px,
-    $dark-blue 20px,
-    $dark-blue 40px);
+    $stripe-light,
+    $stripe-light 20px,
+    $stripe-dark 20px,
+    $stripe-dark 40px);
   background-repeat: no-repeat, no-repeat;
   background-position: 0 0, 0 0;
-  background-size: 40% 100%, 100% 100%;
-  background-attachment: fixed;
+  background-size: 45% 100%, 100% 100%;
+  //background-attachment: fixed;
+}
+
+.small-left-block-stripes {
+  background-image: 
+  linear-gradient(to bottom, $light-blue 25%, $light-blue 25%), 
+  repeating-linear-gradient(120deg,
+    $stripe-light,
+    $stripe-light 20px,
+    $stripe-dark 20px,
+    $stripe-dark 40px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 0;
+  background-size: 30% 100%, 100% 100%;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  //background-attachment: fixed;
+}
+
+.picks-top-stripes {
+  background-image: 
+  repeating-linear-gradient(120deg,
+    $stripe-dark,
+    $stripe-dark 5px,
+    $stripe-light 5px,
+    $stripe-light 10px),
+  linear-gradient(to bottom,$dark-blue 25%, $dark-blue 25%);   
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 0;
+  background-size: 100% 45%, 100% 100%;
+  //background-attachment: fixed;
+}
+
+.picks-small-left-block-stripes {
+  background-image: 
+  linear-gradient(to bottom, $light-blue 25%, $light-blue 25%), 
+  repeating-linear-gradient(120deg,
+    $stripe-light,
+    $stripe-light 5px,
+    $stripe-dark 5px,
+    $stripe-dark 10px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 0;
+  background-size: 45% 100%, 100% 100%;
+  min-height: 75vh;
+
+  //background-attachment: fixed;
+}
+
+.small-right-block-stripes {
+  background-image: 
+  repeating-linear-gradient(120deg,
+    $stripe-light,
+    $stripe-light 20px,
+    $stripe-dark 20px,
+    $stripe-dark 40px),
+  linear-gradient(to bottom, $dark-blue 25%, $dark-blue 25%); 
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 0;
+  background-size: 70% 100%, 100% 100%;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  .container {
+    padding-left: 45%;
+  }
+  //background-attachment: fixed;
+}
+
+.picks-small-right-block-stripes {
+  background-image: 
+  repeating-linear-gradient(120deg,
+    $stripe-light,
+    $stripe-light 5px,
+    $stripe-dark 5px,
+    $stripe-dark 10px),
+  linear-gradient(to bottom, $dark-blue 25%, $dark-blue 25%); 
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 0;
+  background-size: 70% 100%, 100% 100%;
+  
+  //background-attachment: fixed;
 }
 
 .picks-left-block-stripes {
@@ -1261,7 +1384,7 @@ img.cookie-img {
   background-repeat: no-repeat, no-repeat;
   background-position: 0 0, 0 0;
   background-size: 20% 100%, 100% 100%;
-  background-attachment: fixed;
+  //background-attachment: fixed;
 }
 
 .picks-full-stripes {
@@ -1274,10 +1397,32 @@ img.cookie-img {
   background-repeat: no-repeat, no-repeat;
   background-position: 0 0;
   background-size: 100% 100%;
-  background-attachment: fixed;
+  //background-attachment: fixed;
+}
+
+.picks-small-full-stripes {
+  background-image: 
+  repeating-linear-gradient(120deg,
+    $light-blue,
+    $light-blue 5px,
+    $dark-blue 5px,
+    $dark-blue 10px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  //background-attachment: fixed;
 }
 
 .picks-preview {
   height: 150px !important;
   width: 400px !important;
+}
+
+.spcks-active .spcks-meta {
+  background: #ddd;
+  color: #333;
+}
+
+ul.spcks-ul li.spcks-active {
+  box-shadow: 0 0 0 3px #ddd, 0 0 4px 6px hsla(0,0%,100%,.3);
 }

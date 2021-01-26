@@ -101,7 +101,7 @@ class Navigation extends React.Component {
     if (navigationStyle === "transparentDark") {
       topSectionClassNames.push("bg-dark-image");
     } else {
-      topSectionClassNames.push("bg-white", "nav-only");
+      topSectionClassNames.push("nav-only");
     }
 
     const bootstrapNavbarClassNames = [];
