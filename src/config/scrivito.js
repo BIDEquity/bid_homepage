@@ -23,7 +23,6 @@ function siteForUrl(url) {
       return { siteId, baseUrl: baseUrlForSite(siteId) };
     default:
       siteId = "en";
-      console.log("default", baseUrlForSite(siteId))
       return { siteId, baseUrl: baseUrlForSite(siteId) };
   }
 }

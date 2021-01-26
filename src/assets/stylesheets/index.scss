@@ -193,7 +193,7 @@ h6,
   font-size: 14px;
 }
 
-h1.b-bottom {
+.b-bottom {
   border-bottom: 10px solid $big-border-blue;
   width: fit-content;
   width: -moz-fit-content;
@@ -503,7 +503,6 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
 /* sections
 =================================================================== */
 section {
-  background-color: $light-blue;
   color: #fff;
 }
 
@@ -942,6 +941,9 @@ footer {
     padding: 60px 0;
   }
 
+  background-color: $footer-blue;
+  color: #fff;
+
   a,
   a:hover,
   a:focus {
@@ -1219,61 +1221,63 @@ img.cookie-img {
   }
 }
 
-.stripe_25 {
-  background-image: linear-gradient(128deg, #035bbb 25%, #0066c9 25%, #0066c9 50%, #035bbb 50%, #035bbb 75%, #0066c9 75%, #0066c9 100%);
-  background-size: 63.45px 81.21px;
-}
 
-//stripes 20px
 .full-stripes {
-  background-image: linear-gradient(120deg, #035bbb 25%, #0066c9 25%, #0066c9 50%, #035bbb 50%, #035bbb 75%, #0066c9 75%, #0066c9 100%);
-  background-size: 46.19px 80.00px;
+  background-image: 
+  repeating-linear-gradient(120deg,
+    $light-blue,
+    $light-blue 20px,
+    $dark-blue 20px,
+    $dark-blue 40px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }
 
-.picks-full-stripes {
-  background-image: linear-gradient(130deg, #035bbb 25%, #0066c9 25%, #0066c9 50%, #035bbb 50%, #035bbb 75%, #0066c9 75%, #0066c9 100%);
-  background-size: 26.11px 31.11px;
-}
 
-//strikes 10
 .left-block-stripes {
-  &:before {
-    content: " ";
-    width: 40vw;
-    background-color: #035bbb;
-    display:block;
-  }
-  background-image: linear-gradient(130deg, #035bbb 25%, #0066c9 25%, #0066c9 50%, #035bbb 50%, #035bbb 75%, #0066c9 75%, #0066c9 100%);
-  background-size: 26.11px 31.11px;
-}
-
-.stripe-test {
-  background: 
-  linear-gradient(90deg, blue 200px),
-  repeating-linear-gradient(-45deg, red, red 5px, white 5px, white 10px);
-
+  background-image: 
+  linear-gradient(to bottom,$dark-blue 25%, $dark-blue 25%), 
+  repeating-linear-gradient(120deg,
+    $light-blue,
+    $light-blue 20px,
+    $dark-blue 20px,
+    $dark-blue 40px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 0;
+  background-size: 40% 100%, 100% 100%;
+  background-attachment: fixed;
 }
 
 .picks-left-block-stripes {
-  &:before {
-    content: " ";
-    width: 40%;
-    height: 100%;
-    background-color: #035bbb;
-    display:block;
-  }
-  background-image: linear-gradient(130deg, #035bbb 25%, #0066c9 25%, #0066c9 50%, #035bbb 50%, #035bbb 75%, #0066c9 75%, #0066c9 100%);
-  background-size: 26.11px 31.11px;
+  background-image: 
+  linear-gradient(to bottom,$dark-blue 25%, $dark-blue 25%), 
+  repeating-linear-gradient(120deg,
+    $light-blue,
+    $light-blue 5px,
+    $dark-blue 5px,
+    $dark-blue 10px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0, 0 0;
+  background-size: 20% 100%, 100% 100%;
+  background-attachment: fixed;
 }
 
-.stripe_8 {
-  background-image: linear-gradient(115deg, #035bbb 25%, #0066c9 25%, #0066c9 50%, #035bbb 50%, #035bbb 75%, #0066c9 75%, #0066c9 100%);
-  background-size: 17.65px 37.86px;
+.picks-full-stripes {
+  background-image: 
+  repeating-linear-gradient(120deg,
+    $light-blue,
+    $light-blue 10px,
+    $dark-blue 10px,
+    $dark-blue 20px);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }
 
 .picks-preview {
   height: 150px !important;
   width: 400px !important;
-  //background-repeat: no-repeat !important;
-  //background-size: contain !important;
 }

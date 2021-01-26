@@ -6,7 +6,6 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
   const sectionStyle = {};
 
   let backgroundGradientImage = widget.get("backgroundGradientImage");
-  console.log(backgroundGradientImage)
 
   const backgroundImage = widget.get("backgroundImage");
   if (backgroundImage) {
@@ -21,7 +20,6 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
 
   if (backgroundGradientImage) {
     sectionClassNames.push(backgroundGradientImage)
-    console.log(sectionClassNames);
   }
 
   if (widget.get("showPadding") === "no") {
