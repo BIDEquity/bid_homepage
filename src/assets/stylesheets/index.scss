@@ -156,6 +156,7 @@ h6,
   margin: 0 0 15px 0;
   padding-bottom: 30px;
   line-height: 1.5;
+  text-transform: uppercase;
   /*width: fit-content;
   width: -moz-fit-content;*/
 }
@@ -336,13 +337,13 @@ small,
 =================================================================== */
 
 .btn {
-  border-radius: 0;
+  border-radius: 40px;
   font-size: 16px;
   font-weight: 700;
-  text-transform: uppercase;
   vertical-align: middle;
-  padding: 13px 20px 10px;
+  padding: 13px 60px 10px;
   margin: 0 0 10px 0;
+  background-color: #fff;
 }
 .btn .fa {
   padding: 0 0 3px 15px;
@@ -356,7 +357,7 @@ small,
 .btn-info,
 .btn-warning,
 .btn-danger {
-  color: #fff;
+  color: $light-blue;
   .fa {
     color: #fff;
   }
@@ -366,9 +367,13 @@ small,
 }
 
 .btn-clear {
-  color: $theme-greydark;
+  color: #fff;
   padding-left: 0;
   padding-right: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid $blue-line;
+  width: fit-content;
+  width: -moz-fit-content;
 }
 .btn-clear .fa {
   color: $primary;
@@ -377,11 +382,13 @@ small,
 .btn-clear:active,
 .btn-clear:focus {
   box-shadow: none !important;
+  color: $blue-line;
 }
 
 .btn-white-transparent {
   background: rgba(255, 255, 255, 0.1);
-  color: $secondary;
+  color: #fff;
+  border-bottom: 1px solid $blue-line;
 }
 .btn-white-transparent:hover {
   background: rgba(255, 255, 255, 0.2);
@@ -539,7 +546,7 @@ section {
 }
 
 .darkest-blue {
-  background-color: #0a55aa;
+  background-color: $darkest-blue;
 }
 
 .dark-blue {
@@ -550,8 +557,12 @@ section {
   background-color: $light-blue;
 }
 
+.card-blue {
+  background-color: $card-blue;
+}
+
 .mid-blue {
-  background-color: #1666c3;
+  background-color: $mid-blue;
 }
 
 .bg-brand-primary {
@@ -790,7 +801,6 @@ section.navbar-fixed {
 }
 
 .card-theme {
-  background: transparent;
   box-shadow: none;
   border-radius: 0;
   border: 0;
@@ -955,10 +965,10 @@ footer {
   background-color: $footer-blue;
   color: #fff;
 
-  a,
+  a, .fa,
   a:hover,
   a:focus {
-    color: $theme-greydark;
+    color: #fff;
     text-decoration: none;
   }
 
@@ -1270,7 +1280,7 @@ img.cookie-img {
   linear-gradient(to bottom,$mid-blue 25%, $mid-blue 25%);   
   background-repeat: no-repeat, no-repeat;
   background-position: 0 0, 0 0;
-  background-size: 100% 45%, 100% 100%;
+  background-size: 100% 35%, 100% 100%;
   padding-top: 50%;
   //background-attachment: fixed;
 }

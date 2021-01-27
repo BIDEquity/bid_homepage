@@ -2,9 +2,12 @@ import * as Scrivito from "scrivito";
 
 const QuoteWidget = Scrivito.provideWidgetClass("QuoteWidget", {
   attributes: {
-    headline: "string",
+    quote: "string",
+    name: "string",
+    position: "string",
+    company: "string",
   },
-  extractTextAttributes: ["headline"],
+  extractTextAttributes: ["quote", "name", "position", "company"],
 });
 
 export default QuoteWidget;
