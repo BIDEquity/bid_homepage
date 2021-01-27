@@ -14,6 +14,15 @@
     font-size: 24px;
     margin-bottom: 24px;
     font-weight: bold;
+    &:after {
+      content: "";
+      display: block;
+      border: 2px solid $blue-line;
+      position: absolute;
+      width: 18px;
+      top: 42px;
+      left: 35px;
+    }
   }
 
   .fact-value {
@@ -29,7 +38,7 @@
     color: #fff;
     font-size: 18px;
     line-height: 22px;
-    border-bottom: 1px solid $blue-line;
+    border-bottom: 2px solid $blue-line;
     padding-bottom: 24px;
     margin-bottom: 120px;
   }
