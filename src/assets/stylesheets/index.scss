@@ -1106,7 +1106,6 @@ img.cookie-img {
 =================================================================== */
 
 .card.box-offset {
-  background: #fff;
   padding: 80px 100px;
   margin: -120px 0 0 0;
 }
@@ -1368,6 +1367,16 @@ img.cookie-img {
   //background-attachment: fixed;
 }
 
+.sidebar-style {
+  background-image: 
+  linear-gradient(to right, $light-blue 75%, $light-blue 75%, $dark-blue 75%, $dark-blue 100%);
+  
+  background-repeat: no-repeat, no-repeat;
+  min-height: 75vh;
+  padding: 0 40px;
+  //background-attachment: fixed;
+}
+
 .picks-small-right-block-stripes {
   background-image: 
   repeating-linear-gradient(120deg,
@@ -1421,6 +1430,10 @@ img.cookie-img {
   background-position: 0 0;
   background-size: 100% 100%;
   //background-attachment: fixed;
+}
+
+.full-inner-height {
+  height: 75vh;
 }
 
 .picks-preview {

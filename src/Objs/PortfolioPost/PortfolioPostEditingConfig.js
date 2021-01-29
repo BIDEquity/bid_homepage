@@ -9,7 +9,7 @@ import {
 } from "../_metadataEditingConfig";
 
 Scrivito.provideEditingConfig("PortfolioPost", {
-  title: "PortfolioPost",
+  title: "Portfolio Post",
   thumbnail: PageObjIcon,
   attributes: {
     ...metadataEditingConfigAttributes,
