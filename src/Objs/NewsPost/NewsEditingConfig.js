@@ -36,7 +36,10 @@ Scrivito.provideEditingConfig("NewsPost", {
     title: "Title of the news (Click to edit)",
     text: "News content (Click to edit)",
     body: [
+      
       new SectionWidget({
+        useFullHeight: "yes",
+        backgroundGradientImage: "mid-blue",
         content: [
           new ColumnContainerWidget({
             alignment: "stretch",

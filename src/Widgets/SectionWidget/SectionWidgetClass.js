@@ -15,6 +15,7 @@ const SectionWidget = Scrivito.provideWidgetClass("SectionWidget", {
           "small-left-block-stripes",
           "small-right-block-stripes",
           "dark-blue",
+          "mid-blue",
           "light-blue",
         ]
       }

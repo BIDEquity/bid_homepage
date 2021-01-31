@@ -7,10 +7,11 @@ import SchemaDotOrg from "../../Components/SchemaDotOrg";
 Scrivito.provideComponent("NewsPost", ({ page }) => (
   <div>
     <section className="left-block-stripes full-height">
-      <div className="container">
-        <section className="sidebar-style">
-          <div className="row align-items-center justify-content-center full-inner-height">
-            <div className="col-lg-9">
+      
+        <div className="container h-100">
+        <div className="row h-100">
+          
+            <div className="col-lg-9 light-blue p-4">
             <Scrivito.ContentTag
               tag="h1"
               className="h1"
@@ -23,9 +24,9 @@ Scrivito.provideComponent("NewsPost", ({ page }) => (
               attribute="text"
               />
             </div>
-            <div className="col-lg-3 text-center">Next News</div>
+            <div className="col-lg-3 p-4 text-center dark-blue"><div className="next-link"> Next News</div></div>
           </div>  
-       </section>
+       
       </div>
       
     </section>

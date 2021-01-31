@@ -24,13 +24,13 @@ const ButtonWidgetComponent = Scrivito.connect(({ widget }) => {
 });
 
 Scrivito.provideComponent("ButtonWidget", ({ widget }) => {
-  if (["center", "right"].includes(widget.get("alignment"))) {
+  //if (["center", "right"].includes(widget.get("alignment"))) {
     return (
-      <div className={`text-${widget.get("alignment")}`}>
+      <div className={`d-inline text-${widget.get("alignment")}`}>
         <ButtonWidgetComponent widget={widget} />
       </div>
     );
-  }
+  //}
 
   return <ButtonWidgetComponent widget={widget} />;
 });

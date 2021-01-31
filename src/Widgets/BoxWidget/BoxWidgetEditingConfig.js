@@ -41,6 +41,7 @@ Scrivito.provideEditingConfig("BoxWidget", {
                 { value: "dark-blue", title: "Dark blue", previewClassName: 'dark-blue picks-preview' },
                 { value: "light-blue", title: "Light blue", previewClassName: 'light-blue picks-preview' },
                 { value: "card-blue", title: "Card blue", previewClassName: 'card-blue picks-preview' },
+                { value: "footer-blue", title: "Footer blue", previewClassName: 'footer-blue picks-preview' },
               ],
             }
 

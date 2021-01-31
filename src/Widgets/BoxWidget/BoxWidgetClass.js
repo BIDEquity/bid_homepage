@@ -18,6 +18,7 @@ const BoxWidget = Scrivito.provideWidgetClass("BoxWidget", {
           "dark-blue",
           "light-blue",
           "card-blue",
+          "footer-blue",
         ]
       }
     ],

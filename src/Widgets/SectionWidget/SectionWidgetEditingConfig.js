@@ -67,6 +67,7 @@ Scrivito.provideEditingConfig("SectionWidget", {
                 { value: "small-left-block-stripes", title: "Small left block stripes", previewClassName: 'picks-small-left-block-stripes picks-preview' },
                 { value: "small-right-block-stripes", title: "Small right block stripes", previewClassName: 'picks-small-right-block-stripes picks-preview' },
                 { value: "dark-blue", title: "Dark blue", previewClassName: 'dark-blue picks-preview' },
+                { value: "mid-blue", title: "Mid blue", previewClassName: 'mid-blue picks-preview' },
                 { value: "light-blue", title: "Light blue", previewClassName: 'light-blue picks-preview' },
               ],
             }
