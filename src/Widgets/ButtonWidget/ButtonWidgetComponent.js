@@ -30,7 +30,4 @@ Scrivito.provideComponent("ButtonWidget", ({ widget }) => {
         <ButtonWidgetComponent widget={widget} />
       </div>
     );
-  //}
-
-  return <ButtonWidgetComponent widget={widget} />;
 });

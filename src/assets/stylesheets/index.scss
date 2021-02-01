@@ -134,8 +134,14 @@ button:focus {
   background: $secondary;
 }
 
-p {
+p, ul {
   margin: 0 0 25px 0;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.clear {
+  clear: both;
 }
 
 h1,
@@ -336,6 +342,9 @@ small,
 
 /* button adaoptions
 =================================================================== */
+.btn {
+  margin: 24px 0;
+}
 
 .btn-primary {
   border-radius: 40px;
@@ -343,7 +352,6 @@ small,
   font-weight: 700;
   vertical-align: middle;
   padding: 13px 60px 10px;
-  margin: 0 0 10px 0;
   background-color: #fff;
 }
 .btn .fa {
@@ -775,8 +783,7 @@ section.navbar-fixed {
 .row.align-items-stretch .card:only-of-type {
   @extend .h-100;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
 .social-links i {
@@ -1450,6 +1457,10 @@ img.cookie-img {
 
 .next-link {
   //margin-top: 250px;
+}
+
+.float-right {
+  float: right;
 }
 
 .picks-preview {

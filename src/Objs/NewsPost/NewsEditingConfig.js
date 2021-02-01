@@ -51,7 +51,7 @@ Scrivito.provideEditingConfig("NewsPost", {
                     backgroundGradientImage: "dark-blue",
                     useOffset: "yes",
                     body: [
-                      new ExtendedFactWidget ({})
+                      new ExtendedFactWidget ({title: "01"})
                     ]
                   }),
                 ],

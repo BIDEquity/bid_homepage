@@ -14,6 +14,14 @@ Scrivito.provideEditingConfig("TextWidget", {
         { value: "right", title: "Right" },
       ],
     },
+    float: {
+      title: "Float Alignment",
+      description: "Default: Left",
+      values: [
+        { value: "left", title: "Left" },
+        { value: "right", title: "Right" },
+      ],
+    },
     width: {
       title: "Width of the text element (optional)",
       values: [
@@ -27,12 +35,20 @@ Scrivito.provideEditingConfig("TextWidget", {
         { value: "75", title: "75%" },
       ],
     },
+    showDividingLine: {
+      title: "Show dividing line?",
+      description: "Default: No",
+      values: [
+        { value: "yes", title: "Yes" },
+        { value: "no", title: "No" },
+      ],
+    },
     text: {
       title: "Text",
       description: "The actual source code of this text",
     },
   },
-  properties: ["alignment", "width", "text"],
+  properties: ["alignment", "float", "width", "showDividingLine", "text"],
   initialContent: {
     alignment: "left",
   },

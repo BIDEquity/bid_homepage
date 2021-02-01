@@ -53,6 +53,14 @@ Scrivito.provideEditingConfig("HeadlineWidget", {
         { value: "right", title: "Right" },
       ],
     },
+    float: {
+      title: "Float Alignment",
+      description: "Default: Left",
+      values: [
+        { value: "left", title: "Left" },
+        { value: "right", title: "Right" },
+      ],
+    },
     width: {
       title: "Width of the text element (optional)",
       values: [
@@ -83,7 +91,7 @@ Scrivito.provideEditingConfig("HeadlineWidget", {
       ],
     },
   },
-  properties: ["style", "level", "alignment", "width", "showDividingLine", "showMargin"],
+  properties: ["style", "level", "alignment", "float", "width", "showDividingLine", "showMargin"],
   initialContent: {
     alignment: "left",
     headline: "Lorem Ipsum",

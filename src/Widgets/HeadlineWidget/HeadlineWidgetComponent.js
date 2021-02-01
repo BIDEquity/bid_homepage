@@ -21,6 +21,10 @@ Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
     classNames.push(`w-${widget.get("width")}`)
   }
 
+  if (widget.get("float") === "right") {
+    classNames.push("float-right")
+  }
+
   return (
     <>
       <span

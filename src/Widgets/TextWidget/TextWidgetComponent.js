@@ -11,6 +11,14 @@ Scrivito.provideComponent("TextWidget", ({ widget }) => {
     classNames.push(`w-${widget.get("width")}`)
   }
 
+  if (widget.get("float") === "right") {
+    classNames.push("float-right")
+  }
+
+  if (widget.get("showDividingLine") === "yes") {
+    classNames.push("b-bottom");
+  }
+
   return (
     <Scrivito.ContentTag
       tag="div"
