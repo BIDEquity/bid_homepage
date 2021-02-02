@@ -6,6 +6,7 @@ const QuoteWidget = Scrivito.provideWidgetClass("QuoteWidget", {
     name: "string",
     position: "string",
     company: "string",
+    showDividingLine: ["enum", { values: ["yes", "no"] }],
   },
   extractTextAttributes: ["quote", "name", "position", "company"],
 });

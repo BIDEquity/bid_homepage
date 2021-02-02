@@ -205,6 +205,7 @@ h6,
   border-bottom: 10px solid $big-border-blue;
   width: fit-content;
   width: -moz-fit-content;
+  padding-bottom: 36px;
 }
 
 .bg-greydark .b-bottom:after {
@@ -818,6 +819,12 @@ section.navbar-fixed {
 .card-theme .card-body {
   padding: 20px 0;
 }
+
+.dark-blue .card-body {
+  padding: 20px 40px;
+}
+
+
 .card-theme a:hover {
   text-decoration: none;
 }
@@ -1470,6 +1477,17 @@ img.cookie-img {
 
 .float-right {
   float: right;
+}
+
+.play {
+  font-size: 1.4rem;
+  padding: 60px;
+  background: $dark-blue;
+  max-width: 65%;
+  margin: 0 auto;
+  .fa {
+    font-size: 3rem;
+  }
 }
 
 .picks-preview {

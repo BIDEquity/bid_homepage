@@ -3,8 +3,16 @@ import * as Scrivito from "scrivito";
 
 import "./QuoteWidget.scss";
 
-Scrivito.provideComponent("QuoteWidget", ({ widget }) => (
-  <>
+
+Scrivito.provideComponent("QuoteWidget", ({ widget }) =>  {
+
+  const classNames = [];
+  if (widget.get("showDividingLine") === "yes") {
+    classNames.push("b-bottom");
+  }
+
+  return (
+  <div className={classNames.join(" ")}>
     <div className="prefix">“</div>
     <Scrivito.ContentTag
     tag="h2"  
@@ -28,5 +36,7 @@ Scrivito.provideComponent("QuoteWidget", ({ widget }) => (
     attribute="company"
   />
     
-  </>
-));
+    </div>
+  )
+}
+);

@@ -118,6 +118,7 @@
 
 .dropdown-menu.show {
   display: block;
+  z-index: 1000;
 }
 
 // Dropdown section headers

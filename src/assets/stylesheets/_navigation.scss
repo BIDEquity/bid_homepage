@@ -85,6 +85,7 @@
     }
 
     > .dropdown-menu {
+      z-index: 1000;
       border-radius: 0;
       border: none;
       left: 50%;
@@ -568,6 +569,7 @@
 
   .open > .dropdown-menu {
     display: block !important;
+    z-index: 1000 !important;
   }
 
   /* menu toggle */
