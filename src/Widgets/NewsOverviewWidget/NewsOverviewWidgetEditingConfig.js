@@ -1,14 +1,14 @@
 import * as Scrivito from "scrivito";
-import jobOverviewWidgetIcon from "../../assets/images/job_overview_widget.svg";
 
-Scrivito.provideEditingConfig("JobOverviewWidget", {
-  title: "Job Overview",
-  thumbnail: jobOverviewWidgetIcon,
+
+Scrivito.provideEditingConfig("NewsOverviewWidget", {
+  title: "News Overview",
+  
   attributes: {
     tags: {
       title: "Filter by tags",
       description:
-        "Only show jobs, that have one of the given tags." +
+        "Only show news, that have one of the given tags." +
         " Leave empty to not filter by tags.",
     },
     showTags: {
@@ -22,6 +22,6 @@ Scrivito.provideEditingConfig("JobOverviewWidget", {
   },
   properties: ["showTags", "tags"],
   initialContent: {
-    showTags: "yes",
+    showTags: "no",
   },
 });

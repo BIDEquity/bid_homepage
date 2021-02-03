@@ -24,6 +24,10 @@ Scrivito.provideEditingConfig("Job", {
       title: "Posted at",
       description: "The job was posted at.",
     },
+    tags: {
+      title: "Tags",
+      description: "Which tags can be associated with this job?",
+    },
     validThrough: {
       title: "Expire at",
       description: "Job posting will expire at.",
@@ -73,6 +77,7 @@ Scrivito.provideEditingConfig("Job", {
   properties: [
     "title",
     "image",
+    "tags",
     "datePosted",
     "validThrough",
     "hiringOrganizationName",

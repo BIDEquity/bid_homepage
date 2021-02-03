@@ -1,10 +1,10 @@
 import * as Scrivito from "scrivito";
 
-const JobOverviewWidget = Scrivito.provideWidgetClass("JobOverviewWidget", {
+const NewsOverviewWidget = Scrivito.provideWidgetClass("NewsOverviewWidget", {
   attributes: {
     showTags: ["enum", { values: ["yes", "no"] }],
     tags: "stringlist",
   },
 });
 
-export default JobOverviewWidget;
+export default NewsOverviewWidget;

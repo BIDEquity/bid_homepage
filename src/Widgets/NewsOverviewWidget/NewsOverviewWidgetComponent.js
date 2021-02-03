@@ -1,11 +1,11 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
-import Job from "../../Objs/Job/JobObjClass";
+import NewsPost from "../../Objs/NewsPost/NewsPostObjClass";
 import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
 import TagList from "../../Components/TagList";
 
 
-class JobOverviewWidgetComponent extends React.Component {
+class NewsOverviewWidgetComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = { currentTag: "" };
@@ -14,23 +14,23 @@ class JobOverviewWidgetComponent extends React.Component {
   }
 
   render() {
-    let jobsSearch = Scrivito.Obj.where("_objClass", "equals", "Job");
+    let newsSearch = Scrivito.Obj.where("_objClass", "equals", "NewsPost");
     const filterTags = this.props.widget.get("tags");
     if (filterTags.length) {
-      jobsSearch = jobsSearch.and("tags", "equals", filterTags);
+      newsSearch = newsSearch.and("tags", "equals", filterTags);
     } else if (this.state.currentTag) {
-      jobsSearch = jobsSearch.and("tags", "equals", this.state.currentTag);
+      newsSearch = newsSearch.and("tags", "equals", this.state.currentTag);
     }
 
-    const tags = [...Job.all().facet("tags")].map((facet) => facet.name());
+    const tags = [...NewsPost.all().facet("tags")].map((facet) => facet.name());
 
   
-    let jobs;
+    let news;
     
-    jobs = [...jobsSearch];
+    news = [...newsSearch];
     
 
-    if (!jobs.length) {
+    if (!news.length) {
       return (
         <InPlaceEditingPlaceholder center>
           There are no event pages. Create one using the page menu.
@@ -50,8 +50,8 @@ class JobOverviewWidgetComponent extends React.Component {
         />
         <section className="mid-blue">
           <div className="row">
-            {jobs.map((job, index) => (
-              <JobItem key={job.id()} job={job} index={index} />
+            {news.map((news, index) => (
+              <NewsItem key={news.id()} news={news} index={index} />
             ))}
           </div>
         </section>
@@ -66,33 +66,31 @@ class JobOverviewWidgetComponent extends React.Component {
   }
 }
 
-Scrivito.provideComponent("JobOverviewWidget", JobOverviewWidgetComponent);
+Scrivito.provideComponent("NewsOverviewWidget", NewsOverviewWidgetComponent);
 
 
-const JobItem = Scrivito.connect(({ job }) => {
-  const location = [job.get("locationLocality"), job.get("locationCountry")]
-    .filter((n) => n)
-    .join(", ");
+const NewsItem = Scrivito.connect(({ news }) => {
+
 
   return (
     <div className="col-sm-6">
-      <Scrivito.LinkTag to={job} className="box-card">
+      <Scrivito.LinkTag to={news} className="box-card">
         <Scrivito.BackgroundImageTag
           tag="span"
           className="box-image"
           style={{
-            background: { image: job.get("image") },
+            background: { image: news.get("image") },
           }}
         />
         <span className="box-topic arrow-right">
-          <h3 className="h3">{job.get("title")}</h3>
+          <h3 className="h3">{news.get("title")}</h3>
           <span>
             <i
               className={`fa ${location ? "fa-map-marker" : ""} fa-2x`}
               aria-hidden="true"
               title="location"
             />
-            <span>{location}</span>
+            <span>location</span>
           </span>
           <i className="fa fa-angle-right" aria-hidden="true" />
         </span>
