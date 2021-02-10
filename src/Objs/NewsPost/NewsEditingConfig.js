@@ -4,7 +4,7 @@ import SectionWidget from "../../Widgets/SectionWidget/SectionWidgetClass";
 import ColumnContainerWidget from "../../Widgets/ColumnContainerWidget/ColumnContainerWidgetClass";
 import ColumnWidget from "../../Widgets/ColumnWidget/ColumnWidgetClass";
 import BoxWidget from "../../Widgets/BoxWidget/BoxWidgetClass";
-import ExtendedFactWidget from "../../Widgets/ExtendedFactWidget/ExtendedFactWidgetClass";
+import ExtendedFactWidget from "../../Widgets/BidFactWidget/BidFactWidgetClass";
 import {
   metadataEditingConfigAttributes,
   metadataInitialContent,

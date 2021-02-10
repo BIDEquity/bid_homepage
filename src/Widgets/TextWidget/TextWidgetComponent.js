@@ -21,7 +21,7 @@ Scrivito.provideComponent("TextWidget", ({ widget }) => {
 
   return (
     <Scrivito.ContentTag
-      tag="div"
+      tag="p"
       className={classNames.join(" ")}
       content={widget}
       attribute="text"

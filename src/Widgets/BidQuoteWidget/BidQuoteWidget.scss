@@ -1,0 +1,50 @@
+@import "../../assets/stylesheets/variables";
+
+
+@media (min-width: $screen-lg-min) {
+}
+
+@media (max-width: $screen-md-max) {
+}
+
+@media (max-width: $screen-sm-max) {
+}
+
+@media (max-width: $screen-xs-max) {
+  
+}
+
+
+
+.prefix {
+  font-size: 8rem;
+  margin-top: 124px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $blue-line;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+.quote {
+  font-size: 30px;
+  font-style: italic;
+  max-width: 35vw;
+  line-height: 130%;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-bottom: 0;
+}
+
+.quote-name {
+  font-size: 20px;
+}
+
+.quote-position,
+.quote-company {
+  float: left;
+}
+
+.quote-position:after {
+  content: ",";
+  display: inline-block;
+  margin-right: 6px;
+}

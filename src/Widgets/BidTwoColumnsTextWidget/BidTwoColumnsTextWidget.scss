@@ -1,0 +1,39 @@
+@import "../../assets/stylesheets/variables";
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@font-face {
+  font-family: "Swiss721BT-Regular";
+  font-weight: 1 1000;
+  src: url("https://fonts.animaapp.com/Swiss721BT-Regular") format("truetype");
+}
+
+
+.bid-two-columns-text-widget {
+  color: white;
+  font-family: "Swiss721BT-Regular", Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  .row {
+    letter-spacing: 0px;
+    line-height: 32px;
+    min-height: 195px;
+    opacity: 0.9;
+    width: 600px;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+}
+
+@media (max-width: $screen-md-max) {
+}
+
+@media (max-width: $screen-sm-max) {
+}
+
+@media (max-width: $screen-xs-max) {
+  
+}
+

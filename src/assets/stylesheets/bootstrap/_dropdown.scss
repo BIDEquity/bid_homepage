@@ -12,9 +12,10 @@
 // The dropdown menu
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: 70px;
+  height: 300px !important;
   left: 0;
-  z-index: $zindex-dropdown;
+  z-index: 10000;
   display: none; // none by default, but block on "open" of the menu
   float: left;
   min-width: $dropdown-min-width;
@@ -118,7 +119,7 @@
 
 .dropdown-menu.show {
   display: block;
-  z-index: 1000;
+  
 }
 
 // Dropdown section headers
