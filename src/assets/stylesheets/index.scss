@@ -1059,8 +1059,38 @@ footer {
     margin-right: 18px;
   }
 
+  .btn-clear, .text-left {
+    font-size: 14px;
+  }
+
+  h4 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+  }
+
+  h2.h3 {
+    font-size: 43px !important;
+    font-weight: 700 !important;
+    padding-bottom: 16px !important;
+    margin: 0;
+  }
+
+  h2.h2 {
+    font-size: 46px !important;
+    font-weight: 700 !important;
+    padding-bottom: 42px;
+    margin: 0;
+  }
+
   .b-bottom {
     border-color: #fff;
+    margin-bottom: 40px;
+  }
+
+  p {
+    padding-bottom: 40px;
+    margin: 0;
+    font-size: 14px;
   }
 
   background-color: $footer-blue;
