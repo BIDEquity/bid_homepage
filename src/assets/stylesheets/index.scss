@@ -99,6 +99,33 @@ body {
   color: #fff;
 }
 
+.news-teaser {
+  font-size: 36px;
+  font-weight: lighter;
+  line-height: 1.1;
+}
+
+.news-date {
+  font-size: 13px;
+  font-weight: 700;
+  border-bottom: 4px solid #fff;
+  position: absolute;
+  top: 6px;
+  left: -26px;
+  width: fit-content;
+  width: -moz-fit-content;
+  height: 64px;
+  padding-bottom: 9px;
+  span {
+    display: block;
+    height: 17px;
+  }
+}
+
+time {
+  border-bottom: 1px solid #fff;
+}
+
 .container,
 .container-fluid {
   position: relative;
@@ -153,12 +180,19 @@ p, ul {
 }
 
 .contact-form {
-  font-size: 2rem;
+  font-size: 4rem;
+  line-height: 1;
   width: 75vw;
+  padding: 0 12px;
+  .form-control {
+    font-size: 60px !important;
+    line-height: 1;
+    padding: 30px 0;
+  }
 }
 
 #contactCompany {
-  width: 113px;
+  width: 225px;
 }
 
 #contactLocation {
@@ -215,7 +249,7 @@ h6,
   font-family: "PT Sans Narrow", sans-serif;
   font-weight: 400;
   color: $theme-greydark;
-  margin: 0 0 12px 0;
+  margin: 0 0 10px 0;
   line-height: 1.5;
   /*width: fit-content;
   width: -moz-fit-content;*/
@@ -411,6 +445,10 @@ small,
 =================================================================== */
 .btn {
   margin: 24px 0;
+}
+
+.btn-block {
+  width: auto !important;
 }
 
 .btn-primary {
@@ -971,6 +1009,7 @@ _:-ms-fullscreen,
   overflow: hidden;
   outline: 4px solid transparent;
   @include transition(outline 0.5s ease-in-out);
+  padding-left: 48px;
 }
 .box-card:hover {
   text-decoration: none;
@@ -1056,11 +1095,19 @@ footer {
 
   .d-inline, .btn-clear {
     float: left;
-    margin-right: 18px;
+    margin-right: 12px;
   }
 
-  .btn-clear, .text-left {
-    font-size: 14px;
+  .btn-clear, p.text-left {
+    font-size: 14px !important;
+    font-family: "Swiss721BT-Bold", Helvetica, Arial, serif;
+  }
+
+  .btn-clear {
+    height: 26px;
+    padding: 0;
+    margin: -3px 12px 12px 0;
+    font-weight: 300;
   }
 
   h4 {

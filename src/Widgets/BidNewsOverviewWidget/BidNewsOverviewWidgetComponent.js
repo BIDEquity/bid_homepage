@@ -1,6 +1,8 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import NewsPost from "../../Objs/NewsPost/NewsPostObjClass";
+import { truncate } from "lodash-es";
+import formatDate from "../../utils/formatDate";
 import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
 import TagList from "../../Components/TagList";
 import "./BidNewsOverviewWidget.scss";
@@ -34,7 +36,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
     if (!news.length) {
       return (
         <InPlaceEditingPlaceholder center>
-          There are no event pages. Create one using the page menu.
+          There are no new pages. Create one using the page menu.
         </InPlaceEditingPlaceholder>
       );
     }
@@ -49,7 +51,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
           setTag={this.setTag}
           tags={tags}
         />
-        <section className="mid-blue">
+        <section>
           <div className="row">
             {news.map((news, index) => (
               <NewsItem key={news.id()} news={news} index={index} />
@@ -74,27 +76,21 @@ const NewsItem = Scrivito.connect(({ news }) => {
 
 
   return (
-    <div className="col-sm-6">
-      <Scrivito.LinkTag to={news} className="box-card">
-        <Scrivito.BackgroundImageTag
-          tag="span"
-          className="box-image"
-          style={{
-            background: { image: news.get("image") },
-          }}
-        />
-        <span className="box-topic arrow-right">
-          <h3 className="h3">{news.get("title")}</h3>
-          <span>
-            <i
-              className={`fa ${location ? "fa-map-marker" : ""} fa-2x`}
-              aria-hidden="true"
-              title="location"
-            />
-            <span>location</span>
-          </span>
-          <i className="fa fa-angle-right" aria-hidden="true" />
-        </span>
+    <div className="col-sm-8">
+      <Scrivito.LinkTag to={news}>
+        <p className="news-date">
+      
+          <span className="text-uppercase text-right">{formatDate(news.get("datePosted"), "mmm")}</span>
+          <span className="text-uppercase text-right">{formatDate(news.get("datePosted"), "dd")}</span>
+          <span className="text-uppercase text-right">{formatDate(news.get("datePosted"), "yyyy")}</span>
+        </p>
+          
+          <p className="news-teaser">
+          {truncate(Scrivito.extractText(news, { length: 330 }), {
+            length: 300,
+            separator: /,? +/,
+          })}
+        </p>
       </Scrivito.LinkTag>
     </div>
   );

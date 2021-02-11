@@ -10,7 +10,7 @@ const NewsPost = Scrivito.provideObjClass("NewsPost", {
     ...defaultPageAttributes,
     ...metadataAttributes,
   },
-  extractTextAttributes: ["body", "title", "text"],
+  extractTextAttributes: ["body", "text"],
 });
 
 export default NewsPost;
