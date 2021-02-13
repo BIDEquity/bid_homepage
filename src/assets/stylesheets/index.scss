@@ -99,10 +99,40 @@ body {
   color: #fff;
 }
 
-.news-teaser {
+.taglist {
+  border-bottom: 2px solid $lighter-blue;
+  padding-bottom: 24px !important;
+  font-size: 18px !important;
+}
+
+.news-wrapper {
+  margin-top: -116px
+}
+
+.news-tag {
+  display: inline-block;
+  margin-right: 36px;
+  border-bottom: 2px solid $lighter-blue;
+  padding-bottom: 4px;
+  font-size: 12px;
+}
+
+.news-tags {
+  margin-top: 18px;
+  a {
+    display: inline-block;
+  }
+}
+
+.news-text {
   font-size: 36px;
   font-weight: lighter;
   line-height: 1.1;
+}
+
+.news-teaser {
+  padding-bottom: 72px;
+  border-bottom: 2px solid $lighter-blue;
 }
 
 .news-date {
@@ -110,11 +140,11 @@ body {
   font-weight: 700;
   border-bottom: 4px solid #fff;
   position: absolute;
-  top: 6px;
-  left: -26px;
+  top: 91px;
+  left: 0;
   width: fit-content;
   width: -moz-fit-content;
-  height: 64px;
+  height: 66px;
   padding-bottom: 9px;
   span {
     display: block;
@@ -122,8 +152,11 @@ body {
   }
 }
 
-time {
-  border-bottom: 1px solid #fff;
+.news {
+  padding-top: 85px;
+  width: 600px;
+  position: relative;
+  padding-left: 48px;
 }
 
 .container,
@@ -145,9 +178,9 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: darken($primary, 5%);
-  text-decoration: underline;
+  color: #fff;
   outline: none !important;
+  text-decoration: none;
 }
 button:focus {
   outline: none !important;
@@ -456,8 +489,10 @@ small,
   font-size: 16px;
   font-weight: 700;
   vertical-align: middle;
-  padding: 13px 60px 10px;
+  padding-top: 20px;
   background-color: #fff;
+  min-width: 280px;
+  min-height: 64px;
 }
 .btn .fa {
   padding: 0 0 3px 15px;
@@ -498,6 +533,25 @@ small,
   width: fit-content;
   width: -moz-fit-content;
 }
+
+.btn-link {
+  
+  letter-spacing: 0px;
+  line-height: 32px;
+  white-space: nowrap;
+  color: $lighter-blue;
+  font-family: "Swiss721BT-Bold", Helvetica, Arial, serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid $lighter-blue;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
 .btn-clear .fa {
   color: $primary;
 }
@@ -675,6 +729,10 @@ section {
 
 .light-blue {
   background-color: $light-blue;
+}
+
+.lighter-blue {
+  color: $lighter-blue;
 }
 
 .card-blue {
@@ -1009,7 +1067,7 @@ _:-ms-fullscreen,
   overflow: hidden;
   outline: 4px solid transparent;
   @include transition(outline 0.5s ease-in-out);
-  padding-left: 48px;
+  
 }
 .box-card:hover {
   text-decoration: none;

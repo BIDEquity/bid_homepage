@@ -52,7 +52,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
           tags={tags}
         />
         <section>
-          <div className="row">
+          <div className="news-wrapper">
             {news.map((news, index) => (
               <NewsItem key={news.id()} news={news} index={index} />
             ))}
@@ -76,22 +76,31 @@ const NewsItem = Scrivito.connect(({ news }) => {
 
 
   return (
-    <div className="col-sm-8">
-      <Scrivito.LinkTag to={news}>
+    <div className="news">
+      
         <p className="news-date">
       
           <span className="text-uppercase text-right">{formatDate(news.get("datePosted"), "mmm")}</span>
           <span className="text-uppercase text-right">{formatDate(news.get("datePosted"), "dd")}</span>
           <span className="text-uppercase text-right">{formatDate(news.get("datePosted"), "yyyy")}</span>
-        </p>
-          
-          <p className="news-teaser">
+      </p>
+      <div className="news-teaser">
+        <Scrivito.LinkTag to={news}>
+          <p className="news-text">
           {truncate(Scrivito.extractText(news, { length: 330 }), {
             length: 300,
             separator: /,? +/,
           })}
+          
         </p>
       </Scrivito.LinkTag>
+      <p className="news-tags ">
+      
+        {news.get("tags").map((item, index) => (
+          <span className="news-tag lighter-blue" key={index}>{item}</span>
+        ))}
+        </p>
+        </div>
     </div>
   );
 });

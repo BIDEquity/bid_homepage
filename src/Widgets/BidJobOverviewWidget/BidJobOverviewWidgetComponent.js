@@ -3,6 +3,7 @@ import * as Scrivito from "scrivito";
 import Job from "../../Objs/Job/JobObjClass";
 import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
 import TagList from "../../Components/TagList";
+import { truncate } from "lodash-es";
 
 
 class BidJobOverviewWidgetComponent extends React.Component {
@@ -77,26 +78,22 @@ const JobItem = Scrivito.connect(({ job }) => {
   return (
     <div className="col-sm-6">
       <Scrivito.LinkTag to={job} className="box-card">
-        <Scrivito.BackgroundImageTag
-          tag="span"
-          className="box-image"
-          style={{
-            background: { image: job.get("image") },
-          }}
-        />
-        <span className="box-topic arrow-right">
-          <h3 className="h3">{job.get("title")}</h3>
-          <span>
-            <i
-              className={`fa ${location ? "fa-map-marker" : ""} fa-2x`}
-              aria-hidden="true"
-              title="location"
-            />
-            <span>{location}</span>
-          </span>
-          <i className="fa fa-angle-right" aria-hidden="true" />
-        </span>
+        <div className="w-75">
+        <h2 className="h2">{job.get("headline")}</h2>
+        
+        <p>
+          {truncate(Scrivito.extractText(job, { length: 230 }), {
+            length: 200,
+            separator: /,? +/,
+          })}
+          
+        </p>
+       </div>
+          
       </Scrivito.LinkTag>
+      
     </div>
   );
 });
+
+

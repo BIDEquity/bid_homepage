@@ -15,12 +15,12 @@ function TagList({ showTags, tags, currentTag, setTag }) {
   return (
     <div className="negative-margin-top nav-centered select-icon">
       <div className="d-none d-sm-block">
-        <ul className="nav nav-pills justify-content-center">
+        <ul className="nav taglist">
           <li
             role="presentation"
-            className={!currentTag ? "active nav-item" : "nav-item"}
+            className={!currentTag ? "_active nav-item" : "nav-item"}
           >
-            <a className="nav-link" onClick={(e) => onClick(e, "")} href="#">
+            <a className="nav-link lighter-blue" onClick={(e) => onClick(e, "")} href="#">
               All
             </a>
           </li>
@@ -28,9 +28,9 @@ function TagList({ showTags, tags, currentTag, setTag }) {
             <li
               role="presentation"
               key={tag}
-              className={currentTag === tag ? "active nav-item" : "nav-item"}
+              className={currentTag === tag ? "_active nav-item" : "nav-item"}
             >
-              <a className="nav-link" onClick={(e) => onClick(e, tag)} href="#">
+              <a className="nav-link lighter-blue" onClick={(e) => onClick(e, tag)} href="#">
                 {tag}
               </a>
             </li>

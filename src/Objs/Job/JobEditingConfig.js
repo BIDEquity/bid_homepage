@@ -1,6 +1,9 @@
 import * as Scrivito from "scrivito";
 import jobObjIcon from "../../assets/images/job_obj.svg";
 import SectionWidget from "../../Widgets/SectionWidget/SectionWidgetClass";
+import ButtonWidget from "../../Widgets/ButtonWidget/ButtonWidgetClass";
+import HeadlineWidget from "../../Widgets/HeadlineWidget/HeadlineWidgetClass";
+import TextWidget from "../../Widgets/TextWidget/TextWidgetClass";
 import {
   metadataEditingConfigAttributes,
   metadataInitialContent,
@@ -93,35 +96,31 @@ Scrivito.provideEditingConfig("Job", {
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
     ...metadataInitialContent,
-    title: "Lorem Ipsum",
-    body: [new SectionWidget({})],
-  },
-  validations: [
-    ...metadataValidations,
-    [
-      "title",
-
-      (title) => {
-        if (!title) {
-          return {
-            message: "The job title must be set.",
-            severity: "error",
-          };
-        }
-      },
-    ],
-    [
-      "validThrough",
-
-      (validThrough, { obj }) => {
-        const datePosted = obj.get("datePosted");
-        if (datePosted && validThrough && datePosted >= validThrough) {
-          return {
-            message: "The expiration date must be after the posting date.",
-            severity: "error",
-          };
-        }
-      },
-    ],
-  ],
+    title: "Job designation",
+  
+    
+    body: [
+      new SectionWidget({
+        useFullHeight: "yes",
+        backgroundGradientImage: "mid-blue",
+        content: [
+          new HeadlineWidget(
+            {
+              headline: "Job designation",
+              style: "h2",
+              level: "h2"
+            }),
+          new TextWidget({
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation sed do eiusmod tempor incididunt ut labore et dolore magna."
+          }),
+        
+          new ButtonWidget({
+            style: "btn-primary",
+            alignment: "center"
+          }),
+        ]
+      
+      })]
+  }
+    
 });

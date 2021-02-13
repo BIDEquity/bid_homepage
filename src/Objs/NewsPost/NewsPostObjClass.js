@@ -4,13 +4,14 @@ import defaultPageAttributes from "../_defaultPageAttributes";
 
 const NewsPost = Scrivito.provideObjClass("NewsPost", {
   attributes: {
-    logo: ["reference", { only: ["Image"] }],
+
     datePosted: "date",
+    tags: "stringlist",
     text: "html",
     ...defaultPageAttributes,
     ...metadataAttributes,
   },
-  extractTextAttributes: ["body", "text"],
+  extractTextAttributes: ["text"],
 });
 
 export default NewsPost;

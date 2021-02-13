@@ -5,33 +5,13 @@ import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholde
 import SchemaDotOrg from "../../Components/SchemaDotOrg";
 
 Scrivito.provideComponent("Job", ({ page }) => (
-  <div>
-    <section className="title-bgc">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-lg-7">
-            <Scrivito.ContentTag
-              tag="h1"
-              className="h2"
-              content={page}
-              attribute="title"
-            />
-            <JobDatePosted page={page} />
-          </div>
-          <div className="col-lg-5 details-title-box">
-            <JobLocation job={page} />
-            <JobEmploymentTypes employmentTypes={page.get("employmentType")} />
-            <JobValidThrough page={page} />
-          </div>
-        </div>
-      </div>
-    </section>
+  <div className="mid-blue">
     <Scrivito.ContentTag tag="div" content={page} attribute="body" />
     <SchemaDotOrg content={page} />
   </div>
 ));
 
-const JobDatePosted = Scrivito.connect(({ page }) => {
+/*const JobDatePosted = Scrivito.connect(({ page }) => {
   const datePosted = page.get("datePosted");
 
   if (!datePosted && !Scrivito.isInPlaceEditingActive()) {
@@ -144,4 +124,4 @@ const JobLocation = Scrivito.connect(({ job }) => {
       </h2>
     </React.Fragment>
   );
-});
+});*/

@@ -20,15 +20,16 @@ Scrivito.provideEditingConfig("NewsPost", {
     title: {
       title: "News title",
     },
-    logo: {
-      title: "Company title",
+    tags: {
+      title: "Tags"
     },
+    
     datePosted: {
       title: "Posted at",
       description: "The news was posted at.",
     },
   },
-  properties: ["title", "image", "datePosted"],
+  properties: ["title", "tags", "datePosted"],
 
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {

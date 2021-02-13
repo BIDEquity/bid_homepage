@@ -11,7 +11,7 @@ const HeadlineWidget = Scrivito.provideWidgetClass("HeadlineWidget", {
     showDividingLine: ["enum", { values: ["yes", "no"] }],
     showMargin: ["enum", { values: ["yes", "no"] }],
   },
-  extractTextAttributes: ["headline"],
+  
 });
 
 export default HeadlineWidget;
