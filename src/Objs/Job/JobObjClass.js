@@ -6,6 +6,7 @@ const Job = Scrivito.provideObjClass("Job", {
     body: "widgetlist",
     image: ["reference", { only: ["Image"] }],
     title: "string",
+    text: "html",
     tags: "stringlist",
 
     datePosted: "date",

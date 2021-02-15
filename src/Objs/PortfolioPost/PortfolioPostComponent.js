@@ -27,7 +27,7 @@ Scrivito.provideComponent("PortfolioPost", ({ page }) => (
       </div>
     </section>
     <Scrivito.ContentTag tag="div" content={page} attribute="body" />
-    <SchemaDotOrg content={page} />
+    
   </div>
 ));
 

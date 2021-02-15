@@ -6,8 +6,16 @@ import SchemaDotOrg from "../../Components/SchemaDotOrg";
 
 Scrivito.provideComponent("Job", ({ page }) => (
   <div className="mid-blue">
+    <section className="full-height">
+    <div className="container">
+      
+    <Scrivito.ContentTag tag="h1" content={page} attribute="title" />
+    <Scrivito.ContentTag tag="div" content={page} attribute="text" />
     <Scrivito.ContentTag tag="div" content={page} attribute="body" />
-    <SchemaDotOrg content={page} />
+      <SchemaDotOrg content={page} />
+      </div>
+      </section>
+    
   </div>
 ));
 

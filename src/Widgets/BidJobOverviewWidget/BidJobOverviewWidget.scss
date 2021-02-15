@@ -1,5 +1,35 @@
 @import "src/assets/stylesheets/variables";
 
+.bid-job-overview {
+  display: flex;
+  flex-direction: column;
+  
+h2 {
+  font-size: 36px;
+  font-weight: lighter;
+  padding-bottom: 0;
+  margin-bottom: 12px;
+}
+}
+
+.job-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  a {
+  margin-bottom: 96px;
+  position: relative;
+  p {
+    margin-bottom: 120px;
+  }
+  .btn-primary {
+    position: absolute;
+    bottom: 0;
+  }
+  }
+}
+
+
 @media (min-width: $screen-lg-min) {
 }
 

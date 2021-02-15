@@ -4,6 +4,7 @@ import Job from "../../Objs/Job/JobObjClass";
 import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
 import TagList from "../../Components/TagList";
 import { truncate } from "lodash-es";
+import "./BidJobOverviewWidget.scss";
 
 
 class BidJobOverviewWidgetComponent extends React.Component {
@@ -49,8 +50,8 @@ class BidJobOverviewWidgetComponent extends React.Component {
           setTag={this.setTag}
           tags={tags}
         />
-        <section className="mid-blue">
-          <div className="row">
+        <section className="no-padding">
+          <div className="job-cards">
             {jobs.map((job, index) => (
               <JobItem key={job.id()} job={job} index={index} />
             ))}
@@ -76,10 +77,10 @@ const JobItem = Scrivito.connect(({ job }) => {
     .join(", ");
 
   return (
-    <div className="col-sm-6">
-      <Scrivito.LinkTag to={job} className="box-card">
-        <div className="w-75">
-        <h2 className="h2">{job.get("headline")}</h2>
+    
+      <Scrivito.LinkTag to={job} className="w-40 ">
+        <div className="bid-job-overview align-items-stretch">
+        <h2 className="h2">{job.get("title")}</h2>
         
         <p>
           {truncate(Scrivito.extractText(job, { length: 230 }), {
@@ -87,12 +88,12 @@ const JobItem = Scrivito.connect(({ job }) => {
             separator: /,? +/,
           })}
           
-        </p>
+          </p>
+          <div className="w-50 text-center btn-primary"><a href={ Scrivito.urlFor(job)}>Apply for this job</a></div>
        </div>
           
       </Scrivito.LinkTag>
-      
-    </div>
+
   );
 });
 
