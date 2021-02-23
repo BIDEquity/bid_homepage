@@ -1,11 +1,11 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 
-import "./BidBotWidget.scss";
+import "./BidProcessWidget.scss";
 
-Scrivito.provideComponent("BidBotWidget", ({ widget }) => (
+Scrivito.provideComponent("BidProcessWidget", ({ widget }) => (
   <Scrivito.ContentTag
-    className="bot-widget"
+    className="bid-process-widget"
     content={widget}
     attribute="headline"
   />

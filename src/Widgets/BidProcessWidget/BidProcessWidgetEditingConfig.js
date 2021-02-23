@@ -1,7 +1,7 @@
 import * as Scrivito from "scrivito";
 
-Scrivito.provideEditingConfig("BidBotWidget", {
-  title: "Bot",
+Scrivito.provideEditingConfig("BidProcessWidget", {
+  title: "Bid Process",
   initialContent: {
     headline: "Lorem Ipsum",
   },

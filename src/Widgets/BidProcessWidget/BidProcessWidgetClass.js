@@ -1,10 +1,10 @@
 import * as Scrivito from "scrivito";
 
-const BidBotWidget = Scrivito.provideWidgetClass("BidBotWidget", {
+const BidProcessWidget = Scrivito.provideWidgetClass("BidProcessWidget", {
   attributes: {
     headline: "string",
   },
   extractTextAttributes: ["headline"],
 });
 
-export default BidBotWidget;
+export default BidProcessWidget;
