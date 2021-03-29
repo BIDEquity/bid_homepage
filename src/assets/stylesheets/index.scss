@@ -688,14 +688,14 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
 =================================================================== */
 section {
   color: #fff;
-  padding: 60px;
+  padding: 0;
   clear: both;
   position: relative;
 }
 
-#mainContent:first-of-type + div {
+/*#mainContent:first-of-type + div {
   margin-top: -70px;
-}
+}*/
 
 .section {
   &.medium-height {
@@ -716,7 +716,6 @@ section {
 
 .nav-only {
   padding: 0 !important;
-  height: 75px;
 }
 
 .darkest-blue {
@@ -887,14 +886,10 @@ footer {
 section.navbar-fixed {
   padding-top: 0 !important;
   overflow: hidden;
-  background-color: transparent !important;
   color: #fff;
   z-index: 1000;
 } 
 
-.navbar {
-  background-color: transparent !important;
-}
 
 /* blog detail navbar
 =================================================================== */

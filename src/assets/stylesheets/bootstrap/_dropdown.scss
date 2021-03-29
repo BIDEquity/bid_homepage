@@ -12,8 +12,6 @@
 // The dropdown menu
 .dropdown-menu {
   position: absolute;
-  top: 70px;
-  height: 300px !important;
   left: 0;
   z-index: 10000;
   display: none; // none by default, but block on "open" of the menu
