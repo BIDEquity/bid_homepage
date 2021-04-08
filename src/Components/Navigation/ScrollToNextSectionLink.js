@@ -8,9 +8,9 @@ function ScrollToNextSectionLink({ heightClassName }) {
   return (
     <a
       href="#mainContent"
-      className="btn-round btn-white-transparent hidden-xs"
+      className="scroll_anchor top_scroll"
     >
-      <i className="fa fa-angle-down" aria-hidden="true" />
+      <img src="/src/assets/images/mouse_scroll.svg" alt="" />
     </a>
   );
 }

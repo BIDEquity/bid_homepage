@@ -54,7 +54,6 @@ class BaseNavChild extends React.Component {
 const NavChild = Scrivito.connect(BaseNavChild);
 
 const NavSingleChild = Scrivito.connect(({ child, open, ...otherProps }) => {
-  
   const classNames = ["nav-item"];
   if (open) {
     classNames.push("open");

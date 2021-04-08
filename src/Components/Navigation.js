@@ -99,10 +99,12 @@ class Navigation extends React.Component {
     }
 
     if (navigationStyle === "transparentDark") {
-      topSectionClassNames.push("dark-blue");
+      topSectionClassNames.push("bg-dark-image");
+    } else {
+      topSectionClassNames.push("bg-white", "nav-only");
     }
 
-    const bootstrapNavbarClassNames = [];
+    const bootstrapNavbarClassNames = [""];
     if (this.state.showSearch) {
       bootstrapNavbarClassNames.push("show-search");
     }
@@ -158,7 +160,7 @@ class Navigation extends React.Component {
       <React.Fragment>
         <Scrivito.BackgroundImageTag
           tag="section"
-          className="dark-blue"
+          className={topSectionClassNames.join(" ")}
           style={topSectionStyle}
         >
           <BackgroundVideo videoUrl={videoUrl} />

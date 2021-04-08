@@ -40,7 +40,6 @@ Scrivito.provideEditingConfig("NewsPost", {
       
       new SectionWidget({
         useFullHeight: "yes",
-        backgroundGradientImage: "mid-blue",
         content: [
           new ColumnContainerWidget({
             alignment: "stretch",
@@ -49,7 +48,6 @@ Scrivito.provideEditingConfig("NewsPost", {
                 colSize: 4,
                 content: [
                   new BoxWidget({
-                    backgroundGradientImage: "dark-blue",
                     useOffset: "yes",
                     body: [
                       new ExtendedFactWidget ({title: "01"})
@@ -61,7 +59,6 @@ Scrivito.provideEditingConfig("NewsPost", {
                 colSize: 4,
                 content: [
                   new BoxWidget({
-                    backgroundGradientImage: "dark-blue",
                     useOffset: "yes",
                     body: [
                       new ExtendedFactWidget ({title: "02"})
@@ -73,7 +70,6 @@ Scrivito.provideEditingConfig("NewsPost", {
                 colSize: 4,
                 content: [
                   new BoxWidget({
-                    backgroundGradientImage: "dark-blue",
                     useOffset: "yes",
                     body: [
                       new ExtendedFactWidget ({title: "03"})
