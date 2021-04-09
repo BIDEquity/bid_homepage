@@ -43,6 +43,14 @@ Scrivito.provideEditingConfig("SectionWidget", {
         { value: "no", title: "No" },
       ],
     },
+    contentSteps: {
+      title: "Content steps?",
+      description: "Is this a section with content steps. Default: No",
+      values: [
+        { value: "yes", title: "Yes" },
+        { value: "no", title: "No" },
+      ],
+    },
     backgroundImage: {
       title: "Background image",
     },
@@ -53,11 +61,13 @@ Scrivito.provideEditingConfig("SectionWidget", {
     "useFullWidth",
     "useFullHeight",
     "showPadding",
+    "contentSteps"
   ],
   initialContent: {
     backgroundColor: "brand-secondary",
     showPadding: "yes",
     useFullHeight: "no",
     useFullWidth: "no",
+    contentSteps: "no"
   },
 });

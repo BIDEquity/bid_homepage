@@ -1,6 +1,6 @@
 import * as Scrivito from "scrivito";
 
-const BidPortfolioTeaserWidget = Scrivito.provideWidgetClass("BidPortfolioTeaserWidget", {
+const BidCardTeaserWidget = Scrivito.provideWidgetClass("BidCardTeaserWidget", {
   attributes: {
     content: "widgetlist",
     float: ['enum', { values: ['left', 'right'] }]
@@ -8,4 +8,4 @@ const BidPortfolioTeaserWidget = Scrivito.provideWidgetClass("BidPortfolioTeaser
   extractTextAttributes: ["content"],
 });
 
-export default BidPortfolioTeaserWidget;
+export default BidCardTeaserWidget;

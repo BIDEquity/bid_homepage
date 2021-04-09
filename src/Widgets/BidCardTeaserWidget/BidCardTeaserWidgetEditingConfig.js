@@ -4,8 +4,8 @@ import HeadlineWidget from "../HeadlineWidget/HeadlineWidgetClass";
 import TextWidget from "../TextWidget/TextWidgetClass";
 import ImageWidget from "../ImageWidget/ImageWidgetClass";
 
-Scrivito.provideEditingConfig("BidPortfolioTeaserWidget", {
-  title: "Bid Portfolio Teaser",
+Scrivito.provideEditingConfig("BidCardTeaserWidget", {
+  title: "Bid Card Teaser",
   attributes: {
     attribute: {
       title: 'Float',

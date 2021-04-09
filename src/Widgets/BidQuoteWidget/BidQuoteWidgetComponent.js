@@ -1,42 +1,35 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 
-import "./BidQuoteWidget.scss";
-
-
-Scrivito.provideComponent("BidQuoteWidget", ({ widget }) =>  {
-
-  const classNames = [];
-  if (widget.get("showDividingLine") === "yes") {
-    classNames.push("b-bottom");
-  }
-
+Scrivito.provideComponent("BidQuoteWidget", ({ widget }) => {
   return (
-  <div className={classNames.join(" ")}>
-    <div className="prefix">“</div>
-    <Scrivito.ContentTag
-    tag="h2"  
-    className="quote"
-    content={widget}
-    attribute="quote"
-    />
-    <Scrivito.ContentTag
-    className="quote-name"
-    content={widget}
-    attribute="name"
-    />
-    <Scrivito.ContentTag
-    className="quote-position"
-    content={widget}
-    attribute="position"
-    />
-    <Scrivito.ContentTag
-    className="quote-company"
-    content={widget}
-    attribute="company"
-  />
-    
+    <div className="testimonials_section">
+    <div className="testimonial_item">
+      <div className="testimonial_item_text">
+        <Scrivito.ContentTag tag="p" content={widget} attribute="quote" />
+      </div>
+      <div className="testimonial_item_bottom">
+        <Scrivito.ContentTag
+          className="testimonial_item_name"
+          content={widget}
+          attribute="name"
+          tag="p"
+        />
+        <p className="testimonial_item_position">
+          <Scrivito.ContentTag
+            content={widget}
+            attribute="position"
+            tag="span"
+          />
+          <span>, </span>
+          <Scrivito.ContentTag
+            content={widget}
+            attribute="company"
+            tag="span"
+          />
+        </p>
+      </div>
+      </div>
     </div>
-  )
-}
-);
+  );
+});

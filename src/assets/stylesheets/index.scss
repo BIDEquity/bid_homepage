@@ -98,7 +98,7 @@ body {
   font-size: 16px;
   line-height: 1.5em;
   color: $theme-greymiddle;
-  background: transparent;
+  background: $secondary;
 }
 
 .container {
@@ -593,14 +593,7 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
 }
 
 /* content adaptions */
-
-.bg-dark-image,
-.bg-brand-primary,
-.bg-brand-secondary,
-.bg-grey,
-.bg-greydark,
-.bg-greymiddle {
-  p,
+  h1
   h2,
   h3,
   h4,
@@ -611,10 +604,20 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
   .h3,
   .h4,
   .h5,
-  .h6,
+  .h6 {
+    color: $primary;
+  }
+
+.bg-dark-image,
+.bg-brand-primary,
+.bg-brand-secondary,
+.bg-grey,
+.bg-greydark,
+.bg-greymiddle {
+  p,
   .card.card-theme,
   .edit-mode-link {
-    color: #000 !important;
+    color: #000;
   }
 }
 
@@ -642,7 +645,7 @@ footer {
     ul li span,
     address,
     address a {
-      color: #000 !important;
+      color: #000;
     }
   }
 }
@@ -650,7 +653,7 @@ footer {
 .bg-brand-primary,
 .bg-brand-secondary {
   .fa {
-    color: #000 !important;
+    color: #000;
   }
 }
 

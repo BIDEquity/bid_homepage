@@ -18,6 +18,7 @@ function Footer() {
       <Scrivito.ContentTag
         content={root}
         attribute="footer"
+        className="footer"
         tag="footer"
         id="footer"
       />

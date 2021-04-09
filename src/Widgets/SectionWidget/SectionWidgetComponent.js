@@ -5,15 +5,13 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
   const sectionClassNames = [];
   const sectionStyle = {};
 
-  let backgroundColor = widget.get("backgroundColor") || "white";
+  let backgroundColor = widget.get("backgroundColor") || "";
 
   const backgroundImage = widget.get("backgroundImage");
   if (backgroundImage) {
     backgroundColor = "dark-image";
     sectionStyle.background = [
-      {
-        image: "linear-gradient(rgba(46, 53, 60, 0.7), rgba(46, 53, 60, 0.7))",
-      },
+      
       { image: backgroundImage },
     ];
   }
@@ -23,8 +21,12 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
   if (widget.get("showPadding") === "no") {
     sectionClassNames.push("no-padding");
   }
+
+  if (widget.get("contentSteps") === "yes") {
+    sectionClassNames.push("content_steps");
+  }
   
-  let contentClassName = "content_steps";
+  let contentClassName = "";
   if (widget.get("useFullWidth") === "yes") {
     contentClassName = "container-fluid gutter0";
   }
@@ -36,7 +38,7 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
   return (
     <Scrivito.BackgroundImageTag
       tag="div"
-      className="content_steps"
+      className={sectionClassNames.join(" ")}
       style={sectionStyle}
     >
       <Scrivito.ContentTag
