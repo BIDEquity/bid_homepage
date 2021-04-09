@@ -2,10 +2,11 @@ import * as Scrivito from "scrivito";
 
 const BidCardTeaserWidget = Scrivito.provideWidgetClass("BidCardTeaserWidget", {
   attributes: {
-    content: "widgetlist",
-    float: ['enum', { values: ['left', 'right'] }]
+    image: "reference",
+    description: "string",
+    content: "widgetlist"
   },
-  extractTextAttributes: ["content"],
+  extractTextAttributes: ["description"],
 });
 
 export default BidCardTeaserWidget;

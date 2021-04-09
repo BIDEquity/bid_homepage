@@ -866,35 +866,29 @@ body {
 }
 
 .post_item {
-    display: flex;
-    flex-direction: column;
-    width: calc(25% - 24px);
     margin: 0 12px 24px;
     background-color: #3A4248;
     border-radius: 0 0 6px 6px;
     overflow: hidden;
+    max-width: 100%;
 }
 
 .post_item_info {
     padding: 40px 30px 45px;
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .post_item_text {
-    flex: 1 0 auto;
     padding-bottom: 30px;
-
+    width: 100%;
     p {
-        color: #F7EDE1;
+        color: #F7EDE1 !important;
         font-size: 18px;
         line-height: 24px;
+        max-width: 100%;
     }
 }
 
-.post_item_more {
+.post_item_more .btn-clear {
     text-decoration: none;
     color: #FF5650;
     font-weight: 700;

@@ -6,27 +6,12 @@ import ImageWidget from "../ImageWidget/ImageWidgetClass";
 
 Scrivito.provideEditingConfig("BidCardTeaserWidget", {
   title: "Bid Card Teaser",
-  attributes: {
-    attribute: {
-      title: 'Float',
-      description: 'Float of the block. Default: left',
-      values: [
-        { value: "left", title: "Left" },
-        { value: "right", title: "Right" },
-      ],
   
-    },
-  },
-  properties: ['float'],
+  properties: ['image', 'description', 'content'],
   initialContent: {
-    float: "left",
     content: [
-      new ImageWidget({}),
-      new HeadlineWidget({}),
-      new TextWidget({}),
-      
       new ButtonWidget({
-        style: "btn-primary",
+        style: "post_item_more",
         alignment: "center" 
       })
     ]
