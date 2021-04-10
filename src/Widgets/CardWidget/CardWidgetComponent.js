@@ -1,9 +1,9 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 
-Scrivito.provideComponent("CardWidget", ({ widget }) => {
-  return (
-    <div className="post_item">
+Scrivito.provideComponent("CardWidget", ({ widget }) => (
+  <Scrivito.WidgetTag className="post_item" tag="div">
+    
       <Scrivito.ImageTag
         content={widget}
         attribute="image"
@@ -16,10 +16,12 @@ Scrivito.provideComponent("CardWidget", ({ widget }) => {
             attribute="description"
             tag="p"
           />
-        </div>
-          <Scrivito.ContentTag content={widget} attribute="content" className="post_item_more" />
-        
       </div>
-    </div>
-  );
-});
+      <Scrivito.WidgetTag className="post_item_more" tag="div">
+          <Scrivito.ContentTag content={widget} attribute="content" />
+        </Scrivito.WidgetTag>
+      </div>
+    
+    </Scrivito.WidgetTag>
+  )
+)
