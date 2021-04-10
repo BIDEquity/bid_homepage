@@ -1187,6 +1187,13 @@ img.cookie-img {
   }
 }
 
+.card-deck {
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
 /* RESPONSIVE
 ================================================== */
 
