@@ -10,7 +10,7 @@ function ScrollToNextSectionLink({ heightClassName }) {
       href="#mainContent"
       className="scroll_anchor top_scroll"
     >
-      <img src="./mouse_scroll.svg" alt="" />
+      <img src="images/mouse_scroll.svg" alt="" />
     </a>
   );
 }

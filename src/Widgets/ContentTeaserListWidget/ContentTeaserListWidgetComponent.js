@@ -29,7 +29,7 @@ Scrivito.provideComponent('ContentTeaserListWidget', ({ widget }) => {
           <div className='col-md-9'>
             {item.get('title') && <h2 className='h5 mt-0'><b>{item.get('title')}</b></h2>}
             <Teaser key={item.id()} post={item} />
-            <Scrivito.LinkTag to={item}>Artikel lesen</Scrivito.LinkTag>
+            <Scrivito.LinkTag link={ item } to={item} />
           </div>
 
         </div>

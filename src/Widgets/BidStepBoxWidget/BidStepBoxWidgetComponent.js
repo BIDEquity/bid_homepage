@@ -6,7 +6,7 @@ import "./BidStepBoxWidget.scss";
 Scrivito.provideComponent("BidStepBoxWidget", ({ widget }) => {
   const reverse = widget.get("orientation") === "left";
   const color = widget.get("color");
-
+  const link = widget.get("link")
   return (
     <div className={`content_step_section animate ${color} ${reverse ? "reverse" : ""}`}>
       <div className="content_step_box">
@@ -16,9 +16,10 @@ Scrivito.provideComponent("BidStepBoxWidget", ({ widget }) => {
           tag="h2"
           className="content_step_title bottom_line"
       />
-      <Scrivito.LinkTag className="content_step_link"  to={widget.get("link")}>
-        Lesen
-      </Scrivito.LinkTag>
+        <Scrivito.LinkTag className="content_step_link" to={ link } >
+          {link.get("title")} 
+        </Scrivito.LinkTag>
+        
       </div>
       
       <div className="content_step_info">
@@ -40,18 +41,4 @@ Scrivito.provideComponent("BidStepBoxWidget", ({ widget }) => {
       </div>
     </div>
   );
-});
-
-const LinkTitle = Scrivito.connect(({ link }) => {
-  if (link.title() === null)
-    return;
-  if (link.title()) {
-    return link.title();
-  }
-
-  if (link.isInternal()) {
-    return link.obj().get("title");
-  }
-
-  return link.url();
 });
