@@ -8,7 +8,7 @@ Scrivito.provideComponent("BidStepBoxWidget", ({ widget }) => {
   const color = widget.get("color");
   const link = widget.get("link")
   return (
-    <div className={`content_step_section animate ${color} ${reverse ? "reverse" : ""}`}>
+    <div className={`content_step_section ${color} ${reverse ? "reverse" : ""}`}>
       <div className="content_step_box">
       <Scrivito.ContentTag
         content={widget}

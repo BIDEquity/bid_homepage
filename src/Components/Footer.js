@@ -74,7 +74,7 @@ function Footer() {
                       target="_blank"
                     >
                       <i
-                        class="fa fa-twitter "
+                        className="fa fa-twitter "
                         aria-hidden="true"
                         title="Twitter"
                       ></i>
@@ -85,7 +85,7 @@ function Footer() {
                       target="_blank"
                     >
                       <i
-                        class="fa fa-facebook "
+                        className="fa fa-facebook "
                         aria-hidden="true"
                         title="Facebook"
                       ></i>
@@ -96,7 +96,7 @@ function Footer() {
                       target="_blank"
                     >
                       <i
-                        class="fa fa-linkedin "
+                        className="fa fa-linkedin "
                         aria-hidden="true"
                         title="Linkedin"
                       ></i>

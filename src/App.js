@@ -11,10 +11,63 @@ import NotFoundErrorPage from "./Components/NotFoundErrorPage";
 import CookieConsentBanner from "./Components/CookieConsentBanner";
 import Tracking from "./Components/Tracking";
 import { CookieConsentProvider } from "./Components/CookieConsentContext";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
+
 
 export const helmetContext = {};
 
 export default function App() {
+  React.useEffect(() => {
+    AOS.init();
+    
+  })
+
+  function offsetTop(el) {
+    var rect = el.getBoundingClientRect(),
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop }
+}
+
+  /* Step content animation */
+  const b = document.querySelector('body');
+  window.addEventListener('scroll', event => {
+    if (typeof b.dataset.scrollval === 'undefined') {
+      b.dataset.scrollval = 0;
+    }
+
+    let fromTop = window.scrollY;
+    let offset = 400;
+    console.log("fromTop",fromTop)
+    
+    const steps = document.getElementsByClassName('content_step_section')
+   
+    for (let i = 0; i < steps.length; i++) {
+      let elOffset = offsetTop(steps[i]);
+      console.log("elTop",elOffset.top)
+      if (elOffset.top - offset <= fromTop && elOffset.top - offset + steps[i].offsetHeight > fromTop) {
+        steps[i].classList.add('animate');
+        if (window.scrollY > b.dataset.scrollval) {
+          steps[i].classList.add('animation_reverse');
+        }
+        else if (window.scrollY < b.dataset.scrollval) {
+          steps[i].classList.remove('animation_reverse');
+        }
+      }
+      else {
+        steps[i].classList.remove('animate');
+        // setTimeout(function() {
+        //     section.classList.remove('animation_reverse');
+        // }, 2200)
+      }
+    }
+  
+
+    b.dataset.scrollval = window.scrollY;
+  })
+  
   return (
     <ErrorBoundary>
       <CookieConsentProvider>
