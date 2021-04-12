@@ -39,7 +39,7 @@ export default function App() {
     }
 
     let fromTop = window.scrollY;
-    let offset = 400;
+    let offset = 550;
     console.log("fromTop",fromTop)
     
     const steps = document.getElementsByClassName('content_step_section')
