@@ -35,7 +35,6 @@ Scrivito.provideComponent("BidStepBoxWidget", ({ widget }) => {
         className="content_step_text"
         content={widget}
           attribute="text"
-          tag="p"
           />
         </div>
       </div>
