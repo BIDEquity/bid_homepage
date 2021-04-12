@@ -40,13 +40,12 @@ export default function App() {
 
     let fromTop = window.scrollY;
     let offset = 370;
-    console.log("fromTop",fromTop)
     
     const steps = document.getElementsByClassName('content_step_section')
    
     for (let i = 0; i < steps.length; i++) {
       let elOffset = offsetTop(steps[i]);
-      console.log("elTop",elOffset.top)
+      
       if (elOffset.top - offset <= fromTop && elOffset.top - offset + steps[i].offsetHeight > fromTop) {
         steps[i].classList.add('animate');
         if (window.scrollY > b.dataset.scrollval) {
