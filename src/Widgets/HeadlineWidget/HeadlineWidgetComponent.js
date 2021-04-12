@@ -11,7 +11,7 @@ Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
     classNames.push(`text-${widget.get("alignment")}`);
   }
   if (widget.get("showDividingLine") === "yes") {
-    classNames.push("top_title", "bottom_line");
+    classNames.push("top_title", "bottom_line", "aos-init", "aos-animate", "hidden");
   }
   
 
@@ -31,6 +31,7 @@ Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
         id={kebabCase(widget.get("headline"))}
       ></span>
       <Scrivito.ContentTag
+        data-aos="animation"
         tag={level}
         content={widget}
         attribute="headline"
