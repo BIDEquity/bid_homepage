@@ -11,7 +11,7 @@ Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
     classNames.push(`text-${widget.get("alignment")}`);
   }
   if (widget.get("showDividingLine") === "yes") {
-    classNames.push("top_title", "bottom_line", "aos-init", "aos-animate", "hidden");
+    classNames.push("top_title", "bottom_line", "aos-init", "aos-animate");
   }
   
 

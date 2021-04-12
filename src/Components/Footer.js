@@ -15,7 +15,7 @@ function Footer() {
         <div className="footer_inner">
           <div className="footer_left">
             <a className="footer_logo" href="/">
-              <img src="assets/logo.svg" alt="" />
+              <img src="/src/assets/images/logo.svg" alt="" />
             </a>
             <p className="footer_cop bottom_line">
               © 2021 Bid Equity Gmbh. All rights reserved.
