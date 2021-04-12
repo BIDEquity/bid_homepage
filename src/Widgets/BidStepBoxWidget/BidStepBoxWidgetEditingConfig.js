@@ -20,7 +20,7 @@ Scrivito.provideEditingConfig("BidStepBoxWidget", {
       ]
     },
   },
-  properties: ["orientation", "color", "link", "image"],
+  properties: ["orientation", "color", "text", "link", "image"],
   initialContent: {
     headline: "Lorem Ipsum",
     orientation: "right",
