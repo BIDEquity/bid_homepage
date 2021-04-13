@@ -66,6 +66,7 @@ class FullNavigation extends React.Component {
               />
             </div>
           </Collapse>
+          <a className="header_login btn_login btn_secondary" href="#">Login</a>
           <LanguageSwitch />
         </div>
       </nav>

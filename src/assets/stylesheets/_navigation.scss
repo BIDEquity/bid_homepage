@@ -6,10 +6,6 @@
 
 /* .bg-dark-image .navbar-brand { background: $logo-white no-repeat center center / contain; } */
 .bg-dark-image {
-  .nav > li > a {
-    color: #fff !important;
-  }
-
   .navbar-toggler .icon-bar {
     background: #fff;
   }
@@ -24,15 +20,7 @@
   
 
   &.bg-dark-image {
-    .navbar-nav > {
-      li > a {
-        color: #fff !important;
-      }
-
-      li.active > a {
-        color: #fff !important;
-      }
-    }
+    
 
     .nav > li {
       &.active > a,
@@ -53,7 +41,7 @@
 
   &.navbar-right {
     margin-left: auto;
-    margin-right: 45px;
+    margin-right: 0;
   }
 
   > li,
@@ -99,52 +87,26 @@
       padding: 10px;
       font-size: 14px;
 
-      &:before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 20px;
-        position: absolute;
-        top: -20px;
-        left: 0;
-        right: 0;
-      }
-
-      &:after {
-        bottom: 100%;
-        left: 50%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border-color: rgba(255, 255, 255, 0);
-        border-bottom-color: #fff;
-        border-width: 10px;
-        margin-left: -10px;
-      }
+      
     }
   }
 
   .dropdown-menu > li {
     > a {
-      color: $theme-grey;
+      color: #f7ede1;
       padding: 5px 10px !important;
       text-align: center;
 
       &:hover,
       &:focus {
-        background: $nav-hover;
-        color: #fff;
+        color: #f7ede1;
       }
     }
 
     &.active > {
       a:hover,
       a:focus {
-        background: $primary;
-        color: #fff;
+        color: $primary;
       }
     }
   }
@@ -178,13 +140,14 @@
   }
 
   &-nav > li > a {
-    height: 75px;
-    position: relative;
-    padding: 25px 15px !important;
-    text-transform: uppercase;
-    font-weight: 600;
+    margin: 0 0 0 20px;
+    padding: 0 !important;
+    text-decoration: none;
+    color: #f7ede1 !important;
     font-size: 14px;
-    color: #fff;
+    line-height: 20px;
+    letter-spacing: .3px;
+    transition: all .3s;
     display: inline-block;
   }
 
@@ -634,14 +597,13 @@
       border: 1px solid $primary;
     }
 
-    .nav-link {
+    /*.nav-link {
       background: #fff;
       border-radius: 0;
       padding: 10px 15px;
       color: $theme-greydark;
-      border: 1px solid $theme-greylight;
-      text-transform: uppercase;
-    }
+      border: 1px solid $theme-greylight
+    }*/
   }
 
   select {

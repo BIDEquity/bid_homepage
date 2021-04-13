@@ -8,6 +8,97 @@
 
 /* react-slick
 ================================================== */
+@font-face {
+  font-family: "Swiss721 BT";
+  src: url("../fonts/Swiss721BT-Regular.eot");
+  src: url("../fonts/Swiss721BT-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Swiss721BT-Regular.woff2") format("woff2"),
+    url("../fonts/Swiss721BT-Regular.woff") format("woff"),
+    url("../fonts/Swiss721BT-Regular.ttf") format("truetype"),
+    url("../fonts/Swiss721BT-Regular.svg#Swiss721BT-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Swiss721 BT";
+  src: url("../fonts/Swiss721BT-Bold.eot");
+  src: url("../fonts/Swiss721BT-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Swiss721BT-Bold.woff2") format("woff2"),
+    url("../fonts/Swiss721BT-Bold.woff") format("woff"),
+    url("../fonts/Swiss721BT-Bold.ttf") format("truetype"),
+    url("../fonts/Swiss721BT-Bold.svg#Swiss721BT-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Swiss721 BT";
+  src: url("../fonts/Swiss721BT-Light.eot");
+  src: url("../fonts/Swiss721BT-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Swiss721BT-Light.woff2") format("woff2"),
+    url("../fonts/Swiss721BT-Light.woff") format("woff"),
+    url("../fonts/Swiss721BT-Light.ttf") format("truetype"),
+    url("../fonts/Swiss721BT-Light.svg#Swiss721BT-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url("../fonts/AGaramondPro-Italic.eot");
+  src: url("../fonts/AGaramondPro-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/AGaramondPro-Italic.woff2") format("woff2"),
+    url("../fonts/AGaramondPro-Italic.woff") format("woff"),
+    url("../fonts/AGaramondPro-Italic.ttf") format("truetype"),
+    url("../fonts/AGaramondPro-Italic.svg#AGaramondPro-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.eot");
+  src: url("../fonts/Georgia.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Georgia.woff2") format("woff2"),
+    url("../fonts/Georgia.woff") format("woff"),
+    url("../fonts/Georgia.ttf") format("truetype"),
+    url("../fonts/Georgia.svg#Georgia") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url("../fonts/AGaramondPro-Italic.eot");
+  src: url("../fonts/AGaramondPro-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/AGaramondPro-Italic.woff2") format("woff2"),
+    url("../fonts/AGaramondPro-Italic.woff") format("woff"),
+    url("../fonts/AGaramondPro-Italic.ttf") format("truetype"),
+    url("../fonts/AGaramondPro-Italic.svg#AGaramondPro-Italic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "bebas-neue-pro-semiexpanded";
+  src: url("https://use.typekit.net/af/07ca09/00000000000000007735c8ba/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3")
+      format("woff2"),
+    url("https://use.typekit.net/af/07ca09/00000000000000007735c8ba/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3")
+      format("woff"),
+    url("https://use.typekit.net/af/07ca09/00000000000000007735c8ba/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3")
+      format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 600;
+}
+
+$base-font: "Swiss721 BT", sans-serif;
+$secondary-font: "bebas-neue-pro-semiexpanded", sans-serif;
+$italic-font: "Adobe Garamond Pro", sans-serif;
+
 
 $slick-loader-path: "~slick-carousel/slick/";
 $slick-font-path: "~slick-carousel/slick/fonts/";
@@ -98,11 +189,6 @@ html {
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.5em;
-  color: $theme-greymiddle;
   background: $secondary;
 }
 
@@ -133,6 +219,7 @@ a:hover,
 a:active,
 a:focus {
   outline: none !important;
+  color: $primary;
 }
 button:focus {
   outline: none !important;
@@ -150,27 +237,6 @@ p {
   margin: 0 0 25px 0;
 }
 
-
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: "PT Sans Narrow", sans-serif;
-  font-weight: 400;
-  color: $theme-greydark;
-  margin: 0 0 15px 0;
-  padding: 0;
-  line-height: 1.5;
-}
-
-
 h2,
 .h2 {
   font-size: 42px;
@@ -183,15 +249,12 @@ h3,
 }
 h4,
 .h4 {
-  font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   font-size: 22px;
   line-height: 30px;
-  color: $theme-greymiddle;
 }
 h5,
 .h5 {
-  font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
 }
 h6,
@@ -314,7 +377,6 @@ small,
 }
 
 .hero-bold {
-  font-family: "Source Sans Pro", sans-serif;
   font-weight: 700;
   font-size: 180px;
   text-transform: uppercase;
@@ -326,7 +388,6 @@ small,
   color: $secondary !important;
 }
 .hero-small {
-  font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   font-size: 30px;
   line-height: 1;
@@ -355,7 +416,6 @@ small,
   border-radius: 0;
   font-size: 16px;
   font-weight: 700;
-  text-transform: uppercase;
   vertical-align: middle;
   padding: 13px 20px 10px;
   margin: 0 0 10px 0;
@@ -727,7 +787,6 @@ section.navbar-fixed {
   line-height: 62px;
   border: 10px solid #fff;
   display: block;
-  font-family: "PT Sans Narrow", sans-serif;
   font-weight: 700;
   text-align: center;
   background: $secondary;
@@ -867,7 +926,6 @@ _:-ms-fullscreen,
   border-radius: 50%;
   line-height: 60px;
   text-align: center;
-  font-family: "PT Sans Narrow", sans-serif;
   font-weight: 600;
 }
 .box-card .box-image {
@@ -1235,9 +1293,8 @@ nav .open .dropdown-menu.lang-switch a {
 .lang-switch {
   cursor: pointer;
   //float: left;
-  height: 80px;
   padding-top: 2px;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   @media (max-width: 1269px) {
   position: absolute !important;
