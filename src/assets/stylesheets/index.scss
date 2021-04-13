@@ -1206,3 +1206,60 @@ img.cookie-img {
 @media (max-width: $screen-xs-max) {
   
 }
+
+@media (max-width: 736px) {
+  .dropdown-menu.show-language {
+      margin-top: 40px !important;
+      position: absolute;
+      left: 50% !important;
+      transform: translate(-50%) !important;
+  }
+}
+
+nav .open .dropdown-menu.show-language {
+  box-shadow: none;
+  padding: 0;
+  position: absolute !important;
+  a {
+      border-top: 0 !important;
+      font-size: 16px !important;
+      padding: 20px !important;
+      border-bottom: 1px solid #ddd;
+  }
+}
+
+nav .open .dropdown-menu.lang-switch a {
+  border-top: none !important;
+}
+
+.lang-switch {
+  cursor: pointer;
+  //float: left;
+  height: 80px;
+  padding-top: 2px;
+  font-size: 16px;
+  color: #fff;
+  @media (max-width: 1269px) {
+  position: absolute !important;
+  top: 22px;
+  left: 50% !important;
+  transform: translate(-50%) !important;
+  }
+}
+
+.lang-switch a {
+
+  text-transform: uppercase;
+  &:hover {
+      color: $primary;
+  }
+}
+
+.hide-language {
+  display: none;
+}
+
+.show-language {
+  display: block;
+}
+

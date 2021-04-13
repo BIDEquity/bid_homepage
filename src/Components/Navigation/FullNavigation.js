@@ -3,7 +3,7 @@ import Collapse from "reactstrap/lib/Collapse";
 import CollapseToggle from "./CollapseToggle";
 import Logo from "./Logo";
 import Nav from "./Nav";
-import { SearchBox, SearchIcon } from "./Search";
+import LanguageSwitch from './LanguageSwitch';
 
 class FullNavigation extends React.Component {
   constructor(props) {
@@ -45,25 +45,28 @@ class FullNavigation extends React.Component {
     return (
       <nav className={classNames.join(" ")}>
         <div className="container">
-          <SearchBox toggleSearch={toggleSearch} showSearch={showSearch} />
 
           <div className="navbar-header">
+
             <CollapseToggle
               expanded={this.state.expanded}
               toggleExpanded={this.toggleExpanded}
             />
             <Logo scrolled={scrolled} navigationStyle={navigationStyle} />
-            <SearchIcon toggleSearch={toggleSearch} />
+            
+
           </div>
 
           <Collapse isOpen={this.state.expanded} navbar>
             <div className="navbar-collapse">
+
               <Nav
                 closeExpanded={this.closeExpanded}
                 expanded={this.state.expanded}
               />
             </div>
           </Collapse>
+          <LanguageSwitch />
         </div>
       </nav>
     );

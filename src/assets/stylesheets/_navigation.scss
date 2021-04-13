@@ -303,6 +303,7 @@
 
   > .dropdown-menu {
     display: block;
+    z-index: 10000;
   }
 }
 
@@ -555,6 +556,7 @@
   .open > .dropdown-menu {
     display: block !important;
     z-index: 1000 !important;
+    border: 1px solid #fff;
   }
 
   /* menu toggle */
