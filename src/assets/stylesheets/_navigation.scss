@@ -25,7 +25,7 @@
     .nav > li {
       &.active > a,
       &.open > a {
-        color: #fff !important;
+        color: $primary !important;
       }
     }
 
@@ -54,6 +54,7 @@
     &:hover > a,
     &:focus > a {
       background: transparent;
+      color: $primary !important;
     }
 
     &.open > {
@@ -99,7 +100,7 @@
 
       &:hover,
       &:focus {
-        color: #f7ede1;
+        color: $primary !important;
       }
     }
 
@@ -144,10 +145,11 @@
     padding: 0 !important;
     text-decoration: none;
     color: #f7ede1 !important;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: .3px;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    letter-spacing: .3px !important;
     transition: all .3s;
+    font-weight: 700 !important;
     display: inline-block;
   }
 
@@ -484,7 +486,7 @@
         &:hover,
         &:focus {
           background: #bbb !important;
-          color: #fff !important;
+          color: $primary !important;
           border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
       }
@@ -512,7 +514,7 @@
   .bg-dark-image .nav > li {
     &.active > a,
     &.open > a {
-      color: #fff !important;
+      color: $primary !important;
     }
   }
 

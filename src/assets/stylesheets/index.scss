@@ -219,7 +219,7 @@ a:hover,
 a:active,
 a:focus {
   outline: none !important;
-  color: $primary;
+  color: $primary !important;
 }
 button:focus {
   outline: none !important;
