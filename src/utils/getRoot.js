@@ -5,7 +5,6 @@ function getRoot() {
   if (!currentPage) { return; }
 
   const path = currentPage.siteId();
-  console.log(path)
   
   return Scrivito.Obj.getByPath(path);
 }

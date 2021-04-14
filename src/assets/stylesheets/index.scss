@@ -729,6 +729,7 @@ footer {
 .medium-height .container,
 .full-height .container {
   margin: auto !important;
+  padding-bottom: 80px;
 }
 .medium-height,
 .height-center {
@@ -1280,9 +1281,6 @@ nav .open .dropdown-menu.show-language {
   position: absolute !important;
   a {
       border-top: 0 !important;
-      font-size: 16px !important;
-      padding: 20px !important;
-      border-bottom: 1px solid #ddd;
   }
 }
 
@@ -1317,6 +1315,14 @@ nav .open .dropdown-menu.lang-switch a {
 }
 
 .show-language {
+  transition: all ease .5s;
   display: block;
+  a {
+    color: #fff !important;
+    margin: 0 !important;
+  }
+  .nav-link {
+    margin: 0 !important;
+  }
 }
 

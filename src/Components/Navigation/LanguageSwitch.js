@@ -26,27 +26,27 @@ class LanguageSwitch extends React.Component {
   }
 
   render() {
-    const homepages = [...Scrivito.getClass('Homepage').all().toArray()];
-    
+    const homepages = Scrivito.getClass('Homepage').all().toArray();
+    console.log(homepages)
   
     return (
       <ul className="nav navbar-nav navbar-right lang-switch">
-        <li className={`nav-item ${this.state.language ? '' : ''}`}>
+        <li className={`nav-item ${this.state.language ? 'open' : ''}`}>
           <a className="nav-link" onMouseEnter={this.toggleLanguage} onClick={this.toggleLanguage}>{
             getRoot() === 'de' ? 'DE' : 'EN'
           }</a>
 
 
 
-          <ul onMouseLeave={this.toggleLanguage} className={`dropdown-menu ${this.state.language ? 'hide-language' : 'hide-language'}`}>
+          <ul onMouseLeave={this.toggleLanguage} className={`dropdown-menu ${this.state.language ? 'show-language' : 'hide-language'}`}>
             {homepages.map(homepage =>
               <li className="nav-item" key={homepage.id()}>
                 <Scrivito.LinkTag onClick={this.toggleLanguage} to={homepage} className="nav-link">
-
+               
                   {
-                    homepage === 'de' ? 'DE'
-                      : homepage.siteId() === 'en' ? 'EN'
-                        : nulL
+                    homepage.id() === '73135f17d58607f8' ? 'EN'
+                      :  'DE'
+                        
                   }
                 </Scrivito.LinkTag>
               </li>
