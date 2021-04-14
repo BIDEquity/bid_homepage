@@ -257,7 +257,7 @@ h6,
         width: 0;
     }
     to {
-        width: 100vw
+        width: 2000px
     }
 }
 
@@ -568,7 +568,7 @@ h6,
     display: block;
     width: 100%;
     height: 100%;
-    opacity: 0.51;
+    opacity: 0;
     background: linear-gradient(
       180deg,
       rgba(3, 3, 3, 1) 0%,
@@ -602,9 +602,9 @@ h6,
 .top_title {
   margin: 135px 0 0 auto;
   padding-bottom: 30px;
-  width: 73.75%;
+  width: 75%;
   color: #ff5650;
-  font: 64px/1 $secondary-font;
+  font: 64px/1 $secondary-font !important;
   text-transform: uppercase;
 }
 
@@ -899,8 +899,10 @@ h6,
 
   p {
     color: #f7ede1 !important;
+    font-family: $base-font !important;
     font-size: 18px;
     line-height: 24px;
+    margin: 0;
   }
 }
 
