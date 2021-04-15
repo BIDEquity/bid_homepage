@@ -5,7 +5,7 @@ const BidStepBoxWidget = Scrivito.provideWidgetClass("BidStepBoxWidget", {
     headline: "string",
     link: "reference",
     text: "html",
-    image: "reference",
+    image: ["reference", {only: "Image"}],
     orientation: ['enum', { values: ['left', 'right'] }],
     color: ['enum', { values: ['red', 'blue'] }],
     stepNumber: "string"
