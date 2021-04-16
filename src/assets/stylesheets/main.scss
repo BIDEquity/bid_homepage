@@ -109,10 +109,6 @@ body {
     font: 14px $base-font !important;
 }
 
-.container {
-  padding-left: 100px !important;
-}
-
 .bid_container {
   max-width: 1354px;
   margin: 0 auto !important;
@@ -605,10 +601,11 @@ h6,
   margin: 135px 0 0 auto;
   padding-bottom: 30px;
   width: 75%;
+  max-width: 75%;
   color: #ff5650;
   font: 64px/1 $secondary-font !important;
   text-transform: uppercase;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .top_scroll {
@@ -914,22 +911,22 @@ h6,
   }
 }
 
+
 .btn_login {
     position: relative;
     display: inline-block;
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #ff5650;
-    padding: 19px 48px;
     text-align: center;
     text-decoration: none;
-    color: $primary;
+    color: $primary !important;
     font-family: $base-font;
     letter-spacing: -.008em;
     transition: all .3s;
     &:hover {
         text-decoration: none;
-        border: 2px solid #fff;
+        border: 2px solid #fff !important;
         color: #fff !important;
     }
 }

@@ -190,13 +190,18 @@ html {
 
 body {
   background: $secondary;
+  overflow-x: hidden;
 }
 
 .container {
   position: relative;
-  overflow: hidden;
   margin: 0 auto;
-  padding: 0 64px;
+  padding: 0 64px 0 64px;
+  width: 1354px;
+}
+
+.navbar-fixed .container {
+  padding: 0;
 }
 
 .container,
@@ -1266,15 +1271,6 @@ img.cookie-img {
   
 }
 
-@media (max-width: 736px) {
-  .dropdown-menu.show-language {
-      margin-top: 40px !important;
-      position: absolute;
-      left: 50% !important;
-      transform: translate(-50%) !important;
-  }
-}
-
 nav .open .dropdown-menu.show-language {
   box-shadow: none;
   padding: 0;
@@ -1294,12 +1290,7 @@ nav .open .dropdown-menu.lang-switch a {
   padding-top: 2px;
   font-size: 14px;
   color: #fff;
-  @media (max-width: 1269px) {
-  position: absolute !important;
-  top: 22px;
-  left: 50% !important;
-  transform: translate(-50%) !important;
-  }
+  
 }
 
 .lang-switch a {
