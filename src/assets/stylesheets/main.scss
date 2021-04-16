@@ -912,7 +912,7 @@ h6,
 }
 
 
-.btn_login {
+.navbar-nav > li > a.btn_login {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -920,7 +920,7 @@ h6,
     border: 2px solid #ff5650;
     text-align: center;
     text-decoration: none;
-    color: $primary !important;
+    color: $primary;
     font-family: $base-font;
     letter-spacing: -.008em;
     transition: all .3s;
@@ -976,7 +976,8 @@ h6,
   transition: all 0.3s;
 
   &:hover {
-    border-bottom-color: transparent;
+    border-bottom: none;
+    text-decoration: none;
   }
 }
 
@@ -1075,7 +1076,7 @@ h6,
     font-family: $base-font;
     letter-spacing: -0.008em;
     transition: all 0.3s;
-  
+    margin-top: 20px;
     &:hover {
       background: #f77b71;
       border-color: #f77b71;
@@ -1121,7 +1122,7 @@ h6,
 
 .footer_box_title {
   color: rgba(255, 255, 255, 0.5);
-  font-weight: 400;
+  font-weight: 700;
   font-size: 18px;
   line-height: 32px;
   letter-spacing: -0.04px;
@@ -1159,10 +1160,8 @@ h6,
 }
 
 .footer_top {
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   margin-bottom: 40px;
-
-  
 }
 
 .footer_title {
