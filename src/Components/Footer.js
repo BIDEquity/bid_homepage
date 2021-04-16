@@ -74,9 +74,20 @@ function Footer() {
                       target="_blank"
                     >
                       <i
-                        className="fa fa-twitter "
+                        className="fa fa-twitter"
                         aria-hidden="true"
                         title="Twitter"
+                      ></i>
+                  </a>
+                  <a
+                      href="https://www.linkedin.com"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      <i
+                        className="fa fa-linkedin-square"
+                        aria-hidden="true"
+                        title="Linkedin"
                       ></i>
                     </a>
                     <a
@@ -85,22 +96,12 @@ function Footer() {
                       target="_blank"
                     >
                       <i
-                        className="fa fa-facebook "
+                        className="fa fa-facebook-square"
                         aria-hidden="true"
                         title="Facebook"
                       ></i>
                     </a>
-                    <a
-                      href="https://www.linkedin.com"
-                      rel="noreferrer"
-                      target="_blank"
-                    >
-                      <i
-                        className="fa fa-linkedin "
-                        aria-hidden="true"
-                        title="Linkedin"
-                      ></i>
-                    </a>
+                    
                 </div>
               </div>
             </div>

@@ -34,7 +34,7 @@ class LanguageSwitch extends React.Component {
         <li className={`nav-item ${this.state.language ? 'open' : ''}`}>
           <a className="nav-link" onMouseEnter={this.toggleLanguage} onClick={this.toggleLanguage}>{
             getRoot() === 'de' ? 'DE' : 'EN'
-          }</a>
+          }<i className="fa fa-chevron-down" /></a>
 
 
 
