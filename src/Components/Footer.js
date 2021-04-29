@@ -23,16 +23,16 @@ function Footer() {
             <div className="footer_box">
               <p className="footer_box_title">Quick Links</p>
               <div className="footer_links">
-                <a href="#">About</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Entrepreneurs</a>
-                <a href="#">Intermediaries</a>
-                <a href="#">Investors</a>
-                <a href="#">News</a>
-                <a href="#">Jobs</a>
-                <a href="#">Contact</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Use</a>
+                <a href="/about">About</a>
+                <a href="/portfolio">Portfolio</a>
+                <a href="/entrepreneurs">Entrepreneurs</a>
+                <a href="/intermediaries">Intermediaries</a>
+                <a href="/investors">Investors</a>
+                <a href="/news">News</a>
+                <a href="/jobs">Jobs</a>
+                <a href="/contact">Contact</a>
+                <a href="/privace-policy">Privacy Policy</a>
+                <a href="/terms-of-use">Terms of Use</a>
               </div>
             </div>
           </div>
@@ -69,7 +69,7 @@ function Footer() {
                 <p className="footer_box_title">Get social with us</p>
                 <div className="footer_soc">
                     <a
-                      href="https://twitter.com/mdwp"
+                      href="https://twitter.com/"
                       rel="noreferrer"
                       target="_blank"
                     >
