@@ -24,7 +24,7 @@ class LanguageSwitch extends React.Component {
       "equals",
       "Homepage"
     ).toArray();
-
+      
     return (
       <ul className="nav navbar-nav navbar-right lang-switch">
         <li className={`nav-item ${this.state.language ? "open" : ""}`}>
@@ -46,6 +46,7 @@ class LanguageSwitch extends React.Component {
             }`}
           >
             {homepages.map((homepage) => (
+              
               <li className="nav-item" key={homepage.id()}>
                 <Scrivito.LinkTag
                   onClick={this.toggleLanguage}
