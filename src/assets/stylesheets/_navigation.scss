@@ -270,8 +270,12 @@
   }
 }
 
+@media screen and (min-width: 1300px){
+  
+
 .navbar-header {
   margin-left: 90px
+}
 }
 
 .navbar-header,
@@ -396,9 +400,9 @@
   .fixed-top,
   .fixed-bottom {
     .navbar-collapse {
-      max-height: calc(100vh - 76px);
+      //height: 100vh;
       width: 100%;
-      overflow-y: auto;
+      //overflow-y: auto;
     }
   }
 
@@ -459,7 +463,6 @@
           width: 100%;
           .nav-link {
             color: #3a4248 !important;
-            font-weight: bold !important;
             //padding-left: 49px !important;
           }
         }
@@ -505,7 +508,7 @@
 
         a {
           border-top: 1px solid #eee;
-          font-size: 17px;
+          //font-size: 17px;
           padding: 13px 20px !important;
         }
       }

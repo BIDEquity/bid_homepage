@@ -914,12 +914,14 @@ h6,
 
 
 .navbar-nav > li > a.btn_login {
-    position: relative;
+@media screen and (min-width: 1024px){
+  text-align: center;
+}    
+position: relative;
     display: inline-block;
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #ff5650;
-    text-align: center;
     text-decoration: none;
     color: $primary;
     font-family: $base-font;

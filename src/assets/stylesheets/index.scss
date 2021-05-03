@@ -1315,6 +1315,13 @@ nav .open .dropdown-menu.lang-switch a {
   .nav-link {
     margin: 0 !important;
   }
+  
+}
+
+@media screen and (max-width:1023px) {
+  nav .open .dropdown-menu.show-language {
+      left: 9px
+    }
 }
 
 .fa-chevron-down {
