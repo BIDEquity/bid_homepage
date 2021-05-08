@@ -5,7 +5,6 @@ import currentPageNavigationOptions from "./Navigation/currentPageNavigationOpti
 import FullNavigation from "./Navigation/FullNavigation";
 import LandingPageNavigation from "./Navigation/LandingPageNavigation";
 import NavigationSection from "./Navigation/NavigationSection";
-import ScrollToNextSectionLink from "./Navigation/ScrollToNextSectionLink";
 import isVideoObj from "../utils/isVideoObj";
 import urlFromBinary from "../utils/urlFromBinary";
 
@@ -168,7 +167,7 @@ class Navigation extends React.Component {
             navigationStyle={navigationStyle}
           />
           <NavigationSection heightClassName={heightClassName} />
-          <ScrollToNextSectionLink heightClassName={heightClassName} />
+          
         </Scrivito.BackgroundImageTag>
         <div id="mainContent" />
       </React.Fragment>

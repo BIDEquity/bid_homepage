@@ -194,10 +194,17 @@ body {
 }
 
 .container {
-  position: relative;
-  margin: 0 auto;
-  padding: 0 64px 0 64px;
   width: 1354px;
+  margin: 0 auto !important;
+  padding: 0 64px !important;
+
+  @media screen and (max-width: 991px) {
+    padding: 0 32px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0 16px;
+  }
 }
 
 .navbar-fixed .container {
@@ -734,7 +741,6 @@ footer {
 .medium-height .container,
 .full-height .container {
   margin: auto !important;
-  padding-bottom: 80px;
 }
 .medium-height,
 .height-center {
@@ -748,7 +754,7 @@ footer {
 
 /* nav section adaptions */
 section.navbar-fixed {
-  padding-top: 80px;
+  //padding-top: 80px;
   overflow: hidden;
 }
 

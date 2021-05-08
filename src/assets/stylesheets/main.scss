@@ -109,8 +109,8 @@ body {
     font: 14px $base-font !important;
 }
 
-.bid_container {
-  max-width: 1354px;
+.container {
+  width: 1354px;
   margin: 0 auto !important;
   padding: 0 64px !important;
 
@@ -577,6 +577,11 @@ h6,
   }
 }
 
+.top_section {
+  position: relative;
+  overflow: hidden;
+}
+
 .top_bg {
   position: absolute;
   top: 0;
@@ -610,10 +615,13 @@ h6,
 
 .top_scroll {
   position: absolute;
-  bottom: 160px;
-  left: 100px;
+  bottom: 130px;
+  left: 0;
   display: block;
-  z-index: 5000;
+
+  @media screen and (max-width: 767px) {
+      display: none;
+  }
 }
 
 .content_steps {
