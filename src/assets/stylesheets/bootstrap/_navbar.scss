@@ -167,10 +167,7 @@
             left: auto; // Reset the default from `.dropdown-menu`
           }
 
-          .nav-link {
-            padding-right: $navbar-nav-link-padding-x;
-            padding-left: $navbar-nav-link-padding-x;
-          }
+          
         }
 
         // For nesting containers, have to redeclare for alignment purposes
