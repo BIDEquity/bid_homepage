@@ -6,6 +6,6 @@ import "./BidCtaTeaser.scss";
 Scrivito.provideComponent("BidCtaTeaser", ({ widget }) => (
   <>
   
-    <Scrivito.ContentTag tag="div" content={widget} attribute="content" />
+    <Scrivito.ContentTag tag="div" className="card--red" content={widget} attribute="content" />
     </>
 ));

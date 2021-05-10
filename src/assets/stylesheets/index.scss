@@ -99,18 +99,17 @@ $base-font: "Swiss721 BT", sans-serif;
 $secondary-font: "bebas-neue-pro-semiexpanded", sans-serif;
 $italic-font: "Adobe Garamond Pro", sans-serif;
 
-
 $slick-loader-path: "~slick-carousel/slick/";
 $slick-font-path: "~slick-carousel/slick/fonts/";
 
 @font-face {
   font-family: "slick_swap";
   font-display: swap;
-  src: url($slick-font-path+"slick.eot");
-  src: url($slick-font-path+"slick.eot?#iefix") format("embedded-opentype"),
-    url($slick-font-path+"slick.woff") format("woff"),
-    url($slick-font-path+"slick.ttf") format("truetype"),
-    url($slick-font-path+"slick.svg#slick") format("svg");
+  src: url($slick-font-path + "slick.eot");
+  src: url($slick-font-path + "slick.eot?#iefix") format("embedded-opentype"),
+    url($slick-font-path + "slick.woff") format("woff"),
+    url($slick-font-path + "slick.ttf") format("truetype"),
+    url($slick-font-path + "slick.svg#slick") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -388,6 +387,26 @@ small,
   color: $theme-greymiddle;
 }
 
+.text-white {
+  color: #fff;
+}
+
+.text-dark {
+  color: rgba(63,94,103,.9) !important;
+}
+
+.name-dark {
+  color: #3f5e67 !important;
+}
+
+.company-dark {
+  color: rgba(63,94,103,.6) !important;
+}
+
+.name-white, .company-white, .white {
+  color: #fff !important;
+}
+
 .hero-bold {
   font-weight: 700;
   font-size: 180px;
@@ -451,6 +470,41 @@ small,
 }
 .btn-link .fa {
   color: $theme-grey;
+}
+
+.btn-primary {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #ff5650;
+  border-radius: 32px;
+  border: 2px solid #ff5650;
+  min-width: 280px;
+  padding: 19px 48px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: $base-font;
+  letter-spacing: -0.008em;
+  transition: all 0.3s;
+
+  &:hover {
+    background: #f77b71;
+    border-color: #f77b71;
+  }
+
+  &.btn_secondary {
+    background: transparent;
+    color: #ff5650;
+
+    &:hover {
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+  }
 }
 
 .btn-clear {
@@ -667,20 +721,19 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
 }
 
 /* content adaptions */
-  h1
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .h1,
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6 {
-    color: $primary;
-  }
+h1 h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  color: $primary;
+}
 
 .bg-dark-image,
 .bg-brand-primary,
@@ -749,7 +802,6 @@ footer {
 .height-center .container {
   margin: auto !important;
 }
-
 
 /* nav section adaptions */
 section.navbar-fixed {
@@ -1130,9 +1182,12 @@ img.cookie-img {
   }
   .cookie-button {
     width: 48%;
-    margin: 10px 5px 0 0!important;
+    margin: 10px 5px 0 0 !important;
   }
-  .cookie-button + .cookie-button { margin: 10px 0 0 0!important; float: right; }
+  .cookie-button + .cookie-button {
+    margin: 10px 0 0 0 !important;
+    float: right;
+  }
   .cookie-box {
     padding: 10px 20px;
   }
@@ -1273,7 +1328,6 @@ img.cookie-img {
 }
 
 @media (max-width: $screen-xs-max) {
-  
 }
 
 nav .open .dropdown-menu.show-language {
@@ -1281,7 +1335,7 @@ nav .open .dropdown-menu.show-language {
   padding: 0;
   position: absolute !important;
   a {
-      border-top: 0 !important;
+    border-top: 0 !important;
   }
 }
 
@@ -1295,14 +1349,12 @@ nav .open .dropdown-menu.lang-switch a {
   padding-top: 2px;
   font-size: 14px;
   color: #fff;
-  
 }
 
 .lang-switch a {
-
   text-transform: uppercase;
   &:hover {
-      color: $primary;
+    color: $primary;
   }
 }
 
@@ -1311,7 +1363,7 @@ nav .open .dropdown-menu.lang-switch a {
 }
 
 .show-language {
-  transition: all ease .5s;
+  transition: all ease 0.5s;
   display: block;
   a {
     color: #fff !important;
@@ -1320,17 +1372,15 @@ nav .open .dropdown-menu.lang-switch a {
   .nav-link {
     margin: 0 !important;
   }
-  
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width: 1023px) {
   nav .open .dropdown-menu.show-language {
-      left: 9px
-    }
+    left: 9px;
+  }
 }
 
 .fa-chevron-down {
   color: $primary;
   margin-left: 6px;
 }
-

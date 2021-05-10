@@ -37,7 +37,7 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
 
   return (
     <Scrivito.BackgroundImageTag
-      tag="div"
+      tag="section"
       className={sectionClassNames.join(" ")}
       style={sectionStyle}
     >

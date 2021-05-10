@@ -1,5 +1,27 @@
 @import "src/assets/stylesheets/variables";
 
+.card--red {
+  background-color: $primary;
+  padding: 32px;
+  margin-top: 16px;
+  width: 59%;
+  margin-left: auto;
+
+  h2 {
+    color: #f7ede1 !important;
+    font: 24px/30px bebas-neue-pro-semiexpanded, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: #f7ede1 !important;
+    margin: 0 !important;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 @media (min-width: $screen-lg-min) {
 }
 

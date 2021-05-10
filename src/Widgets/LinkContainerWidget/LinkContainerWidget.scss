@@ -3,6 +3,10 @@
 .link-container-widget {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 50%;
 
   &,
   & li,
@@ -21,11 +25,26 @@
     font-weight: 700;
   }
 
-  a,
-  a:hover,
-  a:focus {
+  a {
     text-decoration: none;
-  }
+    color: $primary !important;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    border-bottom: 1px solid rgba(63,94,103,0.15);
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    transition: all 0.3s;
+
+    &:hover {
+        border-color: #3F5E67;
+        text-decoration: none;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
 
   &--headline {
     color: $theme-greydark;

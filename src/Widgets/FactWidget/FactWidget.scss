@@ -5,7 +5,8 @@
   flex-direction: column;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin: 96px 0 96px 70px;
 
   .value,
   .key {
@@ -14,20 +15,19 @@
   }
 
   .value {
-    color: #fff;
+    color: $primary;
     font-size: 120px;
     line-height: 80px;
-    font-family: "PT Sans Narrow", sans-serif;
-    font-weight: 700;
+    font: 160px/124px bebas-neue-pro-semiexpanded,sans-serif;
     width: fit-content;
     width: -moz-fit-content;
   }
 
   .key {
-    color: #fff;
-    font-size: 18px;
-    line-height: 22px;
-    max-width: 140px;
+    color: $primary;
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 200px;
     margin-top: 20px;
   }
 

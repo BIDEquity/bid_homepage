@@ -1,19 +1,21 @@
 @import "../../assets/stylesheets/variables";
 
 
-.bid-headline-text-block-widget {
-  width: 600px;
+.bid-column-headline-text-block-widget {
   margin-bottom: 32px;
-  
+  background-color: #334260;
+
+margin: 0 12px;
+padding: 74px 32px 64px;
   h2 {
-    color: #f7ede1;
+    color: #fff;
 font-weight: 700;
 font-size: 24px;
 line-height: 32px;
 margin-bottom: 8px;
   }
   p {
-    color: #f7ede1 !important;
+    color: #fff !important;
 font-size: 22px;
 line-height: 32px;
   }

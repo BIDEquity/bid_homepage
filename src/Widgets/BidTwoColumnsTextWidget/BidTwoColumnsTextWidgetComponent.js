@@ -5,7 +5,7 @@ import "./BidTwoColumnsTextWidget.scss";
 
 Scrivito.provideComponent("BidTwoColumnsTextWidget", ({ widget }) => (
   <div className="bid-two-columns-text-widget">
-    <div className="row b-bottom">
+    <div className="row">
       <div className="col-md-6">
       <Scrivito.ContentTag
         content={widget}

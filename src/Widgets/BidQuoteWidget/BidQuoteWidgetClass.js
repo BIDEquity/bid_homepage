@@ -6,6 +6,7 @@ const BidQuoteWidget = Scrivito.provideWidgetClass("BidQuoteWidget", {
     name: "string",
     position: "string",
     company: "string",
+    color: ["enum", { values: ["dark", "white"] }],
     showDividingLine: ["enum", { values: ["yes", "no"] }],
   },
   extractTextAttributes: ["quote", "name", "position", "company"],
