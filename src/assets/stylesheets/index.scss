@@ -255,8 +255,9 @@ h2,
 }
 h3,
 .h3 {
-  font-size: 30px;
-  line-height: 40px;
+  font: 48px/1 bebas-neue-pro-semiexpanded,sans-serif !important;
+text-transform: uppercase;
+margin-bottom: 64px;
 }
 h4,
 .h4 {
@@ -508,9 +509,19 @@ small,
 }
 
 .btn-clear {
-  color: $theme-greydark;
-  padding-left: 0;
-  padding-right: 0;
+  display: inline-block;
+text-decoration: none;
+color: #ff5650;
+font-weight: 700;
+font-size: 13px;
+line-height: 20px;
+text-transform: uppercase;
+letter-spacing: .2em;
+border-bottom: 1px solid #ff5650;
+    border-bottom-color: rgb(255, 86, 80);
+transition: all .3s;
+padding: 0;
+margin-bottom: 36px;
 }
 .btn-clear .fa {
   color: $primary;
@@ -519,6 +530,7 @@ small,
 .btn-clear:active,
 .btn-clear:focus {
   box-shadow: none !important;
+  border-bottom: none;
 }
 
 .btn-white-transparent {

@@ -6,14 +6,13 @@ import "./HeadlineWidget.scss";
 Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
   const style = widget.get("style") || "h2";
   const level = widget.get("level") || style;
-  const classNames = [];
+  const classNames = [style];
   if (widget.get("alignment")) {
     classNames.push(`text-${widget.get("alignment")}`);
   }
   if (widget.get("showDividingLine") === "yes") {
     classNames.push("top_title", "bottom_line", "aos-init", "aos-animate");
   }
-  
 
   if (widget.get("width")) {
     classNames.push(`w-${widget.get("width")}`)

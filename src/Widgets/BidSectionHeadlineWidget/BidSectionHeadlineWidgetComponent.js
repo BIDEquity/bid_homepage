@@ -1,40 +1,19 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
-import { kebabCase } from "lodash-es";
 
 Scrivito.provideComponent("BidSectionHeadlineWidget", ({ widget }) => {
-  const style = widget.get("style") || "h2";
-  const level = widget.get("level") || style;
-  const classNames = [];
-  if (widget.get("alignment")) {
-    classNames.push(`text-${widget.get("alignment")}`);
-  }
-  if (widget.get("showDividingLine") === "yes") {
-    classNames.push("section_title", "bottom_line");
-  }
-  
-
-  if (widget.get("width")) {
-    classNames.push(`w-${widget.get("width")}`)
-  }
-
-  if (widget.get("float") === "right") {
-    classNames.push("float-right")
-  }
-  
-
   return (
-    <>
-      <span
-        className="headline-widget--anchor"
-        id={kebabCase(widget.get("headline"))}
-      ></span>
+    <div className="section-headline">
+    <div className="section_top_inner">
       <Scrivito.ContentTag
-        tag={level}
+        data-aos="animation"
+        tag="h1"
         content={widget}
         attribute="headline"
-        className={classNames.join(" ")}
+        className="section_top_title bottom_line aos-init aos-animate"
       />
-    </>
+      
+    </div>
+    </div>
   );
 });
