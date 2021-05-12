@@ -630,6 +630,17 @@ h6,
   align-items: flex-end;
 }
 
+.home_top_title {
+  margin: 0 0 0 auto;
+  padding-bottom: 30px;
+  width: 75%;
+  max-width: 75%;
+  color: #ff5650;
+  font: 64px/1 $secondary-font !important;
+  text-transform: uppercase;
+  z-index: 1000;
+  
+}
 
 .top_title {
   margin-left: 60%;
