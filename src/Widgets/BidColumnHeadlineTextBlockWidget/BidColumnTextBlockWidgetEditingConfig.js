@@ -4,7 +4,7 @@ import TextWidget from "../TextWidget/TextWidgetClass";
 
 Scrivito.provideEditingConfig("BidColumnHeadlineTextBlockWidget", {
   title: "Bid Column Headline Text Block",
-  
+  properties: ["headline", "text"],
   initialContent: {
     
     content: [
