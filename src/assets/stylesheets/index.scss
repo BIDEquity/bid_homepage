@@ -96,24 +96,24 @@
 }
 
 @font-face {
-  font-family: 'AcuminPro';
-  src: url('../fonts/AcuminPro-Semibold.eot');
-  src: url('../fonts/AcuminPro-Semibold.eot?#iefix') format('embedded-opentype'),
-      url('../fonts/AcuminPro-Semibold.woff2') format('woff2'),
-      url('../fonts/AcuminPro-Semibold.woff') format('woff'),
-      url('../fonts/AcuminPro-Semibold.ttf') format('truetype'),
-      url('../fonts/AcuminPro-Semibold.svg#AcuminPro-Semibold') format('svg');
+  font-family: "AcuminPro";
+  src: url("../fonts/AcuminPro-Semibold.eot");
+  src: url("../fonts/AcuminPro-Semibold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/AcuminPro-Semibold.woff2") format("woff2"),
+    url("../fonts/AcuminPro-Semibold.woff") format("woff"),
+    url("../fonts/AcuminPro-Semibold.ttf") format("truetype"),
+    url("../fonts/AcuminPro-Semibold.svg#AcuminPro-Semibold") format("svg");
   font-weight: 600;
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap");
 
-$base-font: 'Swiss721 BT', sans-serif;
-$secondary-font: 'bebas-neue-pro-semiexpanded', sans-serif;
-$third-font: 'AcuminPro', sans-serif;
-$italic-font: 'Adobe Garamond Pro', serif;
-$italic-secondary-font: 'Cormorant Garamond', serif;
+$base-font: "Swiss721 BT", sans-serif;
+$secondary-font: "bebas-neue-pro-semiexpanded", sans-serif;
+$third-font: "AcuminPro", sans-serif;
+$italic-font: "Adobe Garamond Pro", serif;
+$italic-secondary-font: "Cormorant Garamond", serif;
 
 $slick-loader-path: "~slick-carousel/slick/";
 $slick-font-path: "~slick-carousel/slick/fonts/";
@@ -1150,10 +1150,13 @@ _:-ms-fullscreen,
 =================================================================== */
 
 .cookie-box {
-  width: 100%;
-  background: rgba(61, 65, 66, 0.85);
+  width: 68.5%;
+  display: flex;
+  align-items: center;
+  background-color: #253046;
+  padding: 24px 24px 24px 80px;
   z-index: 1000000;
-  padding: 25px 17% 25px 17%;
+  margin: 0 auto 40px auto;
 }
 
 .cookie-content {
@@ -1178,24 +1181,45 @@ _:-ms-fullscreen,
 }
 
 .cookie-box-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #ff5650;
   font-weight: 700;
-  text-decoration: underline;
-  margin-left: 5px;
+  font-size: 13px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid #ff5650;
+  border-bottom-color: rgb(255, 86, 80);
+  transition: all 0.3s;
+  margin-left: 276px;
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+.decline {
+  display: block;
+  width: 18.121px;
+  height: 18.121px;
+  display: block;
+  stroke: #ff5650;
+  margin: 24px 0 0 32px;
+  cursor: pointer;
 }
 
 .cookie-box-content {
-  font-size: 14px;
-}
-
-img.cookie-img {
-  margin: 0;
-  opacity: 0.8;
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  filter: FlipH;
-  -ms-filter: "FlipH";
+  display: flex;
+  align-items: center;
+  align-content: space-between;
+  p {
+    color: #f7ede1;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 376px;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
 
 .cookie-img-box {

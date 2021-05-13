@@ -34,18 +34,12 @@ function CookieBanner(props) {
   return (
     <div className="fixed-bottom cookie-box d-lg-flex d-sm-flex align-items-center">
       <div className="cookie-content d-flex align-items-center">
-        <div className="cookie-img-box">
-          <img
-            className="cookie-img"
-            src={cookieConsentIcon}
-            alt="cookie-img"
-          />
-        </div>
         <div>
-          <div className="cookie-box-title">Cookies policy</div>
           <div className="cookie-box-content">
+            <p>
             Our website uses cookies to analyze how the site is used and to
             ensure your experience is consistent between visits.
+            </p>
             <a
               className="cookie-box-link"
               href={props.url}
@@ -59,17 +53,17 @@ function CookieBanner(props) {
       </div>
       <div className="button-wrapper ml-auto">
         <button
-          className="cookie-button btn btn-primary ml-auto mr-2"
+          className="btn btn-primary"
           onClick={props.onAccept}
         >
           Accept
         </button>
-        <button
-          className="cookie-button btn btn-secondary ml-auto"
+        <div
+          className="decline"
           onClick={props.onDecline}
         >
-          Decline
-        </button>
+          <svg xmlns="http://www.w3.org/2000/svg" color="red" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="none" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+        </div>
       </div>
     </div>
   );
@@ -90,7 +84,7 @@ function cookieConsentUrl() {
 
   return {
     url: Scrivito.urlFor(cookieConsentLink),
-    title: cookieConsentLink.title() || "Learn more »",
+    title: cookieConsentLink.title() || "Learn more",
   };
 }
 
