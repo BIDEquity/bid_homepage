@@ -4,9 +4,19 @@ import TextWidget from "../TextWidget/TextWidgetClass";
 
 Scrivito.provideEditingConfig("BidHeadlineTextBlockWidget", {
   title: "Bid Headline Text Block",
-  
+  attributes: {
+    color: {
+      title: "Color",
+      description: "Default: white",
+      values: [
+        { value: "white", title: "White" },
+        { value: "dark", title: "Dark" },
+      ],
+    },
+  },
+  properties: ["color"],
   initialContent: {
-    
+    color: "white",
     content: [
       new HeadlineWidget({
         headline: "LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT.",

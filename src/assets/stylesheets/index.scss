@@ -95,9 +95,25 @@
   font-weight: 600;
 }
 
-$base-font: "Swiss721 BT", sans-serif;
-$secondary-font: "bebas-neue-pro-semiexpanded", sans-serif;
-$italic-font: "Adobe Garamond Pro", sans-serif;
+@font-face {
+  font-family: 'AcuminPro';
+  src: url('../fonts/AcuminPro-Semibold.eot');
+  src: url('../fonts/AcuminPro-Semibold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/AcuminPro-Semibold.woff2') format('woff2'),
+      url('../fonts/AcuminPro-Semibold.woff') format('woff'),
+      url('../fonts/AcuminPro-Semibold.ttf') format('truetype'),
+      url('../fonts/AcuminPro-Semibold.svg#AcuminPro-Semibold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap');
+
+$base-font: 'Swiss721 BT', sans-serif;
+$secondary-font: 'bebas-neue-pro-semiexpanded', sans-serif;
+$third-font: 'AcuminPro', sans-serif;
+$italic-font: 'Adobe Garamond Pro', serif;
+$italic-secondary-font: 'Cormorant Garamond', serif;
 
 $slick-loader-path: "~slick-carousel/slick/";
 $slick-font-path: "~slick-carousel/slick/fonts/";
@@ -255,9 +271,9 @@ h2,
 }
 h3,
 .h3 {
-  font: 48px/1 bebas-neue-pro-semiexpanded,sans-serif !important;
-text-transform: uppercase;
-margin-bottom: 64px;
+  font: 48px/1 bebas-neue-pro-semiexpanded, sans-serif !important;
+  text-transform: uppercase;
+  margin-bottom: 64px;
 }
 h4,
 .h4 {
@@ -392,8 +408,22 @@ small,
   color: #fff;
 }
 
-.text-dark {
-  color: rgba(63,94,103,.9) !important;
+.text-dark h2 {
+  color: rgba(63, 94, 103, 0.9) !important;
+  font: 700 18px/24px AcuminPro, sans-serif;
+  width: 93%;
+}
+
+.text-dark p {
+  color: rgba(63, 94, 103, 0.9) !important;
+  font-size: 18px;
+  line-height: 24px;
+  width: 93%;
+}
+
+.text-red,
+.text-red h2 {
+  color: $primary !important;
 }
 
 .name-dark {
@@ -401,10 +431,12 @@ small,
 }
 
 .company-dark {
-  color: rgba(63,94,103,.6) !important;
+  color: rgba(63, 94, 103, 0.6) !important;
 }
 
-.name-white, .company-white, .white {
+.name-white,
+.company-white,
+.white {
   color: #fff !important;
 }
 
@@ -510,18 +542,18 @@ small,
 
 .btn-clear {
   display: inline-block;
-text-decoration: none;
-color: #ff5650;
-font-weight: 700;
-font-size: 13px;
-line-height: 20px;
-text-transform: uppercase;
-letter-spacing: .2em;
-border-bottom: 1px solid #ff5650;
-    border-bottom-color: rgb(255, 86, 80);
-transition: all .3s;
-padding: 0;
-margin-bottom: 36px;
+  text-decoration: none;
+  color: #ff5650;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid #ff5650;
+  border-bottom-color: rgb(255, 86, 80);
+  transition: all 0.3s;
+  padding: 0;
+  margin-bottom: 36px;
 }
 .btn-clear .fa {
   color: $primary;
