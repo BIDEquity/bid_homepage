@@ -1213,7 +1213,7 @@ max-width: 90%;
     font-family: $base-font;
     letter-spacing: -0.008em;
     transition: all 0.3s;
-    margin-top: 20px;
+    margin-top: 0;
     &:hover {
       background: #f77b71;
       border-color: #f77b71;
@@ -1302,10 +1302,13 @@ max-width: 90%;
 }
 
 .footer_title {
-  max-width: 626px;
+  max-width: 630px;
   color: #ff5650;
   font: 46px/48px $secondary-font;
   text-transform: uppercase;
+  h3 {
+    margin-bottom: 31px !important;
+  }
 }
 
 .footer_info {

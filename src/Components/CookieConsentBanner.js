@@ -44,7 +44,6 @@ function CookieBanner(props) {
               className="cookie-box-link"
               href={props.url}
               rel="noopener noreferrer"
-              target="_blank"
             >
               {props.title}
             </a>
