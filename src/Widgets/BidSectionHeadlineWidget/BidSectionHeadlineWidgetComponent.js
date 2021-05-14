@@ -7,7 +7,7 @@ Scrivito.provideComponent("BidSectionHeadlineWidget", ({ widget }) => {
     <div className="section_top_inner">
       <Scrivito.ContentTag
         data-aos="animation"
-        tag="h1"
+        tag="h2"
         content={widget}
         attribute="headline"
         className="section_top_title bottom_line aos-init aos-animate"
