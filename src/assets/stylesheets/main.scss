@@ -592,24 +592,16 @@ h6,
   .section_top_title {
     width: 58.33% !important;
     color: #ff5650;
-    font: 64px/1 $secondary-font !important;
+    font: 48px/1 $secondary-font !important;
     text-transform: uppercase;
     z-index: 1000;
-    padding-bottom: 30px;
-    margin-bottom: 48px;
+    margin-bottom: 64px;
+    padding-bottom: 34px;
     @media screen and (max-width: 767px) {
       width: 100%;
     }
   }
 }
-
-.section-headline h2 {
-  font: 48px/1 $secondary-font;
-text-transform: uppercase;
-margin-bottom: 64px;
-padding-bottom: 34px;
-}
-
 
 
 .top_section {
