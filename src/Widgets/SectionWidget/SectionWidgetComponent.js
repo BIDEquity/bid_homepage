@@ -26,13 +26,14 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
     sectionClassNames.push("content_steps");
   }
   
-  let contentClassName = "";
+  
   if (widget.get("useFullWidth") === "yes") {
-    contentClassName = "container-fluid gutter0";
+    sectionClassNames.push("full-width");
   }
 
   if (widget.get("useFullHeight") === "yes") {
     sectionClassNames.push("full-height");
+    sectionClassNames.push("_content_section");
   }
 
   return (

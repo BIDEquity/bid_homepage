@@ -3,7 +3,8 @@ import * as Scrivito from "scrivito";
 import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
 
 Scrivito.provideComponent("ColumnContainerWidget", ({ widget }) => {
-  const columns = widget.get("columns");
+  const columns = widget.get("columns") || "no";
+  const reverse = widget.get("reverseMobile")
 
   if (!columns.length) {
     return (
@@ -32,6 +33,10 @@ Scrivito.provideComponent("ColumnContainerWidget", ({ widget }) => {
     classNames.push(`align-items-${widget.get("alignment")}`);
   } else {
     classNames.push("align-items-start");
+  }
+
+  if(reverse === "yes") {
+    classNames.push("row-reverse")
   }
 
   return <div className={classNames.join(" ")}>{content}</div>;

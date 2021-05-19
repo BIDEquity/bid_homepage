@@ -152,11 +152,7 @@ class Navigation extends React.Component {
 
     return (
       <React.Fragment>
-        <Scrivito.BackgroundImageTag
-          tag="section"
-          className={topSectionClassNames.join(" ")}
-          style={topSectionStyle}
-        >
+        <div className="top_section">
           <BackgroundVideo videoUrl={videoUrl} />
           <ActualNavigation
             isLandingPage={isLandingPage}
@@ -166,9 +162,15 @@ class Navigation extends React.Component {
             scrolled={this.state.scrolled}
             navigationStyle={navigationStyle}
           />
-          <NavigationSection heightClassName={heightClassName} />
+          <NavigationSection heightClassName={heightClassName} >
           
-        </Scrivito.BackgroundImageTag>
+            </NavigationSection>
+            <div className="top_home">
+          <img
+        src={urlFromBinary(backgroundImage)} 
+        className="top_bg"
+        />
+        </div></div>
         <div id="mainContent" />
       </React.Fragment>
     );

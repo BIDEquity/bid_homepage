@@ -6,7 +6,7 @@ import "./HeadlineWidget.scss";
 Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
   const style = widget.get("style") || "h2";
   const level = widget.get("level") || style;
-  const classNames = [style];
+  const classNames = [style, "section_title"];
   if (widget.get("alignment")) {
     classNames.push(`text-${widget.get("alignment")}`);
   }
@@ -24,7 +24,7 @@ Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
   
 
   return (
-    <>
+    <div>
       <span
         className="headline-widget--anchor"
         id={kebabCase(widget.get("headline"))}
@@ -36,6 +36,6 @@ Scrivito.provideComponent("HeadlineWidget", ({ widget }) => {
         attribute="headline"
         className={classNames.join(" ")}
       />
-    </>
+    </div>
   );
 });

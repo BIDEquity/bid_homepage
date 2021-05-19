@@ -4,8 +4,17 @@
   background-color: $primary;
   padding: 32px;
   margin-top: 16px;
+  @media screen and (min-width: 737px) {
   width: 59%;
   margin-left: auto;
+  }
+  @media screen and (max-width: 736px) {
+    margin-left: -32px;
+    margin-right: -32px;
+    margin-top: 0;
+    border-bottom: 1px solid #fd7976;
+  }
+
 
   h2 {
     color: #f7ede1 !important;

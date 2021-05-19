@@ -5,6 +5,20 @@ import ColumnWidget from "../ColumnWidget/ColumnWidgetClass";
 Scrivito.provideEditingConfig("ColumnContainerWidget", {
   title: "Columns",
   thumbnail: columnContainerWidgetIcon,
+  attributes: {
+    reverseMobile: {
+      title: "Reverse columns on mobile?",
+      description: "Default: No",
+      values: [
+        { value: "yes", title: "Yes" },
+        { value: "no", title: "No" },
+      ],
+    },
+  },
+  properties: ['reverseMobile'],
+  initialContent: {
+    reverseMobile: "no"
+  },
   propertiesGroups: [
     {
       title: "Columns layout",

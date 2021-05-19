@@ -1,22 +1,37 @@
 @import "../../assets/stylesheets/variables";
 
-
 .bid-headline-text-block-widget {
-  width: 600px;
-  margin-bottom: 32px;
+  @media screen and (min-width: 1024px){
+    width: 598px;
+    margin-bottom: 32px;
+  }
   
+
   h2 {
     color: #f7ede1;
-font-weight: 700;
-font-size: 24px;
-line-height: 32px;
-margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    @media screen and (max-width: 576px) {
+      font-size: 21px;
+      line-height: 24px;
+      margin-bottom: 16px;
+    }
   }
   p {
     color: #f7ede1 !important;
-font-size: 22px;
-line-height: 32px;
+    font-size: 22px;
+    line-height: 32px;
   }
+  @media screen and (max-width: 576px){
+    p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 120px;
+    width: 100%;
+  }
+}
 }
 
 @media (min-width: $screen-lg-min) {
@@ -29,6 +44,4 @@ line-height: 32px;
 }
 
 @media (max-width: $screen-xs-max) {
-  
 }
-

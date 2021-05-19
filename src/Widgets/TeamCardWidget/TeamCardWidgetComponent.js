@@ -10,7 +10,7 @@ Scrivito.provideComponent("TeamCardWidget", ({ widget }) => (
         className="post_item_img"
       />
       <div className="team_info">
-        <div class="team_info_left">
+        <div className="team_info_left">
           <Scrivito.ContentTag
             content={widget}
             attribute="name"
@@ -26,9 +26,9 @@ Scrivito.provideComponent("TeamCardWidget", ({ widget }) => (
           />
         </div>
 
-        <div class="team_info_right">
-          <a class="team_link" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="17.284" height="10.73" viewBox="0 0 17.284 10.73" fill="none" strokeWidth="1.5"><g transform="translate(-570.625 -853.857)"><path d="M576.989,860.911l4.3,4.3-4.3,4.3" transform="translate(5.865 -5.993)" stroke-linecap="round" stroke-linejoin="round" /><line x1="15.783" transform="translate(571.375 859.222)" strokeLinecap="round" strokeLinejoin="round" /></g></svg>
+        <div className="team_info_right">
+          <a className="team_link" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17.284" height="10.73" viewBox="0 0 17.284 10.73" fill="none" strokeWidth="1.5"><g transform="translate(-570.625 -853.857)"><path d="M576.989,860.911l4.3,4.3-4.3,4.3" transform="translate(5.865 -5.993)" strokeLinecap="round" strokeLinejoin="round" /><line x1="15.783" transform="translate(571.375 859.222)" strokeLinecap="round" strokeLinejoin="round" /></g></svg>
           </a>
         </div>
       </div>

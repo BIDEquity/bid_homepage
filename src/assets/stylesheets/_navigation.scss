@@ -7,7 +7,7 @@
 /* .bg-dark-image .navbar-brand { background: $logo-white no-repeat center center / contain; } */
 .bg-dark-image {
   .navbar-toggler .icon-bar {
-    background: #fff;
+    background: $primary;
   }
 }
 
@@ -183,7 +183,7 @@
   }
 
   &-toggler {
-    float: left;
+    float: right;
     margin: 0;
     padding: 9px 20px;
     height: 66px;
@@ -205,13 +205,13 @@
 
     .icon-bar {
       display: block;
-      height: 2px;
-      border-radius: 1px;
-      background: $secondary;
-      width: 30px;
+      height: 3px;
+      border-radius: 50px/20px;
+      background: $primary !important;
+      width: 24px;
 
       + .icon-bar {
-        margin-top: 6px;
+        margin-top: 5px;
       }
     }
   }
@@ -268,13 +268,13 @@
   }
 }
 
-@media screen and (min-width: 1300px){
+/*@media screen and (min-width: 1300px){
   
 
 .navbar-header {
   margin-left: 24px
 }
-}
+}*/
 
 .navbar-header,
 .navbar-collapse,

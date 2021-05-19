@@ -10,7 +10,7 @@ Scrivito.provideComponent("BidSectionHeadlineWidget", ({ widget }) => {
         tag="h2"
         content={widget}
         attribute="headline"
-        className="section_top_title bottom_line aos-init aos-animate"
+        className="section_title bottom_line aos-init aos-animate"
       />
       
     </div>

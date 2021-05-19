@@ -13,7 +13,7 @@ const ButtonWidgetComponent = Scrivito.connect(({ widget }) => {
     );
   }
 
-  const classNames = ["btn"];
+  const classNames = [];
   classNames.push(widget.get("style") || "btn-primary");
 
   return (

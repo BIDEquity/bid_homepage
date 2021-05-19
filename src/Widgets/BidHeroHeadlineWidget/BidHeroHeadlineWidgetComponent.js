@@ -3,14 +3,14 @@ import * as Scrivito from "scrivito";
 
 Scrivito.provideComponent("BidHeroHeadlineWidget", ({ widget }) => {
   return (
-    <div className="hero">
-    <div className="hero_top_inner">
+    <div className="top">
+    <div className="top_inner">
       <Scrivito.ContentTag
         data-aos="animation"
         tag="h1"
         content={widget}
         attribute="headline"
-        className="hero_top_title bottom_line aos-init aos-animate"
+        className="top_title bottom_line aos-init aos-animate"
       />
       
     </div>

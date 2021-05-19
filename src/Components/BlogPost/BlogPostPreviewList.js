@@ -94,7 +94,7 @@ const BlogPostPreview = Scrivito.connect(({ post }) => (
         </p>
       </div>
       <div className="blog-timeline--footer">
-        <Scrivito.LinkTag to={post} className="btn btn-clear">
+        <Scrivito.LinkTag to={post} className="btn-clear">
           Read more
           <i className="fa fa-angle-right fa-4" aria-hidden="true" />
         </Scrivito.LinkTag>
