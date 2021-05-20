@@ -240,13 +240,14 @@ body {
 
 a {
   color: $primary;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 a:hover,
 a:active,
 a:focus {
   outline: none !important;
-  color: $primary !important;
+  color: $primary;
+  text-decoration: none !important;
 }
 button:focus {
   outline: none !important;
@@ -1419,14 +1420,21 @@ nav .open .dropdown-menu.lang-switch a {
   }
 }
 
-@media (min-width: 737px) {
-
-.testimonial_item {
-  width: 50%;
-  margin-left: auto;
+.top_section {
+  height: 100vh;
 }
 
+.page_top_section {
+  height: 95vh;
 }
+
+
+
+.container .container {
+  padding: 0 0 !important;
+}
+
+
 
 @media screen and (max-width: 736px) {
   .full-width .container {
