@@ -226,6 +226,10 @@ body {
   padding: 0;
 }
 
+.container-fluid img {
+  margin: 0;
+}
+
 .container,
 .container-fluid {
   position: relative;
@@ -660,21 +664,18 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
 /* sections
 =================================================================== */
 
-/*.bg-dark-image,
+.bg-dark-image,
 .bg-grey,
 .bg-greydark,
 .bg-greylight,
 .bg-greymiddle,
 .bg-greywhite,
 .bg-white,
-.bg-brand-primary,*/
+.bg-brand-primary,
 .bg-brand-secondary {
   clear: both;
   position: relative;
-  padding: 100px 0 100px 0;
-  @media screen and (min-width: 1024px){
-  padding: 240px 0 240px 0;
-}  
+  
 }
 
 .bg-dark-image,
@@ -1430,43 +1431,8 @@ nav .open .dropdown-menu.lang-switch a {
 
 
 
-.container .container {
-  padding: 0 0 !important;
-}
 
 
-
-@media screen and (max-width: 736px) {
-  .full-width .container {
-    padding-left: 0;
-    padding-right: 0;
-    .bid-two-columns-text-widget, .link-container-widget, .testimonials_section {
-      padding: 0 32px;
-      margin-bottom: 112px
-    }
-    .section_top_inner {
-      padding: 120px 32px 32px;
-    }
-
-  
-  }
-}
-
-.content_section {
-  overflow: hidden;
-  padding: 240px 0;
-
-  @media screen and (max-width: 991px) {
-      padding: 60px 0;
-  }
-}
-
-@media screen and (max-width: 480px) {
-.full-width .container img{
-height: 400px;
-object-fit: cover;
-}
-}
 
 @media screen and (max-width: 768px) {
 .col-lg-3, .col-lg-4 {
@@ -1540,6 +1506,10 @@ object-fit: cover;
 
 .row {
   clear: both;
+}
+
+.article_content {
+  margin-top: -970px !important;
 }
 
 /* RESPONSIVE

@@ -2,5 +2,5 @@ import * as Scrivito from "scrivito";
 
 Scrivito.provideEditingConfig("BidPersonWidget", {
   title: "Bid Person",
-  properties: ['nextMember']
+  properties: ['headline','contentCategory','nextMember']
 });

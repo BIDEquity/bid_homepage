@@ -1,23 +1,30 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 
-import "./FactWidget.scss";
-
-Scrivito.provideComponent("FactWidget", ({ widget }) => (
-  <div className="content_section">
-  <div className="fact-widget">
-    <Scrivito.ContentTag
-      content={widget}
-      attribute="value"
-      className="value"
-      tag="span"
-    />
-    <Scrivito.ContentTag
-      content={widget}
-      attribute="key"
-      className="key"
-      tag="span"
-    />
-  </div>
-  </div>
-));
+Scrivito.provideComponent("FactWidget", ({ widget }) => {
+  
+  return (
+    
+  
+    <div className="about_stat_info">
+      <Scrivito.WidgetTag tag="p" className="about_stat_number">
+      
+        <Scrivito.ContentTag
+          content={widget}
+          attribute="value"
+          
+        />
+      </Scrivito.WidgetTag>
+      <Scrivito.WidgetTag tag="p" className="about_stat_text">
+      
+        <Scrivito.ContentTag
+          content={widget}
+          attribute="key"
+          
+        />
+      </Scrivito.WidgetTag>
+    </div>
+  
+  
+  )
+});

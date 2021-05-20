@@ -33,20 +33,16 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
 
   if (widget.get("useFullHeight") === "yes") {
     sectionClassNames.push("full-height");
-    sectionClassNames.push("_content_section");
+   
   }
 
   return (
-    <Scrivito.BackgroundImageTag
-      tag="section"
-      className={sectionClassNames.join(" ")}
-      style={sectionStyle}
-    >
+    
       <Scrivito.ContentTag
-        className="container"
+        className="content_section"
         content={widget}
         attribute="content"
       />
-    </Scrivito.BackgroundImageTag>
+    
   );
 });
