@@ -230,10 +230,7 @@ body {
   margin: 0;
 }
 
-.container,
-.container-fluid {
-  position: relative;
-}
+
 .container-fluid img {
   margin: 0;
 }
@@ -1377,6 +1374,7 @@ nav .open .dropdown-menu.lang-switch a {
     width: 0;
   }
   to {
+    opacity: 1;
     width: 100vw;
   }
 }
@@ -1389,6 +1387,7 @@ nav .open .dropdown-menu.lang-switch a {
     left: 6px;
     display: block;
     width: 0;
+    opacity: 0;
     height: 4px;
     border-radius: 180px 0 0 180px;
     background-color: #ff5650;
@@ -1400,7 +1399,7 @@ nav .open .dropdown-menu.lang-switch a {
   }
   &.hidden {
     &:before {
-      opacity: 0;
+      opacity: 1;
       transition: all 1s;
     }
 
@@ -1412,7 +1411,7 @@ nav .open .dropdown-menu.lang-switch a {
 
   &.animate {
     &:before {
-      opacity: 1;
+      opacity: 0;
     }
 
     &:after {

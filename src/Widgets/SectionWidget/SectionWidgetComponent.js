@@ -39,7 +39,7 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
   return (
     
       <Scrivito.ContentTag
-        className="content_section"
+        className="section"
         content={widget}
         attribute="content"
       />

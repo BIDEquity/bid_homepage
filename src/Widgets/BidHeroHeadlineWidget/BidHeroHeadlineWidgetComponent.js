@@ -3,7 +3,7 @@ import * as Scrivito from "scrivito";
 
 Scrivito.provideComponent("BidHeroHeadlineWidget", ({ widget }) => {
   return (
-    <div className="top">
+    <div className="top_about">
     <div className="top_inner">
       <Scrivito.ContentTag
         data-aos="animation"
