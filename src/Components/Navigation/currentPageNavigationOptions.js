@@ -19,7 +19,9 @@ function currentPageNavigationOptions() {
       case "Page":
         return pageNavigationOptions(Scrivito.currentPage());
       case "PortfolioPost":
-          return pageNavigationOptions(Scrivito.currentPage());
+        return pageNavigationOptions(Scrivito.currentPage());
+      case "PartnerPost":
+        return pageNavigationOptions(Scrivito.currentPage());
       case "SearchResults":
         return searchResultsNavigationOptions(Scrivito.currentPage());
       default:

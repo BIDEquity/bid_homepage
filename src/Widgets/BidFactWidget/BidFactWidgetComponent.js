@@ -3,7 +3,7 @@ import * as Scrivito from "scrivito";
 
 Scrivito.provideComponent("BidFactWidget", ({ widget }) => (
   
-   <div className="portfolio_stats_item">                    
+   <>                     
   
     <div className="portfolio_stats_top">
     <Scrivito.ContentTag
@@ -26,6 +26,6 @@ Scrivito.provideComponent("BidFactWidget", ({ widget }) => (
       className="portfolio_stats_number"
       tag="p"
     />
-    </div>
-  
+    
+  </>
 ));
