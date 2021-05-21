@@ -26,11 +26,12 @@ function Footer() {
                 <a href="/about">About</a>
                 <a href="/portfolio">Portfolio</a>
                 <a href="/entrepreneurs">Entrepreneurs</a>
-                <a href="/intermediaries">Intermediaries</a>
+                <a href="/intermediaries">M&amp;A Partners</a>
                 <a href="/investors">Investors</a>
                 <a href="/news">News</a>
                 <a href="/jobs">Jobs</a>
                 <a href="/contact">Contact</a>
+                <a href="#">Quick valuation</a>
                 <a href="/privace-policy">Privacy Policy</a>
                 <a href="/terms-of-use">Terms of Use</a>
               </div>

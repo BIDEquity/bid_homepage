@@ -2,8 +2,8 @@ import * as Scrivito from 'scrivito';
 import ButtonWidget from "../ButtonWidget/ButtonWidgetClass";
 
 Scrivito.provideEditingConfig("CardWidget", {
-  title: "Card",
+  title: "Bid News Card",
   
-  properties: ['image', 'description', 'content'],
+  properties: ['image', 'date', 'description', 'content'],
   
 });

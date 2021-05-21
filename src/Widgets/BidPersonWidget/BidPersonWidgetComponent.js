@@ -200,64 +200,10 @@ Scrivito.provideComponent("BidPersonWidget", ({ widget }) => {
             <div className="posts_slider_wrap">
               <div className="posts_slider swiper-container">
                 <div className="swiper-wrapper">
-                  <a className="post_slide swiper-slide" href="#">
-                    <div className="post_item_img">
-                      <img src="images/post_1.jpg" alt="" />
-                    </div>
-                    <div className="post_item_info">
-                      <p className="post_item_date bottom_line">5 Mar 2021</p>
-                      <div className="post_item_text">
-                        <p>
-                          Acquisition of Fortress Medical Systems quickens BID
-                          Equity‘s life science software group around XClinical
-                          and Carenity.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                  <a className="post_slide swiper-slide" href="#">
-                    <div className="post_item_img">
-                      <img src="images/post_2.jpg" alt="" />
-                    </div>
-                    <div className="post_item_info">
-                      <p className="post_item_date bottom_line">5 Feb 2021</p>
-                      <div className="post_item_text">
-                        <p>
-                          BID Equity acquires stake in Infopark Group, creator
-                          of the SaaS-based Content Management System Scrivito.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                  <a className="post_slide swiper-slide" href="#">
-                    <div className="post_item_img">
-                      <img src="images/post_3.jpg" alt="" />
-                    </div>
-                    <div className="post_item_info">
-                      <p className="post_item_date bottom_line">26 Jan 2021</p>
-                      <div className="post_item_text">
-                        <p>
-                          BID Equity Fund II announces the acquisition of PiSA
-                          sales GmbH to strengthen the recently acquired
-                          Infopark Group.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                  <a className="post_slide swiper-slide" href="#">
-                    <div className="post_item_img">
-                      <img src="images/post_4.jpg" alt="" />
-                    </div>
-                    <div className="post_item_info">
-                      <p className="post_item_date bottom_line">26 Jan 2021</p>
-                      <div className="post_item_text">
-                        <p>
-                          myneva Group acquires SWING to further strengthen its
-                          market-leading position in the social software sector.
-                        </p>
-                      </div>
-                    </div>
-                  </a>
+                  <Scrivito.ContentTag
+                    content={widget}
+                    attribute="content"
+                  />
                 </div>
               </div>
             </div>
