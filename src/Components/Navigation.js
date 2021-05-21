@@ -115,7 +115,7 @@ class Navigation extends React.Component {
     if (isVideoObj(backgroundImage)) {
       videoUrl = urlFromBinary(backgroundImage);
     }
-
+    
     const topSectionStyle = {};
     if (navigationStyle === "transparentDark") {
       if (backgroundImage) {

@@ -1,43 +1,14 @@
 import * as Scrivito from "scrivito";
 import metadataAttributes from "../_metadataAttributes";
+import defaultPageAttributes from "../_defaultPageAttributes";
 
 const PortfolioPost = Scrivito.provideObjClass("PortfolioPost", {
   attributes: {
-    body: ["widgetlist", { only: "SectionWidget" }],
-    image: ["reference", { only: ["Image"] }],
-    title: "string",
-
-    datePosted: "date",
-    validThrough: "date",
-
-    hiringOrganizationName: "string",
-    hiringOrganizationWebsite: "string",
-
-    locationStreetAddress: "string",
-    locationLocality: "string",
-    locationRegion: "string",
-    locationPostalCode: "string",
-    locationCountry: "string",
-
-    employmentType: [
-      "multienum",
-      {
-        values: [
-          "FULL_TIME",
-          "PART_TIME",
-          "CONTRACTOR",
-          "TEMPORARY",
-          "INTERN",
-          "VOLUNTEER",
-          "PER_DIEM",
-          "OTHER",
-        ],
-      },
-    ],
-
+    ...defaultPageAttributes,
+    childOrder: "referencelist",
     ...metadataAttributes,
   },
-  extractTextAttributes: ["body"],
+  extractTextAttributes: ["navigationSection", "body"],
 });
 
 export default PortfolioPost;

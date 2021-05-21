@@ -1363,11 +1363,7 @@ nav .open .dropdown-menu.lang-switch a {
   }
 }
 
-@media screen and (max-width: 1023px) {
-  nav .open .dropdown-menu.show-language {
-    left: 9px;
-  }
-}
+
 
 .fa-chevron-down {
   color: $primary;
@@ -1377,6 +1373,7 @@ nav .open .dropdown-menu.lang-switch a {
 @keyframes line {
   from {
     width: 0;
+    opacity: 1;
   }
   to {
     opacity: 1;
@@ -1513,7 +1510,19 @@ nav .open .dropdown-menu.lang-switch a {
 }
 
 .article_content {
-  margin-top: -970px !important;
+  margin-top: -850px !important;
+}
+
+.post_item_info {
+  padding: 37px 32px 20px;
+}
+
+.portfolio_stats_item {
+  padding: 24px 20px 21.5px !important;
+}
+
+.container .container {
+  padding: 0;
 }
 
 /* RESPONSIVE

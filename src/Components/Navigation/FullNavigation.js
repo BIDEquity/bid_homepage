@@ -67,7 +67,7 @@ class FullNavigation extends React.Component {
             </div>
             <ul className="nav navbar-nav navbar-right">
               <li className="nav-item">
-                <a className="nav-link header_login btn_login btn_secondary" href="#">Login</a>
+                <a className="nav-link header_login btn btn_secondary" href="#">Login</a>
               </li>
             </ul>
             <LanguageSwitch />

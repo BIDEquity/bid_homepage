@@ -34,7 +34,8 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
 
   return (
     <section>
-      <div className="container">
+      
+      <div className={`${widget.get("useFullWidth") !== "yes" ? "container" : ""}`}>
         <Scrivito.ContentTag content={widget} attribute="content" />
       </div>
       {backgroundImage  &&
