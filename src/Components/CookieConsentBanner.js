@@ -13,13 +13,13 @@ function CookieConsentBanner() {
   } = useCookieConsent();
 
   React.useEffect(() => {
-    setVisible(cookieConsentChoice === "undecided");
+    setVisible(!visible);
   }, [cookieConsentChoice]);
-
+  
   if (!visible || !consentUrl) {
     return null;
   }
-
+  
   return (
     <CookieBanner
       url={consentUrl.url}
@@ -31,37 +31,55 @@ function CookieConsentBanner() {
 }
 
 function CookieBanner(props) {
+  console.log(props.onDecline)
   return (
-    <div className="fixed-bottom cookie-box d-lg-flex d-sm-flex align-items-center">
-      <div className="cookie-content d-flex align-items-center">
-        <div>
-          <div className="cookie-box-content">
-            <p>
-            Our website uses cookies to analyze how the site is used and to
-            ensure your experience is consistent between visits.
-            </p>
-            <a
-              className="cookie-box-link"
-              href={props.url}
-              rel="noopener noreferrer"
-            >
+    <div className="popup_cookies">
+      <div className="container">
+        <div className="popup_cookies_inner">
+          <div className="popup_cookies_left">
+            <div className="popup_cookies_text">
+              <p>
+                Cookies help us deliver our services. By using our services, you
+                agree to our use of cookies.
+              </p>
+            </div>
+          </div>
+          <div className="popup_cookies_right">
+            <a className="more_link" href={props.url} rel="noopener noreferrer">
               {props.title}
             </a>
+            <button className="btn btn-primary" onClick={props.onAccept}>
+              Accept
+            </button>
           </div>
-        </div>
-      </div>
-      <div className="button-wrapper ml-auto">
-        <button
-          className="btn btn-primary"
-          onClick={props.onAccept}
-        >
-          Accept
-        </button>
-        <div
-          className="decline"
-          onClick={props.onDecline}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" color="red" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="none" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+          <button class="popup_cookies_close">
+            <div onClick={props.onDecline}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                color="red"
+                width="18.121"
+                height="18.121"
+                viewBox="0 0 18.121 18.121"
+                fill="none"
+                strokeWidth="1.5"
+              >
+                <g transform="translate(-478.939 -846.939)">
+                  <line
+                    x1="16"
+                    y2="16"
+                    transform="translate(480 848)"
+                    strokeLinecap="round"
+                  />
+                  <line
+                    x1="16"
+                    y1="16"
+                    transform="translate(480 848)"
+                    strokeLinecap="round"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
         </div>
       </div>
     </div>
@@ -76,6 +94,7 @@ function cookieConsentUrl() {
   }
 
   const cookieConsentLink = root.get("cookieConsentLink");
+  
 
   if (!cookieConsentLink) {
     return null;

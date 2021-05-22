@@ -368,8 +368,9 @@ small,
   line-height: 1.5em;
 }
 
-.fa {
-  color: $secondary;
+.footer_box .fa {
+  color: #e0e8eb;
+  font-size: 21px;
 }
 
 .text-greymiddle {
@@ -1523,6 +1524,10 @@ nav .open .dropdown-menu.lang-switch a {
 
 .container .container {
   padding: 0;
+}
+
+.header_login {
+  color: $secondary !important;
 }
 
 /* RESPONSIVE
