@@ -1510,6 +1510,10 @@ nav .open .dropdown-menu.lang-switch a {
   clear: both;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 .article_content {
   margin-top: -850px !important;
 }
@@ -1518,8 +1522,9 @@ nav .open .dropdown-menu.lang-switch a {
   padding: 37px 32px 20px;
 }
 
-.portfolio_stats_item {
-  padding: 24px 20px 21.5px !important;
+.portfolio_stats_number {
+  position: absolute;
+  bottom: 40px;
 }
 
 .container .container {

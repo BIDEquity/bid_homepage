@@ -11,9 +11,9 @@ function CookieConsentBanner() {
     acceptCookieConsent,
     declineCookieConsent,
   } = useCookieConsent();
-
+  console.log(cookieConsentChoice)
   React.useEffect(() => {
-    setVisible(!visible);
+    setVisible(cookieConsentChoice !== "accepted");
   }, [cookieConsentChoice]);
   
   if (!visible || !consentUrl) {
@@ -52,7 +52,7 @@ function CookieBanner(props) {
               Accept
             </button>
           </div>
-          <button class="popup_cookies_close">
+          <button className="popup_cookies_close">
             <div onClick={props.onDecline}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
