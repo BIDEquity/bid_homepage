@@ -202,9 +202,9 @@ html {
 }
 
 body {
-  color: #3F5E67;
+  color: #3f5e67;
   font: 14px $base-font;
-  background-color: #F7EDE1;
+  background-color: #f7ede1;
   overflow-x: hidden;
 }
 
@@ -230,13 +230,16 @@ body {
   margin: 0;
 }
 
-
 .container-fluid img {
   margin: 0;
 }
 
 .container .container {
   width: auto;
+}
+
+.active a {
+  color: $primary !important;
 }
 
 a {
@@ -673,7 +676,6 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
 .bg-brand-secondary {
   clear: both;
   position: relative;
-  
 }
 
 .bg-dark-image,
@@ -1364,11 +1366,12 @@ nav .open .dropdown-menu.lang-switch a {
   }
 }
 
-
-
 .fa-chevron-down {
   color: $primary;
   margin-left: 6px;
+  font-size: 9px;
+  position: absolute;
+  bottom: 14px;
 }
 
 @keyframes line {
@@ -1431,22 +1434,19 @@ nav .open .dropdown-menu.lang-switch a {
   height: 95vh;
 }
 
-
-
-
-
-
 @media screen and (max-width: 768px) {
-.col-lg-3, .col-lg-4 {
-  width: 50%;
+  .col-lg-3,
+  .col-lg-4 {
+    width: 50%;
   }
 }
 
 @media screen and (max-width: 414px) {
-  .col-lg-3, .col-lg-4 {
+  .col-lg-3,
+  .col-lg-4 {
     width: 100%;
-    }
   }
+}
 
 /* section_title */
 
@@ -1470,33 +1470,29 @@ nav .open .dropdown-menu.lang-switch a {
   margin-right: 32px;
 
   @media screen and (max-width: 767px) {
-      max-width: none;
-      margin-right: 0;
-      position: relative;
-      padding: 260px 0 0 0;
+    max-width: none;
+    margin-right: 0;
+    position: relative;
+    padding: 260px 0 0 0;
   }
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width: 1024px) {
   .w-45 {
-  width: 45%;
-}
-}
-
-
-
-  .section_headline .section_title {
-      margin-left: auto;
-      margin-top: 107px;
-      @media screen and (max-width: 991px) {
-        padding-bottom: 144px;
-    }
-      @media screen and (max-width: 991px) {
-          margin-bottom: 107px;
-      }
+    width: 45%;
   }
+}
 
-
+.section_headline .section_title {
+  margin-left: auto;
+  margin-top: 107px;
+  @media screen and (max-width: 991px) {
+    padding-bottom: 144px;
+  }
+  @media screen and (max-width: 991px) {
+    margin-bottom: 107px;
+  }
+}
 
 .team_item {
   width: 100% !important;

@@ -13,7 +13,7 @@ function CookieConsentBanner() {
   } = useCookieConsent();
   console.log(cookieConsentChoice)
   React.useEffect(() => {
-    setVisible(cookieConsentChoice !== "accepted");
+    setVisible(cookieConsentChoice === "accepted");
   }, [cookieConsentChoice]);
   
   if (!visible || !consentUrl) {
@@ -31,7 +31,7 @@ function CookieConsentBanner() {
 }
 
 function CookieBanner(props) {
-  console.log(props.onDecline)
+  
   return (
     <div className="popup_cookies">
       <div className="container">
