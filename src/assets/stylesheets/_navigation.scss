@@ -130,10 +130,12 @@
     @include text-hide;
     height: 75px;
     padding: 22px 0;
-    margin-left: -2px;
+    margin-left: -6px;
 
     img {
       margin: 0;
+      height: 28px;
+      width: auto;
     }
   }
 
