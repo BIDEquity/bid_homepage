@@ -129,7 +129,8 @@
     /* background: $logo-dark no-repeat center center / contain; */
     @include text-hide;
     height: 75px;
-    padding: 25px 0;
+    padding: 22px 0;
+    margin-left: -6px;
 
     img {
       margin: 0;
