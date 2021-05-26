@@ -317,7 +317,7 @@ Scrivito.provideComponent("BidAboutWidget", ({ widget }) => {
               
             />
           
-          <div class="team_more">
+          <div className="team_more">
             <a className="more_link" href="#">
               Full team
             </a>
