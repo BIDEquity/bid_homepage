@@ -222,7 +222,7 @@ Scrivito.provideComponent("BidPortfolioDetailsWidget", ({ widget }) => {
             <Scrivito.ContentTag
               content={widget}
               tag="h2"
-              attribute="sectionHeadline"
+              attribute="sectionTitle"
               className="section_title bottom_line"
             />
             <div className="posts_slider_wrap">
