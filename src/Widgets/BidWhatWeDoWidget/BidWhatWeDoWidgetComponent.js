@@ -16,7 +16,7 @@ Scrivito.provideComponent("BidWhatWeDoWidget", ({ widget }) => {
             
 		</div>
 	</div>
-    <div className="info_section">
+    <div className="about_us">
         
         <Scrivito.ImageTag 
           content={widget}
