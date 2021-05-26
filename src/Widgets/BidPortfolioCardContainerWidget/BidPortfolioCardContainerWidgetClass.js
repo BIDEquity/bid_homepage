@@ -1,0 +1,9 @@
+import * as Scrivito from 'scrivito'
+
+const BidPortfolioCardContainerWidget = Scrivito.provideWidgetClass('BidPortfolioCardContainerWidget', {
+  attributes: {
+    content: ['widgetlist', { only: "BidPortfolioCardWidget" }],
+  }
+})
+
+export default BidPortfolioCardContainerWidget

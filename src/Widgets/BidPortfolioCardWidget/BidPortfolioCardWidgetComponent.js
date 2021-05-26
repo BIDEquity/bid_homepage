@@ -6,8 +6,8 @@ Scrivito.provideComponent("BidPortfolioCardWidget", ({ widget }) => {
   let linktext = link && link.title();*/
 
   return (
-    <>
-      <div className="portfolio_post_logo">
+    <Scrivito.WidgetTag className="portfolio_post_item">
+      <div className={`${widget.get("backgroundColor") === "yes" ? "portfolio_post_logo" : "portfolio_post_image"}`}>
         <Scrivito.ImageTag content={widget} attribute="image" alt="" />
       </div>
       <div className="portfolio_post_info">
@@ -17,9 +17,9 @@ Scrivito.provideComponent("BidPortfolioCardWidget", ({ widget }) => {
           className="portfolio_post_name bottom_line light_line"
         />
         <div className="portfolio_post_text">
-          <Scrivito.ContentTag content={widget} attribute="text" tag="p" />
+          <Scrivito.ContentTag content={widget} attribute="text"  />
         </div>
       </div>
-    </>
+    </Scrivito.WidgetTag>
   );
 });

@@ -9,13 +9,13 @@ Scrivito.provideComponent("BidPortfolioWidget", ({ widget }) => {
     <>
       <div className="portfolio_posts">
         <div className="container">
-          <div className="portfolio_posts_wrap">
+          
             <Scrivito.ContentTag
               content={widget}
               attribute="card"
-              className="portfolio_post_item"
+              
             />
-          </div>
+        
         </div>
       </div>
       <div className="about_us">
