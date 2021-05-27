@@ -8,8 +8,6 @@ Scrivito.provideComponent('CardContainerWidget', ({ widget }) => (
     attribute="content"
     className="posts_wrap"
     />
-    <div className="posts_more">
-				<a className="more_link" href="#">More news</a>
-			</div>
+    
   </div>
 ))
