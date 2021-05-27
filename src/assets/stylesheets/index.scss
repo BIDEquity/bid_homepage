@@ -253,6 +253,10 @@ a:focus {
   color: $primary;
   text-decoration: none !important;
 }
+
+a.partner_details_link:hover {
+  color: #f7ede1 !important;
+}
 button:focus {
   outline: none !important;
 }
