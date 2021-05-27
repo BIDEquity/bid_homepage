@@ -128,7 +128,6 @@
   &-brand {
     /* background: $logo-dark no-repeat center center / contain; */
     @include text-hide;
-    height: 75px;
     padding: 22px 0;
     margin-left: -6px;
 
@@ -716,7 +715,7 @@
 
 @media (max-width: $screen-sm-max) {
   .nav-landing-page .navbar-brand img {
-    width: 145px;
+    width: 146px;
     margin: 0 auto;
     padding: 20px 0;
   }

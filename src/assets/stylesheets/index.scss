@@ -211,7 +211,7 @@ body {
 .container {
   width: 1354px;
   margin: 0 auto;
-  padding: 0 61px;
+  padding: 0 64px;
 
   @media screen and (max-width: 991px) {
     padding: 0 32px;
@@ -1443,6 +1443,10 @@ nav .open .dropdown-menu.lang-switch a {
 
 .partners_post_logo img {
   width: 208px !important;
+}
+
+.top_about .top_inner {
+  padding: 136px 0 !important;
 }
 
 @media screen and (max-width: 768px) {
