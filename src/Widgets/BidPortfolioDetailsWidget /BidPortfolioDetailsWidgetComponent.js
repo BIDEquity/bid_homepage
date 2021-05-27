@@ -43,7 +43,7 @@ Scrivito.provideComponent("BidPortfolioDetailsWidget", ({ widget }) => {
                 <Scrivito.ContentTag
                   content={widget}
                   attribute="articleBody"
-                  tag="p"
+                  
                 />
               </div>
             </div>
