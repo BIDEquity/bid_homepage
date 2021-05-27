@@ -14,7 +14,7 @@ Scrivito.provideComponent("CardWidget", ({ widget }) => (
       <div className="post_item_info">
       <Scrivito.WidgetTag className="post_item_date bottom_line" tag="div">
           <Scrivito.ContentTag content={widget} attribute="date" >
-            {formatDate(widget.get("date"),"dd mmmm yyyy")}
+            {formatDate(widget.get("date"),"dd mmm yyyy")}
             </Scrivito.ContentTag>
         </Scrivito.WidgetTag>
         <div className="post_item_text">
