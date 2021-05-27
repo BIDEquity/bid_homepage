@@ -152,7 +152,7 @@ class Navigation extends React.Component {
 
     return (
       <React.Fragment>
-        <div className="top_section">
+        <div className={`${useGradient ? "top_section" : "top_article"}`}>
           <BackgroundVideo videoUrl={videoUrl} />
           <ActualNavigation
             isLandingPage={isLandingPage}
