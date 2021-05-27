@@ -242,7 +242,7 @@ Scrivito.provideComponent("BidAboutWidget", ({ widget }) => {
                   content={widget}
                   tag="h2"
                   attribute="sectionTitle"
-                  className="section_title bottom_line col_5 col_t_12"
+                  className="section_title bottom_line col_6 col_t_12"
                 />
           <div className="service_wrap">
             <div className="service_item">
@@ -307,7 +307,7 @@ Scrivito.provideComponent("BidAboutWidget", ({ widget }) => {
       </div>
       <div className="content_section team_section">
         <div className="container">
-          <h2 className="section_title bottom_line col_5 col_t_12">
+          <h2 className="section_title bottom_line col_6 col_t_12">
             Meet our team Lorem ipsum dolor sit amet consectetur
           </h2>
           
