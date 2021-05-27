@@ -123,7 +123,7 @@ Scrivito.provideComponent("BidPortfolioDetailsWidget", ({ widget }) => {
                 <Scrivito.ContentTag
                   content={widget}
                   attribute="body"
-                  tag="p"
+                  
                 />
               </div>
             </div>
