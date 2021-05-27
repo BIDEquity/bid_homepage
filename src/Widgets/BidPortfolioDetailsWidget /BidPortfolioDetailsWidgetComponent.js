@@ -235,7 +235,9 @@ Scrivito.provideComponent("BidPortfolioDetailsWidget", ({ widget }) => {
                 </div>
               </div>
             </div>
-            
+            <div class="posts_more">
+						  <a class="more_link" href="#">More news</a>
+					  </div>
           </div>
           <div className="portfolio_details_bottom row">
             <div className="col_6 col_t_12">
