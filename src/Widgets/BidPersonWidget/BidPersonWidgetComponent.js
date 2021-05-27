@@ -29,8 +29,8 @@ Scrivito.provideComponent("BidPersonWidget", ({ widget }) => {
                   <a href="#">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="17.946"
-                      height="17.946"
+                      width="24"
+                      height="24"
                       viewBox="0 0 17.946 17.946"
                     >
                       <path
