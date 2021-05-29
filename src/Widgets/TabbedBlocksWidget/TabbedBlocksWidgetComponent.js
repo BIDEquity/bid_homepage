@@ -1,0 +1,138 @@
+import * as React from "react";
+import * as Scrivito from "scrivito";
+import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
+import ButtonTagList from "../../Components/ButtonTagList";
+import { Pagination, Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+//import "swiper/swiper.scss";
+
+class TabbedBlocksComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    const widget = this.props.widget;
+    const items = widget.get("items");
+    const tags = allTags(items);
+    
+    this.state = {
+      currentTag: tags[0],
+    };
+
+    this.setTag = this.setTag.bind(this);
+  }
+
+  
+
+  setTag(tag) {
+    this.setState({
+      currentTag: tag,
+    });
+  }
+
+  render() {
+    const widget = this.props.widget;
+    const items = widget.get("items");
+
+    if (!items.length) {
+      return (
+        <InPlaceEditingPlaceholder center>
+          Add blocks in the widget properties.
+        </InPlaceEditingPlaceholder>
+      );
+    }
+    
+    return (
+      <>
+        <div className="entrepreneurs_help_navbar bottom_line">
+          <ButtonTagList
+            showTags
+            tags={allTags(items)}
+            currentTag={this.state.currentTag}
+            setTag={this.setTag}
+
+            
+          />
+        </div>
+        
+        <Swiper 
+        slidesPerView={1} 
+        speed={800} 
+        loop={false} 
+        init={true}
+        pagination={true}
+        >
+          {items.map((item,index) => {
+            
+            return(
+              <SwiperSlide key={index} className="help_slide_item swiper-slide">
+              <div className="help_slide_box info_box">
+                <div className="info_box_content">
+                  <div className="title_block bottom_line light">
+                    <Scrivito.ContentTag
+                      content={item}
+                      attribute="text"
+                    />
+                  </div>
+                  <a className="info_box_link" href="#">
+                    <span>Lorem ipsum dolor</span>
+                    svg
+                  </a>
+                </div>
+              </div>
+              <div className="help_slide_img">
+                <Scrivito.ImageTag content={item} attribute="image" />
+              </div>
+            </SwiperSlide>
+          )})}
+        </Swiper>
+      </>
+    );
+  }
+}
+
+Scrivito.provideComponent("TabbedBlocksWidget", TabbedBlocksComponent);
+
+const TabbedBlock = Scrivito.connect(({ widget, currentTag }) => {
+  const teaser = widget.get("teaser");
+  const text = widget.get("text");
+  const title = widget.get("title");
+  const image = widget.get("image");
+  const tags = widget.get("tags");
+
+  const classNames = ["help_slide_item", "swiper-slide", "squeezed"];
+  if (currentTag && tags.includes(currentTag)) {
+    classNames.pop("squeezed");
+  }
+
+  return (
+    <SwiperSlide>
+      <div className="help_slide_box info_box">
+        <div className="info_box_content">
+          <div className="title_block bottom_line light">
+            <Scrivito.ContentTag tag="div" content={widget} attribute="text" />
+          </div>
+          <a className="info_box_link" href="#">
+            <span>Lorem ipsum dolor</span>
+            svg
+          </a>
+        </div>
+      </div>
+      <div className="help_slide_img">
+        <Scrivito.ImageTag content={widget} attribute="image" />
+      </div>
+    </SwiperSlide>
+  );
+});
+
+function allTags(items) {
+  const tagsArray = items.map((item) => item.get("tags"));
+
+  // flatten tags
+  const tags = tagsArray.reduce((a, b) => a.concat(b), []);
+
+  // unique tags
+  const uniqueTags = [...new Set(tags)];
+
+  // sort tags
+  return uniqueTags;
+}

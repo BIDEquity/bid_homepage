@@ -32,8 +32,10 @@ Scrivito.provideComponent("SectionWidget", ({ widget }) => {
     sectionClassNames.push("full-height");
   }
 
+  const classNames = sectionClassNames.join(" ");
+
   return (
-    <section>
+    <section className={classNames}>
       
       <div className={`${widget.get("useFullWidth") !== "yes" ? "container" : ""}`}>
         <Scrivito.ContentTag content={widget} attribute="content" />

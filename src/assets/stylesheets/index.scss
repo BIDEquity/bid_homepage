@@ -315,8 +315,9 @@ ol {
   margin-bottom: 5px;
   margin-top: 5px;
 }
-ul {
-  padding-left: 20px;
+
+.entrepreneurs_help_nav li .nav-link {
+  padding: 0 !important;
 }
 
 img,
@@ -1554,6 +1555,15 @@ a.btn:hover {
   position: absolute;
   bottom: 40px;
 }
+
+.squeezed {
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+  transition: all ease-out;
+}
+
+
 
 .container .container {
   padding: 0;

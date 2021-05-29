@@ -4,8 +4,8 @@ Scrivito.provideEditingConfig("BidInvestorsWidget", {
   title: "Bid Investors",
   
   properties: [
-    "headline",
-    
+    "link",
+    "tagSection"
   ],
   
 });
