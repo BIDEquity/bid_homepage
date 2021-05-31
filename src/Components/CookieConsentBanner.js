@@ -11,15 +11,15 @@ function CookieConsentBanner() {
     acceptCookieConsent,
     declineCookieConsent,
   } = useCookieConsent();
-  console.log(cookieConsentChoice)
+
   React.useEffect(() => {
-    setVisible(cookieConsentChoice === "accepted");
+    setVisible(cookieConsentChoice === "undecided");
   }, [cookieConsentChoice]);
-  
+
   if (!visible || !consentUrl) {
     return null;
   }
-  
+
   return (
     <CookieBanner
       url={consentUrl.url}

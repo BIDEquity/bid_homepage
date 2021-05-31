@@ -14,12 +14,15 @@ class TabbedBlocksComponent extends React.Component {
     const items = widget.get("items");
     const tags = allTags(items);
     
+    
     this.state = {
       currentTag: tags[0],
     };
 
     this.setTag = this.setTag.bind(this);
   }
+
+  
 
   
 
@@ -40,7 +43,7 @@ class TabbedBlocksComponent extends React.Component {
         </InPlaceEditingPlaceholder>
       );
     }
-    
+    //
     return (
       <>
         <div className="entrepreneurs_help_navbar bottom_line">
@@ -49,7 +52,7 @@ class TabbedBlocksComponent extends React.Component {
             tags={allTags(items)}
             currentTag={this.state.currentTag}
             setTag={this.setTag}
-
+            //onClick={mySwiper.slideTo(3)}
             
           />
         </div>

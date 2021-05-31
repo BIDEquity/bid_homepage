@@ -2,11 +2,10 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 
 Scrivito.provideComponent("BidWhatWeDoWidget", ({ widget }) => {
-  const link = widget.get("bottomLink");
-  let linktext = link && link.title();
   
-  return (
-    <>
+
+return (
+<>
     <div className="content_section we_do_content">
 		<div className="container">
         <Scrivito.ContentTag
@@ -20,7 +19,7 @@ Scrivito.provideComponent("BidWhatWeDoWidget", ({ widget }) => {
         
         <Scrivito.ImageTag 
           content={widget}
-          attribute="bgImage"
+          attribute="image"
           className="info_bg"
           alt=""
         />
@@ -31,27 +30,44 @@ Scrivito.provideComponent("BidWhatWeDoWidget", ({ widget }) => {
                         
                         <Scrivito.ContentTag
                           content={widget}
-                          attribute="sectionHeadline"
-                          className="section_title bottom_line col_6 col_t_12"
-                          tag="h2"
+                          attribute="slides"
+                          
                         />
                         
-                        <Scrivito.LinkTag to={link} className="info_slider_link">
-                          {linktext}
-                        </Scrivito.LinkTag>
+                        
                     </div>
                 </div>
                 
                 
             </div>
         </div>
-        <div className="info_slider_bottom">
-            <div className="container">
-                <div className="info_slider_pagination slider_pagination"></div>
-            </div>
-        </div>
+        
     </div>
 	
-	</>
-      );
-});
+	</>  
+  /*return (
+    <Scrivito.WidgetTag tag="div">
+      
+    <div className="content_section we_do_content">
+		<div className="container">
+        <Scrivito.ContentTag
+          content={widget}
+          attribute="content"
+        />
+            
+		</div>
+	</div>
+    <Scrivito.WidgetTag className="about_us info_section"><Scrivito.ImageTag
+        content={widget}
+        attribute="image"
+      />
+        <Scrivito.ContentTag
+          content={widget}
+          attribute="slides"
+          className="info_slider swiper-container"
+        />
+        
+    </Scrivito.WidgetTag>
+	</Scrivito.WidgetTag>
+      );*/
+)});

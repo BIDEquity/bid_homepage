@@ -2,5 +2,5 @@ import * as Scrivito from "scrivito";
 
 Scrivito.provideEditingConfig("BidWhatWeDoWidget", {
   title: "Bid What We Do",
-  properties: ['sectionLink','bgImage']
+  
 });

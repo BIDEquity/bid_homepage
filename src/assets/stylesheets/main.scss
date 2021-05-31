@@ -218,7 +218,7 @@ body {
     width: 100%;
     max-width: 100%;
     padding-right: 12px;
-    padding-left: 0;
+    padding-left: 12px;
 }
 
 .row_center {
@@ -6706,11 +6706,6 @@ body {
     display: none;
 }
 
-:root {
-    /*
-    --swiper-pagination-color: var(--swiper-theme-color);
-    */
-}
 
 .swiper-pagination {
     position: absolute;
@@ -6889,7 +6884,6 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
-    -ms-touch-action: none;
     background: rgba(0, 0, 0, 0.1);
 }
 
@@ -6948,13 +6942,6 @@ button.swiper-pagination-bullet {
 
 .swiper-slide-zoomed {
     cursor: move;
-}
-
-/* Preloader */
-:root {
-/*
---swiper-preloader-color: var(--swiper-theme-color);
-*/
 }
 
 .swiper-lazy-preloader {

@@ -2,13 +2,12 @@ import * as Scrivito from "scrivito";
 
 const BidWhatWeDoWidget = Scrivito.provideWidgetClass("BidWhatWeDoWidget", {
   attributes: {
-    headline: "string",
+    image: ["reference", {only:"Image"}],
     content: "widgetlist",
-    bgImage: ["reference", {only: "Image"}],
-    sectionHeadline: "string",
-    sectionLink: "link"
+    slides: "widgetlist"
+    
   },
-  extractTextAttributes: ["headline"],
+  extractTextAttributes: ["content"],
 });
 
 export default BidWhatWeDoWidget;
