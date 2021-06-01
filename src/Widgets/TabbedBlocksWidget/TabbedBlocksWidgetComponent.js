@@ -1,8 +1,11 @@
-import * as React from "react";
+import React, { useRef, useState } from "react";
 import * as Scrivito from "scrivito";
 import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
 import ButtonTagList from "../../Components/ButtonTagList";
-import { Pagination, Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Pagination } from 'swiper'
+
+SwiperCore.use([Pagination]);
 
 // Import Swiper styles
 //import "swiper/swiper.scss";
@@ -35,6 +38,20 @@ class TabbedBlocksComponent extends React.Component {
   render() {
     const widget = this.props.widget;
     const items = widget.get("items");
+    const params = {
+      loop: 'true',
+          slidesPerView: 1,
+          speed: 800,
+          loop: 'false',
+          
+          
+      pagination: {
+        el: '.entrepreneurs_help_navbar',
+        clickable: 'true',
+        
+      }
+    }
+    
 
     if (!items.length) {
       return (
@@ -52,17 +69,12 @@ class TabbedBlocksComponent extends React.Component {
             tags={allTags(items)}
             currentTag={this.state.currentTag}
             setTag={this.setTag}
-            //onClick={mySwiper.slideTo(3)}
+            //onClick={swiper.slideTo(3)}
             
           />
         </div>
         
-        <Swiper 
-        slidesPerView={1} 
-        speed={800} 
-        loop={false} 
-        init={true}
-        pagination={true}
+        <Swiper {...params}
         >
           {items.map((item,index) => {
             

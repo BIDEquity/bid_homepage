@@ -25,13 +25,14 @@ class SwiperComponent extends React.Component {
           fadeEffect: { crossFade: true },
           effect: 'fade',
           
+          
       pagination: {
         el: '.info_slider_pagination',
         clickable: 'true',
         
       }
     }
-
+    
     if (!items.length) {
       return (
         <InPlaceEditingPlaceholder center>
@@ -43,7 +44,9 @@ class SwiperComponent extends React.Component {
     return (
       
         
-          <Swiper {...params}>
+          <Swiper {...params}
+          
+          >
             {items.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
