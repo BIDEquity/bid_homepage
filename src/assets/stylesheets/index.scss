@@ -1451,7 +1451,7 @@ nav .open .dropdown-menu.lang-switch a {
 }
 
 .slider_pagination {
-  top: 200px !important;
+  top: 250px !important;
 }
 
 .swiper-container {
@@ -1485,6 +1485,10 @@ nav .open .dropdown-menu.lang-switch a {
     line-height: 48px;
     margin-bottom: 54px;
   }
+}
+
+.about_us {
+  min-height: 100vh !important;
 }
 
 .about_us_left {
