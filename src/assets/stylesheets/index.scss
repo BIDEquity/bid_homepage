@@ -1450,6 +1450,10 @@ nav .open .dropdown-menu.lang-switch a {
   padding: 136px 0 !important;
 }
 
+.slider_pagination {
+  top: 200px !important;
+}
+
 @media screen and (max-width: 768px) {
   .col-lg-3,
   .col-lg-4 {
@@ -1571,10 +1575,6 @@ a.btn:hover {
 
 .header_login {
   color: $secondary !important;
-}
-
-.info_slider_bottom {
-  margin-top: 120px;
 }
 
 /* RESPONSIVE

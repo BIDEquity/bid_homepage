@@ -1,14 +1,15 @@
-import * as React from "react";
+import React, { useRef, useState } from "react";
 import * as Scrivito from "scrivito";
 import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
 import ButtonTagList from "../../Components/ButtonTagList";
-import SwiperCore, {Pagination } from 'swiper';
+import SwiperCore, {EffectFade, Pagination } from 'swiper';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 //import "swiper/swiper.scss";
 SwiperCore.use([Pagination]);
+
 class SwiperComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -22,7 +23,7 @@ class SwiperComponent extends React.Component {
           slidesPerView: 1,
           speed: 500,
           effect: 'fade',
-          crossfade: 'true',
+          
       pagination: {
         el: '.info_slider_pagination',
         clickable: 'true',
@@ -61,11 +62,7 @@ class SwiperComponent extends React.Component {
                 </SwiperSlide>
               );
             })}
-            <div className="info_slider_bottom">
-            <div className="container">
-                <div className="info_slider_pagination slider_pagination"></div>
-            </div>
-        </div>
+            
           </Swiper>
         
       

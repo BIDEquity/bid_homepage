@@ -41,7 +41,11 @@ return (
                 
             </div>
         </div>
-        
+        <div className="info_slider_bottom">
+            <div className="container">
+                <div className="info_slider_pagination slider_pagination"></div>
+            </div>
+        </div>
     </div>
 	
 	</>  
