@@ -28,7 +28,7 @@ Scrivito.provideComponent("BidTermsWidget", ({ widget }) => {
                     <a className="content_nav_link content_next" href="#">
                         <p className="content_nav_direction">Next</p>
                         <div className="content_nav_info">
-                            <span className="content_nav_name">Terms of Use</span>
+                            <span className="content_nav_name">Privacy Policy</span>
                             <span className="arrow_btn">
                             <svg
                     xmlns="http://www.w3.org/2000/svg"
