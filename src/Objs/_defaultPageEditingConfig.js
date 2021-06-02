@@ -6,6 +6,14 @@ export const defaultPageEditingConfigAttributes = {
     title: "Title",
     description: "Limit to 55 characters.",
   },
+  showAlternateFooter: {
+    title: "Alternate Footer",
+    description: "Show the alternate footer version",
+    values: [
+      { value: "yes", title: "Yes" },
+      { value: "no", title: "No" },
+    ],
+  },
   navigationBackgroundImage: {
     title: "Header background",
     description: "The background image/video of the header.",
@@ -41,6 +49,7 @@ export const defaultPageInitialContent = {
 
 export const defaultPageProperties = [
   "title",
+  "showAlternateFooter",
   "navigationHeight",
   "navigationBackgroundImage",
   "navigationBackgroundImageGradient",

@@ -3,7 +3,7 @@ import * as Scrivito from "scrivito";
 import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
 import ButtonTagList from "../../Components/ButtonTagList";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination } from 'swiper'
+import SwiperCore, { Pagination } from "swiper";
 
 SwiperCore.use([Pagination]);
 
@@ -16,18 +16,13 @@ class TabbedBlocksComponent extends React.Component {
     const widget = this.props.widget;
     const items = widget.get("items");
     const tags = allTags(items);
-    
-    
+
     this.state = {
       currentTag: tags[0],
     };
 
     this.setTag = this.setTag.bind(this);
   }
-
-  
-
-  
 
   setTag(tag) {
     this.setState({
@@ -39,19 +34,16 @@ class TabbedBlocksComponent extends React.Component {
     const widget = this.props.widget;
     const items = widget.get("items");
     const params = {
-      loop: 'true',
-          slidesPerView: 1,
-          speed: 800,
-          loop: 'false',
-          
-          
+      loop: "true",
+      slidesPerView: 1,
+      speed: 800,
+      loop: "false",
+
       pagination: {
-        el: '.entrepreneurs_help_navbar',
-        clickable: 'true',
-        
-      }
-    }
-    
+        el: ".entrepreneurs_help_navbar",
+        clickable: "true",
+      },
+    };
 
     if (!items.length) {
       return (
@@ -70,35 +62,52 @@ class TabbedBlocksComponent extends React.Component {
             currentTag={this.state.currentTag}
             setTag={this.setTag}
             //onClick={swiper.slideTo(3)}
-            
           />
         </div>
-        
-        <Swiper {...params}
-        >
-          {items.map((item,index) => {
-            
-            return(
+
+        <Swiper {...params}>
+          {items.map((item, index) => {
+            return (
               <SwiperSlide key={index} className="help_slide_item swiper-slide">
-              <div className="help_slide_box info_box">
-                <div className="info_box_content">
-                  <div className="title_block bottom_line light">
-                    <Scrivito.ContentTag
-                      content={item}
-                      attribute="text"
-                    />
+                <div className="help_slide_box info_box">
+                  <div className="info_box_content">
+                    <div className="title_block bottom_line light">
+                      <Scrivito.ContentTag content={item} attribute="text" />
+                    </div>
+                    <a className="info_box_link" href="#">
+                      <span>Lorem ipsum dolor</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="17.284"
+                        height="10.73"
+                        viewBox="0 0 17.284 10.73"
+                        fill="none"
+                        strokeWidth="1.5"
+                      >
+                        <g transform="translate(-570.625 -853.857)">
+                          <path
+                            d="M576.989,860.911l4.3,4.3-4.3,4.3"
+                            transform="translate(5.865 -5.993)"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <line
+                            x1="15.783"
+                            transform="translate(571.375 859.222)"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </g>
+                      </svg>
+                    </a>
                   </div>
-                  <a className="info_box_link" href="#">
-                    <span>Lorem ipsum dolor</span>
-                    svg
-                  </a>
                 </div>
-              </div>
-              <div className="help_slide_img">
-                <Scrivito.ImageTag content={item} attribute="image" />
-              </div>
-            </SwiperSlide>
-          )})}
+                <div className="help_slide_img">
+                  <Scrivito.ImageTag content={item} attribute="image" />
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </>
     );

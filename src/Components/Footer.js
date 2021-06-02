@@ -4,13 +4,17 @@ import InPlaceEditingPlaceholder from "./InPlaceEditingPlaceholder";
 
 function Footer() {
   const root = Scrivito.Obj.root();
-
+  const currentPage = Scrivito.currentPage();
+  if(!currentPage) {
+    return null;
+  }
+  const altF = currentPage.get("showAlternateFooter");
   if (!root) {
     return null;
   }
 
   return (
-    <footer className="footer">
+    <footer className={`footer ${altF === "yes" && "footer_alternative"}`}>
       <div className="container">
         <div className="footer_inner">
           <div className="footer_left">

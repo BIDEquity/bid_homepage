@@ -1515,12 +1515,19 @@ letter-spacing: -.008em;
 
 }
 
-.swiper-container {
-  overflow: unset !important;
+.investors_news {
+  padding: 837px 0 0 !important;
+  margin-bottom: -200px !important;
 }
 
 .entrepreneurs_help_navbar {
   padding-bottom: 24px;
+}
+
+.entrepreneurs_help {
+  position: relative !important;
+  top: 360px !important;
+  margin-bottom: 0 !important;
 }
 
 .footer_cop {

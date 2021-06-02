@@ -1,5 +1,6 @@
 const defaultPageAttributes = {
   body: ["widgetlist", { only: "SectionWidget" }],
+  showAlternateFooter: ["enum", { values: ["yes", "no"] }],
   navigationBackgroundImage: [
     "reference",
     { only: ["Image", "Video", "Download"] },
