@@ -1515,6 +1515,11 @@ letter-spacing: -.008em;
 
 }
 
+.posts_slider .post_slide {
+  margin-right: 24px !important;
+}
+
+
 .investors_news {
   padding: 837px 0 0 !important;
   margin-bottom: -200px !important;
@@ -1636,12 +1641,18 @@ a.btn:hover {
 }
 
 .post_item_info {
-  padding: 37px 32px 20px;
+  padding: 37px 32px 60px !important;
 }
 
 .portfolio_stats_number {
   position: absolute;
   bottom: 40px;
+}
+
+.entrepreneurs_global_img text {
+  font-weight: 700;
+  font-family: "Bebas Neue Pro Expanded", sans-serif;
+  font-size: 16px !important;
 }
 
 .squeezed {

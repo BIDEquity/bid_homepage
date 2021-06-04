@@ -1,9 +1,14 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import formatDate from "../../utils/formatDate";
-
+import { SwiperSlide } from "swiper/react";
 Scrivito.provideComponent("CardWidget", ({ widget }) => (
-  <Scrivito.WidgetTag className="post_item" tag="div">
+  
+  
+  <SwiperSlide className="swiper-slide post_slide"
+  
+  >
+  
     
       <Scrivito.ImageTag
         content={widget}
@@ -27,6 +32,8 @@ Scrivito.provideComponent("CardWidget", ({ widget }) => (
       
       </div>
     
-    </Scrivito.WidgetTag>
+  
+    </SwiperSlide>
+    
   )
 )

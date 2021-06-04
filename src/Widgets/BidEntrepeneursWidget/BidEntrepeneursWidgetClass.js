@@ -1,0 +1,51 @@
+import * as Scrivito from "scrivito";
+
+const BidEntrepeneursWidget = Scrivito.provideWidgetClass("BidEntrepeneursWidget", {
+  attributes: {
+    assist: ["reference", {only: "Image"}],
+    topTitle: "string",
+    topLink: "link",
+    circleTitle: "string",
+    circleHeadline1: "string",
+    circleHeadline2: "string",
+    circleHeadline3: "string",
+    circleHeadline4: "string",
+    circleText1: "string",
+    circleText2: "string",
+    circleText3: "string",
+    circleText4: "string",
+    circleNumber1: "string",
+    circleNumber2: "string",
+    circleNumber3: "string",
+    circleNumber4: "string",
+    statsNumber: "string",
+    statsText: "string",
+    statsNumber2: "string",
+    statsText2: "string",
+    statsNumber3: "string",
+    statsText3: "string",
+    quote: "string",
+    name: "string",
+    position: "string",
+    quote2: "string",
+    name2: "string",
+    position2: "string",
+    info1: ["reference", {only: "Image"}],
+    info2: ["reference", {only: "Image"}],
+    info3: ["reference", {only: "Image"}],
+    infoTitle1: "string",
+    infoLink1: "link",
+    infoTitle2: "string",
+    infoLink2: "link",
+    infoTitle3: "string",
+    infoLink3: "link",
+    networkTitle: "string",
+    slider: "widgetlist",
+    helpTitle:  "string",
+    tagSection: "widgetlist",
+    link: "link"
+  },
+  
+});
+
+export default BidEntrepeneursWidget;
