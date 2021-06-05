@@ -40,6 +40,8 @@ const BidEntrepeneursWidget = Scrivito.provideWidgetClass("BidEntrepeneursWidget
     infoTitle3: "string",
     infoLink3: "link",
     networkTitle: "string",
+    partnerTitle: "string",
+    partner: "widgetlist",
     slider: "widgetlist",
     helpTitle:  "string",
     tagSection: "widgetlist",

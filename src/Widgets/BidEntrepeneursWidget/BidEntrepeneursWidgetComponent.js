@@ -6776,59 +6776,17 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
       </div>
       <div className="entrepreneurs_brands">
         <div className="container">
-          <h2 className="section_title col_8 col_t_12">
-            We have acquired, partnered and shared in the success of these
-            global brands
-          </h2>
+          <Scrivito.ContentTag
+            content={widget}
+            attribute="partnerTitle"
+            tag="h2"
+            className="section_title col_8 col_t_12"
+          />
           <div className="portfolio_posts_wrap">
-            <div className="portfolio_post_item">
-              <div className="portfolio_post_img">
-                <img src="images/brand_post_1.jpg" alt="" />
-              </div>
-              <div className="portfolio_post_info">
-                <p className="portfolio_post_name bottom_line light_line">
-                  EvidentIQ
-                </p>
-                <div className="portfolio_post_text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna ut.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="portfolio_post_item">
-              <div className="portfolio_post_logo">
-                <img src="images/brand_logo_1.png" width="152" alt="" />
-              </div>
-              <div className="portfolio_post_info">
-                <p className="portfolio_post_name bottom_line light_line">
-                  xClinical
-                </p>
-                <div className="portfolio_post_text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna ut.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="portfolio_post_item">
-              <div className="portfolio_post_logo">
-                <img src="images/brand_logo_2.png" width="168" alt="" />
-              </div>
-              <div className="portfolio_post_info">
-                <p className="portfolio_post_name bottom_line light_line">
-                  eSight Energy
-                </p>
-                <div className="portfolio_post_text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna ut.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Scrivito.ContentTag
+              content={widget}
+              attribute="partner"
+            />
           </div>
           <div className="entrepreneurs_brands_more">
             <a className="more_link" href="#">
