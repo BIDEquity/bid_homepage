@@ -11,11 +11,13 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
   let infolinktext2 = infolink2 && infolink2.title();
   const infolink3 = widget.get("infoLink3");
   let infolinktext3 = infolink3 && infolink3.title();
+  const strategylink = widget.get("strategyLink");
+  let strategylinktext = strategylink && strategylink.title();
 
   return (
     <>
-      <div className="top_article top_entrepreneurs">
-        <div className="entrepreneurs_intro">
+      <div className="top_article top_entrepreneurs bg-grey">
+        <div className="entrepreneurs_intro bg-grey">
           <div className="container">
             <div className="entrepreneurs_intro_box info_box">
               <div className="info_box_content">
@@ -65,12 +67,11 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                   />
                   <div className="assist_entrepreneurs_text">
                     <p>
-                  <Scrivito.ContentTag
-                    content={widget}
-                    attribute="circleText1"
-                    tag="span"
-                    
-                  />
+                      <Scrivito.ContentTag
+                        content={widget}
+                        attribute="circleText1"
+                        tag="span"
+                      />
                       <span className="plus">+</span>
                     </p>
                   </div>
@@ -91,13 +92,12 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     className="assist_entrepreneurs_name"
                   />
                   <div className="assist_entrepreneurs_text">
-                  <p>
-                  <Scrivito.ContentTag
-                    content={widget}
-                    attribute="circleText2"
-                    tag="span"
-                    
-                  />
+                    <p>
+                      <Scrivito.ContentTag
+                        content={widget}
+                        attribute="circleText2"
+                        tag="span"
+                      />
                       <span className="plus">+</span>
                     </p>
                   </div>
@@ -118,13 +118,12 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     className="assist_entrepreneurs_name"
                   />
                   <div className="assist_entrepreneurs_text">
-                  <p>
-                  <Scrivito.ContentTag
-                    content={widget}
-                    attribute="circleText3"
-                    tag="span"
-                    
-                  />
+                    <p>
+                      <Scrivito.ContentTag
+                        content={widget}
+                        attribute="circleText3"
+                        tag="span"
+                      />
                       <span className="plus">+</span>
                     </p>
                   </div>
@@ -145,13 +144,12 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     className="assist_entrepreneurs_name"
                   />
                   <div className="assist_entrepreneurs_text">
-                  <p>
-                  <Scrivito.ContentTag
-                    content={widget}
-                    attribute="circleText4"
-                    tag="span"
-                    
-                  />
+                    <p>
+                      <Scrivito.ContentTag
+                        content={widget}
+                        attribute="circleText4"
+                        tag="span"
+                      />
                       <span className="plus">+</span>
                     </p>
                   </div>
@@ -164,46 +162,42 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
               <div className="content_info_top">
                 <div className="content_stats_box">
                   <div className="content_stats_inner">
-                  
                     <Scrivito.ContentTag
-                    content={widget}
-                    attribute="statsNumber"
-                    tag="span"
-                    className="content_stats_number"
-                  />
+                      content={widget}
+                      attribute="statsNumber"
+                      tag="span"
+                      className="content_stats_number"
+                    />
                     <Scrivito.ContentTag
-                    content={widget}
-                    attribute="statsText"
-                    tag="p"
-                    className="content_stats_text"
-                  />
-                    
+                      content={widget}
+                      attribute="statsText"
+                      tag="p"
+                      className="content_stats_text"
+                    />
                   </div>
                 </div>
                 <div className="testimonial_item">
                   <div className="testimonial_item_text">
-                  <Scrivito.ContentTag
-                    content={widget}
-                    attribute="quote"
-                    tag="p"
-                    
-                  />
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="quote"
+                      tag="p"
+                    />
                   </div>
                   <div className="testimonial_item_bottom">
-                    
                     <Scrivito.ContentTag
-                    content={widget}
-                    attribute="name"
-                    tag="p"
-                    className="testimonial_item_name"
-                  />
-                    
+                      content={widget}
+                      attribute="name"
+                      tag="p"
+                      className="testimonial_item_name"
+                    />
+
                     <Scrivito.ContentTag
-                    content={widget}
-                    attribute="position"
-                    tag="p"
-                    className="testimonial_item_position"
-                  />
+                      content={widget}
+                      attribute="position"
+                      tag="p"
+                      className="testimonial_item_position"
+                    />
                   </div>
                 </div>
               </div>
@@ -213,14 +207,13 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                 </div>
                 <div className="content_info_box info_box">
                   <div className="info_box_content">
-                    
                     <Scrivito.ContentTag
-                    content={widget}
-                    attribute="infoTitle1"
-                    tag="h2"
-                    className="title_block bottom_line light"
-                  />
-                    
+                      content={widget}
+                      attribute="infoTitle1"
+                      tag="h2"
+                      className="title_block bottom_line light"
+                    />
+
                     <Scrivito.LinkTag to={infolink1} className="info_box_link">
                       {infolinktext1}
                     </Scrivito.LinkTag>
@@ -234,13 +227,12 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
       <div className="entrepreneurs_global">
         <div className="entrepreneurs_global_wrap">
           <div className="container">
-            
             <Scrivito.ContentTag
-                    content={widget}
-                    attribute="networkTitle"
-                    tag="h2"
-                    className="section_title col_8 col_t_12"
-                  />
+              content={widget}
+              attribute="networkTitle"
+              tag="h2"
+              className="section_title col_8 col_t_12"
+            />
             <div className="entrepreneurs_global_img">
               <div className="desktop">
                 <svg
@@ -6353,70 +6345,123 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
               <div className="entrepreneurs_strategies_wrap">
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
-                    <img src="images/entrepreneurs_strategy_1.svg" alt="" />
+                    <Scrivito.ImageTag
+                      content={widget}
+                      attribute="strategyImage1"
+                      alt=""
+                    />
                   </div>
                   <p className="entrepreneurs_strategy_text">
-                    Industry <br />
-                    Rollup <span className="plus">+</span>
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="strategyText1"
+                      tag="div"
+                    >
+                      <span className="plus">+</span>
+                    </Scrivito.ContentTag>
                   </p>
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
-                    <img src="images/entrepreneurs_strategy_2.svg" alt="" />
+                    <Scrivito.ImageTag
+                      content={widget}
+                      attribute="strategyImage2"
+                      alt=""
+                    />
                   </div>
                   <p className="entrepreneurs_strategy_text">
-                    Cross <br />
-                    Border <span className="plus">+</span>
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="strategyText2"
+                      tag="div"
+                    >
+                      <span className="plus">+</span>
+                    </Scrivito.ContentTag>
                   </p>
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
-                    <img src="images/entrepreneurs_strategy_3.svg" alt="" />
+                    <Scrivito.ImageTag
+                      content={widget}
+                      attribute="strategyImage3"
+                      alt=""
+                    />
                   </div>
                   <p className="entrepreneurs_strategy_text">
-                    Vertical <br />
-                    Integration <span className="plus">+</span>
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="strategyText3"
+                      tag="div"
+                    >
+                      <span className="plus">+</span>
+                    </Scrivito.ContentTag>
                   </p>
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
-                    <img src="images/entrepreneurs_strategy_4.svg" alt="" />
+                    <Scrivito.ImageTag
+                      content={widget}
+                      attribute="strategyImage4"
+                      alt=""
+                    />
                   </div>
                   <p className="entrepreneurs_strategy_text">
-                    Portfolio <br />
-                    Extension <span className="plus">+</span>
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="strategyText4"
+                      tag="div"
+                    >
+                      <span className="plus">+</span>
+                    </Scrivito.ContentTag>
                   </p>
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
-                    <img src="images/entrepreneurs_strategy_5.svg" alt="" />
+                    <Scrivito.ImageTag
+                      content={widget}
+                      attribute="strategyImage5"
+                      alt=""
+                    />
                   </div>
                   <p className="entrepreneurs_strategy_text">
-                    Capability <br />
-                    Buy <span className="plus">+</span>
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="strategyText5"
+                      tag="div"
+                    >
+                      <span className="plus">+</span>
+                    </Scrivito.ContentTag>
                   </p>
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
-                    <img src="images/entrepreneurs_strategy_6.svg" alt="" />
+                    <Scrivito.ImageTag
+                      content={widget}
+                      attribute="strategyImage6"
+                      alt=""
+                    />
                   </div>
                   <p className="entrepreneurs_strategy_text">
-                    Customer <br />
-                    Access <span className="plus">+</span>
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="strategyText6"
+                      tag="div"
+                    >
+                      <span className="plus">+</span>
+                    </Scrivito.ContentTag>
                   </p>
                 </div>
               </div>
               <div className="entrepreneurs_strategies_description">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat duis aute
-                  irure.
-                </p>
-                <a className="btn" href="#">
-                  Which strategy could work for you?
-                </a>
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="strategyDescription"
+                  tag="p"
+                />
+
+                <Scrivito.LinkTag to={strategylink} className="btn">
+                  {strategylinktext}
+                </Scrivito.LinkTag>
               </div>
             </div>
           </div>
@@ -6427,14 +6472,13 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
               <div className="content_info_top">
                 <div className="content_stats_box">
                   <div className="content_stats_inner">
-                    
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="statsNumber2"
                       tag="span"
                       className="content_stats_number"
                     />
-                    
+
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="statsText2"
@@ -6447,19 +6491,16 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
               <div className="content_info_bottom">
                 <div className="content_info_box info_box left">
                   <div className="info_box_content">
-                    
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="infoTitle2"
                       tag="h2"
                       className="title_block bottom_line light"
                     />
-                    
+
                     <Scrivito.LinkTag to={infolink2} className="info_box_link">
                       {infolinktext2}
                     </Scrivito.LinkTag>
-
-
                   </div>
                 </div>
                 <div className="content_info_img">
@@ -6472,90 +6513,108 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
       </div>
       <div className="operational_value bg_blue tabs_section">
         <div className="container">
-          <h2 className="section_title col_8 col_t_12">
-            We create operational value using our unique toolbox which comprises
-            of 29 software specific levers in 6 categories
-          </h2>
+          <Scrivito.ContentTag
+            content={widget}
+            attribute="leverTitle"
+            tag="h2"
+            className="section_title col_8 col_t_12"
+          />
           <div className="operational_value_buttons tabs_buttons">
-            <button
+            <Scrivito.ContentTag
+              content={widget}
+              attribute="company1"
+              tag="button"
               className="operational_value_btn tab_btn current"
               data-tab="1"
               data-level-offset="40%,72%,0,0,100%,0"
-            >
-              Company A
-            </button>
-            <button
+            />
+            <Scrivito.ContentTag
+              content={widget}
+              attribute="company2"
+              tag="button"
               className="operational_value_btn tab_btn"
               data-tab="2"
               data-level-offset="40%,40%,0,20%,100%,35%"
-            >
-              Company B
-            </button>
-            <button
+            />
+
+            <Scrivito.ContentTag
+              content={widget}
+              attribute="company3"
+              tag="button"
               className="operational_value_btn tab_btn"
               data-tab="3"
               data-level-offset="20%,10%,0,30%,100%,35%"
-            >
-              Company C
-            </button>
-            <button
+            />
+
+            <Scrivito.ContentTag
+              content={widget}
+              attribute="company4"
+              tag="button"
               className="operational_value_btn tab_btn"
               data-tab="4"
               data-level-offset="0,10%,0,10%,80%,35%"
-            >
-              Company D
-            </button>
-            <button
+            />
+
+            <Scrivito.ContentTag
+              content={widget}
+              attribute="company5"
+              tag="button"
               className="operational_value_btn tab_btn"
               data-tab="5"
               data-level-offset="0,10%,0,20%,70%,10%"
-            >
-              Company D
-            </button>
-            <button
+            />
+
+            <Scrivito.ContentTag
+              content={widget}
+              attribute="company6"
+              tag="button"
               className="operational_value_btn tab_btn"
               data-tab="6"
               data-level-offset="20,10%,50%,20%,0,10%"
-            >
-              Company D
-            </button>
+            />
           </div>
           <div className="operational_value_description">
             <div className="tab_container tab_container_1 active">
-              <p>
-                <strong>Continue Growth</strong> <br />
-                Enable this company to continue a path of high growth.
-              </p>
+              <Scrivito.ContentTag
+                content={widget}
+                attribute="growth1"
+                tag="p"
+              />
             </div>
             <div className="tab_container tab_container_2">
-              <p>
-                <strong>Continue Growth</strong> <br />
-                Enable this company to continue a path of high growth.
-              </p>
+              <Scrivito.ContentTag
+                content={widget}
+                attribute="growth2"
+                tag="p"
+              />
             </div>
             <div className="tab_container tab_container_3">
-              <p>
-                <strong>Continue Growth</strong> <br />
-                Enable this company to continue a path of high growth.
-              </p>
+              <Scrivito.ContentTag
+                content={widget}
+                attribute="growth3"
+                tag="p"
+              />
             </div>
             <div className="tab_container tab_container_4">
-              <p>
-                <strong>Continue Growth</strong> <br />
-                Enable this company to continue a path of high growth.
-              </p>
+              <Scrivito.ContentTag
+                content={widget}
+                attribute="growth4"
+                tag="p"
+              />
             </div>
             <div className="tab_container tab_container_5">
-              <p>
-                <strong>Continue Growth</strong> <br />
-                Enable this company to continue a path of high growth.
-              </p>
+              <Scrivito.ContentTag
+                content={widget}
+                attribute="growth5"
+                tag="p"
+              />
             </div>
             <div className="tab_container tab_container_6">
-              <p>
-                <strong>Continue Growth</strong> <br />
-                Enable this company to continue a path of high growth.
-              </p>
+              <Scrivito.ContentTag
+                content={widget}
+                attribute="growth6"
+                tag="p"
+              />
             </div>
           </div>
           <div className="operational_value_wrap">
@@ -6706,14 +6765,13 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
               <div className="content_info_top">
                 <div className="content_stats_box">
                   <div className="content_stats_inner">
-                    
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="statsNumber3"
                       tag="span"
                       className="content_stats_number"
                     />
-                    
+
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="statsText3"
@@ -6724,22 +6782,20 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                 </div>
                 <div className="testimonial_item">
                   <div className="testimonial_item_text">
-                  <Scrivito.ContentTag
+                    <Scrivito.ContentTag
                       content={widget}
                       attribute="quote2"
                       tag="p"
-                      
                     />
                   </div>
                   <div className="testimonial_item_bottom">
-                    
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="name2"
                       tag="p"
                       className="testimonial_item_name"
                     />
-                    
+
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="position2"
@@ -6755,18 +6811,16 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                 </div>
                 <div className="content_info_box info_box">
                   <div className="info_box_content">
-                    
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="infoTitle3"
                       tag="h2"
                       className="title_block bottom_line light"
                     />
-                    
-                    <Scrivito.LinkTag to={infolink3} className="info_box_link">
-                      {infolinktext3 }
-                    </Scrivito.LinkTag>
 
+                    <Scrivito.LinkTag to={infolink3} className="info_box_link">
+                      {infolinktext3}
+                    </Scrivito.LinkTag>
                   </div>
                 </div>
               </div>
@@ -6783,10 +6837,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
             className="section_title col_8 col_t_12"
           />
           <div className="portfolio_posts_wrap">
-            <Scrivito.ContentTag
-              content={widget}
-              attribute="partner"
-            />
+            <Scrivito.ContentTag content={widget} attribute="partner" />
           </div>
           <div className="entrepreneurs_brands_more">
             <a className="more_link" href="#">

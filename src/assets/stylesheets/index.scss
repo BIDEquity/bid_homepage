@@ -781,6 +781,7 @@ h6,
 .height-center {
   display: flex;
   text-align: center;
+  height: 81vh !important;
 }
 .height-center .container {
   margin: auto !important;
@@ -1653,6 +1654,12 @@ a.btn:hover {
   font-weight: 700;
   font-family: "Bebas Neue Pro Expanded", sans-serif;
   font-size: 16px !important;
+}
+
+
+
+.entrepreneurs_intro_box {
+  top: -816px !important;
 }
 
 .squeezed {
