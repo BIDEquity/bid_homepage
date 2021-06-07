@@ -5,7 +5,8 @@ Scrivito.provideEditingConfig("BidInvestorsWidget", {
   
   properties: [
     "link",
-    "tagSection"
+    "tagSection",
+    "cards",
   ],
   
 });

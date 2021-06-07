@@ -1664,6 +1664,14 @@ a.btn:hover {
   margin-top: -449px !important;
 }
 
+.posts_slider {
+  &.swiper-container {
+      @media screen and (max-width: 991px) {
+          padding: 0 0 0 32px;
+      }
+  }
+}
+
 .squeezed {
   max-height: 0;
   max-width: 0;

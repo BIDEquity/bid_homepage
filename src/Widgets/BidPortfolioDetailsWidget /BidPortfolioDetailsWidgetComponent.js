@@ -1,7 +1,20 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
+import { Swiper } from "swiper/react";
 
 Scrivito.provideComponent("BidPortfolioDetailsWidget", ({ widget }) => {
+  const params = {
+    loop: false,
+    watchOverflow: true,
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    speed: 500,
+    breakpoints: {
+      992: {
+        slidesPerView: 4,
+      },
+    },
+  };
   const link = widget.get("detailsButton");
   let linkText = link && link.title();
   
@@ -225,18 +238,22 @@ Scrivito.provideComponent("BidPortfolioDetailsWidget", ({ widget }) => {
               attribute="sectionTitle"
               className="section_title bottom_line"
             />
-            <div className="posts_slider_wrap">
-              <div className="posts_slider swiper-container">
-                <div className="swiper-wrapper">
+           
+					  <div className="posts_slider_wrap">
+              <div className="posts_slider xxxswiper-container">
+                <div className="xxxswiper-wrapper">
+                  <Swiper {...params}>
                   <Scrivito.ContentTag
                     content={widget}
                     attribute="content"
+                    
                   />
+                  </Swiper>
                 </div>
               </div>
             </div>
-            <div class="posts_more">
-						  <a class="more_link" href="#">More news</a>
+            <div className="posts_more">
+						  <a className="more_link" href="#">More news</a>
 					  </div>
           </div>
           <div className="portfolio_details_bottom row">

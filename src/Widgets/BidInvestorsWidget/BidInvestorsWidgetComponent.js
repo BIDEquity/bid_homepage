@@ -93,18 +93,13 @@ Scrivito.provideComponent("BidInvestorsWidget", ({ widget }) => {
             tag="h2"
             className="section_title col_9 col_t_12"
           />
-
-          <div className="posts_slider_wrap">
-            <div className="posts_slider swiper-container">
-              
                 <Scrivito.ContentTag
                   content={widget}
-                  attribute="content"
-                  className="swiper-wrapper"
+                  attribute="cards"
+                  className="xswiper-wrapper"
                 />
               
-            </div>
-          </div>
+            
           <div className="posts_more">
             <a className="more_link" href="#">
               More news

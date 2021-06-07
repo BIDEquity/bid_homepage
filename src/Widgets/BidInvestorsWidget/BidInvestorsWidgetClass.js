@@ -16,6 +16,7 @@ const BidInvestorsWidget = Scrivito.provideWidgetClass("BidInvestorsWidget", {
     newsTitle: "string",
     helpTitle:  "string",
     tagSection: "widgetlist",
+    cards: "widgetlist",
   },
   
 });

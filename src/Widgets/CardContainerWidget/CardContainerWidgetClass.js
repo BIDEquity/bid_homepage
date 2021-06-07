@@ -2,7 +2,7 @@ import * as Scrivito from 'scrivito'
 
 const CardContainerWidget = Scrivito.provideWidgetClass('CardContainerWidget', {
   attributes: {
-    content: ['widgetlist', { only: "CardWidget" }],
+    items: ['widgetlist', { only: "CardWidget" }],
   }
 })
 

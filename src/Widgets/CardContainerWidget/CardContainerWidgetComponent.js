@@ -1,7 +1,11 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
-import { Swiper } from "swiper/react";
+import formatDate from "../../utils/formatDate"
+import { Swiper, SwiperSlide } from "swiper/react";
 Scrivito.provideComponent("CardContainerWidget", ({ widget }) => {
+  
+  const items = widget.get("items");
+  console.log(items)
   const params = {
     loop: false,
     watchOverflow: true,
@@ -15,12 +19,38 @@ Scrivito.provideComponent("CardContainerWidget", ({ widget }) => {
     },
   };
   return (
+    <div className="posts_slider_wrap">
+            <div className="posts_slider swiper-container">
     <Swiper {...params}>
-      <Scrivito.ContentTag
-        content={widget}
-        attribute="content"
-        className="posts_wrap"
-      />
-    </Swiper>
+      {items.map((item, index) => {
+        return (
+          <SwiperSlide key={index} className="post_slide swiper-slide">
+            <Scrivito.ImageTag
+              content={item}
+              attribute="image"
+              className="post_item_img"
+            />
+
+            <div className="post_item_info">
+              <Scrivito.WidgetTag
+                className="post_item_date bottom_line"
+                tag="div"
+              >
+                <Scrivito.ContentTag content={item} attribute="date">
+                  {formatDate(item.get("date"), "dd mmm yyyy")}
+                </Scrivito.ContentTag>
+              </Scrivito.WidgetTag>
+              <div className="post_item_text">
+                <Scrivito.ContentTag
+                  content={item}
+                  attribute="description"
+                  tag="p"
+                />
+              </div>
+            </div>
+          </SwiperSlide>
+        );
+      })}
+    </Swiper></div></div>
   );
 });
