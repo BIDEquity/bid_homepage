@@ -13,6 +13,8 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
   let infolinktext3 = infolink3 && infolink3.title();
   const strategylink = widget.get("strategyLink");
   let strategylinktext = strategylink && strategylink.title();
+  const leverLink = widget.get("leverCTA");
+  let leverLinkText = leverLink && leverLink.title();
 
   return (
     <>
@@ -6620,145 +6622,325 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
           <div className="operational_value_wrap">
             <div className="operational_value_chart">
               <div className="operational_value_column" data-percent="29.87%">
-                <p>Company Value (Entry)</p>
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="companyEntry"
+                  tag="p"
+                />
               </div>
               <div className="operational_value_box">
                 <div className="operational_value_i">
-                  <img src="images/i.svg" alt="" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <text
+                      transform="translate(6.4 1)"
+                      fill="#ff5650"
+                      font-size="12"
+                      font-family="Swiss721BT-Bold, Swiss721 BT"
+                      font-weight="700"
+                    >
+                      <tspan x="0" y="12">
+                        i
+                      </tspan>
+                    </text>
+                    <g fill="none" stroke="#ff5650" strokeWidth="1">
+                      <circle cx="8" cy="8" r="8" stroke="none" />
+                      <circle cx="8" cy="8" r="7.5" fill="none" />
+                    </g>
+                  </svg>
                 </div>
-                <p className="operational_value_level">Lever 1</p>
-                <p className="operational_value_name">
-                  Price <br />
-                  Optimisation
-                </p>
+
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="lever1Title"
+                  tag="p"
+                  className="operational_value_level"
+                />
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="lever1Text"
+                  tag="p"
+                  className="operational_value_name"
+                />
                 <div className="operational_value_expand">
                   <button className="operational_value_close">+</button>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat duis
-                    aute irure.
-                  </p>
+                  <Scrivito.ContentTag
+                    content={widget}
+                    attribute="lever1Tooltip"
+                    tag="p"
+                  />
                 </div>
               </div>
               <div className="operational_value_box">
                 <div className="operational_value_i">
-                  <img src="images/i.svg" alt="" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <text
+                      transform="translate(6.4 1)"
+                      fill="#ff5650"
+                      font-size="12"
+                      font-family="Swiss721BT-Bold, Swiss721 BT"
+                      font-weight="700"
+                    >
+                      <tspan x="0" y="12">
+                        i
+                      </tspan>
+                    </text>
+                    <g fill="none" stroke="#ff5650" strokeWidth="1">
+                      <circle cx="8" cy="8" r="8" stroke="none" />
+                      <circle cx="8" cy="8" r="7.5" fill="none" />
+                    </g>
+                  </svg>
                 </div>
-                <p className="operational_value_level">Lever 2</p>
-                <p className="operational_value_name">
-                  Operational Effectiveness
-                </p>
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="lever2Title"
+                  tag="p"
+                  className="operational_value_level"
+                />
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="lever2Text"
+                  tag="p"
+                  className="operational_value_name"
+                />
                 <div className="operational_value_expand">
                   <button className="operational_value_close">+</button>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat duis
-                    aute irure.
-                  </p>
+                  <Scrivito.ContentTag
+                    content={widget}
+                    attribute="lever2Tooltip"
+                    tag="p"
+                  />
                 </div>
               </div>
               <div className="operational_value_box">
                 <div className="operational_value_i">
-                  <img src="images/i.svg" alt="" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <text
+                      transform="translate(6.4 1)"
+                      fill="#ff5650"
+                      font-size="12"
+                      font-family="Swiss721BT-Bold, Swiss721 BT"
+                      font-weight="700"
+                    >
+                      <tspan x="0" y="12">
+                        i
+                      </tspan>
+                    </text>
+                    <g fill="none" stroke="#ff5650" strokeWidth="1">
+                      <circle cx="8" cy="8" r="8" stroke="none" />
+                      <circle cx="8" cy="8" r="7.5" fill="none" />
+                    </g>
+                  </svg>
                 </div>
-                <p className="operational_value_level">Lever 3</p>
-                <p className="operational_value_name">
-                  DevOps and Delivery Optimisation
-                </p>
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="lever3Title"
+                  tag="p"
+                  className="operational_value_level"
+                />
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="lever3Text"
+                  tag="p"
+                  className="operational_value_name"
+                />
                 <div className="operational_value_expand">
                   <button className="operational_value_close">+</button>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat duis
-                    aute irure.
-                  </p>
+                  <Scrivito.ContentTag
+                    content={widget}
+                    attribute="lever3Tooltip"
+                    tag="p"
+                  />
                 </div>
               </div>
               <div className="operational_value_box">
                 <div className="operational_value_i">
-                  <img src="images/i.svg" alt="" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <text
+                      transform="translate(6.4 1)"
+                      fill="#ff5650"
+                      font-size="12"
+                      font-family="Swiss721BT-Bold, Swiss721 BT"
+                      font-weight="700"
+                    >
+                      <tspan x="0" y="12">
+                        i
+                      </tspan>
+                    </text>
+                    <g fill="none" stroke="#ff5650" strokeWidth="1">
+                      <circle cx="8" cy="8" r="8" stroke="none" />
+                      <circle cx="8" cy="8" r="7.5" fill="none" />
+                    </g>
+                  </svg>
                 </div>
-                <p className="operational_value_level">Lever 4</p>
-                <p className="operational_value_name">
-                  New <br />
-                  Products
-                </p>
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="lever4Title"
+                  tag="p"
+                  className="operational_value_level"
+                />
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="lever4Text"
+                  tag="p"
+                  className="operational_value_name"
+                />
                 <div className="operational_value_expand">
                   <button className="operational_value_close">+</button>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat duis
-                    aute irure.
-                  </p>
+                  <Scrivito.ContentTag
+                    content={widget}
+                    attribute="lever4Tooltip"
+                    tag="p"
+                  />
                 </div>
               </div>
               <div className="operational_value_box">
                 <div className="operational_value_i">
-                  <img src="images/i.svg" alt="" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <text
+                      transform="translate(6.4 1)"
+                      fill="#ff5650"
+                      font-size="12"
+                      font-family="Swiss721BT-Bold, Swiss721 BT"
+                      font-weight="700"
+                    >
+                      <tspan x="0" y="12">
+                        i
+                      </tspan>
+                    </text>
+                    <g fill="none" stroke="#ff5650" strokeWidth="1">
+                      <circle cx="8" cy="8" r="8" stroke="none" />
+                      <circle cx="8" cy="8" r="7.5" fill="none" />
+                    </g>
+                  </svg>
                 </div>
-                <p className="operational_value_level">Lever 5</p>
-                <p className="operational_value_name">
-                  Sales and Marketing Optimisation
-                </p>
-                <div className="operational_value_expand right">
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="lever5Title"
+                  tag="p"
+                  className="operational_value_level"
+                />
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="lever5Text"
+                  tag="p"
+                  className="operational_value_name"
+                />
+                <div className="operational_value_expand">
                   <button className="operational_value_close">+</button>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat duis
-                    aute irure.
-                  </p>
+                  <Scrivito.ContentTag
+                    content={widget}
+                    attribute="lever5Tooltip"
+                    tag="p"
+                  />
                 </div>
               </div>
               <div className="operational_value_box">
                 <div className="operational_value_i">
-                  <img src="images/i.svg" alt="" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <text
+                      transform="translate(6.4 1)"
+                      fill="#ff5650"
+                      font-size="12"
+                      font-family="Swiss721BT-Bold, Swiss721 BT"
+                      font-weight="700"
+                    >
+                      <tspan x="0" y="12">
+                        i
+                      </tspan>
+                    </text>
+                    <g fill="none" stroke="#ff5650" strokeWidth="1">
+                      <circle cx="8" cy="8" r="8" stroke="none" />
+                      <circle cx="8" cy="8" r="7.5" fill="none" />
+                    </g>
+                  </svg>
                 </div>
-                <p className="operational_value_level">Lever 6</p>
-                <p className="operational_value_name">
-                  Cloud <br />
-                  Transformation
-                </p>
-                <div className="operational_value_expand right">
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="lever6Title"
+                  tag="p"
+                  className="operational_value_level"
+                />
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="lever6Text"
+                  tag="p"
+                  className="operational_value_name"
+                />
+                <div className="operational_value_expand">
                   <button className="operational_value_close">+</button>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat duis
-                    aute irure.
-                  </p>
+                  <Scrivito.ContentTag
+                    content={widget}
+                    attribute="lever6Tooltip"
+                    tag="p"
+                  />
                 </div>
               </div>
               <div className="operational_value_column" data-percent="100%">
-                <p>Company Value (Exit)</p>
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="companyExit"
+                  tag="p"
+                />
               </div>
             </div>
             <div className="operational_value_icon">
-              <img src="images/time_icon.svg" alt="" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="29"
+                height="29"
+                viewBox="0 0 29 29"
+              >
+                <g transform="translate(-33 -33)">
+                  <path
+                    d="M47.554,33A14.5,14.5,0,1,1,33,47.554,14.532,14.532,0,0,1,47.554,33Zm-1.521,6.625a1.086,1.086,0,0,1,2.172,0v7.712l5,1.412a1.137,1.137,0,0,1-.652,2.172L46.9,49.184a1.058,1.058,0,0,1-.869-1.086Zm1.521-4.453A12.328,12.328,0,1,0,59.828,47.554,12.377,12.377,0,0,0,47.554,35.172Z"
+                    fill="#ff5650"
+                  />
+                </g>
+              </svg>
             </div>
           </div>
           <div className="operational_value_bottom">
             <div className="text_block">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat duis aute irure.
-              </p>
+              <Scrivito.ContentTag
+                content={widget}
+                attribute="leverTeaser"
+                tag="p"
+              />
             </div>
-            <a className="btn" href="#">
-              Which lever would work for you?
-            </a>
+            
+            <Scrivito.LinkTag to={leverLink} className="btn">
+              {leverLinkText}
+            </Scrivito.LinkTag>
           </div>
           <div className="content_info">
             <div className="content_info_inner">

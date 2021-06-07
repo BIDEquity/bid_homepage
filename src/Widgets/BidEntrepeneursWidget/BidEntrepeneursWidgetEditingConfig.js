@@ -25,5 +25,6 @@ Scrivito.provideEditingConfig("BidEntrepeneursWidget", {
     "lever4Tooltip",
     "lever5Tooltip",
     "lever6Tooltip",
+    "leverCTA",
   ],
 });
