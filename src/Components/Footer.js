@@ -37,7 +37,7 @@ function Footer() {
                 <a href="/contact">Contact</a>
                 <a href="#">Quick valuation</a>
                 <a href="/privace-policy">Privacy Policy</a>
-                <a href="/terms-of-use">Terms of Use</a>
+                <a href="/terms-of-use">Imprint</a>
               </div>
             </div>
           </div>
