@@ -13,7 +13,7 @@ function currentPageNavigationOptions() {
       case "Homepage":
         return homepageNavigationOptions(Scrivito.currentPage());
       case "Job":
-        return jobNavigationOptions(Scrivito.currentPage());
+        return pageNavigationOptions(Scrivito.currentPage());
       case "LandingPage":
         return landingPageNavigationOptions(Scrivito.currentPage());
       case "Page":
@@ -60,10 +60,7 @@ function eventNavigationOptions(obj) {
   return imageWithMediumHeightOrNothing(backgroundImage);
 }
 
-function jobNavigationOptions(obj) {
-  const backgroundImage = obj.get("image");
-  return imageWithMediumHeightOrNothing(backgroundImage);
-}
+
 
 function homepageNavigationOptions(obj) {
   const isLandingPage = obj.get("showAsLandingPage") === "yes";

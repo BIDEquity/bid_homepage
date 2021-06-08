@@ -197,16 +197,14 @@ Scrivito.provideComponent("BidPersonWidget", ({ widget }) => {
           </div>
           <div className="article_posts">
             <h2 className="section_title bottom_line">From Helge’s desk</h2>
-            <div className="posts_slider_wrap">
-              <div className="posts_slider swiper-container">
-                <div className="swiper-wrapper">
+            
+                
                   <Scrivito.ContentTag
                     content={widget}
                     attribute="content"
                   />
-                </div>
-              </div>
-            </div>
+                
+            
           </div>
         </div>
       </div>
