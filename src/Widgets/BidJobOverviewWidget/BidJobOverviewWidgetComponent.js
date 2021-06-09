@@ -3,7 +3,7 @@ import * as Scrivito from "scrivito";
 import Job from "../../Objs/Job/JobObjClass";
 import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
 import TagList from "../../Components/TagList";
-import { truncate } from "lodash-es";
+import { join, truncate } from "lodash-es";
 import "./BidJobOverviewWidget.scss";
 
 class BidJobOverviewWidgetComponent extends React.Component {
@@ -101,13 +101,12 @@ class BidJobOverviewWidgetComponent extends React.Component {
           <div className="job_item" key={index}>
             <p className="job_item_name">{job.get("title")}</p>
             <div className="job_item_text">
-              
-                
-              
+              {job.get("teaser")}
             </div>
-            <a className="btn" href="#">
-              Apply for this job
-            </a>
+            
+            <Scrivito.LinkTag to={job} className="btn">
+            Apply for this job
+            </Scrivito.LinkTag>
           </div>
         )})}
       </div>
@@ -157,8 +156,7 @@ const JobItem = Scrivito.connect(({ job }) => {
   /*const location = [job.get("locationLocality"), job.get("locationCountry")]
     .filter((n) => n)
     .join(", ");*/
-    const w = job.widgets();
-    console.log
+    
 
   return (
     <Scrivito.LinkTag to={job} className="w-40 ">
