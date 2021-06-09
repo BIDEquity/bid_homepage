@@ -6,6 +6,11 @@ Scrivito.provideComponent("BidHeroHeadlineWidget", ({ widget }) => {
     <div className="top_about">
       <div className="top_inner">
     <div className="top_info">
+      <Scrivito.ContentTag 
+        content={widget}
+        attribute="category"
+        className="top_category more_link"
+      />
       <Scrivito.ContentTag
         data-aos="animation"
         tag="h1"
