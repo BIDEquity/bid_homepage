@@ -13,7 +13,7 @@ Scrivito.provideComponent("BidJobWidget", ({ widget }) => {
 
   const jobslink = widget.get("linkToJobs");
   let jobstext = jobslink && jobslink.title();
-
+  
   return (
     <>
       <div className="article_content article_job">
@@ -116,7 +116,8 @@ Scrivito.provideComponent("BidJobWidget", ({ widget }) => {
                   tag="h3"
                   className="article_content_title"
                 />
-                <Scrivito.ContentTag content={widget} attribute="text" />
+                <Scrivito.ContentTag content={widget} attribute="jobText" />
+                
               </div>
 
               <Scrivito.LinkTag to={link} className="article_job_apply btn">
