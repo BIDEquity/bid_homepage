@@ -3,7 +3,9 @@ import * as Scrivito from "scrivito";
 const BidJobWidget = Scrivito.provideWidgetClass("BidJobWidget", {
   attributes: {
     title: "string",
-    tags: "stringlist",
+    location: "string",
+    industry: "string",
+    department: "string",
     teaser: "string",
     subtitle: "string",
     text: "html",

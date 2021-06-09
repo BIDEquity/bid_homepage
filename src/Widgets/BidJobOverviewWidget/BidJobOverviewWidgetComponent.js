@@ -35,7 +35,7 @@ class BidJobOverviewWidgetComponent extends React.Component {
     if (!jobs.length) {
       return (
         <InPlaceEditingPlaceholder center>
-          There are no event pages. Create one using the page menu.
+          There are no job pages. Create one using the page menu.
         </InPlaceEditingPlaceholder>
       );
     }
@@ -72,9 +72,9 @@ Scrivito.provideComponent("BidJobOverviewWidget", BidJobOverviewWidgetComponent)
 
 
 const JobItem = Scrivito.connect(({ job }) => {
-  const location = [job.get("locationLocality"), job.get("locationCountry")]
+  /*const location = [job.get("locationLocality"), job.get("locationCountry")]
     .filter((n) => n)
-    .join(", ");
+    .join(", ");*/
 
   return (
     

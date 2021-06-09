@@ -12,7 +12,12 @@ Scrivito.provideComponent("BidHeroHeadlineWidget", ({ widget }) => {
         attribute="headline"
         className="top_title bottom_line aos-init aos-animate"
       />
-      
+      <Scrivito.ContentTag
+        content={widget}
+        attribute="subtitle"
+        className="top_info_description"
+        tag="p"
+      />
     </div>
     </div>
   );

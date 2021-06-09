@@ -73,13 +73,31 @@ Scrivito.provideComponent("BidJobWidget", ({ widget }) => {
                 <div className="article_content_category">
                   <ul>
                     <li>
-                      <a href="#">Germany</a>
+                      <a href="#">
+                        <Scrivito.ContentTag
+                          content={widget}
+                          tag="span"
+                          attribute="location"
+                        />
+                      </a>
                     </li>
                     <li>
-                      <a href="#">Life sciences</a>
+                      <a href="#">
+                      <Scrivito.ContentTag
+                          content={widget}
+                          tag="span"
+                          attribute="industry"
+                        />
+                      </a>
                     </li>
                     <li>
-                      <a href="#">Marketing</a>
+                      <a href="#">
+                      <Scrivito.ContentTag
+                          content={widget}
+                          tag="span"
+                          attribute="department"
+                        />
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -156,7 +174,29 @@ Scrivito.provideComponent("BidJobWidget", ({ widget }) => {
               <p className="content_nav_direction">Previous role</p>
               <div className="content_nav_info">
                 <span className="arrow_btn">
-                  <svg className="svg_arrow_link">svg</svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17.284"
+                    height="10.73"
+                    viewBox="0 0 17.284 10.73"
+                    fill="none"
+                    strokeWidth="1.5"
+                  >
+                    <g transform="translate(-570.625 -853.857)">
+                      <path
+                        d="M576.989,860.911l4.3,4.3-4.3,4.3"
+                        transform="translate(5.865 -5.993)"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <line
+                        x1="15.783"
+                        transform="translate(571.375 859.222)"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </g>
+                  </svg>
                 </span>
                 <span className="content_nav_name">Systems Analyst</span>
               </div>
@@ -166,7 +206,29 @@ Scrivito.provideComponent("BidJobWidget", ({ widget }) => {
               <div className="content_nav_info">
                 <span className="content_nav_name">Lab Technician</span>
                 <span className="arrow_btn">
-                  <svg className="svg_arrow_link">svg</svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17.284"
+                    height="10.73"
+                    viewBox="0 0 17.284 10.73"
+                    fill="none"
+                    strokeWidth="1.5"
+                  >
+                    <g transform="translate(-570.625 -853.857)">
+                      <path
+                        d="M576.989,860.911l4.3,4.3-4.3,4.3"
+                        transform="translate(5.865 -5.993)"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <line
+                        x1="15.783"
+                        transform="translate(571.375 859.222)"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </g>
+                  </svg>
                 </span>
               </div>
             </a>
