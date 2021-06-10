@@ -153,11 +153,9 @@ class BidJobOverviewWidgetComponent extends React.Component {
             </a>
           </div>
           <div className="jobs_wrap">
-            {jobs.map((job, index) => {
-              if (!jobs.length) {
-                return <div>No jobs found</div>
           
-              }
+            {jobs.map((job, index) => {
+              
               return (
                 <div className="job_item" key={index}>
                   <p className="job_item_name">{job.get("title")}</p>
