@@ -795,7 +795,6 @@ section.navbar-fixed {
 
 section {
   position: relative;
-  
 }
 
 /* blog detail navbar
@@ -1324,7 +1323,6 @@ _:-ms-fullscreen,
 .card-deck {
   display: flex;
   flex-flow: row wrap;
-  
 }
 
 nav .open .dropdown-menu.show-language {
@@ -1460,66 +1458,63 @@ nav .open .dropdown-menu.lang-switch a {
 }
 
 .entrepreneurs_help_navbar {
-.swiper-pagination-bullet:nth-of-type(1):after {
-  content: "Investment";
-  height: 24px;
-  width: -moz-fit-content;
-  width: fit-content;
-}
+  .swiper-pagination-bullet:nth-of-type(1):after {
+    content: "Investment";
+    height: 24px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 
-.swiper-pagination-bullet:nth-of-type(2):after {
-  content: "Sales and Marketing";
-  height: 24px;
-  margin-left: 20px;
-  width: -moz-fit-content !important;
-  width: fit-content;
-}
+  .swiper-pagination-bullet:nth-of-type(2):after {
+    content: "Sales and Marketing";
+    height: 24px;
+    margin-left: 20px;
+    width: -moz-fit-content !important;
+    width: fit-content;
+  }
 
-.swiper-pagination-bullet:nth-of-type(3):after {
-  content: "Mergers and Acquisitions";
-  height: 24px;
-  margin-left: 20px;
-  width: -moz-fit-content !important;
-  width: fit-content;
-}
+  .swiper-pagination-bullet:nth-of-type(3):after {
+    content: "Mergers and Acquisitions";
+    height: 24px;
+    margin-left: 20px;
+    width: -moz-fit-content !important;
+    width: fit-content;
+  }
 
-.swiper-pagination-bullet:nth-of-type(4):after {
-  content: "Internationalisation";
-  height: 24px;
-  margin-left: 20px;
-  width: -moz-fit-content;
-  width: fit-content;
-}
+  .swiper-pagination-bullet:nth-of-type(4):after {
+    content: "Internationalisation";
+    height: 24px;
+    margin-left: 20px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 
-.swiper-pagination-bullet-active {
-  font-weight: 700;
-}
+  .swiper-pagination-bullet-active {
+    font-weight: 700;
+  }
 
-.swiper-pagination-bullet {
-  white-space: nowrap;
-margin-right: 32px;
+  .swiper-pagination-bullet {
+    white-space: nowrap;
+    margin-right: 32px;
 
-color: #f4544f;
-font-size: 18px;
-line-height: 31px;
-letter-spacing: -.008em;
+    color: #f4544f;
+    font-size: 18px;
+    line-height: 31px;
+    letter-spacing: -0.008em;
+  }
 
-}
-
-.swiper-pagination-bullet, .swiper-pagination-bullet-active {
-  height: 0;
-  opacity: 1 !important;
-  width: -moz-fit-content !important;
-  width: fit-content;
-
-}
-
+  .swiper-pagination-bullet,
+  .swiper-pagination-bullet-active {
+    height: 0;
+    opacity: 1 !important;
+    width: -moz-fit-content !important;
+    width: fit-content;
+  }
 }
 
 .posts_slider .post_slide {
   margin-right: 24px !important;
 }
-
 
 .investors_news {
   padding: 837px 0 0 !important;
@@ -1573,6 +1568,58 @@ letter-spacing: -.008em;
   min-height: 100vh !important;
 }
 
+.job_select {
+  border-bottom: 1px solid $primary;
+}
+.react-select__control, .react-select__control--is-focused, .react-select__menu {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.react-select__menu {
+  
+margin-top: 0 !important;
+padding-top: 40px !important;
+border-top: none !important;
+box-shadow: 0 10px 50px rgba(0,0,0,.16) !important;
+color: #f7ede1 !important;
+font: 18px/40px "Swiss721 BT",sans-serif !important;
+}
+
+.react-select__single-value {
+  color: #f7ede1 !important;
+  font: 18px/40px "Swiss721 BT",sans-serif !important;
+}
+
+.react-select__menu * {
+  background: transparent !important;
+}
+
+
+.react-select__option {
+  padding: 0 40px !important;
+}
+
+.react-select__option--is-active {
+  background: red;
+}
+
+
+.react-select__placeholder {
+  padding: 0 32px 0 0 !important;
+  color: #f7ede1 !important;
+  font: 18px/35px "Swiss721 BT", sans-serif !important;
+}
+
+.react-select__indicator-separator {
+  display: none !important;
+}
+
+.react-select__dropdown-indicator {
+  color: $primary !important;
+}
+
 .about_us_left {
   max-width: 560px;
   width: 100%;
@@ -1604,6 +1651,11 @@ letter-spacing: -.008em;
   }
 }
 
+.svg_search_icon {
+  height: 18px;
+  width: 18px;
+}
+
 .team_item {
   width: 100% !important;
   margin: 0 9px 12px !important;
@@ -1613,11 +1665,10 @@ letter-spacing: -.008em;
   margin-bottom: 9px;
 }
 
-.row{
+.row {
   clear: both;
   margin-left: 0 !important;
   margin-right: 0 !important;
-  
 }
 
 .we_do_row {
@@ -1666,24 +1717,22 @@ a.btn:hover {
 
 .posts_slider {
   &.swiper-container {
-      @media screen and (max-width: 991px) {
-          padding: 0 0 0 32px;
-      }
+    @media screen and (max-width: 991px) {
+      padding: 0 0 0 32px;
+    }
   }
 }
 
 .article_content.article_job {
   margin-top: -890px;
 }
- 
+
 .squeezed {
   max-height: 0;
   max-width: 0;
   opacity: 0;
   transition: all ease-out;
 }
-
-
 
 .container .container {
   padding: 0;
