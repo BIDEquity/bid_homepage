@@ -6,6 +6,8 @@ import TagList from "../../Components/TagList";
 import { join, truncate } from "lodash-es";
 import Select from "react-select";
 
+
+
 const locations = [
   { value: "germany", label: "Germany" },
   { value: "england", label: "England" },
@@ -39,6 +41,7 @@ class BidJobOverviewWidgetComponent extends React.Component {
       queryInd: "",
       queryDep: "",
     };
+    
 
     //this.handleChangeLoc = this.handleChangeLoc.bind(this)
 
@@ -71,6 +74,9 @@ class BidJobOverviewWidgetComponent extends React.Component {
   }
 
   render() {
+    const widget = this.props.widget;
+    const infolink1 = this.props.widget.get("infoLink1");
+    let infolinktext1 = infolink1 && infolink1.title();
     let jobsSearch = Scrivito.Obj.where("_objClass", "equals", "Job")
     
     if(this.state.searchJobs) {
@@ -175,36 +181,59 @@ class BidJobOverviewWidgetComponent extends React.Component {
               <div className="content_info_top">
                 <div className="content_stats_box">
                   <div className="content_stats_inner">
-                    <span className="content_stats_number">14k</span>
-                    <p className="content_stats_text">
-                      customers across all assets
-                    </p>
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="statsNumber"
+                      tag="span"
+                      className="content_stats_number"
+                    />
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="statsText"
+                      tag="p"
+                      className="content_stats_text"
+                    />
                   </div>
                 </div>
                 <div className="testimonial_item">
                   <div className="testimonial_item_text">
-                    <p>
-                      They’re fun to work with. Nice people. So you tend to go
-                      the extra mile and and try to achieve things with them,
-                      rather than someone where you just do your duty.
-                    </p>
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="quote"
+                      tag="p"
+                    />
                   </div>
                   <div className="testimonial_item_bottom">
-                    <p className="testimonial_item_name">Julian Brandt</p>
-                    <p className="testimonial_item_position">Founder, MyNeva</p>
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="name"
+                      tag="p"
+                      className="testimonial_item_name"
+                    />
+
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="position"
+                      tag="p"
+                      className="testimonial_item_position"
+                    />
                   </div>
                 </div>
               </div>
               <div className="content_info_bottom">
-                <div className="content_info_img">
-                  <img src="images/content_info_3.jpg" alt="" />
+                <div className="content_info_img shadow">
+                  <Scrivito.ImageTag content={widget} attribute="info1" />
                 </div>
                 <div className="content_info_box info_box">
                   <div className="info_box_content">
-                    <h2 className="title_block bottom_line light">
-                      People related story sit amet, consectetur adipiscing
-                      elit, sed do eiusmod tempor incidi dunt ut consectetur
-                    </h2>
+                    <Scrivito.ContentTag
+                      content={widget}
+                      attribute="infoTitle1"
+                      tag="h2"
+                      className="title_block bottom_line light"
+                    />
+
+                    
                   </div>
                 </div>
               </div>
