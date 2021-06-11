@@ -61,13 +61,13 @@ Scrivito.provideComponent("BidPartnerCardWidget", ({ widget }) => {
             </a>
           </div>
           </div>
-          <div className="portfolio_post_text">
+          
             <Scrivito.ContentTag
               content={widget}
               attribute="text"
               className="partners_post_text block_text light"
             />
-          </div>
+          
         </div>
       
     </Scrivito.WidgetTag>

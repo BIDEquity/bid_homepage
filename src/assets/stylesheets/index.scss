@@ -1441,7 +1441,8 @@ nav .open .dropdown-menu.lang-switch a {
 }
 
 .partners_post_logo img {
-  width: 208px !important;
+  min-width: 190px;
+  max-width: 228px;
 }
 
 .top_about .top_inner {
