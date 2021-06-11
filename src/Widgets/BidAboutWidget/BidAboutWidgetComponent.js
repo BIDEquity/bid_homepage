@@ -307,9 +307,13 @@ Scrivito.provideComponent("BidAboutWidget", ({ widget }) => {
       </div>
       <div className="content_section team_section">
         <div className="container">
-          <h2 className="section_title bottom_line col_5 col_t_12">
-            Meet our team Lorem ipsum dolor sit amet consectetur
-          </h2>
+          
+          <Scrivito.ContentTag
+              content={widget}
+              attribute="teamSectionTitle"
+              className="section_title bottom_line col_5 col_t_12"
+              tag="h2"
+            />
           
             <Scrivito.ContentTag
               content={widget}
