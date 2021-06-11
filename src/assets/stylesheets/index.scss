@@ -1436,10 +1436,6 @@ nav .open .dropdown-menu.lang-switch a {
   height: 95vh;
 }
 
-.portfolio_post_logo img {
-  width: 235px !important;
-}
-
 .partners_post_logo img {
   width: 208px !important;
 }
@@ -1526,8 +1522,11 @@ nav .open .dropdown-menu.lang-switch a {
 
 .entrepreneurs_help {
   position: relative !important;
-  top: 360px !important;
-  margin-bottom: 0 !important;
+  
+}
+
+.entrepreneurs_brands_more {
+  margin-left: -12px !important;
 }
 
 .footer_cop {
