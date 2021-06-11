@@ -250,7 +250,11 @@ a:hover,
 a:active,
 a:focus {
   outline: none !important;
-  text-decoration: none !important;
+  text-decoration: none;
+}
+
+.article_content_category a:hover {
+  text-decoration: underline !important;
 }
 
 a.partner_details_link:hover {
