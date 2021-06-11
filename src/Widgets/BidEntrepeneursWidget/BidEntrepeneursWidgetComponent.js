@@ -6357,7 +6357,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="strategyText1"
-                      tag="div"
+                      tag="span"
                     >
                       <span className="plus">+</span>
                     </Scrivito.ContentTag>
@@ -6375,7 +6375,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="strategyText2"
-                      tag="div"
+                      tag="span"
                     >
                       <span className="plus">+</span>
                     </Scrivito.ContentTag>
@@ -6393,7 +6393,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="strategyText3"
-                      tag="div"
+                      tag="span"
                     >
                       <span className="plus">+</span>
                     </Scrivito.ContentTag>
@@ -6411,7 +6411,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="strategyText4"
-                      tag="div"
+                      tag="span"
                     >
                       <span className="plus">+</span>
                     </Scrivito.ContentTag>
@@ -6429,7 +6429,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="strategyText5"
-                      tag="div"
+                      tag="span"
                     >
                       <span className="plus">+</span>
                     </Scrivito.ContentTag>
@@ -6447,7 +6447,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="strategyText6"
-                      tag="div"
+                      tag="span"
                     >
                       <span className="plus">+</span>
                     </Scrivito.ContentTag>
