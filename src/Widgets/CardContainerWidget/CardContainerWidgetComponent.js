@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 Scrivito.provideComponent("CardContainerWidget", ({ widget }) => {
   
   const items = widget.get("items");
-  console.log(items)
+  
   const params = {
     loop: false,
     watchOverflow: true,

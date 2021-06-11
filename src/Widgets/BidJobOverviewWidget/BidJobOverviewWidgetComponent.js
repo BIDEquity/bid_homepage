@@ -45,22 +45,22 @@ class BidJobOverviewWidgetComponent extends React.Component {
     this.handleChangeLoc = (selectedOption) => {
       
       this.setState ({selectedLoc: selectedOption });
-      console.log(`Option selected state:`, this.state.selectedLoc);
+      
     };
 
     this.handleChangeInd = (selectedOption) => {
       this.setState ({selectedInd: selectedOption});
-      console.log(`Option selected:`, selectedOption);
+      
     };
 
     this.handleChangeDep = (selectedOption) => {
       this.setState ({selectedDep: selectedOption});
-      console.log(`Option selected:`, selectedOption);
+      
     };
 
     this.handleClick = (e) => {
       //e.preventDefault()
-      console.log("Click")
+      
       if(this.state.selectedLoc) this.setState ({queryLoc: this.state.selectedLoc.label})
       if(this.state.selectedInd) this.setState ({queryInd: this.state.selectedInd.label})
       if(this.state.selectedDep) this.setState ({queryDep: this.state.selectedDep.label})
@@ -86,7 +86,7 @@ class BidJobOverviewWidgetComponent extends React.Component {
 
     jobs = [...jobsSearch];
     //this.setState ({searchJobs: false})
-    console.log("Search", jobs)
+    
     
 
     return (
