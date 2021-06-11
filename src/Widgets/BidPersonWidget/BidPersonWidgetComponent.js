@@ -79,7 +79,12 @@ Scrivito.provideComponent("BidPersonWidget", ({ widget }) => {
             </div>
             <div className="article_content_sidebar">
               <a className="content_nav_link content_next" href="#">
-                <p className="content_nav_direction">Next</p>
+              <Scrivito.ContentTag
+                content={widget}
+                attribute="next"
+                tag="p"
+                className="content_nav_direction"
+              />
                 <div className="content_nav_info">
                   <span className="content_nav_name">
                     <Scrivito.ContentTag
@@ -133,7 +138,12 @@ Scrivito.provideComponent("BidPersonWidget", ({ widget }) => {
           </div>
           <div className="article_content_nav content_nav">
             <a className="content_nav_link content_prev" href="#">
-              <p className="content_nav_direction">Previous</p>
+            <Scrivito.ContentTag
+                content={widget}
+                attribute="prev"
+                tag="p"
+                className="content_nav_direction"
+              />
               <div className="content_nav_info">
                 <span className="arrow_btn">
                   <svg
@@ -164,7 +174,12 @@ Scrivito.provideComponent("BidPersonWidget", ({ widget }) => {
               </div>
             </a>
             <a className="content_nav_link content_next" href="#">
-              <p className="content_nav_direction">Next</p>
+            <Scrivito.ContentTag
+                content={widget}
+                attribute="next"
+                tag="p"
+                className="content_nav_direction"
+              />
               <div className="content_nav_info">
                 <span className="content_nav_name">Lars Kloppsteck</span>
                 <span className="arrow_btn">

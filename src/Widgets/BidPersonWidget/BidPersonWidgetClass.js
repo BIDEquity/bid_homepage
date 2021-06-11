@@ -12,7 +12,9 @@ const BidPersonWidget = Scrivito.provideWidgetClass("BidPersonWidget", {
     navNext: "string",
     nextMember: "string",
     job: "string",
-    content: "widgetlist"
+    content: "widgetlist",
+    next: "string",
+    prev: "string",
   },
   extractTextAttributes: ["headline"],
 });

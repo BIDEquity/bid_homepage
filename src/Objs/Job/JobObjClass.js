@@ -21,6 +21,8 @@ const Job = Scrivito.provideObjClass("Job", {
     headText: "string",
     headLink: "link",
     linkToJobs: "link",
+    next: "string",
+    prev: "string"
   },
   extractTextAttributes: ["navigationSection", "body"],
 });

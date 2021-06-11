@@ -24,6 +24,8 @@ const BidPortfolioDetailsWidget = Scrivito.provideWidgetClass("BidPortfolioDetai
     content: "widgetlist",
     detailsText: "string",
     detailsButton: "link",
+    next: "string",
+    prev: "string",
   },
   extractTextAttributes: ["headline"],
 });

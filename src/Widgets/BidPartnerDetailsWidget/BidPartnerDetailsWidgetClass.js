@@ -22,7 +22,9 @@ const BidPartnerDetailsWidget = Scrivito.provideWidgetClass("BidPartnerDetailsWi
     partnerDetailImage: ["reference", { only: "Image" }],
     partnerDetailLink: "link",
     articleIntro: "html",
-    content: "widgetlist"
+    content: "widgetlist",
+    next: "string",
+    prev: "string",
   },
   extractTextAttributes: ["headline"],
 });

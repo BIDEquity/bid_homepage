@@ -127,7 +127,12 @@ Scrivito.provideComponent("Job", ({ page }) => {
             </div>
             <div className="article_content_sidebar">
               <a className="content_nav_link content_next" href="#">
-                <p className="content_nav_direction">Next role</p>
+              <Scrivito.ContentTag
+                content={page}
+                attribute="next"
+                tag="p"
+                className="content_nav_direction"
+              />
                 <div className="content_nav_info">
                   <span className="content_nav_name">Lab Technician</span>
                   <span className="arrow_btn">
@@ -173,7 +178,12 @@ Scrivito.provideComponent("Job", ({ page }) => {
           </div>
           <div className="article_content_nav content_nav">
             <a className="content_nav_link content_prev" href="#">
-              <p className="content_nav_direction">Previous role</p>
+            <Scrivito.ContentTag
+                content={page}
+                attribute="prev"
+                tag="p"
+                className="content_nav_direction"
+              />
               <div className="content_nav_info">
                 <span className="arrow_btn">
                 <svg
@@ -204,7 +214,12 @@ Scrivito.provideComponent("Job", ({ page }) => {
               </div>
             </a>
             <a className="content_nav_link content_next" href="#">
-              <p className="content_nav_direction">Next role</p>
+            <Scrivito.ContentTag
+                content={page}
+                attribute="next"
+                tag="p"
+                className="content_nav_direction"
+              />
               <div className="content_nav_info">
                 <span className="content_nav_name">Lab Technician</span>
                 <span className="arrow_btn">
