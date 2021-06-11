@@ -153,7 +153,7 @@ class BidJobOverviewWidgetComponent extends React.Component {
             </a>
           </div>
           <div className="jobs_wrap">
-          
+    
             {jobs.map((job, index) => {
               
               return (

@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import { Steps, Step } from "react-step-builder";
-import { Input, Button, Col, Row } from "antd";
-import "antd/dist/antd.css";
+
+
 
 import "./BidValuationWidget.scss";
 
