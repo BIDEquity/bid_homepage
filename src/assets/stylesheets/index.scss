@@ -1574,14 +1574,14 @@ nav .open .dropdown-menu.lang-switch a {
   border-bottom: 1px solid $primary;
 }
 .react-select__control, .react-select__control--is-focused, .react-select__menu {
-  background: transparent !important;
+  background: #253046 !important;
   border: none !important;
   box-shadow: none !important;
 }
 
 .react-select__menu {
   
-margin-top: 0 !important;
+margin-top: 3px !important;
 padding-top: 40px !important;
 border-top: none !important;
 box-shadow: 0 10px 50px rgba(0,0,0,.16) !important;
