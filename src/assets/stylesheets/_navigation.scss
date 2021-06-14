@@ -196,7 +196,7 @@
     }
 
     &:not(.collapsed) {
-      background: #fff !important;
+
 
       .icon-bar {
         background: $secondary !important;
@@ -446,7 +446,7 @@
   .nav {
     margin: 0 !important;
     //padding: 20px 15px;
-    background: #fff;
+    
 
     .dropdown-menu > li > a {
       text-align: left;
@@ -457,10 +457,10 @@
       &.active,
       &.open {
         > .menu-toggle {
-          background: #fff !important;
+          
           width: 100%;
           .nav-link {
-            color: #3a4248 !important;
+            color: #fff !important;
             //padding-left: 49px !important;
           }
         }
@@ -515,14 +515,14 @@
 
   .nav > li > a,
   .bg-dark-image .nav > li > a {
-    color: $theme-greydark !important;
+    color: #fff !important;
     display: block;
   }
 
   .bg-dark-image .nav > li {
     &.active > a,
     &.open > a {
-      color: $primary !important;
+      color: #fff !important;
     }
   }
 

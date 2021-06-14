@@ -26,7 +26,8 @@ class FullNavigation extends React.Component {
   }
 
   render() {
-
+    let collapse = "";
+    this.state.expanded ? collapse = "collapse" : ""
     
     const {
       bootstrapNavbarClassNames,
@@ -41,14 +42,18 @@ class FullNavigation extends React.Component {
       "fixed-top",
       "navbar-default",
       "navbar-expand-lg",
+      
       ...bootstrapNavbarClassNames,
+      
     ];
+
+    classNames.push(collapse)
 
     return (
       <nav className={classNames.join(" ")}>
         <div className="container">
 
-          <div className="navbar-header">
+          <div className={`navbar-header ${this.state.expanded ? "" : "collapsed"}`}>
 
             <CollapseToggle
               expanded={this.state.expanded}
