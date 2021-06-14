@@ -1794,7 +1794,11 @@ a.btn:hover {
     background-color: $primary;
     color: #fff;
     padding: 32px 0 0 32px;
-    height: 100vh;
+  }
+
+  .collapse .sec-navbar-right {
+    padding: 0 23px 0 22px;
+    margin-left: 10px !important;
   }
 
   .collapse.navbar-transparent {
@@ -1822,11 +1826,35 @@ a.btn:hover {
 
   .collapse .navbar-nav li a {
     font-weight: 400;
-    font-size: 18px !important;
+    font-size: 18px;
     border-bottom: 1px solid #fff !important;
     padding-bottom: 12px;
     margin-bottom: 18px;
   }
+
+  .fixed-top.collapse {
+    position: fixed;
+  }
+
+  .lang-switch {
+    color: #fff;
+    position: absolute;
+    top: 23px;
+    right: 75px;
+    width: 45px;
+    
+  }
+
+  .open > .show-language {
+    border: none;
+    margin-top: 36px;
+    margin-left: 0;
+  }
+  li a {
+    font-size: 14px !important;
+    border-bottom: none;
+  }
+  
 }
 
 @media (max-width: $screen-sm-max) {

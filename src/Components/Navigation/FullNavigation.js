@@ -72,7 +72,7 @@ class FullNavigation extends React.Component {
                 expanded={this.state.expanded}
               />
             </div>
-            <ul className="nav navbar-nav navbar-right">
+            <ul className="nav navbar-nav sec-navbar-right">
               <li className="nav-item">
                 <a className="nav-link header_login btn btn_secondary" href="#">Login</a>
               </li>

@@ -26,7 +26,7 @@ class LanguageSwitch extends React.Component {
     ).toArray();
       
     return (
-      <ul className="nav navbar-nav navbar-right lang-switch">
+      <ul className="lang-switch">
         <li className={`nav-item ${this.state.language ? "open" : ""}`}>
           <a
             className="nav-link"

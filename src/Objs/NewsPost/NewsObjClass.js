@@ -2,7 +2,7 @@ import * as Scrivito from "scrivito";
 import metadataAttributes from "../_metadataAttributes";
 import defaultPageAttributes from "../_defaultPageAttributes";
 
-const Job = Scrivito.provideObjClass("Job", {
+const NewsPost = Scrivito.provideObjClass("NewsPost", {
   attributes: {
     ...defaultPageAttributes,
     childOrder: "referencelist",
@@ -27,4 +27,4 @@ const Job = Scrivito.provideObjClass("Job", {
   extractTextAttributes: ["navigationSection", "body"],
 });
 
-export default Job;
+export default NewsPost;
