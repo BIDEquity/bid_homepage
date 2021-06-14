@@ -9,7 +9,7 @@ const BidJobOverviewWidget = Scrivito.provideWidgetClass("BidJobOverviewWidget",
     position: "string",
     info1: ["reference", {only:"Image"}],
     infoTitle1: "string",
-    infoLink1: "link",
+    
   },
 });
 

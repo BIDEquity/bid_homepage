@@ -1082,6 +1082,7 @@ body,
 }
 .content-wrapper {
   flex: 1;
+  overflow-x: hidden;
 }
 
 /* weird stuff for IE11 */
@@ -1518,10 +1519,10 @@ nav .open .dropdown-menu.lang-switch a {
   margin-right: 24px !important;
 }
 
-.investors_news {
+/*.investors_news {
   padding: 837px 0 0 !important;
   margin-bottom: -200px !important;
-}
+}*/
 
 .entrepreneurs_help_navbar {
   padding-bottom: 24px;
@@ -1714,8 +1715,10 @@ a.btn:hover {
   height: auto !important;
 }
 
+@media screen and (min-width: 992px ) {
 .entrepreneurs_intro_box {
-  margin-top: -449px !important;
+  margin-top: -449px;
+}
 }
 
 .posts_slider {
@@ -1751,10 +1754,9 @@ a.btn:hover {
 @media (min-width: $screen-lg-min) {
 }
 
-@media (max-width: 991px) {
-}
 
-@media (max-width: $screen-sm-min) {
+
+@media (max-width: 991px) {
   .container {
     max-width: 100vw;
   }
@@ -1776,6 +1778,20 @@ a.btn:hover {
     width: 100vw;
     margin-bottom: 32px;
     margin-left: -41px;
+  }
+
+  .entrepreneurs_intro_box {
+    margin-top: -245px;
+  }
+
+  .article_content {
+    margin-top: -555px;
+  }
+
+  .top_bg {
+    @media screen and (max-width: 767px) {
+        object-position: 50%;
+    }
   }
 }
 
