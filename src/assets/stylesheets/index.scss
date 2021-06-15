@@ -1079,10 +1079,10 @@ body,
   display: flex;
   flex-direction: column;
 }
-.content-wrapper {
+/*.content-wrapper {
   flex: 1;
   overflow-x: hidden;
-}
+}*/
 
 /* weird stuff for IE11 */
 
@@ -1528,7 +1528,8 @@ nav .open .dropdown-menu.lang-switch a {
 }
 
 .entrepreneurs_help {
-  position: relative !important;
+  overflow: hidden !important;
+  margin-bottom: -366px;
 }
 
 .entrepreneurs_brands_more {
@@ -1787,6 +1788,10 @@ a.btn:hover {
 
   .entrepreneurs_intro_box {
     margin-top: -245px;
+  }
+
+  .entrepreneurs_post_info {
+    padding: 44px 32px 48px 60px;
   }
 
   .article_content {
