@@ -1042,10 +1042,6 @@ _:-ms-fullscreen,
 =================================================================== */
 
 footer {
-  [class*="bg-"]:first-of-type {
-    padding: 60px 0;
-  }
-
   a,
   a:hover,
   a:focus {
@@ -1067,6 +1063,11 @@ footer {
 
 /*  sticky footer for react world
 =================================================================== */
+.footer_alternative {
+  position: relative;
+  top: -365px;
+  margin-bottom: -365px;
+}
 
 body,
 #application {
@@ -1529,7 +1530,7 @@ nav .open .dropdown-menu.lang-switch a {
 
 .entrepreneurs_help {
   overflow: hidden !important;
-  margin-bottom: -366px;
+  margin-bottom: 0 !important;
 }
 
 .entrepreneurs_brands_more {
@@ -1676,7 +1677,7 @@ nav .open .dropdown-menu.lang-switch a {
 
 .row {
   clear: both;
-  
+
   margin-right: 0 !important;
 }
 
@@ -1870,8 +1871,6 @@ a.btn:hover {
     margin-top: 36px;
     margin-left: 0;
   }
-  
-  
 }
 
 @media (max-width: $screen-sm-max) {
