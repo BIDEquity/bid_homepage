@@ -1666,11 +1666,16 @@ nav .open .dropdown-menu.lang-switch a {
 
 .team_wrap {
   margin-bottom: 9px;
+  margin-left: -4px !important;
+}
+
+.team_bottom {
+  margin-left: 0;
 }
 
 .row {
   clear: both;
-  margin-left: -12px !important;
+  
   margin-right: 0 !important;
 }
 
@@ -1751,7 +1756,7 @@ a.btn:hover {
 ================================================== */
 
 @media (min-width: 992px) {
-  .bg_blue {
+  jobs_content.bg_blue {
     height: 292.5vh;
   }
 }
