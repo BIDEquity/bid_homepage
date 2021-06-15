@@ -2,29 +2,23 @@ import * as Scrivito from "scrivito";
 import metadataAttributes from "../_metadataAttributes";
 import defaultPageAttributes from "../_defaultPageAttributes";
 
-const Job = Scrivito.provideObjClass("Job", {
+const NewsPost = Scrivito.provideObjClass("NewsPost", {
   attributes: {
     ...defaultPageAttributes,
     childOrder: "referencelist",
     ...metadataAttributes,
+    category: "link",
     title: "string",
-    location: "string",
-    industry: "string",
-    department: "string",
     teaser: "string",
-    subtitle: "string",
-    text: "html",
-    apply: "link",
-    sideText: "string",
-    sideLink: "link",
-    headLogo: ["reference", {only: "Image"}],
-    headText: "string",
-    headLink: "link",
-    linkToJobs: "link",
+    body: "html",
+    image: ["reference", {only: "Image"}],
     next: "string",
-    prev: "string"
+    nextLabel: "string",
+    prev: "string",
+    prevLabel: "string",
+    news: "widgetlist",
   },
   extractTextAttributes: ["navigationSection", "body"],
 });
 
-export default Job;
+export default NewsPost;

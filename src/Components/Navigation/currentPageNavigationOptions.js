@@ -18,6 +18,8 @@ function currentPageNavigationOptions() {
         return landingPageNavigationOptions(Scrivito.currentPage());
       case "Page":
         return pageNavigationOptions(Scrivito.currentPage());
+      case "NewsPost":
+        return pageNavigationOptions(Scrivito.currentPage());
       case "PortfolioPost":
         return pageNavigationOptions(Scrivito.currentPage());
       case "PartnerPost":
@@ -59,8 +61,6 @@ function eventNavigationOptions(obj) {
   const backgroundImage = obj.get("image");
   return imageWithMediumHeightOrNothing(backgroundImage);
 }
-
-
 
 function homepageNavigationOptions(obj) {
   const isLandingPage = obj.get("showAsLandingPage") === "yes";

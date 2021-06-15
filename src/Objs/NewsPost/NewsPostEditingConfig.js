@@ -20,7 +20,7 @@ Scrivito.provideEditingConfig("NewsPost", {
     ...defaultPageEditingConfigAttributes,
     ...metadataEditingConfigAttributes,
   },
-  properties: [...defaultPageProperties, 'apply','sideLink','headLink','linkToJobs'],
+  properties: [...defaultPageProperties, "category", "next", "prev"],
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
     ...defaultPageInitialContent,
