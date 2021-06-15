@@ -1750,7 +1750,10 @@ a.btn:hover {
 /* RESPONSIVE
 ================================================== */
 
-@media (min-width: $screen-lg-min) {
+@media (min-width: 992px) {
+  .bg_blue {
+    height: 292.5vh;
+  }
 }
 
 @media (max-width: 991px) {
