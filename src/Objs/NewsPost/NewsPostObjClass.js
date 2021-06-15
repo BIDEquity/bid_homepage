@@ -21,6 +21,8 @@ const NewsPost = Scrivito.provideObjClass("NewsPost", {
     prev: "string",
     prevLabel: "string",
     news: "widgetlist",
+    newsTitle: "string",
+    more: "link"
   },
   extractTextAttributes: ["navigationSection", "body"],
 });
