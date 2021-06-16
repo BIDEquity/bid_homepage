@@ -1,3 +1,116 @@
+@import "mixin";
+@import "sprite";
+
+@font-face {
+    font-family: 'Swiss721 BT';
+    src: url('../fonts/Swiss721BT-Regular.eot');
+    src: 
+        url('../fonts/Swiss721BT-Regular.woff2') format('woff2'),
+        url('../fonts/Swiss721BT-Regular.woff') format('woff'),
+        url('../fonts/Swiss721BT-Regular.ttf') format('truetype'),
+        url('../fonts/Swiss721BT-Regular.svg#Swiss721BT-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Swiss721 BT';
+    src: url('../fonts/Swiss721BT-Italic.eot');
+    src: 
+        url('../fonts/Swiss721BT-Italic.woff2') format('woff2'),
+        url('../fonts/Swiss721BT-Italic.woff') format('woff'),
+        url('../fonts/Swiss721BT-Italic.ttf') format('truetype'),
+        url('../fonts/Swiss721BT-Italic.svg#Swiss721BT-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Swiss721 BT';
+    src: url('../fonts/Swiss721BT-Bold.eot');
+    src: 
+        url('../fonts/Swiss721BT-Bold.woff2') format('woff2'),
+        url('../fonts/Swiss721BT-Bold.woff') format('woff'),
+        url('../fonts/Swiss721BT-Bold.ttf') format('truetype'),
+        url('../fonts/Swiss721BT-Bold.svg#Swiss721BT-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Swiss721 BT';
+    src: url('../fonts/Swiss721BT-Light.eot');
+    src: 
+        url('../fonts/Swiss721BT-Light.woff2') format('woff2'),
+        url('../fonts/Swiss721BT-Light.woff') format('woff'),
+        url('../fonts/Swiss721BT-Light.ttf') format('truetype'),
+        url('../fonts/Swiss721BT-Light.svg#Swiss721BT-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Adobe Garamond Pro';
+    src: url('../fonts/AGaramondPro-Italic.eot');
+    src: 
+        url('../fonts/AGaramondPro-Italic.woff2') format('woff2'),
+        url('../fonts/AGaramondPro-Italic.woff') format('woff'),
+        url('../fonts/AGaramondPro-Italic.ttf') format('truetype'),
+        url('../fonts/AGaramondPro-Italic.svg#AGaramondPro-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Georgia';
+    src: url('../fonts/Georgia.eot');
+    src: 
+        url('../fonts/Georgia.woff2') format('woff2'),
+        url('../fonts/Georgia.woff') format('woff'),
+        url('../fonts/Georgia.ttf') format('truetype'),
+        url('../fonts/Georgia.svg#Georgia') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Adobe Garamond Pro';
+    src: url('../fonts/AGaramondPro-Italic.eot');
+    src: 
+        url('../fonts/AGaramondPro-Italic.woff2') format('woff2'),
+        url('../fonts/AGaramondPro-Italic.woff') format('woff'),
+        url('../fonts/AGaramondPro-Italic.ttf') format('truetype'),
+        url('../fonts/AGaramondPro-Italic.svg#AGaramondPro-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family:"bebas-neue-pro-semiexpanded";
+    src:url("https://use.typekit.net/af/07ca09/00000000000000007735c8ba/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff2"),url("https://use.typekit.net/af/07ca09/00000000000000007735c8ba/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("woff"),url("https://use.typekit.net/af/07ca09/00000000000000007735c8ba/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6&v=3") format("opentype");
+    font-display:auto;font-style:normal;font-weight:600;
+}
+
+@font-face {
+    font-family: 'AcuminPro';
+    src: url('../fonts/AcuminPro-Semibold.eot');
+    src: 
+        url('../fonts/AcuminPro-Semibold.woff2') format('woff2'),
+        url('../fonts/AcuminPro-Semibold.woff') format('woff'),
+        url('../fonts/AcuminPro-Semibold.ttf') format('truetype'),
+        url('../fonts/AcuminPro-Semibold.svg#AcuminPro-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&display=swap');
+
+$base-font: 'Swiss721 BT', sans-serif;
+$secondary-font: 'bebas-neue-pro-semiexpanded', sans-serif;
+$babes-font: 'Bebas Neue Pro Expanded', sans-serif;
+$third-font: 'AcuminPro', sans-serif;
+$italic-font: 'Adobe Garamond Pro', serif;
+$italic-secondary-font: 'Cormorant Garamond', serif;
 
 html,
 body {
@@ -6692,7 +6805,7 @@ body {
             right: 0;
             display: block;
             transform: translateY(-50%);
-            background: url(../images/arrow_dropdown.svg) no-repeat;
+            
             width: 18px;
             height: 10px;
         }
@@ -6911,7 +7024,7 @@ body {
             cursor: pointer;
             width: 24px;
             height: 24px;
-            background: #FF5650 url(../images/checbox.svg) no-repeat center;
+           
             border: 2px solid #F4544F;
             border-radius: 2px;
             opacity: 0;
@@ -7856,7 +7969,7 @@ body {
         bottom: 20px;
         width: 26px;
         height: 12px;
-        background: url(../images/arrow_form.svg) no-repeat;
+        
 
         @media screen and (max-width: 991px) {
             width: 14px;
@@ -8210,7 +8323,7 @@ body {
     transform: translate(-50%, -50%);
     width: 16px;
     height: 8px;
-    background: url(../images/arrow_select.svg) no-repeat center/cover;
+    
     transition: all 0.3s;
 }
 
@@ -8478,11 +8591,7 @@ body {
     display: none;
 }
 
-:root {
-    /*
-    --swiper-pagination-color: var(--swiper-theme-color);
-    */
-}
+
 
 .swiper-pagination {
     position: absolute;
@@ -8661,6 +8770,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
     border-radius: 10px;
     position: relative;
+    touch-action:none;
     -ms-touch-action: none;
     background: rgba(0, 0, 0, 0.1);
 }
@@ -8722,12 +8832,7 @@ button.swiper-pagination-bullet {
     cursor: move;
 }
 
-/* Preloader */
-:root {
-/*
---swiper-preloader-color: var(--swiper-theme-color);
-*/
-}
+
 
 .swiper-lazy-preloader {
     width: 42px;
