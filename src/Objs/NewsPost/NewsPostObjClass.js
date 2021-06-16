@@ -16,13 +16,15 @@ const NewsPost = Scrivito.provideObjClass("NewsPost", {
     name: "string",
     position: "string",
     image: ["reference", {only: "Image"}],
+    newsImage: ["reference", {only: "Image"}],
     next: "string",
     nextLabel: "string",
     prev: "string",
     prevLabel: "string",
     news: "widgetlist",
     newsTitle: "string",
-    more: "link"
+    more: "link",
+    date: "date",
   },
   extractTextAttributes: ["navigationSection", "body"],
 });

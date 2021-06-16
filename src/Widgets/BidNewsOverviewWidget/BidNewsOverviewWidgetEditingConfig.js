@@ -2,7 +2,7 @@ import * as Scrivito from "scrivito";
 
 
 Scrivito.provideEditingConfig("BidNewsOverviewWidget", {
-  title: "News Overview",
+  title: "Bid News Overview",
   
   attributes: {
     tags: {

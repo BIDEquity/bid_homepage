@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
+import formatDate from "../../utils/formatDate";
 
 Scrivito.provideComponent("NewsPost", ({ page }) => {
   const categorylink = page.get("category");
@@ -7,8 +8,6 @@ Scrivito.provideComponent("NewsPost", ({ page }) => {
 
   const morelink = page.get("more");
   let moretext = morelink && morelink.title();
-
-  
 
   return (
     <>
@@ -30,6 +29,7 @@ Scrivito.provideComponent("NewsPost", ({ page }) => {
                     tag="h1"
                     className="article_content_title"
                   />
+                  <div>{formatDate(page.get("date"), "dd mmm yyyy")}</div>
                 </div>
                 <div className="block_text">
                   <p>
@@ -209,19 +209,15 @@ Scrivito.provideComponent("NewsPost", ({ page }) => {
               </a>
             </div>
             <div className="article_posts">
-              
               <Scrivito.ContentTag
                 content={page}
                 attribute="newsTitle"
                 tag="h2"
                 className="section_title bottom_line"
               />
-                  <Scrivito.ContentTag
-                    content={page}
-                    attribute="news"
-                  />
+              
+              <Scrivito.ContentTag content={page} attribute="news" />
               <div className="posts_more">
-                
                 <Scrivito.LinkTag to={morelink} className="more_link">
                   {moretext}
                 </Scrivito.LinkTag>

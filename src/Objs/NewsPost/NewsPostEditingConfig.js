@@ -20,7 +20,7 @@ Scrivito.provideEditingConfig("NewsPost", {
     ...defaultPageEditingConfigAttributes,
     ...metadataEditingConfigAttributes,
   },
-  properties: [...defaultPageProperties, "category", "next", "prev", "more"],
+  properties: [...defaultPageProperties, "newsImage", "date","category", "next", "prev", "more"],
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
     ...defaultPageInitialContent,
