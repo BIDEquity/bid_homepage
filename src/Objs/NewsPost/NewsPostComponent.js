@@ -29,7 +29,7 @@ Scrivito.provideComponent("NewsPost", ({ page }) => {
                     tag="h1"
                     className="article_content_title"
                   />
-                  <div>{formatDate(page.get("date"), "dd mmm yyyy")}</div>
+                  <div>{page.get("company")}, {formatDate(page.get("date"), "dd mmm yyyy")}</div>
                 </div>
                 <div className="block_text">
                   <p>

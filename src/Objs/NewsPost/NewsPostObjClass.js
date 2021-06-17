@@ -7,7 +7,7 @@ const NewsPost = Scrivito.provideObjClass("NewsPost", {
     ...defaultPageAttributes,
     childOrder: "referencelist",
     ...metadataAttributes,
-    category: "link",
+    category: "string",
     title: "string",
     teaser: "string",
     body: "html",
@@ -25,6 +25,7 @@ const NewsPost = Scrivito.provideObjClass("NewsPost", {
     newsTitle: "string",
     more: "link",
     date: "date",
+    company: "string"
   },
   extractTextAttributes: ["navigationSection", "body"],
 });
