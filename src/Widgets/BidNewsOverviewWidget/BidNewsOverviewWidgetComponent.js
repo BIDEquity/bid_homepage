@@ -207,15 +207,19 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                 return (
                   <div key={index} className="news_subscribe">
                     <div className="news_subscribe_description">
-                      <h3 className="news_subscribe_title">
-                        Stay up to date with BID Equity
-                      </h3>
+                      <Scrivito.ContentTag
+                        content={widget}
+                        attribute="termsTitle"
+                        tag="h3"
+                        className="news_subscribe_title"
+                      />
                       <div className="news_subscribe_text">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua.
-                        </p>
+                      <Scrivito.ContentTag
+                        content={widget}
+                        attribute="teaser"
+                        tag="p"
+                        
+                      />
                       </div>
                     </div>
                     <form
@@ -240,12 +244,13 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                               type="checkbox"
                               name="subscribe_terms"
                             />
-                            <span className="subscribe_checkbox_text">
-                              <a href="#">Terms and conditions</a> lorem ipsum
-                              dolor sit amet, consectetur adipiscing elit, sed
-                              do eiusmod tempor incididunt ut labore et dolore
-                              magna aliqua
-                            </span>
+                            
+                            <Scrivito.ContentTag
+                        content={widget}
+                        attribute="terms"
+                        tag="span"
+                        className="subscribe_checkbox_text"
+                      />
                           </label>
                           <label className="subscribe_checkbox">
                             <input
@@ -253,12 +258,13 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                               type="checkbox"
                               name="subscribe_privacy"
                             />
-                            <span className="subscribe_checkbox_text">
-                              <a href="#">Privacy Policy</a> lorem ipsum dolor
-                              sit amet, consectetur adipiscing elit, sed do
-                              eiusmod tempor incididunt ut labore et dolore
-                              magna aliqua
-                            </span>
+                            
+                            <Scrivito.ContentTag
+                        content={widget}
+                        attribute="privacy"
+                        tag="span"
+                        className="subscribe_checkbox_text"
+                      />
                           </label>
                         </div>
                       </div>
@@ -268,6 +274,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                           type="submit"
                           value="Sign me up"
                         />
+                        
                       </div>
                     </form>
                   </div>

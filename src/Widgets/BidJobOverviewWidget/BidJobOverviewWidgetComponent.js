@@ -166,8 +166,8 @@ class BidJobOverviewWidgetComponent extends React.Component {
                 <div className="job_item" key={index}>
                   <p className="job_item_name">{job.get("title")}</p>
                   <div className="job_item_text">{job.get("teaser")}</div>
-
-                  <Scrivito.LinkTag to={job} className="btn">
+                  
+                  <Scrivito.LinkTag to={job} className="btn" >
                     Apply for this job
                   </Scrivito.LinkTag>
                 </div>

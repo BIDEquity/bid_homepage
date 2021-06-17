@@ -2,6 +2,21 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 
 Scrivito.provideComponent("BidHeroHeadlineWidget", ({ widget }) => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const job = urlParams.get("job");
+  if(job) {
+  return (
+    <div className="top_about">
+      <div className="top_inner">
+    <h1 className="top_title bottom_line aos-init aos-animate">
+      Apply for the role of <br/>{job}
+    </h1>
+    </div>
+    </div>
+  
+  )
+  }
+
   return (
     <div className="top_about">
       <div className="top_inner">

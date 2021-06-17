@@ -8,6 +8,7 @@ const Job = Scrivito.provideObjClass("Job", {
     childOrder: "referencelist",
     ...metadataAttributes,
     title: "string",
+    company: "string",
     location: "string",
     industry: "string",
     department: "string",

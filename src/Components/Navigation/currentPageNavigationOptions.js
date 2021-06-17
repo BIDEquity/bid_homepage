@@ -14,6 +14,8 @@ function currentPageNavigationOptions() {
         return homepageNavigationOptions(Scrivito.currentPage());
       case "Job":
         return pageNavigationOptions(Scrivito.currentPage());
+        case "JobApplyForm":
+        return pageNavigationOptions(Scrivito.currentPage());
       case "LandingPage":
         return landingPageNavigationOptions(Scrivito.currentPage());
       case "Page":

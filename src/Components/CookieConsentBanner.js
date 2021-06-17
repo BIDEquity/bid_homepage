@@ -16,7 +16,7 @@ function CookieConsentBanner() {
     setVisible(cookieConsentChoice === "undecided");
   }, [cookieConsentChoice]);
 
-  console.log(visible)
+ 
 
   if (!visible || !consentUrl) {
     return null;

@@ -13,14 +13,14 @@ import {
   metadataValidations,
 } from "../_metadataEditingConfig";
 
-Scrivito.provideEditingConfig("Job", {
-  title: "Job Detail Page",
+Scrivito.provideEditingConfig("JobApplyForm", {
+  title: "Job Apply Form",
   thumbnail: PageObjIcon,
   attributes: {
     ...defaultPageEditingConfigAttributes,
     ...metadataEditingConfigAttributes,
   },
-  properties: [...defaultPageProperties, 'company','apply','sideLink','headLink','linkToJobs'],
+  properties: [...defaultPageProperties],
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
     ...defaultPageInitialContent,
