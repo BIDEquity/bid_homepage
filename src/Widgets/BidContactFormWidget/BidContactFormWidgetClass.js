@@ -4,7 +4,8 @@ const BidContactFormWidget = Scrivito.provideWidgetClass("BidContactFormWidget",
   attributes: {
     title: "string",
     iAm: "string",
-    company: "string"
+    company: "string",
+    positions: "stringlist"
   },
 });
 
