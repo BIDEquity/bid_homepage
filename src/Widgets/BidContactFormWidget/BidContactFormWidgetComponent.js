@@ -9,115 +9,71 @@ https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-
 */
 
 Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
-  const classNames = ["row"];
-
-  if (widget.get("backgroundColor") === "transparent") {
-    classNames.push("contact-form-widget--card-white-transparent");
-  } else {
-    classNames.push(
-      "contact-form-widget--floating-label",
-      "card-theme",
-      "card",
-      "contact-form-widget--card-padding"
-    );
-  }
-
   return (
-    <div className={classNames.join(" ")}>
-      <form className="contact-form" method="post">
-        <input type="hidden" name="form-name" value="contact" />
-        <div className="d-none">
-          <label>
-            Don’t fill this out: <input name="bot-field" />
-          </label>
-        </div>
-        
-        
-        <label htmlFor="contactCompany">I'm the &nbsp;</label>
-            <input
-              className="form-control"
-              id="contactCompany"
-              name="contactCompany"
-              placeholder="Founder"
-              type="text"
+    <div className="content_section contact_section">
+      <div className="container">
+        <Scrivito.ContentTag
+          content={widget}
+          attribute="title"
+          tag="h2"
+          className="section_title bottom_line dark col_8 col_t_12"
         />
-        
-        <span> &nbsp;of a profitable Software company</span>
-        
-        
-            <label htmlFor="contactLocation">&nbsp;headquartered in &nbsp;</label>
-            <input
-              className="form-control"
-              id="contactLocation"
-              name="contactLocation"
-              placeholder="London"
-              type="text"
-              required
-        />
-      
-
-        <label htmlFor="contactName">with annual revenues of €&nbsp;</label>
-            <input
-              className="form-control"
-              id="contactRevenue"
-              name="contactRevenue"
-              placeholder="3 million"
-              type="text"
-              required
-            />
-          <span>.</span>
-            <label htmlFor="contactName"> &nbsp; My name is &nbsp;</label>
-            <input
-              className="form-control"
-              id="contactName"
-              name="contactName"
-              placeholder="William"
-              type="text"
-              required
-            />
-          
-            <label htmlFor="contactEmail">and my email address is &nbsp;</label>
-            <input
-              className="form-control"
-              id="contactEmail"
-              name="contactEmail"
-              placeholder="william@example.com"
-              type="email"
-              required
-        />
-        <span>.</span>
-        
-        <label htmlFor="contactTel"> &nbsp; You can also call me on &nbsp;</label>
-            <input
-              className="form-control"
-              id="contactTel"
-              name="contactTel"
-              placeholder="00000 00 00 00 0"
-              type="telephone"
-              required
-            />
-          <span>.</span>
-          
-          {widget.get("agreementText") && (
-            <div className="form-group form-check">
-              <input
-                className="form-check-input"
-                id="agreementTextCheck"
-                type="checkbox"
-                name="contactAgreement"
-                value={widget.get("agreementText")}
-                required
-              />
-              <label className="form-check-label" htmlFor="agreementTextCheck">
-                {widget.get("agreementText")}
-              </label>
+        <form className="contact_form" action="#" method="POST">
+          <div className="contact_form_content">
+            <Scrivito.ContentTag content={widget} attribute="iAm" tag="span" />
+            <div className="contact_field">
+              <select className="contact_who select_style">
+                <option>Founder</option>
+                <option>Owner</option>
+                <option>CEO</option>
+                <option>Managing Partner</option>
+                <option>Managing Director</option>
+                <option v>Technical Director</option>
+              </select>
             </div>
-          )}
-          <button className="btn btn-primary btn-block" type="submit">
-            {widget.get("buttonText") || "send message"}
-          </button>
-        
-      </form>
+            <Scrivito.ContentTag content={widget} attribute="company" tag="span" />
+            <div className="contact_details">
+              headquartered in
+              <div className="contact_field contact_field_location">
+                <input type="text" value="" required />
+              </div>
+              with annual revenues of <br />€
+              <div className="contact_field contact_field_revenues">
+                <input type="text" value="" required />
+              </div>
+              million. My name is
+              <div className="contact_field contact_field_name">
+                <input type="text" value="" required />
+              </div>
+              and my email address is
+              <div className="contact_field contact_field_email">
+                <input type="email" value="" required />
+              </div>
+              . You can also call me on
+              <div className="contact_field contact_field_tel">
+                <input
+                  className="contact_tel_code"
+                  maxlength="4"
+                  type="text"
+                  value=""
+                  required
+                />
+                <input type="text" value="" required />
+              </div>
+              .
+            </div>
+          </div>
+          <textarea
+            className="contact_addition"
+            placeholder="Add addition information here"
+          ></textarea>
+          <input
+            className="contact_form_send btn"
+            type="submit"
+            value="Send my enquiry"
+          />
+        </form>
+      </div>
     </div>
   );
 });
