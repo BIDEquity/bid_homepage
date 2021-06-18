@@ -11,21 +11,46 @@ Scrivito.provideComponent("JobApplyForm", ({ page }) => {
       <div className="container">
         <form className="contact_form" action="#" method="POST">
           <div className="contact_form_content">
-            My name is
+            <Scrivito.ContentTag 
+                content={page}
+                attribute="name"
+                tag="span"
+            />
             <div className="contact_field contact_field_name">
-              <input type="text"  required />
+              <input type="text" required />
             </div>
-            and I would like to apply for the job of{" "}
-            <span className="text_pink">{job}</span> at{" "}
-            <span className="text_pink">{company}</span>. My email is
+            <Scrivito.ContentTag 
+                content={page}
+                attribute="apply"
+                tag="span"
+            />
+            <span className="text_pink">{job}</span>
+            <Scrivito.ContentTag 
+                content={page}
+                attribute="at"
+                tag="span"
+            />
+            <span className="text_pink">{company}</span><Scrivito.ContentTag 
+                content={page}
+                attribute="mail"
+                tag="span"
+            />
             <div className="contact_field contact_field_email">
-              <input type="email"  required />
+              <input type="email" required />
             </div>
-            and my contact number is
+            <Scrivito.ContentTag 
+                content={page}
+                attribute="contact"
+                tag="span"
+            />
             <div className="contact_field contact_field_tel">
-              <input type="text"  required />
+              <input type="text" required />
             </div>
-            . Here’s my CV
+            <Scrivito.ContentTag 
+                content={page}
+                attribute="cv"
+                tag="span"
+            />
             <div className="contact_file">
               <span className="contact_file_text"></span>
               <label className="contact_file_browse">

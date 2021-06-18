@@ -7,6 +7,12 @@ const JobApplyForm = Scrivito.provideObjClass("JobApplyForm", {
     ...defaultPageAttributes,
     childOrder: "referencelist",
     ...metadataAttributes,
+    name: "string",
+    apply: "string",
+    contact: "string",
+    cv: "string",
+    mail: "string",
+    at: "string",
   },
   extractTextAttributes: ["navigationSection", "body"],
 });
