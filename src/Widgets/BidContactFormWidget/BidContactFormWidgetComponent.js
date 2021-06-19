@@ -8,13 +8,21 @@ https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-
 */
 
 Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
+  const [visible, setVisible] = React.useState(false);
   const pos = widget.get("positions");
-  
 
   const positions = pos.map((position) => ({
     value: position,
     label: position,
   }));
+
+  const handleChange = (selectedOption) => {
+    setVisible({
+      visible:
+        selectedOption.label === "CEO" ||
+        selectedOption.label === "Managing Director",
+    });
+  };
 
   return (
     <div className="content_section contact_section">
@@ -34,9 +42,7 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
                 className="contact_who select_style"
                 classNamePrefix="contact-select"
                 placeholder="Founder"
-                contenteditable
-                
-                
+                onChange={handleChange}
               />
             </div>
             <Scrivito.ContentTag
@@ -44,7 +50,11 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
               attribute="company"
               tag="span"
             />
-            <div className="contact_details">
+            <div
+              className={`contact_details ${
+                !visible.visible ? "hidden" : "show"
+              } `}
+            >
               headquartered in
               <div className="contact_field contact_field_location">
                 <input type="text" required />
