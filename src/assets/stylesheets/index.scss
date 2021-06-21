@@ -1333,10 +1333,17 @@ _:-ms-fullscreen,
 
 nav .open .dropdown-menu.show-language {
   box-shadow: none;
-  padding: 0;
+  padding: 4px 0 0;
   position: absolute !important;
+  top: 20px;
+  left: 10px;
+  
   a {
     border-top: 0 !important;
+  }
+  @media screen and (max-width: 992px) {
+    left: 0;
+    top: 0;
   }
 }
 
@@ -1350,6 +1357,7 @@ nav .open .dropdown-menu.lang-switch a {
   padding-top: 2px;
   font-size: 14px !important;
   color: #fff;
+  position: relative;
 }
 
 .lang-switch a {
@@ -1377,10 +1385,13 @@ nav .open .dropdown-menu.lang-switch a {
 
 .lang-switch .fa-chevron-down {
   color: $primary;
-  margin-left: 6px;
+  right: 0;
   font-size: 9px;
   position: absolute;
-  bottom: 30px;
+  top: 12px;
+  @media screen and (max-width: 991px) {
+    left:44px
+  }
 }
 
 @keyframes line {
