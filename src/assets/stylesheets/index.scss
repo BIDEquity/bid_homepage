@@ -1956,6 +1956,7 @@ input, textarea {
 
   .fixed-top.collapsed {
     position: fixed;
+    overflow-y: hidden;
   }
 
   .collapsed .lang-switch {

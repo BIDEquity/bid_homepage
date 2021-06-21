@@ -19,8 +19,8 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
   const handleChange = (selectedOption) => {
     setVisible({
       visible:
-        selectedOption.label === "CEO" ||
-        selectedOption.label === "Managing Director",
+        selectedOption.label !== "Founder" //||
+        //selectedOption.label === "Managing Director",
     });
   };
 
