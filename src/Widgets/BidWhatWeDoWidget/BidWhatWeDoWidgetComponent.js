@@ -15,7 +15,7 @@ return (
             
 		</div>
 	</div>
-    <div className="about_us">
+    <div className="about_us info_section">
         
         <Scrivito.ImageTag 
           content={widget}
