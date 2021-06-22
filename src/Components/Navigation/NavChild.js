@@ -58,6 +58,7 @@ const NavSingleChild = Scrivito.connect(({ child, open, ...otherProps }) => {
   if (open) {
     classNames.push("open");
   }
+  
   if (isActive(child)) {
     classNames.push("active");
   }
@@ -117,6 +118,28 @@ function isActive(page) {
   }
 
   const currentPath = Scrivito.currentPage().path();
+  const obj = Scrivito.currentPage();
+
+  if (page.permalink().startsWith("news")) {
+    return obj.permalink().startsWith("news");
+    
+  }
+
+  if (page.permalink().startsWith("partner")) {
+    return obj.permalink().startsWith("partner");
+    
+  }
+
+  if (page.permalink().startsWith("jobs")) {
+    return obj.permalink().startsWith("jobs");
+    
+  }
+
+  if (page.permalink().startsWith("job-apply")) {
+    return true //obj.permalink().startsWith("job");
+    
+  }
+
   if (currentPath) {
     return currentPath.startsWith(page.path());
   }
@@ -124,6 +147,8 @@ function isActive(page) {
   if (Scrivito.currentPage().objClass() === "BlogPost") {
     return page.objClass() === "Blog";
   }
+
+  
 
   return false;
 }
