@@ -120,6 +120,10 @@ function isActive(page) {
   const currentPath = Scrivito.currentPage().path();
   const obj = Scrivito.currentPage();
 
+  if(!page.permalink() || !obj.permalink()) {
+    return false;
+  }
+
   if (page.permalink().startsWith("news")) {
     return obj.permalink().startsWith("news");
     
@@ -136,6 +140,11 @@ function isActive(page) {
   }
 
   if (page.permalink().startsWith("job-apply")) {
+    return true //obj.permalink().startsWith("job");
+    
+  }
+
+  if (page.permalink().startsWith("team")) {
     return true //obj.permalink().startsWith("job");
     
   }
