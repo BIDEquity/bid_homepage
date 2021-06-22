@@ -1887,6 +1887,11 @@ input, textarea {
 }
 
 @media (max-width: 991px) {
+  .article_content_soc svg {
+    height: 15px;
+    width: 15px;
+  }
+
   .team_bottom {
     margin-top: 0 !important;
   }
