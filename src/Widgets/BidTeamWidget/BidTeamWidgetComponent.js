@@ -8,48 +8,44 @@ Scrivito.provideComponent("BidTeamWidget", ({ widget }) => {
   let moretext = morelink && morelink.title();
   return (
     <div className="team_content">
-		<div className="container">
+      <div className="container">
+        <Scrivito.ContentTag
+          content={widget}
+          attribute="headline"
+          tag="h2"
+          className="team_content_title section_title bottom_line col_5 col_t_12"
+        />
+        <div>
+          <Scrivito.ContentTag content={widget} attribute="content" />
+        </div>
+        <div className="team_bottom">
+        <div className="team_more">
+              <Scrivito.LinkTag to={morelink} className="more_link">
+                {moretext}
+              </Scrivito.LinkTag>
+            </div>
+          <div className="col_5 col_t_12">
+            
             <Scrivito.ContentTag
               content={widget}
-              attribute="headline"
+              attribute="bottomHeadline"
               tag="h2"
-              className="team_content_title section_title bottom_line col_5 col_t_12"
+              className="section_title"
             />
-            <div className="team_wrap">
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="content"
-                />
-                
+            <div className="block_text">
+              <Scrivito.ContentTag
+                content={widget}
+                attribute="bottomText"
+                tag="p"
+              />
             </div>
-            <div className="team_bottom row">
-                <div className="col_5 col_t_12">
-                    
-                    <Scrivito.LinkTag to={morelink} className="more_link">
-                      {moretext}
-                    </Scrivito.LinkTag>
-                    
-                    <Scrivito.ContentTag
-                      content={widget}
-                      attribute="bottomHeadline"
-                      tag="h2"
-                      className="section_title"
-                    />
-                    <div className="block_text">
-                    <Scrivito.ContentTag
-                      content={widget}
-                      attribute="bottomText"
-                      tag="p"
-                      
-                    />
-                    </div>
-                    
-                    <Scrivito.LinkTag to={link} className="btn">
-                      {linktext}
-                    </Scrivito.LinkTag>
-                </div>
-            </div>
+
+            <Scrivito.LinkTag to={link} className="btn">
+              {linktext}
+            </Scrivito.LinkTag>
+          </div>
         </div>
+      </div>
     </div>
-      );
+  );
 });

@@ -1771,9 +1771,7 @@ margin-top: 30px;
   margin-left: -4px;
 }
 
-.team_bottom {
-  margin-left: 0;
-}
+
 
 .row {
   clear: both;
@@ -1863,6 +1861,22 @@ input, textarea {
   margin: 0 12px;
 }
 
+
+
+.team_bottom .more_link {
+  display: inline-block !important;
+}
+
+.team_bottom {
+  margin-top: 0 !important;
+}
+
+.team_more {
+  margin-top: 50px !important;
+  margin-left: 4px;
+  margin-bottom: 60px;
+}
+
 /* RESPONSIVE
 ================================================== */
 
@@ -1873,6 +1887,14 @@ input, textarea {
 }
 
 @media (max-width: 991px) {
+  .team_bottom {
+    margin-top: 0 !important;
+  }
+
+  .team_more {
+    margin-bottom: 0;
+  }
+
   .container {
     max-width: 100vw;
   }
@@ -1985,6 +2007,10 @@ input, textarea {
     margin-top: 36px;
     margin-left: 0;
   }
+
+  .team_more {
+    margin-top: 0 !important;
+}
 }
 
 @media (max-width: $screen-sm-max) {
