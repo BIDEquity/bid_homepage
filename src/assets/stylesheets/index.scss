@@ -794,7 +794,7 @@ h6,
 /* nav section adaptions */
 section.navbar-fixed {
   //padding-top: 80px;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 section {
@@ -1984,12 +1984,16 @@ input, textarea {
     border-bottom: 1px solid #fff !important;
     padding-bottom: 12px;
     margin-bottom: 18px;
+    padding-top: 16px;
   }
 
-  .fixed-top.collapsed {
-    position: fixed;
-    overflow-y: hidden;
-  }
+  /*.fixed-top.collapsed {
+    @media screen and (max-width: 414px) {
+      overflow: hidden;
+      position: fixed;
+    }
+    
+  }*/
 
   .collapsed .lang-switch {
     color: #fff;
@@ -2016,6 +2020,11 @@ input, textarea {
   .team_more {
     margin-top: 0 !important;
 }
+
+.top_section {
+  overflow-y: unset;
+}
+
 }
 
 @media (max-width: $screen-sm-max) {

@@ -42,6 +42,7 @@
   &.navbar-right {
     margin-left: auto;
     margin-right: 0;
+    margin-top: 16px;
   }
 
   > li,
@@ -76,17 +77,17 @@
       z-index: 1000;
       border-radius: 0;
       border: none;
-      left: 27px;
+      left: 40px;
       margin-top: 0px;
       right: auto;
       text-align: left;
       position: absolute !important;
       transform: translate(-50%, 0);
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1),
-        0 -20px 10px rgba(44, 44, 44, 0.04);
+      //box-shadow: 0 0 8px rgba(0, 0, 0, 0.1),
+      //  0 -20px 10px rgba(44, 44, 44, 0.04);
       font-size: 14px;
-
-      
+      width: 100px;
+      display: none;
     }
   }
 
@@ -94,17 +95,15 @@
     > a {
       color: #f7ede1;
       padding: 5px 10px !important;
-      text-align: center;
+      text-align: left;
 
-      &:hover,
-      &:focus {
+      &:hover {
         color: $primary !important;
       }
     }
 
     &.active > {
-      a:hover,
-      a:focus {
+      a:hover {
         color: $primary;
       }
     }
@@ -183,7 +182,7 @@
   }
 
   &-toggler {
-    float: right;
+  float: right;
     margin: 0;
     padding: 9px 20px;
     height: 66px;
@@ -244,9 +243,9 @@
     height: 75px;
     width: 35px;
     line-height: 75px;
-    font-size: 22px;
-    text-align: center;
-    margin: 0 auto;
+    font-size: 15px;
+    text-align: left;
+    margin-top: -18px;
     color: #fff;
     @include transition(transform 0.2s ease-in-out);
   }
@@ -259,11 +258,12 @@
 .open {
   .menu-toggle .fa {
     color: #fff;
-    transform: rotate(180deg);
+    //transform: rotate(180deg);
   }
 
   > .dropdown-menu {
-    display: block;
+    display: block !important;
+    opacity: 1;
     z-index: 10000;
   }
 }
@@ -443,6 +443,11 @@
     }
   }
 
+  .open > .dropdown-menu {
+    opacity: 1 !important;
+    display: block !important;
+  }
+
   .nav {
     margin: 0 !important;
     //padding: 20px 15px;
@@ -461,6 +466,7 @@
           width: 100%;
           .nav-link {
             color: #fff !important;
+            opacity: 1;
             //padding-left: 49px !important;
           }
         }
@@ -475,9 +481,9 @@
       }
 
       > .dropdown-menu {
-        left: auto;
+        left: 0;
         margin-top: 0px;
-        right: auto;
+        width: 100px;
         text-align: left;
         transform: none;
         padding: 10px;
@@ -503,7 +509,7 @@
         box-shadow: none;
         padding: 0;
         position: static !important;
-
+        opacity: 1 !important;
         a {
           border-top: 1px solid #eee;
           //font-size: 17px;
@@ -530,6 +536,7 @@
     display: block !important;
     z-index: 1000 !important;
     border: 1px solid #fff;
+    opacity: 1 !important;
   }
 
   /* menu toggle */
@@ -674,7 +681,7 @@
         height: 14px;
         width: 14px;
         transform: rotate(135deg);
-        click-events: none;
+       
       }
     }
 
