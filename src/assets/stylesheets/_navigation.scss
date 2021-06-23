@@ -25,7 +25,7 @@
     .nav > li {
       &.active > a,
       &.open > a {
-        color: $primary !important;
+        color: $primary;
       }
     }
 
@@ -58,20 +58,20 @@
       
     }
 
-    &.open > {
+    /*&.open > {
       a,
       .menu-toggle {
         //background: $nav-hover !important;
         color: #fff;
       }
-    }
+    }*/
 
-    &.active {
+   /* &.active {
       > a,
       > .menu-toggle {
         color: #fff;
       }
-    }
+    }*/
 
     > .dropdown-menu {
       z-index: 1000;
@@ -109,14 +109,14 @@
     }
   }
 
-  li {
+  /*li {
     &.active > {
       a,
       .menu-toggle {
         color: #fff;
       }
     }
-  }
+  }*/
 }
 
 .navbar {
@@ -140,7 +140,7 @@
     margin: 0 22.75px 0 0;
     //padding: 0 !important;
     text-decoration: none;
-    color: #f7ede1;
+    
     font-size: 14px;
     line-height: 20px !important;
     letter-spacing: .3px !important;
@@ -427,8 +427,7 @@
       font-weight: 300;
       font-size: 24px;
       text-transform: none;
-      border-top: 1px solid #eee !important;
-      border: 0 !important;
+      border-top: none !important;
       text-align: left;
     }
 
@@ -456,6 +455,7 @@
     .dropdown-menu > li > a {
       text-align: left;
       //padding: 10px 20px;
+      color: #fff !important;
     }
 
     > li {
@@ -465,7 +465,7 @@
           
           width: 100%;
           .nav-link {
-            color: #fff !important;
+            //color: #fff;
             opacity: 1;
             //padding-left: 49px !important;
           }
@@ -511,7 +511,7 @@
         position: static !important;
         opacity: 1 !important;
         a {
-          border-top: 1px solid #eee;
+          
           //font-size: 17px;
           padding: 13px 20px !important;
         }
@@ -521,16 +521,15 @@
 
   .nav > li > a,
   .bg-dark-image .nav > li > a {
-    color: #fff !important;
     display: block;
   }
 
-  .bg-dark-image .nav > li {
+  /*.bg-dark-image .nav > li {
     &.active > a,
     &.open > a {
       color: #fff !important;
     }
-  }
+  }*/
 
   .open > .dropdown-menu {
     display: block !important;
@@ -577,6 +576,8 @@
       margin: 0 auto;
       color: $primary;
       @include transition(all 0.2s ease-in-out);
+      position: absolute;
+      right: 10px;
     }
   }
 }

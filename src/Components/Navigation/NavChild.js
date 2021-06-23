@@ -120,7 +120,7 @@ function isActive(page) {
   const currentPath = Scrivito.currentPage().path();
   const obj = Scrivito.currentPage();
 
-  /*if(!page.permalink() || !obj.permalink()) {
+  if(!page.permalink() || !obj.permalink()) {
     return false;
   }
 
@@ -147,7 +147,7 @@ function isActive(page) {
   if (page.permalink().startsWith("team")) {
     return obj.permalink().startsWith("team");
     
-  }*/
+  }
 
   if (currentPath) {
     return currentPath.startsWith(page.path());

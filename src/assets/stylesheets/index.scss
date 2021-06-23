@@ -239,11 +239,11 @@ body {
 }
 
 .active a {
-  color: $primary !important;
+  color: $primary;
 }
 
 a {
-  color: $primary;
+  color: #f7ede1;
   text-decoration: none !important;
 }
 a:hover,
@@ -1981,10 +1981,17 @@ input, textarea {
   .collapsed .navbar-nav li a {
     font-weight: 400;
     font-size: 18px;
-    border-bottom: 1px solid #fff !important;
     padding-bottom: 12px;
     margin-bottom: 18px;
     padding-top: 16px;
+    color: #fff !important;
+    width: 85vw !important;
+    border-bottom: 1px solid #fff;
+    
+  }
+
+  .nav-item .dropdown-menu li a{
+    border-bottom: none;
   }
 
   /*.fixed-top.collapsed {
