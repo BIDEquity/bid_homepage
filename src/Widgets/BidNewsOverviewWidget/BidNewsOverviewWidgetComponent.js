@@ -253,7 +253,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                             <Checkbox
                               className="subscribe_group subscribe_agree subscribe_terms"
                               value={this.state.checkedTerms}
-                              
+                              required
                               onChange={this.handleChangeTerms}
                             />
 
@@ -267,7 +267,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                           
                             <Checkbox
                               className="subscribe_group subscribe_agree subscribe_privacy"
-                              
+                              required
                               onChange={this.handleChangePrivacy}
                               value={this.state.checkedPrivacy}
                             />
