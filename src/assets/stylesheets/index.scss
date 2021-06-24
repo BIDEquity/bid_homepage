@@ -1971,6 +1971,9 @@ textarea {
 }
 
 @media (max-width: 991px) {
+  .swiper-pagination-bullet:after {
+    margin-left: 0 !important;
+  }
   .article_content_soc svg {
     height: 15px;
     width: 15px;
