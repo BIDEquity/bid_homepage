@@ -1499,6 +1499,8 @@ nav .open .dropdown-menu.lang-switch a {
     width: fit-content;
   }
 
+  
+
   .swiper-pagination-bullet-active {
     font-weight: 700;
   }
@@ -1546,6 +1548,13 @@ nav .open .dropdown-menu.lang-switch a {
 
 .footer_cop {
   padding-bottom: 44px !important;
+}
+
+.posts_more {
+
+  @media screen and (max-width: 991px) {
+      display: block !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
