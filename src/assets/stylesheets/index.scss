@@ -1609,6 +1609,12 @@ nav .open .dropdown-menu.lang-switch a {
   box-shadow: none !important;
 }
 
+.contact-select__option--is-focused,
+.companies-select__option--is-focused {
+  background-color: #f1e9dd !important;
+  font-weight: bold;
+}
+
 .companies-select__control,
 .companies-select__control--is-focused,
 .companies-select__menu {
@@ -1660,20 +1666,16 @@ nav .open .dropdown-menu.lang-switch a {
   font: 18px/40px "Swiss721 BT", sans-serif !important;
 }
 
-.react-select__menu * {
-  background: transparent !important;
-}
+
 
 .react-select__option,
 .contact-select__option {
   padding: 9px 40px !important;
-  &-is-active {
-    background: #ccc !important;
-  }
+  
 }
 
-.react-select__option--is-active {
-  background: red;
+.react-select__option--is-focused {
+  background-color: #334260 !important;
 }
 
 .select_style {
