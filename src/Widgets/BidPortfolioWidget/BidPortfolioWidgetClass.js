@@ -9,7 +9,8 @@ const BidPortfolioWidget = Scrivito.provideWidgetClass("BidPortfolioWidget", {
     sectionHeadline: "string",
     sectionLink: "link",
     newsHeadline: "string",
-    
+    slides: "widgetlist",
+    sliderBgImage: ["reference", {only: "Image"}],
       },
   
 });

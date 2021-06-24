@@ -18,37 +18,38 @@ Scrivito.provideComponent("BidPortfolioWidget", ({ widget }) => {
         
         </div>
       </div>
-      <div className="about_us">
-        <Scrivito.ImageTag
+      <div className="about_us info_section">
+        
+        <Scrivito.ImageTag 
           content={widget}
-          attribute="bgImage"
+          attribute="sliderBgImage"
           className="info_bg"
           alt=""
         />
         <div className="info_slider swiper-container">
-          <div className="swiper-wrapper">
-            <div className="info_slider_item swiper-slide">
-              <div className="container">
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="sectionHeadline"
-                  className="section_title bottom_line col_6 col_t_12"
-                  tag="h2"
-                />
-
-                <Scrivito.LinkTag to={link} className="info_slider_link">
-                  {linktext}
-                </Scrivito.LinkTag>
-              </div>
+            <div className="swiper-wrapper">
+                <div className="info_slider_item swiper-slide">
+                    <div className="container">
+                        
+                        <Scrivito.ContentTag
+                          content={widget}
+                          attribute="slides"
+                          
+                        />
+                        
+                        
+                    </div>
+                </div>
+                
+                
             </div>
-          </div>
-          <div className="info_slider_bottom">
-            <div className="container">
-              <div className="info_slider_pagination slider_pagination"></div>
-            </div>
-          </div>
         </div>
-      </div>
+        <div className="info_slider_bottom">
+            <div className="container">
+                <div className="info_slider_pagination slider_pagination"></div>
+            </div>
+        </div>
+    </div>
       <div className="portfolio_news">
         <div className="container">
           <Scrivito.ContentTag
