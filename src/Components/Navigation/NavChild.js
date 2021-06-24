@@ -145,7 +145,7 @@ function isActive(page) {
   }
 
   if (page.permalink().startsWith("team")) {
-    return obj.permalink().startsWith("team");
+    return true//obj.permalink().startsWith("team");
     
   }
 

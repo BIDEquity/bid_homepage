@@ -1337,7 +1337,7 @@ nav .open .dropdown-menu.show-language {
   position: absolute !important;
   top: 20px;
   left: 10px;
-  
+
   a {
     border-top: 0 !important;
   }
@@ -1390,7 +1390,7 @@ nav .open .dropdown-menu.lang-switch a {
   position: absolute;
   top: 12px;
   @media screen and (max-width: 991px) {
-    left:44px
+    left: 44px;
   }
 }
 
@@ -1619,7 +1619,7 @@ nav .open .dropdown-menu.lang-switch a {
 
 .contact-select__menu {
   margin-top: 3px !important;
-  padding: 40px  0 !important;
+  padding: 40px 0 !important;
   border-top: none !important;
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.16) !important;
   background-color: #f7ede1 !important;
@@ -1628,14 +1628,13 @@ nav .open .dropdown-menu.lang-switch a {
   font-weight: bold !important;
 }
 
-
 .companies-select__menu {
   font: 18px/40px "Swiss721 BT", sans-serif !important;
   color: #3f5e67;
   margin-top: 15px !important;
   margin-left: -1px;
   background-color: #f7ede1 !important;
-  box-shadow: 0 10px 50px rgba(0,0,0,.16) !important;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.16) !important;
   padding: 42px 0 30px;
   width: 320px !important;
   z-index: 1000;
@@ -1656,7 +1655,8 @@ nav .open .dropdown-menu.lang-switch a {
   background: transparent !important;
 }
 
-.react-select__option, .contact-select__option {
+.react-select__option,
+.contact-select__option {
   padding: 9px 40px !important;
   &-is-active {
     background: #ccc !important;
@@ -1682,38 +1682,37 @@ nav .open .dropdown-menu.lang-switch a {
 }
 
 .companies-select__placeholder {
-
   color: $primary !important;
   font: 18px/35px "Swiss721 BT", sans-serif !important;
 }
 
-.contact-select__placeholder, .contact-select__single-value {
-  
+.contact-select__placeholder,
+.contact-select__single-value {
   color: $primary !important;
   font: 60px/37px "Swiss721 BT", sans-serif !important;
   border-bottom: 2px solid $primary;
   padding-bottom: 12px !important;
-  
 }
 
 .contact-select__single-value,
 .contact-select__placeholder {
-    position: relative !important;
-    top: 12px !important;
-    left: auto !important;
-    transform: none !important;
-    max-width: none !important;
-    padding-top: 4px;
-  }
+  position: relative !important;
+  top: 12px !important;
+  left: auto !important;
+  transform: none !important;
+  max-width: none !important;
+  padding-top: 4px;
+}
 
-
-.react-select__indicator-separator, .companies-select__indicator-separator, .contact-select__indicator-separator{
+.react-select__indicator-separator,
+.companies-select__indicator-separator,
+.contact-select__indicator-separator {
   display: none !important;
 }
 
 .contact-select__dropdown-indicator {
-margin-left: -40px;
-margin-top: 30px;
+  margin-left: -40px;
+  margin-top: 30px;
 }
 
 .contact-select__dropdown-indicator svg {
@@ -1721,7 +1720,9 @@ margin-top: 30px;
   width: 40px;
 }
 
-.react-select__dropdown-indicator, .companies-select__dropdown-indicator, .contact-select__dropdown-indicator  {
+.react-select__dropdown-indicator,
+.companies-select__dropdown-indicator,
+.contact-select__dropdown-indicator {
   color: $primary !important;
 }
 
@@ -1771,8 +1772,6 @@ margin-top: 30px;
   margin-left: -4px;
 }
 
-
-
 .row {
   clear: both;
 
@@ -1782,7 +1781,6 @@ margin-top: 30px;
 .we_do_row {
   margin: 0 -12px 88px !important;
 }
-
 
 p {
   margin-bottom: 0;
@@ -1853,15 +1851,86 @@ a.btn:hover {
   color: $secondary !important;
 }
 
-input, textarea {
+input,
+textarea {
   outline: none;
+}
+
+.label-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.label-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 26px;
+  width: 26px;
+  border: 2px solid $primary;
+  border-radius: 2px;
+}
+
+/* When the checkbox is checked, add a background */
+.label-container input:checked ~ .checkmark {
+  background-color: $primary;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.label-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.label-container .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 7px;
+  height: 16px;
+  border: solid white;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(40deg);
+}
+
+.subscribe_checkbox_text {
+  margin-left: 34px !important;
+  margin-top: -14px !important;
+  margin-bottom: 20px !important;
 }
 
 .contact_field input {
   margin: 0 12px;
 }
-
-
 
 .team_bottom .more_link {
   display: inline-block !important;
@@ -1987,10 +2056,9 @@ input, textarea {
     color: #fff !important;
     width: 85vw !important;
     border-bottom: 1px solid #fff;
-    
   }
 
-  .nav-item .dropdown-menu li a{
+  .nav-item .dropdown-menu li a {
     border-bottom: none;
   }
 
@@ -2026,12 +2094,11 @@ input, textarea {
 
   .team_more {
     margin-top: 0 !important;
-}
+  }
 
-.top_section {
-  overflow-y: unset;
-}
-
+  .top_section {
+    overflow-y: unset;
+  }
 }
 
 @media (max-width: $screen-sm-max) {

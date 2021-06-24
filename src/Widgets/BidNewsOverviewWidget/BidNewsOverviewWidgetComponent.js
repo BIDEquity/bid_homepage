@@ -1,5 +1,6 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
+import Checkbox from "../../Components/Checkbox";
 
 import formatDate from "../../utils/formatDate";
 import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
@@ -19,6 +20,8 @@ class BidNewsOverviewWidgetComponent extends React.Component {
     this.state = {
       selectedCat: "",
       selectedCompany: null,
+      checkedTerms: false,
+      checkedPrivacy: false,
     };
 
     this.handleChangeCat = (selectedOption) => {
@@ -27,6 +30,14 @@ class BidNewsOverviewWidgetComponent extends React.Component {
 
     this.handleChangeCompany = (selectedOption) => {
       this.setState({ selectedCompany: selectedOption });
+    };
+
+    this.handleChangeTerms = () => {
+      this.setState({ checkedTerms: !this.state.checkedTerms });
+    };
+
+    this.handleChangePrivacy = () => {
+      this.setState({ checkedPrivacy: !this.state.checkedPrivacy });
     };
   }
 
@@ -214,12 +225,11 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                         className="news_subscribe_title"
                       />
                       <div className="news_subscribe_text">
-                      <Scrivito.ContentTag
-                        content={widget}
-                        attribute="teaser"
-                        tag="p"
-                        
-                      />
+                        <Scrivito.ContentTag
+                          content={widget}
+                          attribute="teaser"
+                          tag="p"
+                        />
                       </div>
                     </div>
                     <form
@@ -234,38 +244,41 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                             type="email"
                             name="subscribe_email"
                             placeholder="Email"
+                            required
                           />
                         </div>
                         <div className="request_errors"></div>
                         <div className="news_subscribe_terms">
-                          <label className="subscribe_checkbox">
-                            <input
+                          
+                            <Checkbox
                               className="subscribe_group subscribe_agree subscribe_terms"
-                              type="checkbox"
-                              name="subscribe_terms"
+                              value={this.state.checkedTerms}
+                              
+                              onChange={this.handleChangeTerms}
                             />
-                            
+
                             <Scrivito.ContentTag
-                        content={widget}
-                        attribute="terms"
-                        tag="span"
-                        className="subscribe_checkbox_text"
-                      />
-                          </label>
-                          <label className="subscribe_checkbox">
-                            <input
+                              content={widget}
+                              attribute="terms"
+                              tag="span"
+                              className="subscribe_checkbox_text"
+                            />
+                          
+                          
+                            <Checkbox
                               className="subscribe_group subscribe_agree subscribe_privacy"
-                              type="checkbox"
-                              name="subscribe_privacy"
+                              
+                              onChange={this.handleChangePrivacy}
+                              value={this.state.checkedPrivacy}
                             />
-                            
+
                             <Scrivito.ContentTag
-                        content={widget}
-                        attribute="privacy"
-                        tag="span"
-                        className="subscribe_checkbox_text"
-                      />
-                          </label>
+                              content={widget}
+                              attribute="privacy"
+                              tag="span"
+                              className="subscribe_checkbox_text"
+                            />
+                          
                         </div>
                       </div>
                       <div className="news_subscribe_bottom">
@@ -274,7 +287,6 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                           type="submit"
                           value="Sign me up"
                         />
-                        
                       </div>
                     </form>
                   </div>
