@@ -1928,6 +1928,12 @@ textarea {
   margin-bottom: 20px !important;
 }
 
+:-moz-validation-bubble-message {
+  background: transparent;
+  color: $primary;
+  border: none;
+}
+
 .contact_field input {
   margin: 0 12px;
 }
