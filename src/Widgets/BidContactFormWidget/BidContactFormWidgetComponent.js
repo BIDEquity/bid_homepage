@@ -18,9 +18,8 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
 
   const handleChange = (selectedOption) => {
     setVisible({
-      visible:
-        selectedOption.label !== "Founder" //||
-        //selectedOption.label === "Managing Director",
+      visible: selectedOption.label !== "Founder", //||
+      //selectedOption.label === "Managing Director",
     });
   };
 
@@ -33,8 +32,19 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
           tag="h2"
           className="section_title bottom_line dark col_8 col_t_12"
         />
-        <form className="contact_form" action="#" method="POST">
+        <form
+          className="contact_form"
+          name="contact"
+          method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
           <div className="contact_form_content">
+            <p class="hidden">
+              <label>
+                Don’t fill this out if you’re human: <input name="bot-field" />
+              </label>
+            </p>
             <Scrivito.ContentTag content={widget} attribute="iAm" tag="span" />
             <div className="contact_field">
               <Select
@@ -43,6 +53,7 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
                 classNamePrefix="contact-select"
                 placeholder="Founder"
                 onChange={handleChange}
+                name="position"
               />
             </div>
             <Scrivito.ContentTag
@@ -57,29 +68,28 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
             >
               headquartered in
               <div className="contact_field contact_field_location">
-                <input type="text" required />
+                <input name="location" type="text" required />
               </div>
               with annual revenues of <br />€
               <div className="contact_field contact_field_revenues">
-                <input type="text" required />
+                <input name="revenues" type="text" required />
               </div>
               million. My name is
               <div className="contact_field contact_field_name">
-                <input type="text" required />
+                <input name="name" type="text" required />
               </div>
               and my email address is
               <div className="contact_field contact_field_email">
-                <input type="email" required />
+                <input name="email" type="email" required />
               </div>
               . You can also call me on
               <div className="contact_field contact_field_tel">
                 <input
                   className="contact_tel_code"
-                  maxLength="4"
                   type="text"
                   required
+                  name="phone"
                 />
-                <input type="text" required />
               </div>
               .
             </div>
@@ -87,6 +97,7 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
           <textarea
             className="contact_addition"
             placeHolder="Add addition information here"
+            name="addition"
           ></textarea>
           <input
             className="contact_form_send btn"
