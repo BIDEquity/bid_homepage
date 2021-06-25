@@ -42,6 +42,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
   }
 
   render() {
+    console.log(this.state.selectedCat)
     const widget = this.props.widget;
     let newsSearch = Scrivito.Obj.where("_objClass", "equals", "NewsPost");
 
@@ -64,12 +65,12 @@ class BidNewsOverviewWidgetComponent extends React.Component {
             <div className="news_panel">
               <nav id="nav" className="news_categories bottom_line">
                 <ul>
-                  <li className="active">
+                  <li className={`${this.state.selectedCat === "" ? "active" : ""}`}>
                     <a onClick={() => this.handleChangeCat("")} href="#nav">
                       All
                     </a>
                   </li>
-                  <li>
+                  <li className={`${this.state.selectedCat === "Acquisitions" ? "active" : ""}`}>
                     <a
                       onClick={() => this.handleChangeCat("Acquisitions")}
                       href="#nav"
@@ -77,7 +78,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       Acquisitions
                     </a>
                   </li>
-                  <li>
+                  <li className={`${this.state.selectedCat === "Exits" ? "active" : ""}`}>
                     <a
                       onClick={() => this.handleChangeCat("Exits")}
                       href="#nav"
@@ -85,7 +86,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       Exits
                     </a>
                   </li>
-                  <li>
+                  <li className={`${this.state.selectedCat === "People" ? "active" : ""}`}>
                     <a
                       onClick={() => this.handleChangeCat("People")}
                       href="#nav"
@@ -93,7 +94,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       People
                     </a>
                   </li>
-                  <li>
+                  <li className={`${this.state.selectedCat === "Events" ? "active" : ""}`}>
                     <a
                       onClick={() => this.handleChangeCat("Events")}
                       href="#nav"
@@ -101,7 +102,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       Events
                     </a>
                   </li>
-                  <li>
+                  <li className={`${this.state.selectedCat === "Market News" ? "active" : ""}`}>
                     <a
                       onClick={() => this.handleChangeCat("Market News")}
                       href="#nav"
@@ -109,7 +110,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       Market News
                     </a>
                   </li>
-                  <li>
+                  <li className={`${this.state.selectedCat === "Insights" ? "active" : ""}`}>
                     <a
                       onClick={() => this.handleChangeCat("Insights")}
                       href="#nav"
@@ -117,7 +118,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       Insights
                     </a>
                   </li>
-                  <li>
+                  <li className={`${this.state.selectedCat === "Tools" ? "active" : ""}`}>
                     <a
                       onClick={() => this.handleChangeCat("Tools")}
                       href="#nav"
@@ -150,12 +151,12 @@ class BidNewsOverviewWidgetComponent extends React.Component {
           <div className="news_panel">
             <nav id="nav" className="news_categories bottom_line">
               <ul>
-                <li className="active">
+                <li className={`${this.state.selectedCat === "" ? "active" : ""}`}>
                   <a onClick={() => this.handleChangeCat("")} href="#nav">
                     All
                   </a>
                 </li>
-                <li>
+                <li className={`${this.state.selectedCat === "Acquisitions" ? "active" : ""}`}>
                   <a
                     onClick={() => this.handleChangeCat("Acquisitions")}
                     href="#nav"
@@ -163,22 +164,22 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                     Acquisitions
                   </a>
                 </li>
-                <li>
+                <li className={`${this.state.selectedCat === "Exits" ? "active" : ""}`}>
                   <a onClick={() => this.handleChangeCat("Exits")} href="#nav">
                     Exits
                   </a>
                 </li>
-                <li>
+                <li className={`${this.state.selectedCat === "People" ? "active" : ""}`}>
                   <a onClick={() => this.handleChangeCat("People")} href="#nav">
                     People
                   </a>
                 </li>
-                <li>
+                <li className={`${this.state.selectedCat === "Events" ? "active" : ""}`}>
                   <a onClick={() => this.handleChangeCat("Events")} href="#nav">
                     Events
                   </a>
                 </li>
-                <li>
+                <li className={`${this.state.selectedCat === "Market News" ? "active" : ""}`}>
                   <a
                     onClick={() => this.handleChangeCat("Market News")}
                     href="#nav"
@@ -186,7 +187,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                     Market News
                   </a>
                 </li>
-                <li>
+                <li className={`${this.state.selectedCat === "Insights" ? "active" : ""}`}>
                   <a
                     onClick={() => this.handleChangeCat("Insights")}
                     href="#nav"
@@ -194,7 +195,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                     Insights
                   </a>
                 </li>
-                <li>
+                <li className={`${this.state.selectedCat === "Tools" ? "active" : ""}`}>
                   <a onClick={() => this.handleChangeCat("Tools")} href="#nav">
                     Tools
                   </a>

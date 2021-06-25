@@ -5,7 +5,7 @@ function Checkbox ({ label, value, onChange, className, required }) {
     <label className="label-container">
       <input type="checkbox" checked={value} required={required} onChange={onChange} className={className} />
       {label}
-      <span class="checkmark"></span>
+      <span className="checkmark"></span>
     </label>
   );
 }

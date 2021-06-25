@@ -253,6 +253,10 @@ a:focus {
   text-decoration: none;
 }
 
+.news_categories .active a {
+  font-weight: bold;
+}
+
 .article_content_category a:hover {
   text-decoration: underline !important;
 }
