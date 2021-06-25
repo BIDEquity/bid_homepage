@@ -40,6 +40,8 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
           data-netlify="true"
         >
           <div className="contact_form_content">
+          <input type="hidden" name="form-name" value="contact" />
+
             <p class="hidden">
               <label>
                 Don’t fill this out if you’re human: <input name="bot-field" />
@@ -91,11 +93,8 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
                   name="phone"
                   maxLength="5"
                 />
+                <input type="text" name="tel" />
               </div>
-              <input
-              type="text"
-              name="tel"
-              />
               .
             </div>
           </div>
