@@ -14,7 +14,7 @@ Scrivito.provideComponent("JobApplyForm", ({ page }) => {
   return (
     <div className="content_section apply_section">
       <div className="container">
-        <form className="job" method="post">
+        <form className="job" name="job" method="post">
           <input type="hidden" name="form-name" value="job" />
           <p class="hidden">
             <label>
@@ -24,7 +24,7 @@ Scrivito.provideComponent("JobApplyForm", ({ page }) => {
           <div className="contact_form_content">
             <Scrivito.ContentTag content={page} attribute="name" tag="span" />
             <div className="contact_field contact_field_name">
-              <input type="text" required />
+              <input type="text" name="name" required />
             </div>
             <Scrivito.ContentTag content={page} attribute="apply" tag="span" />
             <span className="text_pink">{job}</span>
@@ -32,7 +32,7 @@ Scrivito.provideComponent("JobApplyForm", ({ page }) => {
             <span className="text_pink">{company}</span>
             <Scrivito.ContentTag content={page} attribute="mail" tag="span" />
             <div className="contact_field contact_field_email">
-              <input type="email" required />
+              <input type="email" name="email" required />
             </div>
             <Scrivito.ContentTag
               content={page}
@@ -40,13 +40,13 @@ Scrivito.provideComponent("JobApplyForm", ({ page }) => {
               tag="span"
             />
             <div className="contact_field contact_field_tel">
-              <input type="text" required />
+              <input type="text" name="phone" required />
             </div>
             <Scrivito.ContentTag content={page} attribute="cv" tag="span" />
             <div className="contact_file">
               <span className="contact_file_text"></span>
               <label className="contact_file_browse">
-                <input className="contact_file_input" type="file" />
+                <input className="contact_file_input" type="file" name="cv" />
                 <span>Browse</span>
               </label>
             </div>
