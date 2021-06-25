@@ -35,7 +35,7 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
         <form
           className="contact_form"
           name="contact"
-          method="POST"
+          method="post"
           netlify-honeypot="bot-field"
           data-netlify="true"
         >
