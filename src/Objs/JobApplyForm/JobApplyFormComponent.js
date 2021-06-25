@@ -18,8 +18,7 @@ Scrivito.provideComponent("JobApplyForm", ({ page }) => {
           className="job"
           name="job"
           method="post"
-          netlify-honeypot="bot-field"
-          data-netlify="true"
+          
         >
           <input type="hidden" name="form-name" value="job" />
           <p class="hidden">
