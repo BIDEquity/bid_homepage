@@ -89,8 +89,13 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
                   type="text"
                   required
                   name="phone"
+                  maxLength="5"
                 />
               </div>
+              <input
+              type="text"
+              name="tel"
+              />
               .
             </div>
           </div>
