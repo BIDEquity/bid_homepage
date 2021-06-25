@@ -33,8 +33,10 @@ Scrivito.provideComponent("JobApplyForm", ({ page }) => {
             </div>
             <Scrivito.ContentTag content={page} attribute="apply" tag="span" />
             <span className="text_pink">{job}</span>
+            <input type="hidden" name="job-wanted" value={job} />
             <Scrivito.ContentTag content={page} attribute="at" tag="span" />
             <span className="text_pink">{company}</span>
+            <input type="hidden" name="company" value={company} />
             <Scrivito.ContentTag content={page} attribute="mail" tag="span" />
             <div className="contact_field contact_field_email">
               <input type="email" name="email" required />
