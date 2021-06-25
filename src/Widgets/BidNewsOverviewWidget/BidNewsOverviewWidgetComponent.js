@@ -1,6 +1,11 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import Checkbox from "../../Components/Checkbox";
+import "file-loader?name=[name].[contenthash].[ext]!./newsForm.html";
+/* This html file is needed for Netlify form handling. Updates to inputs in this file should also be
+added to contactForm.html as well. See the following link for details:
+https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/
+*/
 
 import formatDate from "../../utils/formatDate";
 import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
@@ -42,7 +47,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
   }
 
   render() {
-    console.log(this.state.selectedCat)
+    console.log(this.state.selectedCat);
     const widget = this.props.widget;
     let newsSearch = Scrivito.Obj.where("_objClass", "equals", "NewsPost");
 
@@ -65,12 +70,20 @@ class BidNewsOverviewWidgetComponent extends React.Component {
             <div className="news_panel">
               <nav id="nav" className="news_categories bottom_line">
                 <ul>
-                  <li className={`${this.state.selectedCat === "" ? "active" : ""}`}>
+                  <li
+                    className={`${
+                      this.state.selectedCat === "" ? "active" : ""
+                    }`}
+                  >
                     <a onClick={() => this.handleChangeCat("")} href="#nav">
                       All
                     </a>
                   </li>
-                  <li className={`${this.state.selectedCat === "Acquisitions" ? "active" : ""}`}>
+                  <li
+                    className={`${
+                      this.state.selectedCat === "Acquisitions" ? "active" : ""
+                    }`}
+                  >
                     <a
                       onClick={() => this.handleChangeCat("Acquisitions")}
                       href="#nav"
@@ -78,7 +91,11 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       Acquisitions
                     </a>
                   </li>
-                  <li className={`${this.state.selectedCat === "Exits" ? "active" : ""}`}>
+                  <li
+                    className={`${
+                      this.state.selectedCat === "Exits" ? "active" : ""
+                    }`}
+                  >
                     <a
                       onClick={() => this.handleChangeCat("Exits")}
                       href="#nav"
@@ -86,7 +103,11 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       Exits
                     </a>
                   </li>
-                  <li className={`${this.state.selectedCat === "People" ? "active" : ""}`}>
+                  <li
+                    className={`${
+                      this.state.selectedCat === "People" ? "active" : ""
+                    }`}
+                  >
                     <a
                       onClick={() => this.handleChangeCat("People")}
                       href="#nav"
@@ -94,7 +115,11 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       People
                     </a>
                   </li>
-                  <li className={`${this.state.selectedCat === "Events" ? "active" : ""}`}>
+                  <li
+                    className={`${
+                      this.state.selectedCat === "Events" ? "active" : ""
+                    }`}
+                  >
                     <a
                       onClick={() => this.handleChangeCat("Events")}
                       href="#nav"
@@ -102,7 +127,11 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       Events
                     </a>
                   </li>
-                  <li className={`${this.state.selectedCat === "Market News" ? "active" : ""}`}>
+                  <li
+                    className={`${
+                      this.state.selectedCat === "Market News" ? "active" : ""
+                    }`}
+                  >
                     <a
                       onClick={() => this.handleChangeCat("Market News")}
                       href="#nav"
@@ -110,7 +139,11 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       Market News
                     </a>
                   </li>
-                  <li className={`${this.state.selectedCat === "Insights" ? "active" : ""}`}>
+                  <li
+                    className={`${
+                      this.state.selectedCat === "Insights" ? "active" : ""
+                    }`}
+                  >
                     <a
                       onClick={() => this.handleChangeCat("Insights")}
                       href="#nav"
@@ -118,7 +151,11 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       Insights
                     </a>
                   </li>
-                  <li className={`${this.state.selectedCat === "Tools" ? "active" : ""}`}>
+                  <li
+                    className={`${
+                      this.state.selectedCat === "Tools" ? "active" : ""
+                    }`}
+                  >
                     <a
                       onClick={() => this.handleChangeCat("Tools")}
                       href="#nav"
@@ -151,12 +188,18 @@ class BidNewsOverviewWidgetComponent extends React.Component {
           <div className="news_panel">
             <nav id="nav" className="news_categories bottom_line">
               <ul>
-                <li className={`${this.state.selectedCat === "" ? "active" : ""}`}>
+                <li
+                  className={`${this.state.selectedCat === "" ? "active" : ""}`}
+                >
                   <a onClick={() => this.handleChangeCat("")} href="#nav">
                     All
                   </a>
                 </li>
-                <li className={`${this.state.selectedCat === "Acquisitions" ? "active" : ""}`}>
+                <li
+                  className={`${
+                    this.state.selectedCat === "Acquisitions" ? "active" : ""
+                  }`}
+                >
                   <a
                     onClick={() => this.handleChangeCat("Acquisitions")}
                     href="#nav"
@@ -164,22 +207,38 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                     Acquisitions
                   </a>
                 </li>
-                <li className={`${this.state.selectedCat === "Exits" ? "active" : ""}`}>
+                <li
+                  className={`${
+                    this.state.selectedCat === "Exits" ? "active" : ""
+                  }`}
+                >
                   <a onClick={() => this.handleChangeCat("Exits")} href="#nav">
                     Exits
                   </a>
                 </li>
-                <li className={`${this.state.selectedCat === "People" ? "active" : ""}`}>
+                <li
+                  className={`${
+                    this.state.selectedCat === "People" ? "active" : ""
+                  }`}
+                >
                   <a onClick={() => this.handleChangeCat("People")} href="#nav">
                     People
                   </a>
                 </li>
-                <li className={`${this.state.selectedCat === "Events" ? "active" : ""}`}>
+                <li
+                  className={`${
+                    this.state.selectedCat === "Events" ? "active" : ""
+                  }`}
+                >
                   <a onClick={() => this.handleChangeCat("Events")} href="#nav">
                     Events
                   </a>
                 </li>
-                <li className={`${this.state.selectedCat === "Market News" ? "active" : ""}`}>
+                <li
+                  className={`${
+                    this.state.selectedCat === "Market News" ? "active" : ""
+                  }`}
+                >
                   <a
                     onClick={() => this.handleChangeCat("Market News")}
                     href="#nav"
@@ -187,7 +246,11 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                     Market News
                   </a>
                 </li>
-                <li className={`${this.state.selectedCat === "Insights" ? "active" : ""}`}>
+                <li
+                  className={`${
+                    this.state.selectedCat === "Insights" ? "active" : ""
+                  }`}
+                >
                   <a
                     onClick={() => this.handleChangeCat("Insights")}
                     href="#nav"
@@ -195,7 +258,11 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                     Insights
                   </a>
                 </li>
-                <li className={`${this.state.selectedCat === "Tools" ? "active" : ""}`}>
+                <li
+                  className={`${
+                    this.state.selectedCat === "Tools" ? "active" : ""
+                  }`}
+                >
                   <a onClick={() => this.handleChangeCat("Tools")} href="#nav">
                     Tools
                   </a>
@@ -235,10 +302,18 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                     </div>
                     <form
                       className="news_subscribe_form"
-                      action="#"
+                      name="news"
                       method="POST"
+                      netlify-honeypot="bot-field"
+                      data-netlify="true"
                     >
                       <div className="news_subscribe_body">
+                        <p class="hidden">
+                          <label>
+                            Don’t fill this out if you’re human:{" "}
+                            <input name="bot-field" />
+                          </label>
+                        </p>
                         <div className="form_field">
                           <input
                             className="form_email news_subscribe_field subscribe_group"
@@ -250,36 +325,35 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                         </div>
                         <div className="request_errors"></div>
                         <div className="news_subscribe_terms">
-                          
-                            <Checkbox
-                              className="subscribe_group subscribe_agree subscribe_terms"
-                              value={this.state.checkedTerms}
-                              required
-                              onChange={this.handleChangeTerms}
-                            />
+                          <Checkbox
+                            className="subscribe_group subscribe_agree subscribe_terms"
+                            value={this.state.checkedTerms}
+                            required
+                            onChange={this.handleChangeTerms}
+                            name="subscribe_terms"
+                          />
 
-                            <Scrivito.ContentTag
-                              content={widget}
-                              attribute="terms"
-                              tag="span"
-                              className="subscribe_checkbox_text"
-                            />
-                          
-                          
-                            <Checkbox
-                              className="subscribe_group subscribe_agree subscribe_privacy"
-                              required
-                              onChange={this.handleChangePrivacy}
-                              value={this.state.checkedPrivacy}
-                            />
+                          <Scrivito.ContentTag
+                            content={widget}
+                            attribute="terms"
+                            tag="span"
+                            className="subscribe_checkbox_text"
+                          />
 
-                            <Scrivito.ContentTag
-                              content={widget}
-                              attribute="privacy"
-                              tag="span"
-                              className="subscribe_checkbox_text"
-                            />
-                          
+                          <Checkbox
+                            className="subscribe_group subscribe_agree subscribe_privacy"
+                            required
+                            onChange={this.handleChangePrivacy}
+                            value={this.state.checkedPrivacy}
+                            name="subscribe_privacy"
+                          />
+
+                          <Scrivito.ContentTag
+                            content={widget}
+                            attribute="privacy"
+                            tag="span"
+                            className="subscribe_checkbox_text"
+                          />
                         </div>
                       </div>
                       <div className="news_subscribe_bottom">
