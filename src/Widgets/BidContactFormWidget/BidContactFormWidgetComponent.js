@@ -36,7 +36,7 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
           className="contact_form"
           name="contact"
           method="post"
-          
+          action="/en/contact/complete"
         >
           <div className="contact_form_content">
           <input type="hidden" name="form-name" value="contact" />
