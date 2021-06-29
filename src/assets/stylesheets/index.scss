@@ -1618,9 +1618,11 @@ nav .open .dropdown-menu.lang-switch a {
 }
 
 .contact-select__option--is-focused,
+.contact-select__option--is-selected,
 .companies-select__option--is-focused {
   background-color: #f1e9dd !important;
-  font-weight: bold;
+  font-weight: bold !important;
+  color: $primary !important;
 }
 
 .companies-select__control,
