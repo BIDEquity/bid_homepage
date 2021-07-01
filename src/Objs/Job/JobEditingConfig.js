@@ -20,7 +20,7 @@ Scrivito.provideEditingConfig("Job", {
     ...defaultPageEditingConfigAttributes,
     ...metadataEditingConfigAttributes,
   },
-  properties: [...defaultPageProperties, 'company','apply','sideLink','headLink','linkToJobs'],
+  properties: [...defaultPageProperties, 'company','apply','sideLink','headLink','linkToJobs','next', 'prev'],
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
     ...defaultPageInitialContent,
