@@ -6,8 +6,6 @@ import TagList from "../../Components/TagList";
 import { join, truncate } from "lodash-es";
 import Select from "react-select";
 
-
-
 const locations = [
   { value: "germany", label: "Germany" },
   { value: "england", label: "England" },
@@ -41,63 +39,61 @@ class BidJobOverviewWidgetComponent extends React.Component {
       queryInd: "",
       queryDep: "",
     };
-    
 
     //this.handleChangeLoc = this.handleChangeLoc.bind(this)
 
     this.handleChangeLoc = (selectedOption) => {
-      
-      this.setState ({selectedLoc: selectedOption });
-      
+      this.setState({ selectedLoc: selectedOption });
     };
 
     this.handleChangeInd = (selectedOption) => {
-      this.setState ({selectedInd: selectedOption});
-      
+      this.setState({ selectedInd: selectedOption });
     };
 
     this.handleChangeDep = (selectedOption) => {
-      this.setState ({selectedDep: selectedOption});
-      
+      this.setState({ selectedDep: selectedOption });
     };
 
     this.handleClick = (e) => {
       //e.preventDefault()
-      
-      if(this.state.selectedLoc) this.setState ({queryLoc: this.state.selectedLoc.label})
-      if(this.state.selectedInd) this.setState ({queryInd: this.state.selectedInd.label})
-      if(this.state.selectedDep) this.setState ({queryDep: this.state.selectedDep.label})
-      this.setState ({searchJobs: true})
-    }
 
-    
+      if (this.state.selectedLoc)
+        this.setState({ queryLoc: this.state.selectedLoc.label });
+      if (this.state.selectedInd)
+        this.setState({ queryInd: this.state.selectedInd.label });
+      if (this.state.selectedDep)
+        this.setState({ queryDep: this.state.selectedDep.label });
+      this.setState({ searchJobs: true });
+    };
   }
 
   render() {
     const widget = this.props.widget;
     const infolink1 = this.props.widget.get("infoLink1");
     let infolinktext1 = infolink1 && infolink1.title();
-    let jobsSearch = Scrivito.Obj.where("_objClass", "equals", "Job")
-    
-    if(this.state.searchJobs) {
-      
-    if (this.state.queryLoc) jobsSearch = jobsSearch.and("location", "equals", this.state.queryLoc);
-    if (this.state.queryInd) jobsSearch = jobsSearch.and("industry", "equals", this.state.queryInd);
-    if (this.state.queryDep) jobsSearch = jobsSearch.and("department", "equals", this.state.queryDep);
+    let jobsSearch = Scrivito.Obj.where("_objClass", "equals", "Job");
+
+    if (this.state.searchJobs) {
+      if (this.state.queryLoc)
+        jobsSearch = jobsSearch.and("location", "equals", this.state.queryLoc);
+      if (this.state.queryInd)
+        jobsSearch = jobsSearch.and("industry", "equals", this.state.queryInd);
+      if (this.state.queryDep)
+        jobsSearch = jobsSearch.and(
+          "department",
+          "equals",
+          this.state.queryDep
+        );
     }
-    
-    
-    
+
     let jobs;
 
     jobs = [...jobsSearch];
     //this.setState ({searchJobs: false})
-    
-    
 
     return (
       <div className="jobs_content bg_blue" id="search">
-        <div className="jobs_content_top" >
+        <div className="jobs_content_top">
           <div className="container">
             <h2 className="section_title bottom_line col_6 col_t_12">
               Current job opportunities sit amet, consectetur adipiscing elit,
@@ -106,18 +102,17 @@ class BidJobOverviewWidgetComponent extends React.Component {
           </div>
         </div>
         <div className="container">
-          <div className="jobs_filter" >
+          <div className="jobs_filter">
             <div className="jobs_filter_fields">
               <div className="jobs_filter_item">
-              <Select
+                <Select
                   value={this.state.selectedLoc}
                   onChange={this.handleChangeLoc}
                   options={locations}
                   placeholder="Location"
                   className="job_select"
                   classNamePrefix="react-select"
-                  
-               />
+                />
               </div>
               <div className="jobs_filter_item">
                 <Select
@@ -130,7 +125,7 @@ class BidJobOverviewWidgetComponent extends React.Component {
                 />
               </div>
               <div className="jobs_filter_item">
-              <Select
+                <Select
                   value={this.state.selectedDep}
                   onChange={this.handleChangeDep}
                   options={departments}
@@ -140,7 +135,11 @@ class BidJobOverviewWidgetComponent extends React.Component {
                 />
               </div>
             </div>
-            <a href="#search" className="jobs_filter_send"  onClick={e => this.handleClick(e)}>
+            <a
+              href="#search"
+              className="jobs_filter_send"
+              onClick={(e) => this.handleClick(e)}
+            >
               <svg className="svg_search_icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -159,22 +158,18 @@ class BidJobOverviewWidgetComponent extends React.Component {
             </a>
           </div>
           <div className="jobs_wrap">
-    
             {jobs.map((job, index) => {
-              
               return (
                 <div className="job_item" key={index}>
                   <p className="job_item_name">{job.get("title")}</p>
                   <div className="job_item_text">{job.get("teaser")}</div>
-                  
-                  <Scrivito.LinkTag to={job} className="btn" >
+
+                  <Scrivito.LinkTag to={job} className="btn">
                     Apply for this job
                   </Scrivito.LinkTag>
                 </div>
               );
-            })
-          }
-            
+            })}
           </div>
           <div className="content_info">
             <div className="content_info_inner">
@@ -232,15 +227,12 @@ class BidJobOverviewWidgetComponent extends React.Component {
                       tag="h2"
                       className="title_block bottom_line light"
                     />
-
-                    
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        )
       </div>
     );
   }
