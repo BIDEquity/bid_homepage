@@ -1978,8 +1978,9 @@ textarea {
 ================================================== */
 
 @media (min-width: 992px) {
-  jobs_content.bg_blue {
+  .jobs_content.bg_blue {
     height: 292.5vh;
+    margin-bottom: 600px;
   }
 
   .footer_top .btn {
