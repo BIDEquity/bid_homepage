@@ -1985,6 +1985,10 @@ textarea {
   .footer_top .btn {
     margin-top: 27px !important;
   }
+
+  .footer_right::before, .footer_right::after {
+    display: none !important;
+}
 }
 
 @media (max-width: 991px) {

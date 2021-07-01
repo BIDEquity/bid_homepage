@@ -139,7 +139,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="footer_right">
+          <div className="footer_right bottom_line">
             <div className="footer_top bottom_line">
               <h3 className="footer_title">
                 Get a reliable valuation for your business within two hours from
