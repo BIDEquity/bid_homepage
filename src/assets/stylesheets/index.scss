@@ -1811,9 +1811,11 @@ p {
   margin-top: -709px;
 }
 
+@media screen and (min-width: 992px){
 .article_typical {
   padding-bottom: 191px;
   margin-top: -600px !important;
+}
 }
 
 a.btn:hover {

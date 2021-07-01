@@ -120,7 +120,7 @@ function isActive(page) {
   const currentPath = Scrivito.currentPage().path();
   const obj = Scrivito.currentPage();
 
-  if (!page.permalink()) {
+  if (!page.permalink() || !obj.permalink()) {
     return false;
   }
 
