@@ -271,14 +271,7 @@ a.partner_details_link:hover {
 button:focus {
   outline: none !important;
 }
-::selection {
-  color: #fff;
-  background: $secondary;
-}
-::-moz-selection {
-  color: #fff;
-  background: $secondary;
-}
+
 
 .b-bottom {
   display: block;
