@@ -1982,6 +1982,10 @@ textarea {
   jobs_content.bg_blue {
     height: 292.5vh;
   }
+
+  .footer_top .btn {
+    margin-top: 27px !important;
+  }
 }
 
 @media (max-width: 991px) {
@@ -2014,6 +2018,9 @@ textarea {
       display: none;
     }
   }
+
+  
+
   .about_us_info {
     padding: 0 0 74px 32px;
   }
