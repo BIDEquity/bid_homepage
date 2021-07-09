@@ -7,5 +7,5 @@ Scrivito.provideEditingConfig("BidValuationQuestionWidget", {
       title: 'Bot question',
     },
   },
-  properties: ['question'],
+  properties: ['question', 'errorMsg'],
 });

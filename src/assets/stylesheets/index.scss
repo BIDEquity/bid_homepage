@@ -1987,9 +1987,9 @@ textarea {
     margin-top: 27px !important;
   }
 
-  .footer_right::before, .footer_right::after {
+  .footer_right::before, .footer_right::after, .menu-toggle, .dropdown-menu {
     display: none !important;
-}
+  }
 }
 
 @media (max-width: 991px) {
@@ -2097,8 +2097,7 @@ textarea {
     margin-bottom: 18px;
     padding-top: 16px;
     color: #fff !important;
-    width: 85vw !important;
-    border-bottom: 1px solid #fff;
+    
   }
 
   .nav-item .dropdown-menu li a {

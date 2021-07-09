@@ -16,6 +16,6 @@ Scrivito.provideComponent("BidValuationQuestionWidget", ({ widget }) => {
 
 
   return (
-    <div className="bot-question">{ question }</div>
+    { question }
   )
 });
