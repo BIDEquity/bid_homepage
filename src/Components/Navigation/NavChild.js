@@ -84,24 +84,25 @@ const Dropdown = Scrivito.connect(
 
     return (
       <li className={classNames.join(" ")} {...otherProps}>
-        <Scrivito.LinkTag
-          to={child}
-          className="nav-link"
-          role="button"
-          aria-haspopup="true"
-          aria-expanded={open}
-        >
-          {child.get("title") || "<untitled>"}
-        </Scrivito.LinkTag>
-        <span
-          className="menu-toggle"
-          onClick={(e) => {
-            toggleDropdown();
-            e.stopPropagation();
-          }}
-        >
-          <i className="fa fa-angle-down" aria-hidden="true" />
-        </span>
+        <div className="dropdown">
+          <Scrivito.LinkTag
+            to={child}
+            role="button"
+            aria-haspopup="true"
+            aria-expanded={open}
+          >
+            {child.get("title") || "<untitled>"}
+          </Scrivito.LinkTag>
+          <span
+            className="mobile-toggle"
+            onClick={(e) => {
+              toggleDropdown();
+              e.stopPropagation();
+            }}
+          >
+            <i className="fa fa-angle-down fa-dropdown" aria-hidden="true" />
+          </span>
+        </div>
         <Scrivito.ChildListTag
           className="dropdown-menu"
           parent={child}

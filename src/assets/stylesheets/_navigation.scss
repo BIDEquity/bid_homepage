@@ -13,15 +13,10 @@
 
 /* .scrolled.bg-dark-image .navbar-brand { background: $logo-dark no-repeat center center / contain; } */
 
-
-  .navbar {
-    background: transparent;
-    
-  
+.navbar {
+  background: transparent;
 
   &.bg-dark-image {
-    
-
     .nav > li {
       &.active > a,
       &.open > a {
@@ -35,7 +30,6 @@
   }
 }
 
-
 .nav {
   margin: 0;
 
@@ -45,15 +39,27 @@
     margin-top: 16px;
   }
 
-  @media screen and (max-width:991px) {
-    > li > a  {
-    position: relative;
-    display: block;
-    border-bottom: 1px solid #fff;
-    //width: 85vw;
+  @media screen and (max-width: 991px) {
+    .dropdown {
+      display: flex;
+      justify-content: flex-start;
+      align-content: center;
+      align-items: center;
+      width: 85vw;
+    }
+    .nav-item {
+      border-bottom: 1px solid #fff;
+    }
+    .dropdown-menu .nav-item {
+      border-bottom: none;
+    }
+    .mobile-toggle {
+      margin-top: -11px;
+    }
+    .fa-dropdown {
+      margin-left: 12px;
+    }
   }
-  }
-  
 
   > li {
     &:hover > a,
@@ -70,7 +76,7 @@
       }
     }*/
 
-   /* &.active {
+    /* &.active {
       > a,
       > .menu-toggle {
         color: #fff;
@@ -144,11 +150,11 @@
     margin: 0 22.75px 0 0;
     //padding: 0 !important;
     text-decoration: none;
-    
+
     font-size: 14px;
     line-height: 20px !important;
-    letter-spacing: .3px !important;
-    transition: all .3s;
+    letter-spacing: 0.3px !important;
+    transition: all 0.3s;
     display: inline-block;
   }
 
@@ -161,8 +167,6 @@
     width: 32px;
     padding: 23px 0;
     text-align: center;
-
-    
 
     &:hover {
       cursor: pointer;
@@ -186,7 +190,7 @@
   }
 
   &-toggler {
-  float: right;
+    float: right;
     margin: 0;
     padding: 9px 20px;
     height: 66px;
@@ -199,8 +203,6 @@
     }
 
     &:not(.collapsed) {
-
-
       .icon-bar {
         background: $secondary !important;
       }
@@ -255,14 +257,19 @@
   }
 }
 
+.fa-dropdown {
+  @include transition(transform 0.2s ease-in-out);
+}
+
 .active .menu-toggle .fa {
   color: #fff;
 }
 
 .open {
-  .menu-toggle .fa {
+   .fa {
     color: #fff;
-    //transform: rotate(180deg);
+    transform: rotate(180deg);
+    
   }
 
   > .dropdown-menu {
@@ -454,7 +461,6 @@
   .nav {
     margin: 0 !important;
     //padding: 20px 15px;
-    
 
     .dropdown-menu > li > a {
       text-align: left;
@@ -466,7 +472,6 @@
       &.active,
       &.open {
         > .menu-toggle {
-          
           width: 100%;
           .nav-link {
             //color: #fff;
@@ -479,8 +484,6 @@
       &:hover > ul {
         display: none;
       }
-
-      
 
       > .dropdown-menu {
         left: 0;
@@ -513,7 +516,6 @@
         position: static !important;
         opacity: 1 !important;
         a {
-          
           //font-size: 17px;
           padding: 0 !important;
         }
@@ -574,7 +576,6 @@
       margin: auto 20px;
       color: $primary;
       @include transition(all 0.2s ease-in-out);
-      
     }
   }
 }
@@ -679,7 +680,6 @@
         height: 14px;
         width: 14px;
         transform: rotate(135deg);
-       
       }
     }
 
@@ -710,7 +710,6 @@
     padding: 0;
 
     img {
-      
       margin: 0 auto;
       padding: 25px 0;
     }
