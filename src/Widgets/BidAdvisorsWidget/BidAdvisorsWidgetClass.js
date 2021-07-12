@@ -1,0 +1,37 @@
+import * as Scrivito from "scrivito";
+
+const BidAdvisorsWidget = Scrivito.provideWidgetClass("BidAdvisorsWidget", {
+  attributes: {
+    assist: ["reference", {only: "Image"}],
+    topTitle: "string",
+    topLink: "link",
+    sectionTitle: "string",
+    infoBoxTitle: "string",
+    infoBoxImage: ["reference", {only:"Image"}],
+    infoBoxLink: "link",
+    statsNumber: "string",
+    statsText: "string",
+    howItWorksTitle: "string",
+    howItWorksText: "string",
+    howImage1: ["reference", {only:"Image"}],
+    howTitle1: "string",
+    howText1: "string",
+    howImage2: ["reference", {only:"Image"}],
+    howTitle2: "string",
+    howText2: "string",
+    howImage3: ["reference", {only:"Image"}],
+    howTitle3: "string",
+    howText3: "string",
+    howItWorksButton: "link",
+    sliderTitle: "string",
+    slider: "widgetlist",
+    infoBoxTitle2: "string",
+    infoBoxImage2: ["reference", {only:"Image"}],
+    infoBoxLink2: "link",
+    statsNumber2: "string",
+    statsText2: "string",
+  },
+  
+});
+
+export default BidAdvisorsWidget;

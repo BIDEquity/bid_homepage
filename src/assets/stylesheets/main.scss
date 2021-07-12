@@ -8105,7 +8105,6 @@ body {
             right: 0;
             display: block;
             transform: translateY(-50%);
-            //background: url(../images/arrow_dropdown.svg) no-repeat;
             width: 18px;
             height: 10px;
         }
@@ -8324,7 +8323,6 @@ body {
             cursor: pointer;
             width: 24px;
             height: 24px;
-            //background: #FF5650 url(../images/checbox.svg) no-repeat center;
             border: 2px solid #F4544F;
             border-radius: 2px;
             opacity: 0;
@@ -8392,169 +8390,6 @@ body {
     @media screen and (max-width: 480px) {
         min-width: auto;
         width: 100%;
-    }
-}
-
-.send_loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 280px;
-    min-width: auto;
-
-    @media screen and (max-width: 480px) {
-        width: 100%;
-    }
-
-    &.loaded {
-        .btn_loading {
-            background-color: #FF5650;
-            animation: button-to-circle .5s linear forwards;
-            animation-delay: .3s;
-        }
-    
-        .loading_circle {
-            &.circle_2 {
-                animation: loading-circle 3s linear forwards;
-                animation-delay: 1s;
-            }
-        }  
-    }
-
-    svg {
-        position: absolute;
-        display: none;
-    }
-}
-
-.btn_loading {
-    position: relative;
-    display: block;
-    min-width: auto;
-    height: 64px;
-    width: 280px;
-    padding-left: 8px;
-    padding-right: 8px;
-
-    &.loading_popout {
-        animation: circle-to-button .5s linear forwards;
-
-        .btn_loading_text {
-            opacity: 0;
-        }
-    }
-
-    &.loading_return {
-        .btn_loading_text {
-            opacity: 1;
-        }
-    }
-}
-
-.btn_loading_text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    white-space: nowrap;
-}
-
-.loading_circle {
-    &.circle_1,
-    &.circle_2 {
-        display: none;
-        position: absolute;
-        width: 67px;
-        height: 67px;
-        opacity: 0;
-
-        .loading_circle_inner {
-            stroke-dasharray: 181;
-            stroke-width: 3;
-            stroke-miterlimit: 10;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke: #D9D2C7;
-            fill: transparent;
-        }
-    }
-
-    &.circle_1 {
-        opacity: 0;
-
-        .loading_circle_inner {
-            stroke: #FF5650;
-        }
-    }
-
-    &.circle_2 {
-        .loading_circle_inner {
-            stroke-width: 3.8;
-        }
-    }
-}
-  
-@keyframes loading-circle {
-    0% { 
-        opacity: 1;
-        stroke-dashoffset: 0;
-    }
-
-    50% {
-        opacity: 1;
-        stroke-dashoffset: 90;
-    }
-
-    100% { 
-        opacity: 1;
-        stroke-dashoffset: 215;
-    }
-}
-  
-@keyframes button-to-circle {
-    0% {
-        width: 280px;
-        color: #ffffff;
-        border-color: #FF5650;
-        background-color: #FF5650;
-    }
-
-    50% {
-        color: rgba(255, 255, 255, 0);
-    }
-
-    90% {
-        width: 64px;
-        color: rgba(255, 255, 255, 0);
-        border-color: #D9D2C7;
-    }
-
-    100% {
-        width: 64px;
-        border-color: rgba(255, 255, 255, 0);
-        color: rgba(255, 255, 255, 0);
-        background-color:  rgba(255, 255, 255, 0);
-    }
-}
-  
-@keyframes circle-to-button {
-    0% {
-        border-color: #FF5650;
-        background-color: #FF5650;
-        height: 64px;
-        width: 64px;
-    }
-
-    50% {
-        height: 64px;
-        width: 64px;
-    }
-
-    100% {
-        height: 64px;
-        width: 280px;
-        border-color: #FF5650;
-        background-color: #FF5650;
     }
 }
 
@@ -9432,7 +9267,6 @@ body {
         bottom: 20px;
         width: 26px;
         height: 12px;
-        //background: url(../images/arrow_form.svg) no-repeat;
 
         @media screen and (max-width: 991px) {
             width: 14px;
@@ -9619,16 +9453,13 @@ body {
 
 .contact_form_send {
     margin-top: 48px;
+    padding-right: 8px;
+    padding-left: 8px;
 
-    .btn {
-        padding-right: 8px;
-        padding-left: 8px;
-
-        @media screen and (max-width: 480px) {
-            min-width: auto;
-            width: 100%;
-        }
-    }  
+    @media screen and (max-width: 480px) {
+        min-width: auto;
+        width: 100%;
+    }
 }
 
 .top_job_apply {
@@ -9789,7 +9620,6 @@ body {
     transform: translate(-50%, -50%);
     width: 16px;
     height: 8px;
-    //background: url(../images/arrow_select.svg) no-repeat center/cover;
     transition: all 0.3s;
 }
 

@@ -54,7 +54,7 @@
       border-bottom: none;
     }
     .mobile-toggle {
-      margin-top: -11px;
+      margin-top: 20px;
     }
     .fa-dropdown {
       margin-left: 12px;
@@ -115,6 +115,7 @@
     &.active > {
       a:hover {
         color: $primary;
+        font-weight: bold;
       }
     }
   }
@@ -517,7 +518,7 @@
         opacity: 1 !important;
         a {
           //font-size: 17px;
-          padding: 0 !important;
+          padding: 0 0 20px 0 !important;
         }
       }
     }
