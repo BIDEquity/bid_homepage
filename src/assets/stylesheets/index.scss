@@ -272,7 +272,6 @@ button:focus {
   outline: none !important;
 }
 
-
 .b-bottom {
   display: block;
   position: relative;
@@ -791,8 +790,6 @@ h6,
 .height-center .container {
   margin: auto !important;
 }
-
-
 
 section {
   position: relative;
@@ -1384,10 +1381,8 @@ nav .open .dropdown-menu.lang-switch a {
   color: $primary;
   font-size: 9px;
   position: absolute;
-  top: 12px;
-  @media screen and (max-width: 991px) {
-    left: 44px;
-  }
+  top: 14px;
+  left: 44px;
 }
 
 @keyframes line {
@@ -1495,8 +1490,6 @@ nav .open .dropdown-menu.lang-switch a {
     width: fit-content;
   }
 
-  
-
   .swiper-pagination-bullet-active {
     font-weight: 700;
   }
@@ -1547,9 +1540,8 @@ nav .open .dropdown-menu.lang-switch a {
 }
 
 .posts_more {
-
   @media screen and (max-width: 991px) {
-      display: block !important;
+    display: block !important;
   }
 }
 
@@ -1664,15 +1656,13 @@ nav .open .dropdown-menu.lang-switch a {
   font: 18px/40px "Swiss721 BT", sans-serif !important;
 }
 
-
-
 .react-select__option,
 .contact-select__option {
   padding: 9px 40px !important;
-  
 }
 
-.react-select__option--is-focused, .react-select__option--is-selected {
+.react-select__option--is-focused,
+.react-select__option--is-selected {
   background-color: #334260 !important;
 }
 
@@ -1799,11 +1789,11 @@ p {
   margin-top: -709px;
 }
 
-@media screen and (min-width: 992px){
-.article_typical {
-  padding-bottom: 191px;
-  margin-top: -600px !important;
-}
+@media screen and (min-width: 992px) {
+  .article_typical {
+    padding-bottom: 191px;
+    margin-top: -600px !important;
+  }
 }
 
 a.btn:hover {
@@ -1982,12 +1972,19 @@ textarea {
     margin-top: 27px !important;
   }
 
-  .footer_right::before, .footer_right::after, .menu-toggle, .dropdown-menu {
-    display: none !important;
+  .footer_right::before,
+  .footer_right::after,
+  .menu-toggle,
+  .dropdown-menu {
+    display: none;
   }
 
   .dropdown {
-    margin-top: 9px;
+    margin-top: 8px;
+  }
+
+  .navbar-right .nav-item .fa {
+    display: none;
   }
 }
 
@@ -2021,8 +2018,6 @@ textarea {
       display: none;
     }
   }
-
-  
 
   .about_us_info {
     padding: 0 0 74px 32px;
@@ -2095,7 +2090,6 @@ textarea {
     padding-bottom: 20px;
     padding-top: 40px;
     color: #fff !important;
-    
   }
 
   .nav-item .dropdown-menu li a {
