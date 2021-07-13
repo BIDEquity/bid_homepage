@@ -48,106 +48,11 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
             tag="h2"
             className="section_title col_8 col_t_12"
           />
-          <div className="partners_wrap">
-            <div className="partners_left">
-              <div className="partners_info_slider swiper-container">
-                <div className="swiper-wrapper">
-                  <div className="partner_info_slide swiper-slide">
-                    <div className="testimonial_item">
-                      <div className="testimonial_item_text">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Mauris bibendum enim sed velit blandit
-                          faucibus.Aenean orci arcu, vehicula fermentum mauris
-                          at, auctor suscipit ligula.
-                        </p>
-                      </div>
-                      <div className="testimonial_item_bottom">
-                        <p className="testimonial_item_name">Julian Brandt</p>
-                        <p className="testimonial_item_position">
-                          Founder, MyNeva
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="partner_info_slide swiper-slide">
-                    <div className="testimonial_item">
-                      <div className="testimonial_item_text">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Mauris bibendum enim sed velit blandit
-                          faucibus.Aenean orci arcu, vehicula fermentum mauris
-                          at, auctor suscipit ligula.
-                        </p>
-                      </div>
-                      <div className="testimonial_item_bottom">
-                        <p className="testimonial_item_name">Julian Brandt</p>
-                        <p className="testimonial_item_position">
-                          Founder, MyNeva
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="partner_info_slide swiper-slide">
-                    <div className="testimonial_item">
-                      <div className="testimonial_item_text">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Mauris bibendum enim sed velit blandit
-                          faucibus.Aenean orci arcu, vehicula fermentum mauris
-                          at, auctor suscipit ligula.
-                        </p>
-                      </div>
-                      <div className="testimonial_item_bottom">
-                        <p className="testimonial_item_name">Julian Brandt</p>
-                        <p className="testimonial_item_position">
-                          Founder, MyNeva
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="partner_info_slide swiper-slide">
-                    <div className="testimonial_item">
-                      <div className="testimonial_item_text">
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Mauris bibendum enim sed velit blandit
-                          faucibus.Aenean orci arcu, vehicula fermentum mauris
-                          at, auctor suscipit ligula.
-                        </p>
-                      </div>
-                      <div className="testimonial_item_bottom">
-                        <p className="testimonial_item_name">Julian Brandt</p>
-                        <p className="testimonial_item_position">
-                          Founder, MyNeva
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="partners_slider_pagination slider_pagination"></div>
-              </div>
-            </div>
-            <div className="partners_right">
-              <div className="partners_logos_slider swiper-container">
-                <div className="swiper-wrapper">
-                  <div className="partner_logo_slide swiper-slide">
-                    <img src="images/partner_logo_1.png" width="284" alt="" />
-                  </div>
-                  <div className="partner_logo_slide swiper-slide">
-                    <img src="images/partner_logo_2.png" width="192" alt="" />
-                  </div>
-                  <div className="partner_logo_slide swiper-slide">
-                    <img src="images/partner_logo_3.png" width="208" alt="" />
-                  </div>
-                  <div className="partner_logo_slide swiper-slide">
-                    <img src="images/partner_logo_1.png" width="284" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="content_info">
+          <Scrivito.ContentTag
+            content={widget}
+            attribute="partnerSlider"
+          />
+                    <div className="content_info">
             <div className="content_info_inner">
               <div className="content_info_top">
                 <div className="content_info_img">

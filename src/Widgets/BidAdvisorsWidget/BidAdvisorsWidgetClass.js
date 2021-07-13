@@ -42,6 +42,7 @@ const BidAdvisorsWidget = Scrivito.provideWidgetClass("BidAdvisorsWidget", {
     portfolio: "widgetlist",
     entrepreneurTitle: "string",
     tagSection: "widgetlist",
+    partnerSlider: "widgetlist"
   },
   
 });
