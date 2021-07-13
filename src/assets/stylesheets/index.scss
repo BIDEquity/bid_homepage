@@ -1382,7 +1382,6 @@ nav .open .dropdown-menu.lang-switch a {
 
 .lang-switch .fa-chevron-down {
   color: $primary;
-  right: 0;
   font-size: 9px;
   position: absolute;
   top: 12px;
@@ -1985,6 +1984,10 @@ textarea {
 
   .footer_right::before, .footer_right::after, .menu-toggle, .dropdown-menu {
     display: none !important;
+  }
+
+  .dropdown {
+    margin-top: 9px;
   }
 }
 

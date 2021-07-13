@@ -266,11 +266,13 @@
   color: #fff;
 }
 
+
+
 .open {
    .fa {
     color: #fff;
     transform: rotate(180deg);
-    
+    @include transition(transform 0.2s ease-in-out);
   }
 
   > .dropdown-menu {
