@@ -30,6 +30,18 @@ const BidAdvisorsWidget = Scrivito.provideWidgetClass("BidAdvisorsWidget", {
     infoBoxLink2: "link",
     statsNumber2: "string",
     statsText2: "string",
+    quote: "string",
+    name: "string",
+    position: "string",
+    infoBoxTitle3: "string",
+    infoBoxImage3: ["reference", {only:"Image"}],
+    infoBoxLink3: "link",
+    statsNumber3: "string",
+    statsText3: "string",
+    brandsTitle: "string",
+    portfolio: "widgetlist",
+    entrepreneurTitle: "string",
+    tagSection: "widgetlist",
   },
   
 });

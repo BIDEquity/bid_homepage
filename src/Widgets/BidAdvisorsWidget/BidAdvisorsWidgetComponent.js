@@ -11,7 +11,7 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
   let infolinktext1 = infolink1 && infolink1.title();
   const infolink2 = widget.get("infoBoxLink2");
   let infolinktext2 = infolink2 && infolink2.title();
-  const infolink3 = widget.get("infoLink3");
+  const infolink3 = widget.get("infoBoxLink3");
   let infolinktext3 = infolink3 && infolink3.title();
   const strategylink = widget.get("strategyLink");
   let strategylinktext = strategylink && strategylink.title();
@@ -719,41 +719,62 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
                 <div className="content_info_top">
                   <div className="content_stats_box">
                     <div className="content_stats_inner">
-                      <span className="content_stats_number">14k</span>
-                      <p className="content_stats_text">
-                        customers across all assets
-                      </p>
+                      <Scrivito.ContentTag
+                        content={widget}
+                        attribute="statsNumber3"
+                        tag="span"
+                        className="content_stats_number"
+                      />
+                      <Scrivito.ContentTag
+                        content={widget}
+                        attribute="statsText3"
+                        tag="p"
+                        className="content_stats_text"
+                      />
                     </div>
                   </div>
                   <div className="testimonial_item">
                     <div className="testimonial_item_text">
-                      <p>
-                        They’re fun to work with. Nice people. So you tend to go
-                        the extra mile and and try to achieve things with them,
-                        rather than someone where you just do your duty.
-                      </p>
+                      <Scrivito.ContentTag
+                        content={widget}
+                        attribute="quote"
+                        tag="p"
+                      />
                     </div>
                     <div className="testimonial_item_bottom">
-                      <p className="testimonial_item_name">Julian Brandt</p>
-                      <p className="testimonial_item_position">
-                        Founder, MyNeva
-                      </p>
+                      
+                      <Scrivito.ContentTag
+                        content={widget}
+                        attribute="name"
+                        tag="p"
+                        className="testimonial_item_name"
+                      />
+                      <Scrivito.ContentTag
+                        content={widget}
+                        attribute="position"
+                        tag="p"
+                        className="testimonial_item_position"
+                      />
                     </div>
                   </div>
                 </div>
                 <div className="content_info_bottom">
                   <div className="content_info_img">
-                    <img src="images/content_info_3.jpg" alt="" />
+                    <Scrivito.ImageTag
+                      content={widget}
+                      attribute="infoBoxImage3"
+                    />
                   </div>
                   <div className="content_info_box info_box">
                     <div className="info_box_content">
-                      <h2 className="title_block bottom_line light">
-                        Are you looking to get an instant valuation of a company
-                        in your network?
-                      </h2>
-                      <a className="info_box_link" href="#">
-                        The finance multiples calculator
-                      </a>
+                      
+                      <Scrivito.ContentTag
+                        content={widget}
+                        attribute="infoBoxTitle3"
+                        tag="h2"
+                        className="title_block bottom_line light"
+                      />
+                      <Scrivito.LinkTag className="info_box_link" to={infolink3}>{infolinktext3}</Scrivito.LinkTag>
                     </div>
                   </div>
                 </div>
@@ -764,59 +785,17 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
       </div>
       <div className="advisors_brands">
         <div className="container">
-          <h2 className="section_title col_8 col_t_12">
-            We have acquired, partnered and shared in the success of these
-            global brands
-          </h2>
+          <Scrivito.ContentTag
+            content={widget}
+            attribute="brandsTitle"
+            tag="h2"
+            className="section_title col_8 col_t_12"
+          />
           <div className="portfolio_posts_wrap">
-            <div className="portfolio_post_item">
-              <div className="portfolio_post_img">
-                <img src="images/brand_post_1.jpg" alt="" />
-              </div>
-              <div className="portfolio_post_info">
-                <p className="portfolio_post_name bottom_line light_line">
-                  EvidentIQ
-                </p>
-                <div className="portfolio_post_text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna ut.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="portfolio_post_item">
-              <div className="portfolio_post_logo">
-                <img src="images/brand_logo_1.png" width="152" alt="" />
-              </div>
-              <div className="portfolio_post_info">
-                <p className="portfolio_post_name bottom_line light_line">
-                  xClinical
-                </p>
-                <div className="portfolio_post_text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna ut.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="portfolio_post_item">
-              <div className="portfolio_post_logo">
-                <img src="images/brand_logo_2.png" width="168" alt="" />
-              </div>
-              <div className="portfolio_post_info">
-                <p className="portfolio_post_name bottom_line light_line">
-                  eSight Energy
-                </p>
-                <div className="portfolio_post_text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna ut.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Scrivito.ContentTag
+              content={widget}
+              attribute="portfolio"
+            />
           </div>
           <div className="advisors_brands_more">
             <a className="more_link" href="#">
@@ -827,102 +806,15 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
       </div>
       <div className="entrepreneurs_help">
         <div className="container">
-          <h2 className="section_title col_8 col_t_12">
-            If you need any help/advice on any of the following then do get in
-            touch
-          </h2>
-          <div className="entrepreneurs_help_navbar bottom_line">
-            <ul className="entrepreneurs_help_nav">
-              <li className="active">Investment</li>
-              <li>Sales and Marketing</li>
-              <li>Mergers and Acquisitions</li>
-              <li>Internationalisation</li>
-            </ul>
-          </div>
-          <div className="help_slider swiper-container">
-            <div className="swiper-wrapper">
-              <div className="help_slide_item swiper-slide">
-                <div className="help_slide_box info_box">
-                  <div className="info_box_content">
-                    <div className="title_block bottom_line light">
-                      <p>Hello!</p>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Vestibulum quam ligula, interdum molestie odio sit amet.
-                      </p>
-                    </div>
-                    <a className="info_box_link" href="#">
-                      <span>Lorem ipsum dolor</span>
-                      <svg className="svg_arrow_link">svg</svg>
-                    </a>
-                  </div>
-                </div>
-                <div className="help_slide_img">
-                  <img src="images/help_slide_img.jpg" alt="" />
-                </div>
-              </div>
-              <div className="help_slide_item swiper-slide">
-                <div className="help_slide_box info_box">
-                  <div className="info_box_content">
-                    <div className="title_block bottom_line light">
-                      <p>Hello!</p>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Vestibulum quam ligula, interdum molestie odio sit amet.
-                      </p>
-                    </div>
-                    <a className="info_box_link" href="#">
-                      <span>Lorem ipsum dolor</span>
-                      <svg className="svg_arrow_link">svg</svg>
-                    </a>
-                  </div>
-                </div>
-                <div className="help_slide_img">
-                  <img src="images/help_slide_img.jpg" alt="" />
-                </div>
-              </div>
-              <div className="help_slide_item swiper-slide">
-                <div className="help_slide_box info_box">
-                  <div className="info_box_content">
-                    <div className="title_block bottom_line light">
-                      <p>Hello!</p>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Vestibulum quam ligula, interdum molestie odio sit amet.
-                      </p>
-                    </div>
-                    <a className="info_box_link" href="#">
-                      <span>Lorem ipsum dolor</span>
-                      <svg className="svg_arrow_link">svg</svg>
-                    </a>
-                  </div>
-                </div>
-                <div className="help_slide_img">
-                  <img src="images/help_slide_img.jpg" alt="" />
-                </div>
-              </div>
-              <div className="help_slide_item swiper-slide">
-                <div className="help_slide_box info_box">
-                  <div className="info_box_content">
-                    <div className="title_block bottom_line light">
-                      <p>Hello!</p>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Vestibulum quam ligula, interdum molestie odio sit amet.
-                      </p>
-                    </div>
-                    <a className="info_box_link" href="#">
-                      <span>Lorem ipsum dolor</span>
-                      <svg className="svg_arrow_link">svg</svg>
-                    </a>
-                  </div>
-                </div>
-                <div className="help_slide_img">
-                  <img src="images/help_slide_img.jpg" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
+          <Scrivito.ContentTag
+            content={widget}
+            attribute="entrepreneurTitle"
+            tag="h2"
+            className="section_title col_8 col_t_12"
+          />
+          
+
+          <Scrivito.ContentTag content={widget} attribute="tagSection" />
         </div>
       </div>
     </>
