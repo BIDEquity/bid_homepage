@@ -1,7 +1,7 @@
 import * as Scrivito from 'scrivito'
 
 Scrivito.provideEditingConfig('SwiperWidget', {
-  title: 'Swiper Silder Item',
+  title: 'Swiper Slider',
 
   attributes: {
     items: {

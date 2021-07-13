@@ -245,11 +245,18 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
         <div className="transaction_process_overview bg_blue">
           <div className="container">
             <div className="transaction_process_wrap">
-              <h2 className="section_title col_8 col_t_12">
-                We ensure a collaborative, professional and rapid transaction
-                process
-              </h2>
+              
+              <Scrivito.ContentTag
+            content={widget}
+            attribute="processTitle"
+            tag="h2"
+            className="section_title col_8 col_t_12"
+          />
               <div className="transaction_process_section">
+              <Scrivito.ContentTag
+            content={widget}
+            attribute="processSlider"
+          />
                 <div className="transaction_process_dots">
                   <div className="transaction_process_dot active">
                     <span>Step 1</span>

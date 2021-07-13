@@ -1,7 +1,7 @@
 import * as Scrivito from 'scrivito'
 
-Scrivito.provideEditingConfig('PartnerSwiperWidget', {
-  title: 'Partner Swiper Slider',
+Scrivito.provideEditingConfig('ProcessSwiperWidget', {
+  title: 'Process Swiper Slider',
 
   attributes: {
     items: {
