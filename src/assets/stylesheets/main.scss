@@ -7298,7 +7298,7 @@ body {
 }
 
 .transaction_process_step {
-    display: none;
+    display: block;
 
     @media screen and (max-width: 991px) {
         display: block;
@@ -7319,7 +7319,7 @@ body {
 .transaction_process_block {
     margin-bottom: 24px;
     transform: translateY(500px);
-    opacity: 0;
+    opacity: 1;
     transition: all 2s 4s;
 
     &:last-child {

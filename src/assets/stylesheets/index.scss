@@ -571,6 +571,10 @@ small,
 .btn-round:hover {
   cursor: pointer;
 }
+
+.btn {
+  color: #fff !important;
+}
 .bg-dark-image .btn-round {
   position: absolute;
   bottom: 30px;
@@ -1959,9 +1963,24 @@ textarea {
   margin-bottom: 60px;
 }
 
-.partners_wrap {
-  padding: 40px 116px 40px 60px !important;
+
+
+.transaction_process_section .slider_pagination .swiper-pagination-bullet {
+  margin: 0 0 10px 0 !important;
 }
+
+.transaction_process_box, .transaction_duration {
+  opacity: 1;
+}
+
+.transaction_process_section .swiper-wrapper {
+  padding-left: 7px !important;
+}
+
+.transaction_process_dots {
+  left:  -4px !important;
+}
+
 
 /* RESPONSIVE
 ================================================== */
@@ -1989,6 +2008,10 @@ textarea {
 
   .navbar-right .nav-item .fa {
     display: none;
+  }
+
+  .partners_wrap {
+    padding: 40px 116px 40px 60px !important;
   }
 }
 
