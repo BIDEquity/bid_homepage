@@ -24,6 +24,8 @@ function currentPageNavigationOptions() {
         return pageNavigationOptions(Scrivito.currentPage());
       case "PortfolioPost":
         return pageNavigationOptions(Scrivito.currentPage());
+        case "TeamMemberPage":
+          return pageNavigationOptions(Scrivito.currentPage());
       case "PartnerPost":
         return pageNavigationOptions(Scrivito.currentPage());
       case "SearchResults":

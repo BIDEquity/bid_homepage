@@ -127,5 +127,5 @@ const PAGES = [
   "Redirect",
   "Homepage",
   "SearchResults",
-  "TeamMember"
+  "TeamMemberPage"
 ];
