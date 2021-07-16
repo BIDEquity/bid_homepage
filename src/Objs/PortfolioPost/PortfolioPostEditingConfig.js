@@ -20,7 +20,7 @@ Scrivito.provideEditingConfig("PortfolioPost", {
     ...defaultPageEditingConfigAttributes,
     ...metadataEditingConfigAttributes,
   },
-  properties: [...defaultPageProperties],
+  properties: [...defaultPageProperties, "detailsButton"],
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
     ...defaultPageInitialContent,

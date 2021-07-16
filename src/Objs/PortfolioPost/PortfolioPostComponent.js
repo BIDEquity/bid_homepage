@@ -1,6 +1,292 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
+import { Swiper } from "swiper/react";
 
-Scrivito.provideComponent("PortfolioPost", ({ page }) => (
-  <Scrivito.ContentTag tag="div" content={page} attribute="body" />
-));
+Scrivito.provideComponent("PortfolioPost", ({ page }) => {
+  const params = {
+    loop: false,
+    watchOverflow: true,
+    slidesPerView: "auto",
+    spaceBetween: 24,
+    speed: 500,
+    breakpoints: {
+      992: {
+        slidesPerView: 4,
+      },
+    },
+  };
+  const link = page.get("detailsButton");
+  let linkText = link && link.title();
+  
+  return (
+    <div className="article_content article_portfolio">
+      <div className="article_portfolio_top">
+        <div className="container">
+          <a className="article_page_category more_link" href="#">
+            Portfolio
+          </a>
+          <div className="article_content_wrap">
+            <div className="article_content_main">
+              <div className="article_content_top">
+                <div className="article_content_logo">
+                  <Scrivito.ImageTag
+                    content={page}
+                    attribute="logo"
+                    alt="Company logo"
+                  />
+                </div>
+
+                <Scrivito.ContentTag
+                  content={page}
+                  attribute="headline"
+                  tag="h1"
+                  className="article_content_title"
+                />
+              </div>
+              <div className="article_content_intro">
+                <strong>
+                  <Scrivito.ContentTag
+                    content={page}
+                    attribute="articleIntro"
+                    tag="p"
+                  />
+                </strong>
+              </div>
+              <div className="block_text">
+                <Scrivito.ContentTag
+                  content={page}
+                  attribute="articleBody"
+                  
+                />
+              </div>
+            </div>
+            <div className="article_content_sidebar">
+              <a className="content_nav_link content_next" href="#">
+              <Scrivito.ContentTag
+                content={page}
+                attribute="next"
+                tag="p"
+                className="content_nav_direction"
+              />
+                <div className="content_nav_info">
+                  <Scrivito.ContentTag
+                    tag="span"
+                    content={page}
+                    attribute="nextPortfolio"
+                    className="content_nav_name"
+                  />
+
+                  <span className="arrow_btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17.284"
+                      height="10.73"
+                      viewBox="0 0 17.284 10.73"
+                      fill="none"
+                      strokeWidth="1.5"
+                    >
+                      <g transform="translate(-570.625 -853.857)">
+                        <path
+                          d="M576.989,860.911l4.3,4.3-4.3,4.3"
+                          transform="translate(5.865 -5.993)"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <line
+                          x1="15.783"
+                          transform="translate(571.375 859.222)"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </g>
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="portfolio_stats">
+        <div className="container">
+          <div className="portfolio_stats_wrap">
+            <div className="portfolio_stats_item">
+              <Scrivito.ContentTag content={page} attribute="statsItem1" />
+            </div>
+
+            <div className="portfolio_stats_item">
+              <Scrivito.ContentTag content={page} attribute="statsItem2" />
+            </div>
+
+            <div className="portfolio_stats_item">
+              <Scrivito.ContentTag content={page} attribute="statsItem3" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="portfolio_details_img">
+        <Scrivito.ImageTag content={page} attribute="bgImage" alt="" />
+      </div>
+      <div className="article_portfolio_bottom">
+        <div className="container">
+          <div className="article_content_wrap">
+            <div className="article_content_main">
+              <Scrivito.ContentTag
+                content={page}
+                attribute="headline2"
+                tag="h2"
+                className="section_title"
+              />
+              <div className="block_text">
+                <Scrivito.ContentTag
+                  content={page}
+                  attribute="body"
+                  
+                />
+              </div>
+            </div>
+            <div className="article_content_sidebar">
+              <div className="testimonial_item dark">
+                <div className="testimonial_item_text">
+                  <Scrivito.ContentTag
+                    tag="p"
+                    content={page}
+                    attribute="quote"
+                  />
+                </div>
+                <div className="testimonial_item_bottom">
+                  
+                  <Scrivito.ContentTag
+                    tag="p"
+                    content={page}
+                    attribute="name"
+                    className="testimonial_item_name"
+                  />
+                  
+                  <Scrivito.ContentTag
+                    tag="p"
+                    content={page}
+                    attribute="position"
+                    className="testimonial_item_position"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="article_content_nav content_nav">
+            <a className="content_nav_link content_prev" href="#">
+            <Scrivito.ContentTag
+                content={page}
+                attribute="prev"
+                tag="p"
+                className="content_nav_direction"
+              />
+              <div className="content_nav_info">
+                <span className="arrow_btn"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17.284"
+                    height="10.73"
+                    viewBox="0 0 17.284 10.73"
+                    fill="none"
+                    strokeWidth="1.5"
+                  >
+                    <g transform="translate(-570.625 -853.857)">
+                      <path
+                        d="M576.989,860.911l4.3,4.3-4.3,4.3"
+                        transform="translate(5.865 -5.993)"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <line
+                        x1="15.783"
+                        transform="translate(571.375 859.222)"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </g>
+                  </svg></span>
+                <span className="content_nav_name">Midoco’s Travel Tech</span>
+              </div>
+            </a>
+            <a className="content_nav_link content_next" href="#">
+            <Scrivito.ContentTag
+                content={page}
+                attribute="next"
+                tag="p"
+                className="content_nav_direction"
+              />
+              <div className="content_nav_info">
+                <span className="content_nav_name">
+                  xClinical’s innovations
+                </span>
+                <span className="arrow_btn"><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="17.284"
+                    height="10.73"
+                    viewBox="0 0 17.284 10.73"
+                    fill="none"
+                    strokeWidth="1.5"
+                  >
+                    <g transform="translate(-570.625 -853.857)">
+                      <path
+                        d="M576.989,860.911l4.3,4.3-4.3,4.3"
+                        transform="translate(5.865 -5.993)"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <line
+                        x1="15.783"
+                        transform="translate(571.375 859.222)"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </g>
+                  </svg></span>
+              </div>
+            </a>
+          </div>
+          <div className="article_posts">
+            
+            <Scrivito.ContentTag
+              content={page}
+              tag="h2"
+              attribute="sectionTitle"
+              className="section_title bottom_line"
+            />
+           
+					  <div className="posts_slider_wrap">
+              <div className="posts_slider xxxswiper-container">
+                <div className="xxxswiper-wrapper">
+                  <Swiper {...params}>
+                  <Scrivito.ContentTag
+                    content={page}
+                    attribute="content"
+                    
+                  />
+                  </Swiper>
+                </div>
+              </div>
+            </div>
+            <div className="posts_more">
+						  <a className="more_link" href="#">More news</a>
+					  </div>
+          </div>
+          <div className="portfolio_details_bottom row">
+            <div className="col_6 col_t_12">
+              <div className="portfolio_details_text">
+              <Scrivito.ContentTag
+                    content={page}
+                    attribute="detailsText"
+                    tag="p"
+                  />
+              </div>
+              <Scrivito.LinkTag to={link} className="btn">
+                {linkText}
+              </Scrivito.LinkTag>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+)});
