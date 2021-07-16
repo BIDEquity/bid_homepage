@@ -4,6 +4,6 @@ import ButtonWidget from "../ButtonWidget/ButtonWidgetClass";
 Scrivito.provideEditingConfig("TeamCardWidget", {
   title: "Team Card",
   
-  properties: ['image', 'name', 'position'],
+  properties: ['image', 'name', 'position','link'],
   
 });

@@ -52,23 +52,7 @@ function filtersForObjClasses(objClasses) {
 
 function defaultFilters() {
   return {
-    lang: {
-      title: "Language",
-      type: "radioButton",
-      expanded: true,
-      field: "_path",
-      operator: "startsWith",
-      options: {
-        de: {
-          title: "German",
-          value: "/de",
-        },
-        en: {
-          title: "English",
-          value: "/en",
-        },
-      },
-    },
+    
     _objClass: {
       options: {
         All: {
@@ -118,34 +102,30 @@ function filterOptionsForObjClass(objClass) {
 }
 
 const FILTER_PRESENTATIONS = {
-  Author: { title: "Authors", icon: "user" },
-  Blog: { title: "Blog", icon: "pen" },
-  BlogPost: { title: "Blog posts", icon: "pen" },
   Download: { title: "Downloads", icon: "pdf" },
-  Event: { title: "Events", icon: "cal" },
   Homepage: { title: "Homepage", icon: "inbox" },
   Image: { title: "Images", icon: "image" },
   Job: { title: "Jobs", icon: "suitcase" },
   LandingPage: { title: "Landing pages", icon: "inbox" },
   NewsPost: { title: "News posts", icon: "pen" },
   Page: { title: "Standard pages", icon: "sheet" },
+  PartnerPost: { title: "Partner posts", icon: "pen" },
   PortfolioPost: { title: "Portfolio posts", icon: "pen" },
   Redirect: { title: "Redirects", icon: "link" },
   SearchResults: { title: "Search results", icon: "lens" },
+  TeamMemberPage: { title: "Team member", icon: "pen" },
   Video: { title: "Videos", icon: "video" },
 };
 
 const PAGES = [
   "Page",
   "LandingPage",
-  "BlogPost",
-  "Author",
-  "Event",
   "Job",
   "NewsPost",
+  "PartnerPost",
   "PortfolioPost",
   "Redirect",
   "Homepage",
-  "Blog",
   "SearchResults",
+  "TeamMember"
 ];

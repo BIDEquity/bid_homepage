@@ -20,7 +20,7 @@ Scrivito.provideEditingConfig("PartnerPost", {
     ...defaultPageEditingConfigAttributes,
     ...metadataEditingConfigAttributes,
   },
-  properties: [...defaultPageProperties],
+  properties: [...defaultPageProperties, "partnerImage", "category", "cat", "partnerDetailLink", "next", "prev", "more"],
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
     ...defaultPageInitialContent,

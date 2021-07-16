@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import * as Scrivito from "scrivito";
-import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
-import ButtonTagList from "../../Components/ButtonTagList";
+import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Mousewheel, EffectFade, Pagination } from "swiper";
@@ -22,6 +21,7 @@ class ProcessSwiperComponent extends React.Component {
       slidesPerView: 1,
       direction: "vertical",
       speed: 2000,
+      grabCursor:true,
       pagination: {
         el: ".slider_pagination",
         clickable: true,

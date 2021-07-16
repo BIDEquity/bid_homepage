@@ -5,7 +5,7 @@ const CardWidget = Scrivito.provideWidgetClass("TeamCardWidget", {
     image: "reference",
     name: "string",
     position: "string",
-    
+    link: "link"
   },
   
 });
