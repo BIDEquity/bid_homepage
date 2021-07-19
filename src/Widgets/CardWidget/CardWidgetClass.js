@@ -5,7 +5,8 @@ const CardWidget = Scrivito.provideWidgetClass("CardWidget", {
   attributes: {
     image: "reference",
     description: "string",
-    date: "date"
+    date: "date",
+    newsLink: "link",
   },
   extractTextAttributes: ["description"],
 });

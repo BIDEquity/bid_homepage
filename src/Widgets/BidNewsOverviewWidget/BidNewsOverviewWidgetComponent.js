@@ -358,22 +358,11 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       </div>
                       <div class="news_subscribe_bottom">
                             <div class="send_loading">
-                                <svg class="loading_circle circle_1" x="1.5" y="1.5" viewBox="0 0 64 64">
-                                    <circle class="loading_circle_inner" cx="32" cy="32" r="29"/>
-                                </svg>
-                                <svg class="loading_circle circle_2" x="1.5" y="1.5" viewBox="0 0 64 64">
-                                    <circle class="loading_circle_inner" cx="32" cy="32" r="29"/>
-                                </svg>
+                                
                                 <button class="news_subscribe_send btn btn_loading">
                                     <span class="btn_loading_text">Sign me up</span>
                                 </button>
-                                <svg class="loading_check" width="27" height="19.725" viewBox="0 0 27 19.725">
-                                    <g transform="translate(-567.767 -849.647)">
-                                        <g transform="translate(567.267 849.148)">
-                                            <path d="M0,9.453l5.638,7.272ZM24,0,5.638,16.725Z" transform="translate(2 2)" fill="none" stroke="#f7ede1" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3"/>
-                                        </g>
-                                    </g>
-                                </svg>
+                                
                             </div>
                         </div>
                     </form>

@@ -7,7 +7,7 @@ const BidPartnerCardWidget = Scrivito.provideWidgetClass("BidPartnerCardWidget",
     company: "string",
     position: "string",
     text: "html",
-
+    partnerLink: "link",
   },
   
 });

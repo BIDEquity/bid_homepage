@@ -2,8 +2,8 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 
 Scrivito.provideComponent("BidPartnerCardWidget", ({ widget }) => {
-  /*const link = widget.get("link");
-  let linktext = link && link.title();*/
+  const link = widget.get("partnerLink");
+  
 
   return (
     <Scrivito.WidgetTag className="partners_post_item">
@@ -34,7 +34,7 @@ Scrivito.provideComponent("BidPartnerCardWidget", ({ widget }) => {
             />
           </div>
           <div className="partners_post_right">
-            <a class="arrow_btn" href="#">
+            <Scrivito.LinkTag class="arrow_btn" to={link}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17.284"
@@ -58,7 +58,7 @@ Scrivito.provideComponent("BidPartnerCardWidget", ({ widget }) => {
                   />
                 </g>
               </svg>
-            </a>
+            </Scrivito.LinkTag>
           </div>
           </div>
           

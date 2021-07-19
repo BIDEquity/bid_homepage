@@ -23,14 +23,16 @@ Scrivito.provideComponent("CardContainerWidget", ({ widget }) => {
             <div className="posts_slider swiper-container">
     <Swiper {...params}>
       {items.map((item, index) => {
+        let link = item.get("newsLink")
         return (
           <SwiperSlide key={index} className="post_slide swiper-slide">
+            <Scrivito.LinkTag to={link}>
             <Scrivito.ImageTag
               content={item}
               attribute="image"
               className="post_item_img"
             />
-
+          </Scrivito.LinkTag>
             <div className="post_item_info">
               <Scrivito.WidgetTag
                 className="post_item_date bottom_line"

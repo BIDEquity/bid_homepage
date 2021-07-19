@@ -48,6 +48,8 @@ class SwiperComponent extends React.Component {
           
           >
             {items.map((item, index) => {
+              let link = item.get("link");
+              let linktext = link && link.title();
               return (
                 <SwiperSlide key={index}>
                   
@@ -59,9 +61,9 @@ class SwiperComponent extends React.Component {
                         tag="h2"
                         className="section_title bottom_line col_6 col_t_12"
                       />
-                      <a className="info_slider_link" href="#">
-                        The xclinical story
-                      </a>
+                      <Scrivito.LinkTag className="info_slider_link" to={link}>
+                        {linktext}
+                      </Scrivito.LinkTag>
                     
                 </SwiperSlide>
               );

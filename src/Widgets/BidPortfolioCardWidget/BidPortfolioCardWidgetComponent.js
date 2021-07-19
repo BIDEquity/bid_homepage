@@ -2,11 +2,13 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 
 Scrivito.provideComponent("BidPortfolioCardWidget", ({ widget }) => {
-  /*const link = widget.get("link");
-  let linktext = link && link.title();*/
+  const link = widget.get("portfolioLink");
+  
 
   return (
+    
     <Scrivito.WidgetTag className="portfolio_post_item">
+      <Scrivito.LinkTag to={link}>
       <div className={`${widget.get("backgroundColor") === "yes" && widget.get("logo") === "yes"? "portfolio_post_logo" : "portfolio_post_image portfolio_post_img"}`}>
         <Scrivito.ImageTag width="235" content={widget} attribute="image" alt="" />
       </div>
@@ -20,6 +22,8 @@ Scrivito.provideComponent("BidPortfolioCardWidget", ({ widget }) => {
           <Scrivito.ContentTag content={widget} attribute="text"  />
         </div>
       </div>
+      </Scrivito.LinkTag>
     </Scrivito.WidgetTag>
+    
   );
 });
