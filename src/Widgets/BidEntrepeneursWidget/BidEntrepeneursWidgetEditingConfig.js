@@ -13,7 +13,7 @@ Scrivito.provideEditingConfig("BidEntrepeneursWidget", {
     "circleText3",
     "circleText4",
     "strategyLink",
-    
+    "icon",
     "leverCTA",
   ],
 });

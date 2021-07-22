@@ -1992,7 +1992,7 @@ textarea {
   margin: 0 12px;
   background-color: #617aab;
   transition: all 0.3s;
-  height: 29.87%;
+  height: 22.07%;
   /*div {
   position: absolute;
 bottom: 100%;
@@ -2009,7 +2009,7 @@ width: 100%;
 
 .box_Start + .operational_value_info {
   position: absolute;
-  bottom: 20%;
+  bottom: 12%;
   left: 0;
   margin-bottom: 11px;
   text-align: center;
@@ -2183,6 +2183,8 @@ width: 100%;
 .A .box_D + .operational_value_info .operational_value_level,
 .A .box_F + .operational_value_info .operational_value_name,
 .A .box_F + .operational_value_info .operational_value_level,
+.B .box_D + .operational_value_info .operational_value_name,
+.B .box_D + .operational_value_info .operational_value_level,
 .C .box_F + .operational_value_info .operational_value_name,
 .C .box_F + .operational_value_info .operational_value_level,
 .E .box_A + .operational_value_info .operational_value_name,

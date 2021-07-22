@@ -83,6 +83,7 @@ class LeverBlocksComponent extends React.Component {
                 </div>
               ))
             )}
+            
           </div>
         </div>
       </div>

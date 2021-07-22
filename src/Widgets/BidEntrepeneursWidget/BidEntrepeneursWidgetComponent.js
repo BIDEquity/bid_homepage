@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import { Swiper, SwiperSlide } from "swiper/react";
+import ButtonTagList from "../../Components/ButtonTagList";
 
 Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
   const link = widget.get("topLink");
@@ -10899,6 +10900,13 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
             className="section_title col_8 col_t_12"
           />
           <Scrivito.ContentTag content={widget} attribute="leverWidget" />
+          <div className="operational_value_icon">
+                    <Scrivito.ImageTag 
+                    alt="" 
+                    content={widget}
+                    attribute="icon"
+                    />
+                </div>
           <div className="operational_value_bottom">
             <div className="text_block">
               <Scrivito.ContentTag
@@ -10907,6 +10915,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                 tag="p"
               />
             </div>
+            <Scrivito.LinkTag className="btn" to={leverLink}>{leverLinkText}</Scrivito.LinkTag>
           </div>
           
 
