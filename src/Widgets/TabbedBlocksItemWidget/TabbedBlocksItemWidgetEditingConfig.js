@@ -26,7 +26,8 @@ Scrivito.provideEditingConfig('TabbedBlocksItemWidget', {
     'title',
     'text',
     'image',
-    'tags'
+    'tags',
+    'sliderLink'
   ]
 
 })

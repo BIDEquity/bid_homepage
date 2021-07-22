@@ -7,8 +7,8 @@ const TabbedBlocksItemWidget = Scrivito.provideWidgetClass('TabbedBlocksItemWidg
     title: 'string',
     text: 'html',
     image: 'reference',
-    tags: 'stringlist'
-
+    tags: 'stringlist',
+    sliderLink: "link",
   }
 })
 

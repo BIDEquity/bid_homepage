@@ -74,8 +74,15 @@ class TabbedBlocksComponent extends React.Component {
                     <div className="title_block bottom_line light">
                       <Scrivito.ContentTag content={item} attribute="text" />
                     </div>
-                    <a className="info_box_link" href="#">
-                      <span>Lorem ipsum dolor</span>
+                    <Scrivito.LinkTag
+                      className="info_box_link"
+                      to={item.get("sliderLink")}
+                      params={{
+                        helpSection: this.state.currentTag,
+                      }}
+                    >
+                      <span>{item.get("sliderLink").title()}</span>
+
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="17.284"
@@ -99,7 +106,7 @@ class TabbedBlocksComponent extends React.Component {
                           />
                         </g>
                       </svg>
-                    </a>
+                    </Scrivito.LinkTag>
                   </div>
                 </div>
                 <div className="help_slide_img">
@@ -116,12 +123,14 @@ class TabbedBlocksComponent extends React.Component {
 
 Scrivito.provideComponent("TabbedBlocksWidget", TabbedBlocksComponent);
 
-const TabbedBlock = Scrivito.connect(({ widget, currentTag }) => {
+/*const TabbedBlock = Scrivito.connect(({ widget, currentTag }) => {
   const teaser = widget.get("teaser");
   const text = widget.get("text");
   const title = widget.get("title");
   const image = widget.get("image");
   const tags = widget.get("tags");
+  const sliderLink = widget.get("sliderLink");
+  const sliderLinkText = sliderLink && sliderLink.title();
 
   const classNames = ["help_slide_item", "swiper-slide", "squeezed"];
   if (currentTag && tags.includes(currentTag)) {
@@ -135,10 +144,18 @@ const TabbedBlock = Scrivito.connect(({ widget, currentTag }) => {
           <div className="title_block bottom_line light">
             <Scrivito.ContentTag tag="div" content={widget} attribute="text" />
           </div>
-          <a className="info_box_link" href="#">
-            <span>Lorem ipsum dolor</span>
-            svg
-          </a>
+          <Scrivito.LinkTag 
+            className="info_box_link" 
+            to={sliderLink}
+            params={{
+              helpSection: currentTag,
+              
+            }}
+            >
+              
+            <span>{sliderLinkText}</span>
+            
+          </Scrivito.LinkTag>
         </div>
       </div>
       <div className="help_slide_img">
@@ -146,7 +163,7 @@ const TabbedBlock = Scrivito.connect(({ widget, currentTag }) => {
       </div>
     </SwiperSlide>
   );
-});
+});*/
 
 function allTags(items) {
   const tagsArray = items.map((item) => item.get("tags"));
