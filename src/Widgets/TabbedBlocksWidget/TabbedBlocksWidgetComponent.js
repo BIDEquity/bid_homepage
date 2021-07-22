@@ -78,7 +78,7 @@ class TabbedBlocksComponent extends React.Component {
                       className="info_box_link"
                       to={item.get("sliderLink")}
                       params={{
-                        helpSection: this.state.currentTag,
+                        helpsection: this.state.currentTag,
                       }}
                     >
                       <span>{item.get("sliderLink").title()}</span>

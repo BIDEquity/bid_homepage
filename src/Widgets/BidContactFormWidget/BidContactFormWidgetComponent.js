@@ -22,6 +22,8 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
       //selectedOption.label === "Managing Director",
     });
   };
+  const urlParams = new URLSearchParams(window.location.search);
+  const helpsection = urlParams.get("helpsection");
 
   return (
     <div className="content_section contact_section">
@@ -40,7 +42,7 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
         >
           <div className="contact_form_content">
           <input type="hidden" name="form-name" value="contact" />
-
+          <input type="hidden" name="form-helpsection" value={helpsection} />
             <p class="hidden">
               <label>
                 Don’t fill this out if you’re human: <input name="bot-field" />
@@ -99,7 +101,7 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
           </div>
           <textarea
             className="contact_addition"
-            placeHolder="Add addition information here"
+            placeholder="Add addition information here"
             name="addition"
           ></textarea>
           <input
