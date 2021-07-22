@@ -75,7 +75,7 @@ class LeverBlocksComponent extends React.Component {
                         key={item.id()}
                         content={item}
                         attribute="title"
-                        tag="p"
+                        tag="div"
                         className="operational_value_name"
                       />
                     </div>
