@@ -11,6 +11,6 @@ Scrivito.provideEditingConfig('LeverBlocksWidget', {
   },
   properties: [
     'items',
-    "button",
+    
   ]
 })

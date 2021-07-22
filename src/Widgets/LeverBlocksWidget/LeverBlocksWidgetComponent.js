@@ -1,14 +1,6 @@
 import React, { useRef, useState } from "react";
 import * as Scrivito from "scrivito";
-import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
-import ButtonTagList from "../../Components/ButtonTagList";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination } from "swiper";
-
-SwiperCore.use([Pagination]);
-
-// Import Swiper styles
-//import "swiper/swiper.scss";
+import LeverTagList from "../../Components/LeverTagList";
 
 class LeverBlocksComponent extends React.Component {
   constructor(props) {
@@ -19,136 +11,113 @@ class LeverBlocksComponent extends React.Component {
 
     this.state = {
       currentTag: tags[0],
+      companyBstep1: null,
     };
 
     this.setTag = this.setTag.bind(this);
+    
   }
 
   setTag(tag) {
     this.setState({
       currentTag: tag,
+      
     });
   }
 
+  
   render() {
     const widget = this.props.widget;
     const items = widget.get("items");
-    const params = {
-      loop: "true",
-      slidesPerView: 1,
-      speed: 800,
-      loop: "false",
+    const tags = allTags(items);
+    const lever = widget.get("lever");
 
-      pagination: {
-        el: ".entrepreneurs_help_navbar",
-        clickable: "true",
-      },
-    };
-
-    if (!items.length) {
-      return (
-        <InPlaceEditingPlaceholder center>
-          Add blocks in the widget properties.
-        </InPlaceEditingPlaceholder>
-      );
-    }
     //
     return (
-      <>
-        <div className="entrepreneurs_help_navbar bottom_line">
-          <ButtonTagList
-            showTags
-            tags={allTags(items)}
-            currentTag={this.state.currentTag}
-            setTag={this.setTag}
-            //onClick={swiper.slideTo(3)}
-          />
-        </div>
+      <div>
+        <LeverTagList
+          showTags
+          tags={tags}
+          currentTag={this.state.currentTag}
+          setTag={this.setTag}
+        />
 
-        <Swiper {...params}>
-          {items.map((item, index) => {
-            return (
-              <SwiperSlide key={index} className="help_slide_item swiper-slide">
-                <div className="help_slide_box info_box">
-                  <div className="info_box_content">
-                    <div className="title_block bottom_line light">
-                      <Scrivito.ContentTag content={item} attribute="text" />
+        <div className="operational_value_description">
+          
+          {items.map((item, index) => (
+            <div className={`tab_container_${index + 1}`}>
+              <TabbedContent
+                key={item.id()}
+                widget={item}
+                currentTag={this.state.currentTag}
+                
+              />
+              </div>
+            
+          ))}
+        </div>
+        <div className="operational_value_wrap">
+          <div className={`operational_value_chart ${this.state.currentTag}`}>
+            {items.map((item) => 
+              item.get("lever").map((item, index) => (
+                
+                <div className="operational_value_column" key={index} >
+                  <div className={`operational_value_box box_${item.get("intern")}`} ></div>
+                  <div className="operational_value_info">
+                    <div>
+                      <Scrivito.ContentTag
+                        content={item}
+                        attribute="leverStep"
+                        tag="p"
+                        className="operational_value_level"
+                      />
+                      <Scrivito.ContentTag
+                        key={item.id()}
+                        content={item}
+                        attribute="title"
+                        tag="p"
+                        className="operational_value_name"
+                      />
                     </div>
-                    <a className="info_box_link" href="#">
-                      <span>Lorem ipsum dolor</span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="17.284"
-                        height="10.73"
-                        viewBox="0 0 17.284 10.73"
-                        fill="none"
-                        strokeWidth="1.5"
-                      >
-                        <g transform="translate(-570.625 -853.857)">
-                          <path
-                            d="M576.989,860.911l4.3,4.3-4.3,4.3"
-                            transform="translate(5.865 -5.993)"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <line
-                            x1="15.783"
-                            transform="translate(571.375 859.222)"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </g>
-                      </svg>
-                    </a>
                   </div>
                 </div>
-                <div className="help_slide_img">
-                  <Scrivito.ImageTag content={item} attribute="image" />
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-      </>
+              ))
+            )}
+          </div>
+        </div>
+      </div>
     );
   }
 }
 
 Scrivito.provideComponent("LeverBlocksWidget", LeverBlocksComponent);
 
-const TabbedBlock = Scrivito.connect(({ widget, currentTag }) => {
+const TabbedContent = Scrivito.connect(({ widget, currentTag }) => {
   const company = widget.get("company");
-  const text = widget.get("text");
+
   const title = widget.get("title");
-  const lever = widget.get("lever");
-  const classNames = ["help_slide_item", "swiper-slide", "squeezed"];
-  
-  if (currentTag && tags.includes(currentTag)) {
+
+  const classNames = ["squeezed"];
+
+  if (currentTag && company.includes(currentTag)) {
     classNames.pop("squeezed");
+    classNames.push("active");
   }
 
   return (
-    <SwiperSlide>
-      <div className="help_slide_box info_box">
-        <div className="info_box_content">
-          <div className="title_block bottom_line light">
-            <Scrivito.ContentTag tag="div" content={widget} attribute="text" />
-          </div>
-          <a className="info_box_link" href="#">
-            <span>Lorem ipsum dolor</span>
-            svg
-          </a>
+    <>
+      <div className={classNames.join(" ")}>
+        <div>
+          {title.length > 0 && <strong>{title}</strong>}
+          <Scrivito.ContentTag content={widget} attribute="text" />
         </div>
       </div>
-      <div className="help_slide_img">
-        <Scrivito.ImageTag content={widget} attribute="image" />
-      </div>
-    </SwiperSlide>
+    </>
   );
 });
 
 function allTags(items) {
-  const tagsArray = items.map((item) => item.get("tags"));
+  const tagsArray = items.map((item) => item.get("company"));
 
   // flatten tags
   const tags = tagsArray.reduce((a, b) => a.concat(b), []);

@@ -1963,13 +1963,12 @@ textarea {
   margin-bottom: 60px;
 }
 
-
-
 .transaction_process_section .slider_pagination .swiper-pagination-bullet {
   margin: 0 0 10px 0 !important;
 }
 
-.transaction_process_box, .transaction_duration {
+.transaction_process_box,
+.transaction_duration {
   opacity: 1;
 }
 
@@ -1978,9 +1977,242 @@ textarea {
 }
 
 .transaction_process_dots {
-  left:  -4px !important;
+  left: -4px !important;
 }
 
+.operational_value_description div {
+  color: #f7ede1;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.box_Start {
+  position: relative;
+  width: 100%;
+  margin: 0 12px;
+  background-color: #617aab;
+  transition: all 0.3s;
+  height: 29.87%;
+  /*div {
+  position: absolute;
+bottom: 100%;
+left: 0;
+margin-bottom: 11px;
+text-align: center;
+color: #b0bcd5;
+font-weight: 700;
+font-size: 14px;
+line-height: 16px;
+width: 100%;
+}*/
+}
+
+.box_Start + .operational_value_info {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  margin-bottom: 11px;
+  text-align: center;
+  color: #b0bcd5;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  width: 100%;
+}
+
+.box_End + .operational_value_info {
+  position: absolute;
+  bottom: 90%;
+  left: 0;
+  margin-bottom: 11px;
+  text-align: center;
+  color: #b0bcd5;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  width: 100%;
+}
+
+.box_Start + .operational_value_info p, .box_End + .operational_value_info p {
+  color: #b0bcd5 !important;
+}
+
+.box_A {
+  height: 24.67%;
+  transform: translateY(-137.818px);
+  width: 100% !important;
+}
+
+.B .box_A {
+  height: 10.4%;
+  transform: translateY(-187.658px);
+}
+
+.B .box_B {
+  height: 11.7%;
+  transform: translateY(-250.207px);
+}
+
+.B .box_C {
+  height: 13%;
+  transform: translateY(-326.911px);
+}
+
+.B .box_E {
+  height: 15.6%;
+  transform: translateY(-405.525px);
+}
+
+.B .box_F {
+  height: 18%;
+  transform: translateY(-505.12px);
+}
+
+.box_B {
+  height: 23.378%;
+  transform: translateY(-328.506px);
+}
+
+.C .box_A {
+  height: 13.96%;
+  transform: translateY(-140.452px);
+}
+
+.C .box_B {
+  height: 13.96%;
+  transform: translateY(-225.253px);
+}
+
+.C .box_C {
+  height: 17.85%;
+  transform: translateY(-316.278px);
+}
+
+.C .box_D {
+  height: 13.96%;
+  transform: translateY(-426.655px);
+}
+
+.C .box_E {
+  height: 16.85%;
+  transform: translateY(-512.204px);
+}
+
+.C .box_E {
+  height: 16.85%;
+  transform: translateY(-512.204px);
+}
+
+.D .box_A {
+  height: 14.28%;
+  transform: translateY(-137.289px);
+}
+
+.D .box_B {
+  height: 6.49%;
+  transform: translateY(-224.648px);
+}
+
+.D .box_C {
+  height: 12.98%;
+  transform: translateY(-273.382px);
+}
+
+.D .box_D {
+  height: 8.92%;
+  transform: translateY(-353.463px);
+}
+
+.D .box_E {
+  height: 18.77%;
+  transform: translateY(-410.309px);
+}
+
+.D .box_F {
+  height: 14.28%;
+  transform: translateY(-528.035px);
+}
+
+.E .box_D {
+  height: 24.67%;
+  transform: translateY(-137.818px);
+}
+
+.E .box_E {
+  height: 24.67%;
+  transform: translateY(-287.7px);
+}
+
+.E .box_F {
+  height: 28.57%;
+  transform: translateY(-440.009px);
+}
+
+.F .box_A {
+  height: 24.67%;
+  transform: translateY(-137.818px);
+}
+
+.F .box_D {
+  height: 24.67%;
+  transform: translateY(-287.7px);
+}
+
+.F .box_E {
+  height: 28.87%;
+  transform: translateY(-438.161px);
+}
+
+.A .box_C,
+.A .box_D,
+.A .box_F,
+.B .box_D,
+.C .box_F,
+.E .box_A,
+.E .box_B,
+.E .box_C,
+.F .box_B,
+.F .box_C,
+.F .box_F {
+  opacity: 0;
+}
+
+.A .box_C + .operational_value_info .operational_value_name,
+.A .box_C + .operational_value_info .operational_value_level,
+.A .box_D + .operational_value_info .operational_value_name,
+.A .box_D + .operational_value_info .operational_value_level,
+.A .box_F + .operational_value_info .operational_value_name,
+.A .box_F + .operational_value_info .operational_value_level,
+.C .box_F + .operational_value_info .operational_value_name,
+.C .box_F + .operational_value_info .operational_value_level,
+.E .box_A + .operational_value_info .operational_value_name,
+.E .box_A + .operational_value_info .operational_value_level,
+.E .box_B + .operational_value_info .operational_value_name,
+.E .box_B + .operational_value_info .operational_value_level,
+.E .box_C + .operational_value_info .operational_value_name,
+.E .box_C + .operational_value_info .operational_value_level,
+.F .box_B + .operational_value_info .operational_value_name,
+.F .box_B + .operational_value_info .operational_value_level,
+.F .box_C + .operational_value_info .operational_value_name,
+.F .box_C + .operational_value_info .operational_value_level,
+.F .box_F + .operational_value_info .operational_value_name,
+.F .box_F + .operational_value_info .operational_value_level {
+  color: #2e3c56;
+}
+
+.box_E {
+  height: 23.378%;
+  transform: translateY(-471.992px);
+}
+
+.box_End {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 12px;
+  background-color: #617aab;
+  transition: all 0.3s;
+}
 
 /* RESPONSIVE
 ================================================== */

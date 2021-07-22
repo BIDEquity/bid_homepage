@@ -1,0 +1,45 @@
+import * as React from 'react'
+
+function ButtonTagList ({ showTags, tags, currentTag, setTag }) {
+  if (!showTags) { return null }
+
+  const onClick = (e, tag) => {
+    e.preventDefault()
+    e.stopPropagation()
+    setTag(tag)
+    
+  }
+
+  return (
+    
+    <div>
+        <ul className='operational_value_buttons tabs_buttons'>
+
+          {
+            tags.map(tag =>
+              <li
+                role='presentation'
+                key={tag}
+                className={currentTag === tag ? 'operational_value_btn tab_btn current' : 'operational_value_btn tab_btn'}
+              >
+                <a onClick={e => onClick(e, tag)} href='#'>{tag}</a>
+              </li>
+            )
+          }
+        </ul>
+      
+      <select
+        onChange={e => setTag(e.target.value)}
+        value={currentTag}
+        className='d-block d-sm-none'
+      >
+
+        {
+          tags.map(tag => <option key={tag} value={tag}>{tag}</option>)
+        }
+      </select>
+    </div>
+  )
+}
+
+export default ButtonTagList

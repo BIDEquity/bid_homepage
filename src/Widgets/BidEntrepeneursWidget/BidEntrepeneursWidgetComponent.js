@@ -6344,7 +6344,6 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
               <div className="mobile">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  
                   width="901.062"
                   height="826.341"
                   viewBox="0 0 901.062 826.341"
@@ -6360,7 +6359,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     >
                       <feOffset dy="10" input="SourceAlpha" />
                       <feGaussianBlur stdDeviation="30" result="b" />
-                      <feFlood flood-color="#ff5650" flood-opacity="0.349" />
+                      <feFlood floodColor="#ff5650" floodOpacity="0.349" />
                       <feComposite operator="in" in2="b" />
                       <feComposite in="SourceGraphic" />
                     </filter>
@@ -6374,7 +6373,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     >
                       <feOffset dy="10" input="SourceAlpha" />
                       <feGaussianBlur stdDeviation="30" result="d" />
-                      <feFlood flood-color="#ff5650" flood-opacity="0.349" />
+                      <feFlood floodColor="#ff5650" floodOpacity="0.349" />
                       <feComposite operator="in" in2="d" />
                       <feComposite in="SourceGraphic" />
                     </filter>
@@ -6388,7 +6387,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     >
                       <feOffset dy="10" input="SourceAlpha" />
                       <feGaussianBlur stdDeviation="30" result="f" />
-                      <feFlood flood-color="#ff5650" flood-opacity="0.349" />
+                      <feFlood floodColor="#ff5650" floodOpacity="0.349" />
                       <feComposite operator="in" in2="f" />
                       <feComposite in="SourceGraphic" />
                     </filter>
@@ -6402,7 +6401,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     >
                       <feOffset dy="10" input="SourceAlpha" />
                       <feGaussianBlur stdDeviation="30" result="h" />
-                      <feFlood flood-color="#ff5650" flood-opacity="0.349" />
+                      <feFlood floodColor="#ff5650" floodOpacity="0.349" />
                       <feComposite operator="in" in2="h" />
                       <feComposite in="SourceGraphic" />
                     </filter>
@@ -6416,7 +6415,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     >
                       <feOffset dy="10" input="SourceAlpha" />
                       <feGaussianBlur stdDeviation="30" result="j" />
-                      <feFlood flood-color="#ff5650" flood-opacity="0.349" />
+                      <feFlood floodColor="#ff5650" floodOpacity="0.349" />
                       <feComposite operator="in" in2="j" />
                       <feComposite in="SourceGraphic" />
                     </filter>
@@ -6425,10 +6424,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     <g transform="translate(8 4469.658)">
                       <g transform="translate(0)">
                         <g>
-                          <g
-                            transform="translate(0 0.121)"
-                            
-                          >
+                          <g transform="translate(0 0.121)">
                             <path
                               d="M804.011,345.509l-.644-9.5c.011-.731.013-1.464.009-2.2.192,2.714.447,6.336.64,9.053l0,2.645M802.146,329.7c-1.762-5.013-4.063-11.745-6.442-16.5l2.811,3.506,3.6,10.632q0,1.177.027,2.359m-10.663-23.432-2.978-4.141.809-1.21,5.693,8.753-3.524-3.4m-4.467-6.046-.955-1.889c0-.148.007-.3.009-.447.331.071.776.17,1.107.244l1.874,2.433-.818,1.21-1.216-1.549m-.555-2.983-.393-.085c0-.136-.007-.273-.011-.409l.4.494"
                               transform="translate(23.047 70.163)"
@@ -10633,7 +10629,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                       <text
                         transform="translate(424 4305)"
                         fill="#f7ede1"
-                        font-size="22"
+                        fontSize="22"
                       >
                         <tspan x="-102.245" y="0">
                           MANAGEMENT ADVISORY
@@ -10654,7 +10650,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                       <text
                         transform="translate(303 4408)"
                         fill="#f7ede1"
-                        font-size="22"
+                        fontSize="22"
                       >
                         <tspan x="-90.112" y="0">
                           BUY-SIDE &amp; SELL-SIDE
@@ -10675,7 +10671,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                       <text
                         transform="translate(387 4641)"
                         fill="#f7ede1"
-                        font-size="22"
+                        fontSize="22"
                       >
                         <tspan x="-92.103" y="0">
                           DEBT RESTRUCTURING
@@ -10698,7 +10694,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                       <text
                         transform="translate(436 4882)"
                         fill="#f7ede1"
-                        font-size="22"
+                        fontSize="22"
                       >
                         <tspan x="-64.185" y="0">
                           GLOBALISATION
@@ -10720,7 +10716,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     <text
                       transform="translate(115 5090)"
                       fill="#f7ede1"
-                      font-size="22"
+                      fontSize="22"
                     >
                       <tspan x="-65.692" y="0">
                         PRIVATE EQUITY
@@ -10902,414 +10898,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
             tag="h2"
             className="section_title col_8 col_t_12"
           />
-          <div className="operational_value_buttons tabs_buttons">
-            <Scrivito.ContentTag
-              content={widget}
-              attribute="company1"
-              tag="button"
-              className="operational_value_btn tab_btn current"
-              data-tab="1"
-              data-level-offset="40%,72%,0,0,100%,0"
-            />
-            <Scrivito.ContentTag
-              content={widget}
-              attribute="company2"
-              tag="button"
-              className="operational_value_btn tab_btn"
-              data-tab="2"
-              data-level-offset="40%,40%,0,20%,100%,35%"
-            />
-
-            <Scrivito.ContentTag
-              content={widget}
-              attribute="company3"
-              tag="button"
-              className="operational_value_btn tab_btn"
-              data-tab="3"
-              data-level-offset="20%,10%,0,30%,100%,35%"
-            />
-
-            <Scrivito.ContentTag
-              content={widget}
-              attribute="company4"
-              tag="button"
-              className="operational_value_btn tab_btn"
-              data-tab="4"
-              data-level-offset="0,10%,0,10%,80%,35%"
-            />
-
-            <Scrivito.ContentTag
-              content={widget}
-              attribute="company5"
-              tag="button"
-              className="operational_value_btn tab_btn"
-              data-tab="5"
-              data-level-offset="0,10%,0,20%,70%,10%"
-            />
-
-            <Scrivito.ContentTag
-              content={widget}
-              attribute="company6"
-              tag="button"
-              className="operational_value_btn tab_btn"
-              data-tab="6"
-              data-level-offset="20,10%,50%,20%,0,10%"
-            />
-          </div>
-          <div className="operational_value_description">
-            <div className="tab_container tab_container_1 active">
-              <Scrivito.ContentTag
-                content={widget}
-                attribute="growth1"
-                tag="p"
-              />
-            </div>
-            <div className="tab_container tab_container_2">
-              <Scrivito.ContentTag
-                content={widget}
-                attribute="growth2"
-                tag="p"
-              />
-            </div>
-            <div className="tab_container tab_container_3">
-              <Scrivito.ContentTag
-                content={widget}
-                attribute="growth3"
-                tag="p"
-              />
-            </div>
-            <div className="tab_container tab_container_4">
-              <Scrivito.ContentTag
-                content={widget}
-                attribute="growth4"
-                tag="p"
-              />
-            </div>
-            <div className="tab_container tab_container_5">
-              <Scrivito.ContentTag
-                content={widget}
-                attribute="growth5"
-                tag="p"
-              />
-            </div>
-            <div className="tab_container tab_container_6">
-              <Scrivito.ContentTag
-                content={widget}
-                attribute="growth6"
-                tag="p"
-              />
-            </div>
-          </div>
-          <div className="operational_value_wrap">
-            <div className="operational_value_chart">
-              <div className="operational_value_column" data-percent="29.87%">
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="companyEntry"
-                  tag="p"
-                />
-              </div>
-              <div className="operational_value_box">
-                <div className="operational_value_i">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                  >
-                    <text
-                      transform="translate(6.4 1)"
-                      fill="#ff5650"
-                      font-size="12"
-                      fontFamily="Swiss721BT-Bold, Swiss721 BT"
-                      fontWeight="700"
-                    >
-                      <tspan x="0" y="12">
-                        i
-                      </tspan>
-                    </text>
-                    <g fill="none" stroke="#ff5650" strokeWidth="1">
-                      <circle cx="8" cy="8" r="8" stroke="none" />
-                      <circle cx="8" cy="8" r="7.5" fill="none" />
-                    </g>
-                  </svg>
-                </div>
-
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="lever1Title"
-                  tag="p"
-                  className="operational_value_level"
-                />
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="lever1Text"
-                  tag="p"
-                  className="operational_value_name"
-                />
-                <div className="operational_value_expand">
-                  <button className="operational_value_close">+</button>
-                  <Scrivito.ContentTag
-                    content={widget}
-                    attribute="lever1Tooltip"
-                    tag="p"
-                  />
-                </div>
-              </div>
-              <div className="operational_value_box">
-                <div className="operational_value_i">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                  >
-                    <text
-                      transform="translate(6.4 1)"
-                      fill="#ff5650"
-                      font-size="12"
-                      fontFamily="Swiss721BT-Bold, Swiss721 BT"
-                      fontWeight="700"
-                    >
-                      <tspan x="0" y="12">
-                        i
-                      </tspan>
-                    </text>
-                    <g fill="none" stroke="#ff5650" strokeWidth="1">
-                      <circle cx="8" cy="8" r="8" stroke="none" />
-                      <circle cx="8" cy="8" r="7.5" fill="none" />
-                    </g>
-                  </svg>
-                </div>
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="lever2Title"
-                  tag="p"
-                  className="operational_value_level"
-                />
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="lever2Text"
-                  tag="p"
-                  className="operational_value_name"
-                />
-                <div className="operational_value_expand">
-                  <button className="operational_value_close">+</button>
-                  <Scrivito.ContentTag
-                    content={widget}
-                    attribute="lever2Tooltip"
-                    tag="p"
-                  />
-                </div>
-              </div>
-              <div className="operational_value_box">
-                <div className="operational_value_i">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                  >
-                    <text
-                      transform="translate(6.4 1)"
-                      fill="#ff5650"
-                      fontSize="12"
-                      fontFamily="Swiss721BT-Bold, Swiss721 BT"
-                      fontWeight="700"
-                    >
-                      <tspan x="0" y="12">
-                        i
-                      </tspan>
-                    </text>
-                    <g fill="none" stroke="#ff5650" strokeWidth="1">
-                      <circle cx="8" cy="8" r="8" stroke="none" />
-                      <circle cx="8" cy="8" r="7.5" fill="none" />
-                    </g>
-                  </svg>
-                </div>
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="lever3Title"
-                  tag="p"
-                  className="operational_value_level"
-                />
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="lever3Text"
-                  tag="p"
-                  className="operational_value_name"
-                />
-                <div className="operational_value_expand">
-                  <button className="operational_value_close">+</button>
-                  <Scrivito.ContentTag
-                    content={widget}
-                    attribute="lever3Tooltip"
-                    tag="p"
-                  />
-                </div>
-              </div>
-              <div className="operational_value_box">
-                <div className="operational_value_i">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                  >
-                    <text
-                      transform="translate(6.4 1)"
-                      fill="#ff5650"
-                      fontSize="12"
-                      fontFamily="Swiss721BT-Bold, Swiss721 BT"
-                      fontWeight="700"
-                    >
-                      <tspan x="0" y="12">
-                        i
-                      </tspan>
-                    </text>
-                    <g fill="none" stroke="#ff5650" strokeWidth="1">
-                      <circle cx="8" cy="8" r="8" stroke="none" />
-                      <circle cx="8" cy="8" r="7.5" fill="none" />
-                    </g>
-                  </svg>
-                </div>
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="lever4Title"
-                  tag="p"
-                  className="operational_value_level"
-                />
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="lever4Text"
-                  tag="p"
-                  className="operational_value_name"
-                />
-                <div className="operational_value_expand">
-                  <button className="operational_value_close">+</button>
-                  <Scrivito.ContentTag
-                    content={widget}
-                    attribute="lever4Tooltip"
-                    tag="p"
-                  />
-                </div>
-              </div>
-              <div className="operational_value_box">
-                <div className="operational_value_i">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                  >
-                    <text
-                      transform="translate(6.4 1)"
-                      fill="#ff5650"
-                      fontSize="12"
-                      fontFamily="Swiss721BT-Bold, Swiss721 BT"
-                      fontWeight="700"
-                    >
-                      <tspan x="0" y="12">
-                        i
-                      </tspan>
-                    </text>
-                    <g fill="none" stroke="#ff5650" strokeWidth="1">
-                      <circle cx="8" cy="8" r="8" stroke="none" />
-                      <circle cx="8" cy="8" r="7.5" fill="none" />
-                    </g>
-                  </svg>
-                </div>
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="lever5Title"
-                  tag="p"
-                  className="operational_value_level"
-                />
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="lever5Text"
-                  tag="p"
-                  className="operational_value_name"
-                />
-                <div className="operational_value_expand">
-                  <button className="operational_value_close">+</button>
-                  <Scrivito.ContentTag
-                    content={widget}
-                    attribute="lever5Tooltip"
-                    tag="p"
-                  />
-                </div>
-              </div>
-              <div className="operational_value_box">
-                <div className="operational_value_i">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 16 16"
-                  >
-                    <text
-                      transform="translate(6.4 1)"
-                      fill="#ff5650"
-                      fontSize="12"
-                      fontFamily="Swiss721BT-Bold, Swiss721 BT"
-                      fontWeight="700"
-                    >
-                      <tspan x="0" y="12">
-                        i
-                      </tspan>
-                    </text>
-                    <g fill="none" stroke="#ff5650" strokeWidth="1">
-                      <circle cx="8" cy="8" r="8" stroke="none" />
-                      <circle cx="8" cy="8" r="7.5" fill="none" />
-                    </g>
-                  </svg>
-                </div>
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="lever6Title"
-                  tag="p"
-                  className="operational_value_level"
-                />
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="lever6Text"
-                  tag="p"
-                  className="operational_value_name"
-                />
-                <div className="operational_value_expand">
-                  <button className="operational_value_close">+</button>
-                  <Scrivito.ContentTag
-                    content={widget}
-                    attribute="lever6Tooltip"
-                    tag="p"
-                  />
-                </div>
-              </div>
-              <div className="operational_value_column" data-percent="100%">
-                <Scrivito.ContentTag
-                  content={widget}
-                  attribute="companyExit"
-                  tag="p"
-                />
-              </div>
-            </div>
-            <div className="operational_value_icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="29"
-                height="29"
-                viewBox="0 0 29 29"
-              >
-                <g transform="translate(-33 -33)">
-                  <path
-                    d="M47.554,33A14.5,14.5,0,1,1,33,47.554,14.532,14.532,0,0,1,47.554,33Zm-1.521,6.625a1.086,1.086,0,0,1,2.172,0v7.712l5,1.412a1.137,1.137,0,0,1-.652,2.172L46.9,49.184a1.058,1.058,0,0,1-.869-1.086Zm1.521-4.453A12.328,12.328,0,1,0,59.828,47.554,12.377,12.377,0,0,0,47.554,35.172Z"
-                    fill="#ff5650"
-                  />
-                </g>
-              </svg>
-            </div>
-          </div>
+          <Scrivito.ContentTag content={widget} attribute="leverWidget" />
           <div className="operational_value_bottom">
             <div className="text_block">
               <Scrivito.ContentTag
@@ -11318,11 +10907,9 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                 tag="p"
               />
             </div>
-
-            <Scrivito.LinkTag to={leverLink} className="btn">
-              {leverLinkText}
-            </Scrivito.LinkTag>
           </div>
+          
+
           <div className="content_info">
             <div className="content_info_inner">
               <div className="content_info_top">
