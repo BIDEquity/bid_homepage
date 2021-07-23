@@ -28,16 +28,7 @@ function ButtonTagList ({ showTags, tags, currentTag, setTag }) {
           }
         </ul>
       </div>
-      <select
-        onChange={e => setTag(e.target.value)}
-        value={currentTag}
-        className='d-block d-sm-none'
-      >
-
-        {
-          tags.map(tag => <option key={tag} value={tag}>{tag}</option>)
-        }
-      </select>
+      
     </div>
   )
 }

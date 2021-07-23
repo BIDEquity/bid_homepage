@@ -1061,10 +1061,12 @@ footer {
 
 /*  sticky footer for react world
 =================================================================== */
-.footer_alternative {
-  position: relative;
-  top: -365px;
-  margin-bottom: -365px;
+@media screen and (min-width: 992px) {
+  .footer_alternative {
+    position: relative;
+    top: -365px;
+    margin-bottom: -365px;
+  }
 }
 
 body,
@@ -2033,7 +2035,8 @@ width: 100%;
   width: 100%;
 }
 
-.box_Start + .operational_value_info p, .box_End + .operational_value_info p {
+.box_Start + .operational_value_info p,
+.box_End + .operational_value_info p {
   color: #b0bcd5 !important;
 }
 
@@ -2256,6 +2259,21 @@ width: 100%;
   .article_content_soc svg {
     height: 15px;
     width: 15px;
+  }
+
+  .portfolio_posts_wrap {
+    margin: 0 -16px !important;
+  }
+
+  .entrepreneurs_strategies_description .btn {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .entrepreneurs_help .swiper-container {
+    width: 100vw;
+    margin-left: -32px;
+    margin-right: 0;
   }
 
   .team_bottom {

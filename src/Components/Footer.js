@@ -141,13 +141,7 @@ function Footer() {
           </div>
           <div className="footer_right bottom_line">
             <div className="footer_top bottom_line">
-              <h3 className="footer_title">
-                Get a reliable valuation for your business within two hours from
-                us.
-              </h3>
-              <a className="btn" href="#">
-                Let’s go!
-              </a>
+              
               <div className="footer_box footer_box_links">
                 <p className="footer_box_title">Quick Links</p>
                 <div className="footer_links">

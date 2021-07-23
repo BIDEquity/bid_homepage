@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-function ButtonTagList ({ showTags, tags, currentTag, setTag }) {
+function LeverTagList ({ showTags, tags, currentTag, setTag }) {
   if (!showTags) { return null }
 
   const onClick = (e, tag) => {
@@ -28,18 +28,9 @@ function ButtonTagList ({ showTags, tags, currentTag, setTag }) {
           }
         </ul>
       
-      <select
-        onChange={e => setTag(e.target.value)}
-        value={currentTag}
-        className='d-block d-sm-none'
-      >
-
-        {
-          tags.map(tag => <option key={tag} value={tag}>{tag}</option>)
-        }
-      </select>
+      
     </div>
   )
 }
 
-export default ButtonTagList
+export default LeverTagList
