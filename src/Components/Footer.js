@@ -13,6 +13,8 @@ function Footer() {
     return null;
   }
 
+  const lang = root.siteId();
+
   return (
     <footer className={`footer ${altF === "yes" && "footer_alternative"}`}>
       <div className="container">
@@ -125,47 +127,53 @@ function Footer() {
             <div className="footer_box_links">
               <p className="footer_box_title">Quick Links</p>
               <div className="footer_links">
-                <a href="/about">About</a>
-                <a href="/portfolio">Portfolio</a>
-                <a href="/entrepreneurs">Entrepreneurs</a>
-                <a href="/intermediaries">M&amp;A Partners</a>
-                <a href="/investors">Investors</a>
-                <a href="/news">News</a>
-                <a href="/jobs">Jobs</a>
-                <a href="/contact">Contact</a>
+                <Scrivito.ContentTag
+                  content={root}
+                  attribute="footer"
+                  tag="footer"
+                  id="footer"
+                />
+                <a href="about">About</a>
+                <a href="portfolio">Portfolio</a>
+                <a href="entrepreneurs">Entrepreneurs</a>
+                <a href="intermediaries">M&amp;A Partners</a>
+                <a href="investors">Investors</a>
+                <a href="news">News</a>
+                <a href="jobs">Jobs</a>
+                <a href="contact">Contact</a>
                 <a href="#">Quick valuation</a>
-                <a href="/privace-policy">Privacy Policy</a>
-                <a href="/terms-of-use">Imprint</a>
+                <a href="privace-policy">Privacy Policy</a>
+                <a href="terms-of-use">Imprint</a>
               </div>
             </div>
           </div>
           <div className="footer_right bottom_line">
             <div className="footer_top bottom_line">
-              { !altF &&
-              <>
-              <h3 className="footer_title">
-                Get a reliable valuation for your business within two hours from
-                us.
-              </h3>
-              <a className="btn" href="#">
-                Let’s go!
-              </a>
-              </>
-              }
+              {!altF && (
+                <>
+                  <h3 className="footer_title">
+                    Get a reliable valuation for your business within two hours
+                    from us.
+                  </h3>
+                  <a className="btn" href="#">
+                    Let’s go!
+                  </a>
+                </>
+              )}
               <div className="footer_box footer_box_links">
                 <p className="footer_box_title">Quick Links</p>
                 <div className="footer_links">
-                  <a href="#">About</a>
-                  <a href="#">Portfolio</a>
-                  <a href="#">Entrepreneurs</a>
-                  <a href="#">M&A Partners</a>
-                  <a href="#">Investors</a>
-                  <a href="#">News</a>
-                  <a href="#">Jobs</a>
-                  <a href="#">Contact</a>
-                  <a href="#">Quick Valuation</a>
-                  <a href="#">Privacy Policy</a>
-                  <a href="#">Imprint</a>
+                <a href="about">About</a>
+                <a href="portfolio">Portfolio</a>
+                <a href="entrepreneurs">Entrepreneurs</a>
+                <a href="intermediaries">M&amp;A Partners</a>
+                <a href="investors">Investors</a>
+                <a href="news">News</a>
+                <a href="jobs">Jobs</a>
+                <a href="contact">Contact</a>
+                <a href="#">Quick valuation</a>
+                <a href="privace-policy">Privacy Policy</a>
+                <a href="terms-of-use">Imprint</a>
                 </div>
               </div>
             </div>

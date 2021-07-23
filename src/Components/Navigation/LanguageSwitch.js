@@ -19,12 +19,13 @@ class LanguageSwitch extends React.Component {
   }
 
   render() {
-    const homepages = Scrivito.Obj.where(
+    const onAllSites = Scrivito.Obj.onAllSites();
+    const homepages = onAllSites.where(
       "_objClass",
       "equals",
       "Homepage"
     ).toArray();
-      
+      console.log(homepages)
     return (
       <ul className="lang-switch">
         <li className={`nav-item ${this.state.language ? "open" : ""}`}>
@@ -46,7 +47,7 @@ class LanguageSwitch extends React.Component {
             }`}
           >
             {homepages.map((homepage) => (
-              
+              homepage.id() !== "c11fec265ccbf94d" &&
               <li className="nav-item" key={homepage.id()}>
                 <Scrivito.LinkTag
                   onClick={this.toggleLanguage}
@@ -56,6 +57,7 @@ class LanguageSwitch extends React.Component {
                   {homepage.id() === "73135f17d58607f8" ? "EN" : "DE"}
                 </Scrivito.LinkTag>
               </li>
+              
             ))}
           </ul>
         </li>

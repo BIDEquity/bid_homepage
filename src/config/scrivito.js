@@ -8,7 +8,6 @@ function baseUrlForSite(siteId) {
       return `${window.location.origin}/en`;
     case "de":
       return `${window.location.origin}/de`;
-    
   }
 }
 
@@ -21,17 +20,14 @@ function siteForUrl(url) {
     case "de":
       siteId = "de";
       return { siteId, baseUrl: baseUrlForSite(siteId) };
-    default:
-      siteId = "en";
-      return { siteId, baseUrl: baseUrlForSite(siteId) };
   }
 }
 
 Scrivito.configure({
-  baseUrlForSite: baseUrlForSite,
-  siteForUrl: siteForUrl,
+  siteForUrl,
+  baseUrlForSite,
   tenant: process.env.SCRIVITO_TENANT,
-  homepage: () => Scrivito.Obj.getByPath("/en"),
+  //homepage: () => Scrivito.Obj.getByPath("en"),
   adoptUi: true,
   
   // other keys …
