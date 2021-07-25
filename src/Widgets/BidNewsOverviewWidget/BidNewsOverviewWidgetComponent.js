@@ -2,6 +2,7 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 import Checkbox from "../../Components/Checkbox";
 import "file-loader?name=[name].[contenthash].[ext]!./newsForm.html";
+import SubmitButton from "../../Components/SubmitButton";
 /* This html file is needed for Netlify form handling. Updates to inputs in this file should also be
 added to contactForm.html as well. See the following link for details:
 https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/
@@ -303,9 +304,9 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                     <form
                       className="news_subscribe_form"
                       name="news"
-                      //method="POST"
-                      //netlify-honeypot="bot-field"
-                      //data-netlify="true"
+                      method="POST"
+                      netlify-honeypot="bot-field"
+                      data-netlify="true"
                     >
                       <div className="news_subscribe_body">
                         <p class="hidden">
@@ -359,9 +360,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       <div class="news_subscribe_bottom">
                             <div class="send_loading">
                                 
-                                <button class="news_subscribe_send btn btn_loading">
-                                    <span class="btn_loading_text">Sign me up</span>
-                                </button>
+                                <SubmitButton />
                                 
                             </div>
                         </div>
