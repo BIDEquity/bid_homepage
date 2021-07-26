@@ -1,6 +1,8 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import formatDate from "../../utils/formatDate";
+import NextLink from "../../Components/NextLink";
+import PreviousLink from "../../Components/PreviousLink";
 
 Scrivito.provideComponent("NewsPost", ({ page }) => {
   const categorylink = page.get("category");
@@ -43,46 +45,7 @@ Scrivito.provideComponent("NewsPost", ({ page }) => {
                 </div>
               </div>
               <div className="article_content_sidebar">
-                <a className="content_nav_link content_next" href="#">
-                  <Scrivito.ContentTag
-                    content={page}
-                    attribute="nextLabel"
-                    tag="p"
-                    className="content_nav_direction"
-                  />
-                  <div className="content_nav_info">
-                    <span className="content_nav_name">
-                      Acquisition of US-based Fortress Medical Systems
-                      accelerates BID Equity‘s life science software group
-                      around German XClinical and French Carenity
-                    </span>
-                    <span className="arrow_btn">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="17.284"
-                        height="10.73"
-                        viewBox="0 0 17.284 10.73"
-                        fill="none"
-                        strokeWidth="1.5"
-                      >
-                        <g transform="translate(-570.625 -853.857)">
-                          <path
-                            d="M576.989,860.911l4.3,4.3-4.3,4.3"
-                            transform="translate(5.865 -5.993)"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                          <line
-                            x1="15.783"
-                            transform="translate(571.375 859.222)"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </g>
-                      </svg>
-                    </span>
-                  </div>
-                </a>
+                <NextLink type="NewsPost" currentPost={page}/>
               </div>
             </div>
           </div>
@@ -128,85 +91,10 @@ Scrivito.provideComponent("NewsPost", ({ page }) => {
               </div>
             </div>
             <div className="article_content_nav content_nav">
-              <a className="content_nav_link content_prev" href="#">
-                <Scrivito.ContentTag
-                  content={page}
-                  attribute="prevLabel"
-                  tag="p"
-                  className="content_nav_direction"
-                />
-                <div className="content_nav_info">
-                  <span className="arrow_btn">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="17.284"
-                      height="10.73"
-                      viewBox="0 0 17.284 10.73"
-                      fill="none"
-                      strokeWidth="1.5"
-                    >
-                      <g transform="translate(-570.625 -853.857)">
-                        <path
-                          d="M576.989,860.911l4.3,4.3-4.3,4.3"
-                          transform="translate(5.865 -5.993)"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <line
-                          x1="15.783"
-                          transform="translate(571.375 859.222)"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </span>
-                  <span className="content_nav_name">
-                    BID Equity Fund II acquires analytics platform Carenity
-                    forging a new life science group with XClinical
-                  </span>
-                </div>
-              </a>
-              <a className="content_nav_link content_next" href="#">
-                <Scrivito.ContentTag
-                  content={page}
-                  attribute="nextLabel"
-                  tag="p"
-                  className="content_nav_direction"
-                />
-                <div className="content_nav_info">
-                  <span className="content_nav_name">
-                    Acquisition of US-based Fortress Medical Systems accelerates
-                    BID Equity‘s life science software group around German
-                    XClinical and French Carenity
-                  </span>
-                  <span className="arrow_btn">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="17.284"
-                      height="10.73"
-                      viewBox="0 0 17.284 10.73"
-                      fill="none"
-                      strokeWidth="1.5"
-                    >
-                      <g transform="translate(-570.625 -853.857)">
-                        <path
-                          d="M576.989,860.911l4.3,4.3-4.3,4.3"
-                          transform="translate(5.865 -5.993)"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <line
-                          x1="15.783"
-                          transform="translate(571.375 859.222)"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </span>
-                </div>
-              </a>
+              
+                <PreviousLink type="NewsPost" currentPost={page}  />
+              
+              <NextLink type="NewsPost" currentPost={page} />
             </div>
             <div className="article_posts">
               <Scrivito.ContentTag

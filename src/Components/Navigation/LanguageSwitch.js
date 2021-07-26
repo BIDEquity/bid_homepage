@@ -25,7 +25,7 @@ class LanguageSwitch extends React.Component {
       "equals",
       "Homepage"
     ).toArray();
-      console.log(homepages)
+      
     return (
       <ul className="lang-switch">
         <li className={`nav-item ${this.state.language ? "open" : ""}`}>
