@@ -1,7 +1,7 @@
 ##
 # Netlify redirect rules. See https://www.netlify.com/docs/redirects/ for details.
 ##
-bid-equity-relaunch.netlify.app/ bid-equity-relaunch.netlify.app/en
+https://bid-equity-relaunch.netlify.app/ https://bid-equity-relaunch.netlify.app/en
 # Single Page Application routes
 /* status-code=404-not-found /catch_all_index.html 404
 # PRERENDERED-UPPERCASE-ROUTES-PLACEHOLDER
