@@ -28,6 +28,22 @@ class BidNewsOverviewWidgetComponent extends React.Component {
       selectedCompany: null,
       checkedTerms: false,
       checkedPrivacy: false,
+      formValue: "",
+      error: ""
+    };
+
+    this.handleChange = (e) => this.setState({ formValue: e.target.value });
+    this.handleSubmit = (e) => {
+      if(this.state.formValue === "") {
+        this.setState({error: "Please, enter an E-Mail address"})
+        e.preventDefault();
+      }
+      if(!this.state.checkedTerms || !this.state.checkedPrivacy) {
+        this.setState({error: "Please confirm the T&C’s and Privacy policy have been read and understood."})
+        e.preventDefault();
+      }
+      
+     
     };
 
     this.handleChangeCat = (selectedOption) => {
@@ -45,10 +61,12 @@ class BidNewsOverviewWidgetComponent extends React.Component {
     this.handleChangePrivacy = () => {
       this.setState({ checkedPrivacy: !this.state.checkedPrivacy });
     };
+
   }
 
+  
+
   render() {
-    console.log(this.state.selectedCat);
     const widget = this.props.widget;
     let newsSearch = Scrivito.Obj.where("_objClass", "equals", "NewsPost");
 
@@ -307,9 +325,10 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       method="POST"
                       netlify-honeypot="bot-field"
                       data-netlify="true"
+                      onSubmit={this.handleSubmit}
                     >
                       <div className="news_subscribe_body">
-                        <p class="hidden">
+                        <p className="hidden">
                           <label>
                             Don’t fill this out if you’re human:{" "}
                             <input name="bot-field" />
@@ -321,15 +340,15 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                             type="email"
                             name="subscribe_email"
                             placeholder="Email"
-                            required
+                            value={this.state.formValue} 
+                            onChange={this.handleChange}
                           />
                         </div>
-                        <div className="request_errors"></div>
+                        <div className="request_errors"><span className="error">{this.state.error}</span></div>
                         <div className="news_subscribe_terms">
                           <Checkbox
                             className="subscribe_group subscribe_agree subscribe_terms"
                             value={this.state.checkedTerms}
-                            required
                             onChange={this.handleChangeTerms}
                             name="subscribe_terms"
                           />
@@ -343,7 +362,6 @@ class BidNewsOverviewWidgetComponent extends React.Component {
 
                           <Checkbox
                             className="subscribe_group subscribe_agree subscribe_privacy"
-                            required
                             onChange={this.handleChangePrivacy}
                             value={this.state.checkedPrivacy}
                             name="subscribe_privacy"
@@ -357,13 +375,11 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                           />
                         </div>
                       </div>
-                      <div class="news_subscribe_bottom">
-                            <div class="send_loading">
-                                
-                                <SubmitButton />
-                                
-                            </div>
+                      <div className="news_subscribe_bottom">
+                        <div className="send_loading">
+                          <SubmitButton />
                         </div>
+                      </div>
                     </form>
                   </div>
                 );

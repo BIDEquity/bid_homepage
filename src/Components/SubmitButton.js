@@ -8,7 +8,7 @@ function SubmitButton() {
     setState("loading");
     setTimeout(() => {
       setState("idle");
-    }, 2000);
+    }, 1000);
   };
 
   return (
@@ -37,7 +37,7 @@ function SubmitButton() {
       rounded={true}
       size={"normal"}
       block={false}
-      messageDuration={2000}
+      messageDuration={1000}
       disabled={false}
       buttonRef={null}
       width={"280px"}
