@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import "file-loader?name=[name].[contenthash].[ext]!./jobForm.html";
+import SubmitButton from "../../Components/SubmitButton"
 /* This html file is needed for Netlify form handling. Updates to inputs in this file should also be
 added to contactForm.html as well. See the following link for details:
 https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/
@@ -62,11 +63,7 @@ Scrivito.provideComponent("JobApplyForm", ({ page }) => {
             className="contact_addition"
             placeholder="Add addition information here"
           ></textarea>
-          <input
-            className="contact_form_send btn"
-            type="submit"
-            value="Send in my application"
-          />
+          <SubmitButton label="Send in my application" className="contact_form_send btn" />
         </form>
       </div>
     </div>

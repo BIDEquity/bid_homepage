@@ -2,6 +2,7 @@ import * as React from "react";
 import * as Scrivito from "scrivito";
 import Select from "react-select";
 import "file-loader?name=[name].[contenthash].[ext]!./contactForm.html";
+import SubmitButton from "../../Components/SubmitButton";
 /* This html file is needed for Netlify form handling. Updates to inputs in this file should also be
 added to contactForm.html as well. See the following link for details:
 https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/
@@ -38,7 +39,9 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
           className="contact_form"
           name="contact"
           method="post"
-          action="/en/contact/complete"
+          action="en/contact/complete"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
         >
           <div className="contact_form_content">
           <input type="hidden" name="form-name" value="contact" />
@@ -104,11 +107,8 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
             placeholder="Add addition information here"
             name="addition"
           ></textarea>
-          <input
-            className="contact_form_send btn"
-            type="submit"
-            value="Send my enquiry"
-          />
+          <SubmitButton className="contact_form_send btn" label="Send my enquiry"/>
+          
         </form>
       </div>
     </div>

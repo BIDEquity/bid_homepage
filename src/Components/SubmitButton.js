@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactiveButton from "reactive-button";
 
-function SubmitButton() {
+function SubmitButton(props) {
   const [state, setState] = useState("idle");
 
   const onClickHandler = () => {
@@ -15,7 +15,7 @@ function SubmitButton() {
     <ReactiveButton
       buttonState={state}
       onClick={onClickHandler}
-      idleText={"Sign me up"}
+      idleText={props.label}
       loadingText={
         
           <span class="loader"></span>
