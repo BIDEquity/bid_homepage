@@ -21,8 +21,13 @@ const SITEMAP_OBJ_CLASSES_WHITELIST = [
   "Event",
   "Homepage",
   "Job",
+  "JobApplyForm",
   "LandingPage",
+  "NewsPost",
   "Page",
+  "PartnerPost",
+  "PortfolioPost",
+  "TeamMemberPage"
 ];
 
 async function prerenderContent() {
