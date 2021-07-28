@@ -39,7 +39,7 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
           className="contact_form"
           name="contact"
           method="post"
-          action="en/contact/complete"
+          action="/en/contact/complete"
           netlify-honeypot="bot-field"
           data-netlify="true"
         >
