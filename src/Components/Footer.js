@@ -131,7 +131,7 @@ function Footer() {
                 <a href="about">About</a>
                 <a href="portfolio">Portfolio</a>
                 <a href="entrepreneurs">Entrepreneurs</a>
-                <a href="intermediaries">M&amp;A Partners</a>
+                <a href="advisors">M&amp;A Partners</a>
                 <a href="investors">Investors</a>
                 <a href="news">News</a>
                 <a href="jobs">Jobs</a>
@@ -161,7 +161,7 @@ function Footer() {
                 <a href="about">About</a>
                 <a href="portfolio">Portfolio</a>
                 <a href="entrepreneurs">Entrepreneurs</a>
-                <a href="intermediaries">M&amp;A Partners</a>
+                <a href="advisors">M&amp;A Partners</a>
                 <a href="investors">Investors</a>
                 <a href="news">News</a>
                 <a href="jobs">Jobs</a>
