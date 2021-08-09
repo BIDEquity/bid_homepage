@@ -7,6 +7,7 @@ class LanguageSwitch extends React.Component {
     super(props);
 
     this.toggleLanguage = this.toggleLanguage.bind(this);
+    this.showLanguage = this.showLanguage.bind(this);
     this.state = {
       language: false,
     };
@@ -15,6 +16,12 @@ class LanguageSwitch extends React.Component {
   toggleLanguage() {
     this.setState({
       language: !this.state.language,
+    });
+  }
+
+  showLanguage() {
+    this.setState({
+      language: true,
     });
   }
 
@@ -27,11 +34,11 @@ class LanguageSwitch extends React.Component {
     ).toArray();
       
     return (
-      <ul className="lang-switch">
-        <li className={`nav-item ${this.state.language ? "open" : ""}`}>
+      <ul className="lang-switch" onMouseLeave={this.toggleLanguage}>
+        <li onMouseEnter={this.showLanguage} className={`nav-item ${this.state.language ? "open" : ""}`}>
           <a
             className="nav-link"
-            onMouseEnter={this.toggleLanguage}
+            
             onClick={this.toggleLanguage}
           >
             {getRoot() === "de" ? "DE" : "EN"}
@@ -39,7 +46,7 @@ class LanguageSwitch extends React.Component {
           </a>
 
           <ul
-            onMouseLeave={this.toggleLanguage}
+            
             className={`dropdown-menu ${
               this.state.language
                 ? "show-language menu-toggle"
