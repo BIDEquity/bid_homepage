@@ -62,8 +62,8 @@
   }
 
   > li {
-    &:hover > a,
-    &:focus > a {
+    &:hover  a,
+    &:focus  a {
       background: transparent;
       color: $primary;
     }
