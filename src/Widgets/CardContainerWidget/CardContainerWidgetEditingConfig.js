@@ -6,7 +6,7 @@ Scrivito.provideEditingConfig('CardContainerWidget', {
   thumbnail: sectionWidgetIcon,
   
   properties: [
-    'items'
-
+    'items',
+    'moreLink'
   ],
 })

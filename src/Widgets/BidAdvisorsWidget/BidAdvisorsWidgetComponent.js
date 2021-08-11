@@ -188,11 +188,7 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
               <Scrivito.ContentTag content={widget} attribute="slider" />
             </div>
 
-            <div className="posts_more">
-              <a className="more_link" href="#">
-                More news
-              </a>
-            </div>
+            
           </div>
           <div className="content_info">
             <div className="content_info_inner">

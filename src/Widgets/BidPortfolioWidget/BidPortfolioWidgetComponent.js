@@ -59,9 +59,7 @@ Scrivito.provideComponent("BidPortfolioWidget", ({ widget }) => {
             className="section_title bottom_line"
           />
           <Scrivito.ContentTag content={widget} attribute="content" />
-          <div class="posts_more">
-						<a class="more_link" href="#">More news</a>
-					</div>
+          
         </div>
       </div>
     </>

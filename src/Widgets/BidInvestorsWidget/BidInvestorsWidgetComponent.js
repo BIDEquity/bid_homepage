@@ -100,11 +100,7 @@ Scrivito.provideComponent("BidInvestorsWidget", ({ widget }) => {
                 />
               
             
-          <div className="posts_more">
-            <a className="more_link" href="#">
-              More news
-            </a>
-          </div>
+          
         </div>
       </div>
       <div className="entrepreneurs_help">

@@ -1,5 +1,7 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
+import NextLink from "../../Components/NextLink";
+import PreviousLink from "../../Components/PreviousLink"
 
 Scrivito.provideComponent("TeamMemberPage", ({ page }) => {
 
@@ -88,6 +90,7 @@ Scrivito.provideComponent("TeamMemberPage", ({ page }) => {
               />
                 <div className="content_nav_info">
                   <span className="content_nav_name">
+                    
                     <Scrivito.ContentTag
                       tag="span"
                       content={page}
