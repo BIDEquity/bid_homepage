@@ -296,6 +296,60 @@ Scrivito.provideComponent("BidAboutWidget", ({ widget }) => {
                 />
               </div>
             </div>
+
+            <div className="service_item">
+              
+              <Scrivito.ContentTag
+                  content={widget}
+                  tag="p"
+                  attribute="serviceItemName4"
+                  className="service_item_name"
+                />
+              <div className="service_item_text">
+              <Scrivito.ContentTag
+                  content={widget}
+                  tag="p"
+                  attribute="serviceItemText4"
+                  
+                />
+              </div>
+            </div>
+
+            <div className="service_item">
+              
+              <Scrivito.ContentTag
+                  content={widget}
+                  tag="p"
+                  attribute="serviceItemName5"
+                  className="service_item_name"
+                />
+              <div className="service_item_text">
+              <Scrivito.ContentTag
+                  content={widget}
+                  tag="p"
+                  attribute="serviceItemText5"
+                  
+                />
+              </div>
+            </div>
+
+            <div className="service_item">
+              
+              <Scrivito.ContentTag
+                  content={widget}
+                  tag="p"
+                  attribute="serviceItemName6"
+                  className="service_item_name"
+                />
+              <div className="service_item_text">
+              <Scrivito.ContentTag
+                  content={widget}
+                  tag="p"
+                  attribute="serviceItemText6"
+                  
+                />
+              </div>
+            </div>
             
           </div>
           <div className="services_more">
