@@ -14,12 +14,14 @@ function baseUrlForSite(siteId) {
 function siteForUrl(url) {
   let siteId;
   switch (new URL(url).pathname.split("/")[1]) {
-    case "en":
-      siteId = "en";
-      return { siteId, baseUrl: baseUrlForSite(siteId) };
     case "de":
       siteId = "de";
       return { siteId, baseUrl: baseUrlForSite(siteId) };
+    case "en":
+      siteId = "en";
+      return { siteId, baseUrl: baseUrlForSite(siteId) };
+    default:
+      return { siteId: "en", baseUrl: window.location.origin };
   }
 }
 
