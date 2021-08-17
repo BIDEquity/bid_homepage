@@ -2713,7 +2713,7 @@ body {
 .service_wrap {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -12px;
+    margin: 0 -12px 24px -12px;
 
     @media screen and (max-width: 991px) {
         display: block;
