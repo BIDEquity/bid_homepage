@@ -296,7 +296,8 @@ Scrivito.provideComponent("BidAboutWidget", ({ widget }) => {
                 />
               </div>
             </div>
-
+            </div>
+            <div className="service_wrap">
             <div className="service_item">
               
               <Scrivito.ContentTag
