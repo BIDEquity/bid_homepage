@@ -54,14 +54,14 @@ class LanguageSwitch extends React.Component {
             }`}
           >
             {homepages.map((homepage) => (
-              homepage.id() !== "c11fec265ccbf94d" &&
+              
               <li className="nav-item" key={homepage.id()}>
                 <Scrivito.LinkTag
                   onClick={this.toggleLanguage}
                   to={homepage}
                   className="nav-link"
                 >
-                  {homepage.id() === "73135f17d58607f8" ? "EN" : "DE"}
+                  {homepage.id() === "c11fec265ccbf94d" ? "EN" : "DE"}
                 </Scrivito.LinkTag>
               </li>
               

@@ -95,10 +95,14 @@ class BidJobOverviewWidgetComponent extends React.Component {
       <div className="jobs_content bg_blue" id="search">
         <div className="jobs_content_top">
           <div className="container">
-            <h2 className="section_title bottom_line col_6 col_t_12">
-              Current job opportunities sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor
-            </h2>
+            
+              <Scrivito.ContentTag
+                content={widget}
+                attribute="title"
+                tag="h2"
+                className="section_title bottom_line col_6 col_t_12"
+              />
+            
           </div>
         </div>
         <div className="container">
