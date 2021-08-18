@@ -14,9 +14,12 @@ import Select from "react-select";
 
 const companies = [
   { value: "evidentic", label: "Evidentic" },
-  { value: "radical-path", label: "Radical Path" },
   { value: "just-relate", label: "Just Relate" },
-  { value: "microsoft", label: "Microsoft" },
+  { value: "kobold", label: "Kobold" },
+  { value: "midoco", label: "Midoco" },
+  { value: "eSight-energy", label: "eSight Energy" },
+  { value: "myneva", label: "myneva" },
+  { value: "bid-equity", label: "BID Equity" },
 ];
 
 class BidNewsOverviewWidgetComponent extends React.Component {
