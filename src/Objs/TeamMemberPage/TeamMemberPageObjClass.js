@@ -6,6 +6,7 @@ const TeamMemberPage = Scrivito.provideObjClass("TeamMemberPage", {
   attributes: {
     ...defaultPageAttributes,
     headline: "string",
+    date: "date",
     contentCategory: "string",
     image: ["reference", { only: "Image" }],
     articleIntro: "string",
@@ -16,8 +17,8 @@ const TeamMemberPage = Scrivito.provideObjClass("TeamMemberPage", {
     nextMember: "string",
     job: "string",
     content: "widgetlist",
-    next: "string",
-    prev: "string",
+    nextLabel: "string",
+    prevLabel: "string",
     ...metadataAttributes,
   },
   extractTextAttributes: ["body"],

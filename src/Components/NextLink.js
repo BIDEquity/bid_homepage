@@ -7,8 +7,8 @@ const NextLink = Scrivito.connect(({ currentPost, type }) => {
   // find greater than publishedAt
   const newerPost = Scrivito.getClass(type)
     .where("date", "isGreaterThan", currentDate)
-    .order("date", "asc")
-    .first();
+    .order("date", "asc").first();
+    console.log("date",currentDate) 
 
   if (!newerPost) {
     return null;
