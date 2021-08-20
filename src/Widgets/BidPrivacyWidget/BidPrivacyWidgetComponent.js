@@ -25,7 +25,7 @@ Scrivito.provideComponent("BidPrivacyWidget", ({ widget }) => {
                     
                 </div>
                 <div className="article_content_sidebar">
-                    <a className="content_nav_link content_next" href="#">
+                    <a className="content_nav_link content_next" href="imprint">
                     <Scrivito.ContentTag
                 content={widget}
                 attribute="next"
