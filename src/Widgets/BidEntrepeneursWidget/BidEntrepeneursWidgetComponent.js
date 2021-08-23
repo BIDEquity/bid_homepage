@@ -75,7 +75,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                         attribute="circleText1"
                         tag="span"
                       />
-                      <span className="plus">+</span>
+                      
                     </p>
                   </div>
                 </div>
@@ -101,7 +101,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                         attribute="circleText2"
                         tag="span"
                       />
-                      <span className="plus">+</span>
+                      
                     </p>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                         attribute="circleText3"
                         tag="span"
                       />
-                      <span className="plus">+</span>
+                      
                     </p>
                   </div>
                 </div>
@@ -153,7 +153,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                         attribute="circleText4"
                         tag="span"
                       />
-                      <span className="plus">+</span>
+                      
                     </p>
                   </div>
                 </div>

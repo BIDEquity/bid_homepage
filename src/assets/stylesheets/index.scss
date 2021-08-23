@@ -1552,6 +1552,16 @@ a.btn:hover {
   height: auto !important;
 }
 
+.exited {
+  background-color: #3d5e67;
+  color:#dbe2e3;
+  width: 100px;
+  text-align: center;
+  padding: 6px 0;
+  position: absolute;
+  top: 0;
+}
+
 @media screen and (min-width: 992px) {
   .entrepreneurs_intro_box {
     margin-top: -460px !important;

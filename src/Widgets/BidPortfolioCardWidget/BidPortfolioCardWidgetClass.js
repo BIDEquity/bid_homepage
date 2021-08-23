@@ -5,6 +5,7 @@ const BidPortfolioCardWidget = Scrivito.provideWidgetClass("BidPortfolioCardWidg
     image: ["reference", {only: "Image"}],
     backgroundColor: ["enum", { values: ["yes", "no"] }],
     logo: ["enum", { values: ["yes", "no"] }],
+    exited: ["enum", { values: ["yes", "no"] }],
     company: "string",
     text: "html",
     portfolioLink: "link",

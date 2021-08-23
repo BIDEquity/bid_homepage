@@ -3,6 +3,7 @@ import * as Scrivito from "scrivito";
 import { Swiper } from "swiper/react";
 
 Scrivito.provideComponent("PortfolioPost", ({ page }) => {
+  const exited = page.get("exited") || "no"
   const params = {
     loop: false,
     watchOverflow: true,
@@ -28,6 +29,7 @@ Scrivito.provideComponent("PortfolioPost", ({ page }) => {
           <div className="article_content_wrap">
             <div className="article_content_main">
               <div className="article_content_top">
+                {exited === "yes" && <div className="exited">Exited</div>}
                 <div className="article_content_logo">
                   <Scrivito.ImageTag
                     content={page}

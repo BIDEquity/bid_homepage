@@ -17,14 +17,23 @@ Scrivito.provideEditingConfig("PortfolioPost", {
   title: "PortfolioPost",
   thumbnail: PageObjIcon,
   attributes: {
+    exited: {
+      title: "Should the exited label be shown?",
+      description: "Default: No",
+      values: [
+        { value: "yes", title: "Yes" },
+        { value: "no", title: "No" },
+      ],
+    },
     ...defaultPageEditingConfigAttributes,
     ...metadataEditingConfigAttributes,
   },
-  properties: [...defaultPageProperties, "detailsButton"],
+  properties: [...defaultPageProperties, "exited", "detailsButton"],
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
     ...defaultPageInitialContent,
     ...metadataInitialContent,
+    exited: "no"
   },
   validations: [...defaultPageValidations, ...metadataValidations],
 });
