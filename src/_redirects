@@ -1,9 +1,3 @@
-##
-# Scrivito routes
-/scrivito/:slug/* /scrivito/index.html 200
-/scrivito /scrivito/index.html 200
-# Netlify redirect rules. See https://www.netlify.com/docs/redirects/ for details.
-##
 https://bid-equity-relaunch.netlify.app/ https://bid-equity-relaunch.netlify.app/en
 # Single Page Application routes
 /404 /catch_all_index.html 404

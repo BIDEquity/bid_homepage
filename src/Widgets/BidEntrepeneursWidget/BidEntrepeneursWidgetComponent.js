@@ -10745,6 +10745,12 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     />
                     <span className="plus">+</span>
                   </p>
+                  
+                  <Scrivito.ContentTag
+                      content={widget}
+                      attribute="popup1"
+                      className="popup"
+                    />
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
@@ -10762,6 +10768,11 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     />
                     <span className="plus">+</span>
                   </p>
+                  <Scrivito.ContentTag
+                      content={widget}
+                      attribute="popup2"
+                      className="popup"
+                    />
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
@@ -10779,6 +10790,11 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     />
                     <span className="plus">+</span>
                   </p>
+                  <Scrivito.ContentTag
+                      content={widget}
+                      attribute="popup3"
+                      className="popup"
+                    />
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
@@ -10796,6 +10812,11 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     />
                     <span className="plus">+</span>
                   </p>
+                  <Scrivito.ContentTag
+                      content={widget}
+                      attribute="popup4"
+                      className="popup"
+                    />
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
@@ -10813,6 +10834,11 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     />
                     <span className="plus">+</span>
                   </p>
+                  <Scrivito.ContentTag
+                      content={widget}
+                      attribute="popup5"
+                      className="popup"
+                    />
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
@@ -10830,6 +10856,11 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     />
                     <span className="plus">+</span>
                   </p>
+                  <Scrivito.ContentTag
+                      content={widget}
+                      attribute="popup6"
+                      className="popup"
+                    />
                 </div>
               </div>
               <div className="entrepreneurs_strategies_description">

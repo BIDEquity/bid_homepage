@@ -15,5 +15,11 @@ Scrivito.provideEditingConfig("BidEntrepeneursWidget", {
     "strategyLink",
     "icon",
     "leverCTA",
+    "popup1",
+    "popup2",
+    "popup3",
+    "popup4",
+    "popup5",
+    "popup6",
   ],
 });
