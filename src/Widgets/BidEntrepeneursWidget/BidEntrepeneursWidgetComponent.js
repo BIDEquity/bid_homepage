@@ -17,6 +17,19 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
   const leverLink = widget.get("leverCTA");
   let leverLinkText = leverLink && leverLink.title();
 
+  const [showPopup1, setPopup1] = React.useState(false);
+  const [showPopup2, setPopup2] = React.useState(false);
+  const [showPopup3, setPopup3] = React.useState(false);
+  const [showPopup4, setPopup4] = React.useState(false);
+  const [showPopup5, setPopup5] = React.useState(false);
+  const [showPopup6, setPopup6] = React.useState(false);
+  const onClick1 = () => setPopup1(!showPopup1);
+  const onClick2 = () => setPopup2(!showPopup2);
+  const onClick3 = () => setPopup3(!showPopup3);
+  const onClick4 = () => setPopup4(!showPopup4);
+  const onClick5 = () => setPopup5(!showPopup5);
+  const onClick6 = () => setPopup6(!showPopup6);
+
   return (
     <>
       <div className="top_article top_entrepreneurs bg-grey">
@@ -10743,14 +10756,20 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                       attribute="strategyText1"
                       tag="span"
                     />
-                    <span className="plus">+</span>
+                    <span className="plus" onClick={onClick1}>+</span>
                   </p>
-                  
+                  {showPopup1 &&
+                  <div className="popup-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
                   <Scrivito.ContentTag
                       content={widget}
                       attribute="popup1"
                       className="popup"
-                    />
+                    >
+
+                      </Scrivito.ContentTag>
+                    </div>
+                  }
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
@@ -10766,13 +10785,15 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                       attribute="strategyText2"
                       tag="span"
                     />
-                    <span className="plus">+</span>
+                    <span className="plus" onClick={onClick2}>+</span>
                   </p>
+                  {showPopup2 &&
                   <Scrivito.ContentTag
                       content={widget}
                       attribute="popup2"
                       className="popup"
                     />
+                  }
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
@@ -10793,7 +10814,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                   <Scrivito.ContentTag
                       content={widget}
                       attribute="popup3"
-                      className="popup"
+                      className="hidden"
                     />
                 </div>
                 <div className="entrepreneurs_strategy_box">
@@ -10815,7 +10836,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                   <Scrivito.ContentTag
                       content={widget}
                       attribute="popup4"
-                      className="popup"
+                      className="hidden"
                     />
                 </div>
                 <div className="entrepreneurs_strategy_box">
@@ -10837,7 +10858,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                   <Scrivito.ContentTag
                       content={widget}
                       attribute="popup5"
-                      className="popup"
+                      className="hidden"
                     />
                 </div>
                 <div className="entrepreneurs_strategy_box">
@@ -10859,7 +10880,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                   <Scrivito.ContentTag
                       content={widget}
                       attribute="popup6"
-                      className="popup"
+                      className="hidden"
                     />
                 </div>
               </div>

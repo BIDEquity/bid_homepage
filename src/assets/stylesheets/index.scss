@@ -5,6 +5,7 @@
 @import "variables";
 @import "mixins";
 @import "main";
+@import "_fontawesome";
 
 /* react-slick
 ================================================== */
@@ -1117,6 +1118,8 @@ nav .open .dropdown-menu.lang-switch a {
   top: 14px;
   left: 44px;
 }
+
+
 
 @keyframes line {
   from {
