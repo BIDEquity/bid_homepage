@@ -10788,11 +10788,15 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     <span className="plus" onClick={onClick2}>+</span>
                   </p>
                   {showPopup2 &&
+                  <div className="popup-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+                
                   <Scrivito.ContentTag
                       content={widget}
                       attribute="popup2"
                       className="popup"
                     />
+                    </div>
                   }
                 </div>
                 <div className="entrepreneurs_strategy_box">
@@ -10809,13 +10813,19 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                       attribute="strategyText3"
                       tag="span"
                     />
-                    <span className="plus">+</span>
+                    <span className="plus" onClick={onClick3}>+</span>
                   </p>
+                  {showPopup3 &&
+                  <div className="popup-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+                
                   <Scrivito.ContentTag
                       content={widget}
                       attribute="popup3"
                       className="hidden"
                     />
+                    </div>
+                  }
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
@@ -10831,13 +10841,19 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                       attribute="strategyText4"
                       tag="span"
                     />
-                    <span className="plus">+</span>
+                    <span className="plus" onClick={onClick4}>+</span>
                   </p>
+                  {showPopup4 &&
+                  <div className="popup-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+                
                   <Scrivito.ContentTag
                       content={widget}
                       attribute="popup4"
                       className="hidden"
                     />
+                    </div>
+                  } 
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
@@ -10853,13 +10869,19 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                       attribute="strategyText5"
                       tag="span"
                     />
-                    <span className="plus">+</span>
+                    <span className="plus" onClick={onClick5}>+</span>
                   </p>
+                  {showPopup5 &&
+                  <div className="popup-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+                
                   <Scrivito.ContentTag
                       content={widget}
                       attribute="popup5"
                       className="hidden"
                     />
+                    </div>
+                  }
                 </div>
                 <div className="entrepreneurs_strategy_box">
                   <div className="entrepreneurs_strategy_icon">
@@ -10875,13 +10897,19 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                       attribute="strategyText6"
                       tag="span"
                     />
-                    <span className="plus">+</span>
+                    <span className="plus" onClick={onClick6}>+</span>
                   </p>
+                  {showPopup6 &&
+                  <div className="popup-wrapper">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+                
                   <Scrivito.ContentTag
                       content={widget}
                       attribute="popup6"
                       className="hidden"
                     />
+                    </div>
+                  }
                 </div>
               </div>
               <div className="entrepreneurs_strategies_description">
