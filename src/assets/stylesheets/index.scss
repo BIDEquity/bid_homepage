@@ -166,7 +166,7 @@ body {
   width: 1354px;
   margin: 0 auto;
   padding: 0 64px;
-
+  position: relative;
   @media screen and (max-width: 991px) {
     padding: 0 32px;
   }
@@ -676,8 +676,26 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
     }
 }
 
+.close {
+  position: absolute;
+  z-index: 3100;
+  width: 9px;
+  height: 9px;
+  top: -36px;
+  left: 27%;
+  cursor: pointer;
+}
+
 .plus {
   cursor: pointer;
+}
+
+.form-wrapper {
+  position: absolute;
+  width: 100%;
+  z-index: 2000;
+  left: 25%;
+  top: -57px;
 }
 
 /* content adaptions */

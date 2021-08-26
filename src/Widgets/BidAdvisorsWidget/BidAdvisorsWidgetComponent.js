@@ -18,12 +18,28 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
   const leverLink = widget.get("leverCTA");
   let leverLinkText = leverLink && leverLink.title();
 
+  const [showPopup,setShowPopUp] = React.useState(false)
+
+  const onClick = () => setShowPopUp(!showPopup)
+
   return (
     <>
       <div className="top_article top_entrepreneurs bg-grey">
         <div className="entrepreneurs_intro bg-grey">
           <div className="container">
+          
+            {showPopup &&
+            <>
+            <svg className="close" onClick={onClick} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+          <Scrivito.ContentTag
+                  content={widget}
+                  attribute="formWidget"
+                  className="form-wrapper"
+                />
+                </>
+            }
             <div className="entrepreneurs_intro_box info_box">
+            
               <div className="info_box_content">
                 <Scrivito.ContentTag
                   content={widget}
@@ -32,14 +48,19 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
                   className="section_title bottom_line light"
                 />
 
-                <Scrivito.LinkTag to={link} className="info_box_link">
+                <Scrivito.LinkTag onClick={onClick} className="info_box_link">
                   {linktext}
+                  
                 </Scrivito.LinkTag>
+                
               </div>
+              
             </div>
           </div>
         </div>
+        
       </div>
+      
       <div className="advisors_partners bg_blue_light">
         <div className="container">
           <Scrivito.ContentTag
