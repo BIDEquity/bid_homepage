@@ -18,28 +18,47 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
   const leverLink = widget.get("leverCTA");
   let leverLinkText = leverLink && leverLink.title();
 
-  const [showPopup,setShowPopUp] = React.useState(false)
+  const [showPopup, setShowPopUp] = React.useState(false);
 
-  const onClick = () => setShowPopUp(!showPopup)
+  const onClick = () => setShowPopUp(!showPopup);
 
   return (
     <>
       <div className="top_article top_entrepreneurs bg-grey">
         <div className="entrepreneurs_intro bg-grey">
           <div className="container">
-          
-            {showPopup &&
-            <>
-            <svg className="close" onClick={onClick} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
-          <Scrivito.ContentTag
-                  content={widget}
-                  attribute="formWidget"
-                  className="form-wrapper"
-                />
-                </>
-            }
+            {showPopup && (
+              <div className="form-wrapper">
+                <svg
+                  className="close"
+                  onClick={onClick}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18.121"
+                  height="18.121"
+                  viewBox="0 0 18.121 18.121"
+                  fill="red"
+                  stroke="red"
+                  strokeWidth="1.5"
+                >
+                  <g transform="translate(-478.939 -846.939)">
+                    <line
+                      x1="16"
+                      y2="16"
+                      transform="translate(480 848)"
+                      strokeLinecap="round"
+                    />
+                    <line
+                      x1="16"
+                      y1="16"
+                      transform="translate(480 848)"
+                      strokeLinecap="round"
+                    />
+                  </g>
+                </svg>
+                <Scrivito.ContentTag content={widget} attribute="formWidget" />
+              </div>
+            )}
             <div className="entrepreneurs_intro_box info_box">
-            
               <div className="info_box_content">
                 <Scrivito.ContentTag
                   content={widget}
@@ -50,17 +69,13 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
 
                 <Scrivito.LinkTag onClick={onClick} className="info_box_link">
                   {linktext}
-                  
                 </Scrivito.LinkTag>
-                
               </div>
-              
             </div>
           </div>
         </div>
-        
       </div>
-      
+
       <div className="advisors_partners bg_blue_light">
         <div className="container">
           <Scrivito.ContentTag
@@ -69,11 +84,8 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
             tag="h2"
             className="section_title col_8 col_t_12"
           />
-          <Scrivito.ContentTag
-            content={widget}
-            attribute="partnerSlider"
-          />
-                    <div className="content_info">
+          <Scrivito.ContentTag content={widget} attribute="partnerSlider" />
+          <div className="content_info">
             <div className="content_info_inner">
               <div className="content_info_top">
                 <div className="content_info_img">
@@ -208,8 +220,6 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
             <div className="swiper-wrapper">
               <Scrivito.ContentTag content={widget} attribute="slider" />
             </div>
-
-            
           </div>
           <div className="content_info">
             <div className="content_info_inner">
@@ -262,19 +272,17 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
         <div className="transaction_process_overview bg_blue">
           <div className="container">
             <div className="transaction_process_wrap">
-              
               <Scrivito.ContentTag
-            content={widget}
-            attribute="processTitle"
-            tag="h2"
-            className="section_title col_8 col_t_12"
-          />
+                content={widget}
+                attribute="processTitle"
+                tag="h2"
+                className="section_title col_8 col_t_12"
+              />
               <div className="transaction_process_section">
-              <Scrivito.ContentTag
-            content={widget}
-            attribute="processSlider"
-          />
-                
+                <Scrivito.ContentTag
+                  content={widget}
+                  attribute="processSlider"
+                />
               </div>
             </div>
             <div className="content_info">
@@ -305,7 +313,6 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
                       />
                     </div>
                     <div className="testimonial_item_bottom">
-                      
                       <Scrivito.ContentTag
                         content={widget}
                         attribute="name"
@@ -330,14 +337,18 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
                   </div>
                   <div className="content_info_box info_box">
                     <div className="info_box_content">
-                      
                       <Scrivito.ContentTag
                         content={widget}
                         attribute="infoBoxTitle3"
                         tag="h2"
                         className="title_block bottom_line light"
                       />
-                      <Scrivito.LinkTag className="info_box_link" to={infolink3}>{infolinktext3}</Scrivito.LinkTag>
+                      <Scrivito.LinkTag
+                        className="info_box_link"
+                        to={infolink3}
+                      >
+                        {infolinktext3}
+                      </Scrivito.LinkTag>
                     </div>
                   </div>
                 </div>
@@ -355,10 +366,7 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
             className="section_title col_8 col_t_12"
           />
           <div className="portfolio_posts_wrap">
-            <Scrivito.ContentTag
-              content={widget}
-              attribute="portfolio"
-            />
+            <Scrivito.ContentTag content={widget} attribute="portfolio" />
           </div>
           <div className="advisors_brands_more">
             <a className="more_link" href="#">
@@ -375,7 +383,6 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
             tag="h2"
             className="section_title col_8 col_t_12"
           />
-          
 
           <Scrivito.ContentTag content={widget} attribute="tagSection" />
         </div>

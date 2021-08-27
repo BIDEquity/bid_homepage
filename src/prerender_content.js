@@ -15,14 +15,9 @@ const PRERENDER_OBJ_CLASSES_BLACKLIST = [
 ];
 
 const SITEMAP_OBJ_CLASSES_WHITELIST = [
-  "Author",
-  "Blog",
-  "BlogPost",
-  "Event",
   "Homepage",
   "Job",
   "JobApplyForm",
-  "LandingPage",
   "NewsPost",
   "Page",
   "PartnerPost",
