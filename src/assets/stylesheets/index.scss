@@ -1135,9 +1135,7 @@ nav .open .dropdown-menu.lang-switch a {
 
 .lang-switch a {
   text-transform: uppercase;
-  &:hover {
-    color: $primary;
-  }
+  
 }
 
 .hide-language {
@@ -1147,9 +1145,12 @@ nav .open .dropdown-menu.lang-switch a {
 .show-language {
   transition: all ease 0.5s;
   display: block;
-  a {
+  li a {
     color: #fff !important;
     margin: 0 !important;
+    &:hover {
+      color: $primary !important;
+    }
   }
   .nav-link {
     margin: 0 !important;
