@@ -39,12 +39,9 @@ class TabbedBlocksComponent extends React.Component {
       speed: 800,
       loop: "false",
 
-      pagination: {
-        el: ".entrepreneurs_help_navbar",
-        clickable: "true",
-      },
+      
     };
-
+    
     if (!items.length) {
       return (
         <InPlaceEditingPlaceholder center>
@@ -56,13 +53,15 @@ class TabbedBlocksComponent extends React.Component {
     return (
       <>
         <div className="entrepreneurs_help_navbar bottom_line">
-          <ButtonTagList
-            showTags
-            tags={allTags(items)}
-            currentTag={this.state.currentTag}
-            setTag={this.setTag}
-            //onClick={swiper.slideTo(3)}
-          />
+          <ul className="entrepreneurs_help_nav">
+          {items.map((item, index) => {
+            
+            return (
+            <li key={index}>{item.get("tag")}</li>
+            
+            )
+          })}
+          </ul>
         </div>
 
         <Swiper {...params}>

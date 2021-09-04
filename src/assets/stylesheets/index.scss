@@ -1244,60 +1244,6 @@ nav .open .dropdown-menu.lang-switch a {
   width: 100vw !important;
 }
 
-.entrepreneurs_help_navbar {
-  .swiper-pagination-bullet:nth-of-type(1):after {
-    content: "Investment";
-    height: 24px;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-
-  .swiper-pagination-bullet:nth-of-type(2):after {
-    content: "Sales and Marketing";
-    height: 24px;
-    margin-left: 20px;
-    width: -moz-fit-content !important;
-    width: fit-content;
-  }
-
-  .swiper-pagination-bullet:nth-of-type(3):after {
-    content: "Mergers and Acquisitions";
-    height: 24px;
-    margin-left: 20px;
-    width: -moz-fit-content !important;
-    width: fit-content;
-  }
-
-  .swiper-pagination-bullet:nth-of-type(4):after {
-    content: "Internationalisation";
-    height: 24px;
-    margin-left: 20px;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-
-  .swiper-pagination-bullet-active {
-    font-weight: 700;
-  }
-
-  .swiper-pagination-bullet {
-    white-space: nowrap;
-    margin-right: 32px;
-
-    color: #f4544f;
-    font-size: 18px;
-    line-height: 31px;
-    letter-spacing: -0.008em;
-  }
-
-  .swiper-pagination-bullet,
-  .swiper-pagination-bullet-active {
-    height: 0;
-    opacity: 1 !important;
-    width: -moz-fit-content !important;
-    width: fit-content;
-  }
-}
 
 .posts_slider .post_slide {
   margin-right: 24px !important;
@@ -1307,10 +1253,6 @@ nav .open .dropdown-menu.lang-switch a {
   padding: 837px 0 0 !important;
   margin-bottom: -200px !important;
 }*/
-
-.entrepreneurs_help_navbar {
-  padding-bottom: 24px;
-}
 
 .entrepreneurs_help {
   overflow: hidden !important;

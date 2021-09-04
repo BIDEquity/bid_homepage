@@ -17,16 +17,15 @@ Scrivito.provideEditingConfig('TabbedBlocksItemWidget', {
     image: {
       title: 'Image'
     },
-    tags: {
-      title: 'Tags'
+    tag: {
+      title: 'Tab label'
     }
   },
   properties: [
-    'teaser',
     'title',
     'text',
     'image',
-    'tags',
+    'tag',
     'sliderLink'
   ]
 
