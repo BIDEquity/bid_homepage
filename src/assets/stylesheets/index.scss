@@ -272,6 +272,23 @@ ol {
   padding: 0 !important;
 }
 
+.entrepreneurs_help_nav .swiper-pagination-bullet {
+  width: auto !important;
+  height: auto !important;
+  display: inline-block;
+  border-radius: 0 !important;
+  background: transparent !important;
+  opacity: 1 !important;
+  position: relative;
+  z-index: 10000;
+}
+
+.swiper-pagination-bullet-active {
+  font-weight: 700;
+  position: relative;
+z-index: 10000;
+}
+
 img,
 .img-fluid {
   margin: 0 0 0 0;

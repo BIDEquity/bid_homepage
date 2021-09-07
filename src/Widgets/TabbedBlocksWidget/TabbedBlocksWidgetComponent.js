@@ -34,10 +34,18 @@ class TabbedBlocksComponent extends React.Component {
     const widget = this.props.widget;
     const items = widget.get("items");
     const params = {
-      loop: "true",
       slidesPerView: 1,
       speed: 800,
       loop: "false",
+      pagination: {
+        el: ".entrepreneurs_help_nav",
+        clickable: true,
+        
+        renderBullet: function (index, className) {
+          return '<li class="tab ' + className + '">' + (items[index].get("tag")) + '</li>';
+        },
+        
+      }
 
       
     };
