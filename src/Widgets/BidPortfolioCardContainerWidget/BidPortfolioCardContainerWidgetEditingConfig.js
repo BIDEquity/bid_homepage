@@ -6,7 +6,7 @@ Scrivito.provideEditingConfig('BidPortfolioCardContainerWidget', {
   thumbnail: sectionWidgetIcon,
   
   properties: [
-    'content'
-
+    'content',
+    'link'
   ],
 })
