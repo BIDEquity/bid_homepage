@@ -10973,11 +10973,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
           <div className="portfolio_posts_wrap">
             <Scrivito.ContentTag content={widget} attribute="partner" />
           </div>
-          <div className="entrepreneurs_brands_more">
-            <a className="more_link" href="#">
-              Explore all
-            </a>
-          </div>
+          
         </div>
       </div>
       <div className="entrepreneurs_help">
