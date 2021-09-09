@@ -78,7 +78,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
       newsSearch = newsSearch.and("category", "equals", this.state.selectedCat);
     }
 
-    console.table(newsSearch)
+    console.log(newsSearch)
 
     if (this.state.selectedCompany) {
       let company = this.state.selectedCompany.label;
@@ -94,6 +94,22 @@ class BidNewsOverviewWidgetComponent extends React.Component {
             <div className="news_panel">
               <nav id="nav" className="news_categories bottom_line">
                 <ul>
+                  {
+                    news.map((index,item) => 
+                    <li
+                    className={`${
+                      this.state.selectedCat === item.get("category") ? "active" : ""
+                      
+                    }`}
+                  >
+                    <a
+                      onClick={() => this.handleChangeCat(item)}
+                      href="#nav"
+                    >
+                      {item.get("category")}
+                    </a>
+                  </li>
+                    )}
                   <li
                     className={`${
                       this.state.selectedCat === "" ? "active" : ""
@@ -219,18 +235,21 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                     All
                   </a>
                 </li>
-                <li
-                  className={`${
-                    this.state.selectedCat === "Acquisitions" ? "active" : ""
-                  }`}
-                >
-                  <a
-                    onClick={() => this.handleChangeCat("Acquisitions")}
-                    href="#nav"
+                {
+                    news.map((item, index) => 
+                    <li key={index}
+                    className={`${
+                      this.state.selectedCat === item.get("category") ? "active" : ""
+                    }`}
                   >
-                    Acquisitions
-                  </a>
-                </li>
+                    <a
+                      onClick={() => this.handleChangeCat(item)}
+                      href="#nav"
+                    >
+                      {item.get("category")}
+                    </a>
+                  </li>
+                    )}
                 <li
                   className={`${
                     this.state.selectedCat === "Exits" ? "active" : ""
