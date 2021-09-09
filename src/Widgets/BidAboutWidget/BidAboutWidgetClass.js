@@ -49,6 +49,7 @@ const BidAboutWidget = Scrivito.provideWidgetClass("BidAboutWidget", {
     serviceItemText6: "string",
     allServicesLink: "link",
     teamSectionTitle: "string",
+    fullTeam: "link",
   },
   
 });

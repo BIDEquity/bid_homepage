@@ -122,7 +122,7 @@ function Footer() {
               </svg>
             </a>
             <p className="footer_cop bottom_line">
-              © 2021 Bid Equity Gmbh. All rights reserved.
+              © 2021 BID EQUITY GMBH. All rights reserved.
             </p>
             <div className="footer_box_links">
               <p className="footer_box_title">Quick Links</p>
@@ -147,7 +147,7 @@ function Footer() {
               {!altF && (
                 <>
                   <h3 className="footer_title">
-                    Get a reliable valuation for your business within two hours
+                    Get a reliable valuation for your business within 48 hours
                     from us.
                   </h3>
                   <a className="btn" href="#">

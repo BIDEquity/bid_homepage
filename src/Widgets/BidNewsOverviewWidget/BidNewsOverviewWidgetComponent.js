@@ -78,6 +78,8 @@ class BidNewsOverviewWidgetComponent extends React.Component {
       newsSearch = newsSearch.and("category", "equals", this.state.selectedCat);
     }
 
+    console.table(newsSearch)
+
     if (this.state.selectedCompany) {
       let company = this.state.selectedCompany.label;
       newsSearch = newsSearch.and("company", "equals", company);

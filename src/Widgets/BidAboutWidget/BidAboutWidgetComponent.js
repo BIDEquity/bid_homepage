@@ -10,6 +10,9 @@ Scrivito.provideComponent("BidAboutWidget", ({ widget }) => {
   let linktext2 = link2 && link2.title();
   let buttonText = button && button.title();
   let allServicesText = allServicesLink && allServicesLink.title();
+  const fullTeamLink = widget.get("fullTeam");
+  const fullTeamLinkText = fullTeamLink && fullTeamLink.title();
+
   return (
     <div>
       <div className="content_section">
@@ -377,9 +380,7 @@ Scrivito.provideComponent("BidAboutWidget", ({ widget }) => {
             />
           
           <div className="team_more">
-            <a className="more_link" href="#">
-              Full team
-            </a>
+            <Scrivito.LinkTag to={fullTeamLink} className="more_link">{fullTeamLinkText}</Scrivito.LinkTag>
           </div>
         </div>
       </div>

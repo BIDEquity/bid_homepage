@@ -46,24 +46,6 @@ Scrivito.provideComponent("NewsPost", ({ page }) => {
               </div>
               <div className="article_content_sidebar">
                 <NextLink type="NewsPost" currentPost={page}/>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="new_post_img">
-          <Scrivito.ImageTag content={page} attribute="image" />
-        </div>
-        <div className="article_new_bottom">
-          <div className="container">
-            <div className="article_content_wrap">
-              <div className="article_content_main">
-                <Scrivito.ContentTag
-                  content={page}
-                  attribute="body2"
-                  className="block_text"
-                />
-              </div>
-              <div className="article_content_sidebar">
                 <div className="testimonial_item dark">
                   <div className="testimonial_item_text">
                     <Scrivito.ContentTag
@@ -87,9 +69,16 @@ Scrivito.provideComponent("NewsPost", ({ page }) => {
                       className="testimonial_item_position"
                     />
                   </div>
-                </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="new_post_img">
+          <Scrivito.ImageTag content={page} attribute="image" />
+        </div>
+        <div className="article_new_bottom">
+          <div className="container">
+            
             <div className="article_content_nav content_nav">
               
                 <PreviousLink type="NewsPost" currentPost={page}  />
@@ -113,6 +102,7 @@ Scrivito.provideComponent("NewsPost", ({ page }) => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

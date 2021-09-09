@@ -289,6 +289,10 @@ ol {
 z-index: 10000;
 }
 
+.operational_value_btn{
+  white-space: wrap !important;
+}
+
 img,
 .img-fluid {
   margin: 0 0 0 0;
@@ -676,7 +680,7 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
 
 .popup-wrapper {
     position: absolute;
-    z-index: 1000;
+    z-index: 10000;
     left: 20.5%;
     background: #f1eade;
     top: 55px;
@@ -1794,7 +1798,7 @@ textarea {
 
   .B .box_B {
     height: 11.7%;
-    transform: translateY(-250.207px);
+    transform: translateY(-290px);
   }
 
   .B .box_C {

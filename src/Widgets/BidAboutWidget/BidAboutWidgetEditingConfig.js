@@ -8,6 +8,7 @@ Scrivito.provideEditingConfig("BidAboutWidget", {
     "teamLink2",
     "aboutButton",
     "allServicesLink",
+    "fullTeam",
   ],
   
 });
