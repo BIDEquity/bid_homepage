@@ -3,6 +3,7 @@ import * as Scrivito from "scrivito";
 import Checkbox from "../../Components/Checkbox";
 import "file-loader?name=[name].[contenthash].[ext]!./newsForm.html";
 import SubmitButton from "../../Components/SubmitButton";
+import NewsTagList from "../../Components/NewsTagList";
 /* This html file is needed for Netlify form handling. Updates to inputs in this file should also be
 added to contactForm.html as well. See the following link for details:
 https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/
@@ -32,21 +33,22 @@ class BidNewsOverviewWidgetComponent extends React.Component {
       checkedTerms: false,
       checkedPrivacy: false,
       formValue: "",
-      error: ""
+      error: "",
     };
 
     this.handleChange = (e) => this.setState({ formValue: e.target.value });
     this.handleSubmit = (e) => {
-      if(this.state.formValue === "") {
-        this.setState({error: "Please, enter an E-Mail address"})
+      if (this.state.formValue === "") {
+        this.setState({ error: "Please, enter an E-Mail address" });
         e.preventDefault();
       }
-      if(!this.state.checkedTerms || !this.state.checkedPrivacy) {
-        this.setState({error: "Please confirm the T&C’s and Privacy policy have been read and understood."})
+      if (!this.state.checkedTerms || !this.state.checkedPrivacy) {
+        this.setState({
+          error:
+            "Please confirm the T&C’s and Privacy policy have been read and understood.",
+        });
         e.preventDefault();
       }
-      
-     
     };
 
     this.handleChangeCat = (selectedOption) => {
@@ -64,253 +66,38 @@ class BidNewsOverviewWidgetComponent extends React.Component {
     this.handleChangePrivacy = () => {
       this.setState({ checkedPrivacy: !this.state.checkedPrivacy });
     };
-
   }
-
-  
 
   render() {
     const widget = this.props.widget;
     let newsSearch = Scrivito.Obj.where("_objClass", "equals", "NewsPost");
-
-    let news;
+    let initSearch = Scrivito.Obj.where("_objClass", "equals", "NewsPost");
+    let news, tags;
     if (this.state.selectedCat !== "") {
       newsSearch = newsSearch.and("category", "equals", this.state.selectedCat);
     }
-
-    console.log(newsSearch)
 
     if (this.state.selectedCompany) {
       let company = this.state.selectedCompany.label;
       newsSearch = newsSearch.and("company", "equals", company);
     }
 
-    news = [...newsSearch];
+    tags = allTags([...initSearch]);
+    
 
-    if (!news.length) {
-      return (
-        <div className="news_content">
-          <div className="container">
-            <div className="news_panel">
-              <nav id="nav" className="news_categories bottom_line">
-                <ul>
-                  {
-                    news.map((index,item) => 
-                    <li
-                    className={`${
-                      this.state.selectedCat === item.get("category") ? "active" : ""
-                      
-                    }`}
-                  >
-                    <a
-                      onClick={() => this.handleChangeCat(item)}
-                      href="#nav"
-                    >
-                      {item.get("category")}
-                    </a>
-                  </li>
-                    )}
-                  <li
-                    className={`${
-                      this.state.selectedCat === "" ? "active" : ""
-                    }`}
-                  >
-                    <a onClick={() => this.handleChangeCat("")} href="#nav">
-                      All
-                    </a>
-                  </li>
-                  <li
-                    className={`${
-                      this.state.selectedCat === "Acquisitions" ? "active" : ""
-                    }`}
-                  >
-                    <a
-                      onClick={() => this.handleChangeCat("Acquisitions")}
-                      href="#nav"
-                    >
-                      Acquisitions
-                    </a>
-                  </li>
-                  <li
-                    className={`${
-                      this.state.selectedCat === "Exits" ? "active" : ""
-                    }`}
-                  >
-                    <a
-                      onClick={() => this.handleChangeCat("Exits")}
-                      href="#nav"
-                    >
-                      Exits
-                    </a>
-                  </li>
-                  <li
-                    className={`${
-                      this.state.selectedCat === "People" ? "active" : ""
-                    }`}
-                  >
-                    <a
-                      onClick={() => this.handleChangeCat("People")}
-                      href="#nav"
-                    >
-                      People
-                    </a>
-                  </li>
-                  <li
-                    className={`${
-                      this.state.selectedCat === "Events" ? "active" : ""
-                    }`}
-                  >
-                    <a
-                      onClick={() => this.handleChangeCat("Events")}
-                      href="#nav"
-                    >
-                      Events
-                    </a>
-                  </li>
-                  <li
-                    className={`${
-                      this.state.selectedCat === "Market News" ? "active" : ""
-                    }`}
-                  >
-                    <a
-                      onClick={() => this.handleChangeCat("Market News")}
-                      href="#nav"
-                    >
-                      Market News
-                    </a>
-                  </li>
-                  <li
-                    className={`${
-                      this.state.selectedCat === "Insights" ? "active" : ""
-                    }`}
-                  >
-                    <a
-                      onClick={() => this.handleChangeCat("Insights")}
-                      href="#nav"
-                    >
-                      Insights
-                    </a>
-                  </li>
-                  <li
-                    className={`${
-                      this.state.selectedCat === "Tools" ? "active" : ""
-                    }`}
-                  >
-                    <a
-                      onClick={() => this.handleChangeCat("Tools")}
-                      href="#nav"
-                    >
-                      Tools
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-              <div className="news_sort">
-                <Select
-                  value={this.state.selectedCompany}
-                  onChange={this.handleChangeCompany}
-                  options={companies}
-                  placeholder="Sort by Portfolio Company"
-                  className="select_style"
-                  classNamePrefix="companies-select"
-                />
-              </div>
-            </div>
-          </div>
-          <h2 className="section_title">No results found</h2>
-        </div>
-      );
-    }
+    news = [...newsSearch];
 
     return (
       <div className="news_content">
         <div className="container">
           <div className="news_panel">
             <nav id="nav" className="news_categories bottom_line">
-              <ul>
-                <li
-                  className={`${this.state.selectedCat === "" ? "active" : ""}`}
-                >
-                  <a onClick={() => this.handleChangeCat("")} href="#nav">
-                    All
-                  </a>
-                </li>
-                {
-                    news.map((item, index) => 
-                    <li key={index}
-                    className={`${
-                      this.state.selectedCat === item.get("category") ? "active" : ""
-                    }`}
-                  >
-                    <a
-                      onClick={() => this.handleChangeCat(item)}
-                      href="#nav"
-                    >
-                      {item.get("category")}
-                    </a>
-                  </li>
-                    )}
-                <li
-                  className={`${
-                    this.state.selectedCat === "Exits" ? "active" : ""
-                  }`}
-                >
-                  <a onClick={() => this.handleChangeCat("Exits")} href="#nav">
-                    Exits
-                  </a>
-                </li>
-                <li
-                  className={`${
-                    this.state.selectedCat === "People" ? "active" : ""
-                  }`}
-                >
-                  <a onClick={() => this.handleChangeCat("People")} href="#nav">
-                    People
-                  </a>
-                </li>
-                <li
-                  className={`${
-                    this.state.selectedCat === "Events" ? "active" : ""
-                  }`}
-                >
-                  <a onClick={() => this.handleChangeCat("Events")} href="#nav">
-                    Events
-                  </a>
-                </li>
-                <li
-                  className={`${
-                    this.state.selectedCat === "Market News" ? "active" : ""
-                  }`}
-                >
-                  <a
-                    onClick={() => this.handleChangeCat("Market News")}
-                    href="#nav"
-                  >
-                    Market News
-                  </a>
-                </li>
-                <li
-                  className={`${
-                    this.state.selectedCat === "Insights" ? "active" : ""
-                  }`}
-                >
-                  <a
-                    onClick={() => this.handleChangeCat("Insights")}
-                    href="#nav"
-                  >
-                    Insights
-                  </a>
-                </li>
-                <li
-                  className={`${
-                    this.state.selectedCat === "Tools" ? "active" : ""
-                  }`}
-                >
-                  <a onClick={() => this.handleChangeCat("Tools")} href="#nav">
-                    Tools
-                  </a>
-                </li>
-              </ul>
+              <NewsTagList
+                tags={tags}
+                showTags
+                setTag={this.handleChangeCat}
+                currentTag={this.state.selectedCat}
+              />
             </nav>
             <div className="news_sort">
               <Select
@@ -335,6 +122,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                         tag="h3"
                         className="news_subscribe_title"
                       />
+
                       <div className="news_subscribe_text">
                         <Scrivito.ContentTag
                           content={widget}
@@ -364,11 +152,13 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                             type="email"
                             name="subscribe_email"
                             placeholder="Email"
-                            value={this.state.formValue} 
+                            value={this.state.formValue}
                             onChange={this.handleChange}
                           />
                         </div>
-                        <div className="request_errors"><span className="error">{this.state.error}</span></div>
+                        <div className="request_errors">
+                          <span className="error">{this.state.error}</span>
+                        </div>
                         <div className="news_subscribe_terms">
                           <Checkbox
                             className="subscribe_group subscribe_agree subscribe_terms"
@@ -401,7 +191,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       </div>
                       <div className="news_subscribe_bottom">
                         <div className="send_loading">
-                          <SubmitButton label="Sign me on"/>
+                          <SubmitButton label="Sign me on" />
                         </div>
                       </div>
                     </form>
@@ -418,6 +208,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                   </div>
                   <div className="post_item_info">
                     <p className="post_item_date bottom_line">
+                      
                       {formatDate(news.get("date"), "dd mmm yyyy")}
                     </p>
                     <div className="post_item_text">
@@ -468,3 +259,17 @@ Scrivito.provideComponent(
   "BidNewsOverviewWidget",
   BidNewsOverviewWidgetComponent
 );
+
+function allTags(items) {
+  
+  const tagsArray = items.map((item) => item.get("category"));
+
+  // flatten tags
+  const tags = tagsArray.reduce((a, b) => a.concat(b), []);
+
+  // unique tags
+  const uniqueTags = [...new Set(tags)];
+
+  // sort tags
+  return uniqueTags;
+}
