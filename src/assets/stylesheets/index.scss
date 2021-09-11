@@ -684,7 +684,7 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
     z-index: 10000;
     left: 20.5%;
     background: #f1eade;
-    top: 55px;
+    top: -650px;
     padding: 50px 180px 40px 60px;
     width: 100%;
     height: 280px;
@@ -2353,6 +2353,42 @@ transition: all .3s;
   .top_section {
     overflow-y: unset;
   }
+}
+
+.box_1 {
+  position: absolute;
+top: -930px;
+left: 380px;
+}
+
+.box_2 {
+  position: absolute;
+  top: -900px;
+  left: 150px;
+}
+
+.box_3 {
+  position: absolute;
+  top: -740px;
+  left: -20px
+}
+
+.box_5 {
+  position: absolute;
+  top: -580px;
+  left: -110px;
+}
+
+.box_6 {
+  position: absolute;
+  top: -420px;
+  left: -80px;
+}
+
+.box_4 {
+  position: absolute;
+top: -900px;
+left: 610px;
 }
 
 @media (max-width: $screen-sm-max) {
