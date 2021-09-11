@@ -2355,6 +2355,9 @@ transition: all .3s;
   }
 }
 
+@media screen and (min-width:972px) {
+  
+ 
 .box_1 {
   position: absolute;
 top: -930px;
@@ -2385,10 +2388,12 @@ left: 380px;
   left: -80px;
 }
 
+
 .box_4 {
   position: absolute;
 top: -900px;
 left: 610px;
+}
 }
 
 @media (max-width: $screen-sm-max) {
