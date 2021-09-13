@@ -30,6 +30,7 @@ class LeverBlocksComponent extends React.Component {
     const widget = this.props.widget;
     const items = widget.get("items");
     const tags = allTags(items);
+    const companies = allCompanies(items);
     const lever = widget.get("lever");
 
     //
@@ -37,7 +38,7 @@ class LeverBlocksComponent extends React.Component {
       <div>
         <LeverTagList
           showTags
-          tags={tags}
+          tags={companies}
           currentTag={this.state.currentTag}
           setTag={this.setTag}
         />
@@ -45,6 +46,7 @@ class LeverBlocksComponent extends React.Component {
         <div className="operational_value_description">
           
           {items.map((item, index) => (
+            
             <div className={`tab_container_${index + 1}`}>
               <TabbedContent
                 key={item.id()}
@@ -54,10 +56,12 @@ class LeverBlocksComponent extends React.Component {
               />
               </div>
             
-          ))}
+          )
+          
+          )}
         </div>
         <div className="operational_value_wrap">
-          <div className={`operational_value_chart ${this.state.currentTag}`}>
+          <div className={`operational_value_chart ${this.state.currentTag.toLowerCase()}`}>
             {items.map((item) => 
               item.get("lever").map((item, index) => (
                 
@@ -119,6 +123,19 @@ const TabbedContent = Scrivito.connect(({ widget, currentTag }) => {
 
 function allTags(items) {
   const tagsArray = items.map((item) => item.get("company"));
+
+  // flatten tags
+  const tags = tagsArray.reduce((a, b) => a.concat(b), []);
+
+  // unique tags
+  const uniqueTags = [...new Set(tags)];
+
+  // sort tags
+  return uniqueTags;
+}
+
+function allCompanies(items) {
+  const tagsArray = items.map((item) => item.get("title"));
 
   // flatten tags
   const tags = tagsArray.reduce((a, b) => a.concat(b), []);
