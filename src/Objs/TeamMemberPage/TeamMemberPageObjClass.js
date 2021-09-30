@@ -15,7 +15,6 @@ const TeamMemberPage = Scrivito.provideObjClass("TeamMemberPage", {
     bodyBottom: "html",
     navNext: "string",
     nextMember: "string",
-    job: "string",
     content: "widgetlist",
     nextLabel: "string",
     prevLabel: "string",

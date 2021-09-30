@@ -46,30 +46,7 @@ Scrivito.provideComponent("NewsPost", ({ page }) => {
               </div>
               <div className="article_content_sidebar">
                 <NextLink type="NewsPost" currentPost={page}/>
-                <div className="testimonial_item dark">
-                  <div className="testimonial_item_text">
-                    <Scrivito.ContentTag
-                      content={page}
-                      attribute="quote"
-                      tag="p"
-                    />
-                  </div>
-                  <div className="testimonial_item_bottom">
-                    <Scrivito.ContentTag
-                      content={page}
-                      attribute="name"
-                      tag="p"
-                      className="testimonial_item_name"
-                    />
-
-                    <Scrivito.ContentTag
-                      content={page}
-                      attribute="position"
-                      tag="p"
-                      className="testimonial_item_position"
-                    />
-                  </div>
-              </div>
+                
             </div>
           </div>
         </div>

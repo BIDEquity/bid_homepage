@@ -73,19 +73,7 @@ Scrivito.provideComponent("TeamMemberPage", ({ page }) => {
           <div className="article_content_sidebar">
             <NextLink type="TeamMemberPage" currentPost={page} />
 
-            <div className="job_post">
-              <p className="job_post_category">Jobs</p>
-              <Scrivito.ContentTag
-                tag="h3"
-                content={page}
-                attribute="job"
-                className="job_post_name"
-              />
-
-              <a className="more_link" href="#">
-                Learn more
-              </a>
-            </div>
+            
           </div>
         </div>
         <div className="article_content_nav content_nav">

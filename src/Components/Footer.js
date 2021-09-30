@@ -128,17 +128,15 @@ function Footer() {
               <p className="footer_box_title">Quick Links</p>
               <div className="footer_links">
                 
-                <a href="about">About</a>
-                <a href="portfolio">Portfolio</a>
-                <a href="entrepreneurs">Entrepreneurs</a>
-                <a href="advisors">M&amp;A Partners</a>
-                <a href="investors">Investors</a>
-                <a href="news">News</a>
-                <a href="jobs">Jobs</a>
-                <a href="contact">Contact</a>
-                <a href="#">Quick valuation</a>
-                <a href="privace-policy">Privacy Policy</a>
-                <a href="terms-of-use">Imprint</a>
+                <a href="/about">About</a>
+                <a href="/portfolio">Portfolio</a>
+                <a href="/entrepreneurs">Entrepreneurs</a>
+                <a href="/advisors">M&amp;A Partners</a>
+                <a href="/investors">Investors</a>
+                <a href="/news">News</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/imprint">Imprint</a>
               </div>
             </div>
           </div>
@@ -158,17 +156,15 @@ function Footer() {
               <div className="footer_box footer_box_links">
                 <p className="footer_box_title">Quick Links</p>
                 <div className="footer_links">
-                <a href="about">About</a>
-                <a href="portfolio">Portfolio</a>
-                <a href="entrepreneurs">Entrepreneurs</a>
-                <a href="advisors">M&amp;A Partners</a>
-                <a href="investors">Investors</a>
-                <a href="news">News</a>
-                <a href="jobs">Jobs</a>
-                <a href="contact">Contact</a>
-                <a href="#">Quick valuation</a>
-                <a href="privace-policy">Privacy Policy</a>
-                <a href="terms-of-use">Imprint</a>
+                <a href="/about">About</a>
+                <a href="/portfolio">Portfolio</a>
+                <a href="/entrepreneurs">Entrepreneurs</a>
+                <a href="/advisors">M&amp;A Partners</a>
+                <a href="/investors">Investors</a>
+                <a href="/news">News</a>
+                <a href="/contact">Contact</a>
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/imprint">Imprint</a>
                 </div>
               </div>
             </div>
