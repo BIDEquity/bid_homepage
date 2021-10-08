@@ -17,18 +17,8 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
   const leverLink = widget.get("leverCTA");
   let leverLinkText = leverLink && leverLink.title();
 
-  const [showPopup1, setPopup1] = React.useState(false);
-  const [showPopup2, setPopup2] = React.useState(false);
-  const [showPopup3, setPopup3] = React.useState(false);
-  const [showPopup4, setPopup4] = React.useState(false);
-  const [showPopup5, setPopup5] = React.useState(false);
-  const [showPopup6, setPopup6] = React.useState(false);
-  const onClick1 = () => setPopup1(!showPopup1);
-  const onClick2 = () => setPopup2(!showPopup2);
-  const onClick3 = () => setPopup3(!showPopup3);
-  const onClick4 = () => setPopup4(!showPopup4);
-  const onClick5 = () => setPopup5(!showPopup5);
-  const onClick6 = () => setPopup6(!showPopup6);
+  const [popup, setPopup] = React.useState("");
+  
 
   return (
     <>
@@ -6252,7 +6242,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                 </svg>
                 <div className="entrepreneurs_strategies">
               <div className="entrepreneurs_strategies_wrap">
-                <div className="entrepreneurs_strategy_box box_1 plus" onClick={onClick1}>
+                <div className="entrepreneurs_strategy_box box_1 plus" onClick={() => setPopup("popup1")}>
                   <div className="entrepreneurs_strategy_icon">
                     <Scrivito.ImageTag
                       content={widget}
@@ -6270,9 +6260,9 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                   </p>
                   
                 </div>
-                {showPopup1 &&
+                {popup === "popup1" &&
                   <div className="popup-wrapper">
-                    <svg  onClick={onClick1} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+                    <svg  onClick={() => setPopup("")} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
                   <Scrivito.ContentTag
                       content={widget}
                       attribute="popup1"
@@ -6282,7 +6272,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                       </Scrivito.ContentTag>
                     </div>
                   }
-                <div className="entrepreneurs_strategy_box box_2 plus" onClick={onClick2}>
+                <div className="entrepreneurs_strategy_box box_2 plus" onClick={() => setPopup("popup2")}>
                   <div className="entrepreneurs_strategy_icon">
                     <Scrivito.ImageTag
                       content={widget}
@@ -6300,9 +6290,9 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                   </p>
                   
                 </div>
-                {showPopup2 &&
+                {popup === "popup2" &&
                   <div className="popup-wrapper">
-                  <svg  onClick={onClick2} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+                  <svg  onClick={() => setPopup("")} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
                 
                   <Scrivito.ContentTag
                       content={widget}
@@ -6311,7 +6301,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     />
                     </div>
                   }
-                <div className="entrepreneurs_strategy_box box_3 plus" onClick={onClick3}>
+                <div className="entrepreneurs_strategy_box box_3 plus" onClick={() => setPopup("popup3")}>
                   <div className="entrepreneurs_strategy_icon">
                     <Scrivito.ImageTag
                       content={widget}
@@ -6329,9 +6319,9 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                   </p>
                   
                 </div>
-                {showPopup3 &&
+                {popup === "popup3" &&
                   <div className="popup-wrapper">
-                  <svg  onClick={onClick3} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+                  <svg  onClick={() => setPopup("")} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
                 
                   <Scrivito.ContentTag
                       content={widget}
@@ -6340,7 +6330,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     />
                     </div>
                   }
-                <div className="entrepreneurs_strategy_box box_4 plus" onClick={onClick4}>
+                <div className="entrepreneurs_strategy_box box_4 plus" onClick={() => setPopup("popup4")}>
                   <div className="entrepreneurs_strategy_icon">
                     <Scrivito.ImageTag
                       content={widget}
@@ -6358,9 +6348,9 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                   </p>
                   
                 </div>
-                {showPopup4 &&
+                {popup === "popup4" &&
                   <div className="popup-wrapper">
-                  <svg  onClick={onClick4} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+                  <svg  onClick={() => setPopup("")} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
                 
                   <Scrivito.ContentTag
                       content={widget}
@@ -6369,7 +6359,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     />
                     </div>
                   } 
-                <div className="entrepreneurs_strategy_box box_5 plus" onClick={onClick5}>
+                <div className="entrepreneurs_strategy_box box_5 plus" onClick={() => setPopup("popup5")}>
                   <div className="entrepreneurs_strategy_icon">
                     <Scrivito.ImageTag
                       content={widget}
@@ -6387,9 +6377,9 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                   </p>
                   
                 </div>
-                {showPopup5 &&
+                {popup === "popup5" &&
                   <div className="popup-wrapper">
-                  <svg  onClick={onClick5} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+                  <svg  onClick={() => setPopup("")} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
                 
                   <Scrivito.ContentTag
                       content={widget}
@@ -6398,7 +6388,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                     />
                     </div>
                   }
-                <div className="entrepreneurs_strategy_box box_6 plus" onClick={onClick6}>
+                <div className="entrepreneurs_strategy_box box_6 plus" onClick={() => setPopup("popup6")}>
                   <div className="entrepreneurs_strategy_icon">
                     <Scrivito.ImageTag
                       content={widget}
@@ -6416,9 +6406,9 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
                   </p>
                   
                 </div>
-                {showPopup6 &&
+                {popup === "popup6" &&
                   <div className="popup-wrapper">
-                  <svg  onClick={onClick6} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+                  <svg  onClick={() => setPopup("")} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
                 
                   <Scrivito.ContentTag
                       content={widget}
