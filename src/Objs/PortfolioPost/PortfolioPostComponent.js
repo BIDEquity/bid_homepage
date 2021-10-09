@@ -1,6 +1,8 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import { Swiper } from "swiper/react";
+import NextLink from "../../Components/NextLink";
+import PreviousLink from "../../Components/PreviousLink"
 
 Scrivito.provideComponent("PortfolioPost", ({ page }) => {
   const exited = page.get("exited") || "no"
@@ -63,48 +65,7 @@ Scrivito.provideComponent("PortfolioPost", ({ page }) => {
               </div>
             </div>
             <div className="article_content_sidebar">
-              <a className="content_nav_link content_next" href="#">
-              <Scrivito.ContentTag
-                content={page}
-                attribute="next"
-                tag="p"
-                className="content_nav_direction"
-              />
-                <div className="content_nav_info">
-                  <Scrivito.ContentTag
-                    tag="span"
-                    content={page}
-                    attribute="nextPortfolio"
-                    className="content_nav_name"
-                  />
-
-                  <span className="arrow_btn">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="17.284"
-                      height="10.73"
-                      viewBox="0 0 17.284 10.73"
-                      fill="none"
-                      strokeWidth="1.5"
-                    >
-                      <g transform="translate(-570.625 -853.857)">
-                        <path
-                          d="M576.989,860.911l4.3,4.3-4.3,4.3"
-                          transform="translate(5.865 -5.993)"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                        <line
-                          x1="15.783"
-                          transform="translate(571.375 859.222)"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </g>
-                    </svg>
-                  </span>
-                </div>
-              </a>
+            <NextLink type="PortfolioPost" currentPost={page} />
             </div>
           </div>
         </div>
@@ -176,76 +137,8 @@ Scrivito.provideComponent("PortfolioPost", ({ page }) => {
             </div>
           </div>
           <div className="article_content_nav content_nav">
-            <a className="content_nav_link content_prev" href="#">
-            <Scrivito.ContentTag
-                content={page}
-                attribute="prev"
-                tag="p"
-                className="content_nav_direction"
-              />
-              <div className="content_nav_info">
-                <span className="arrow_btn"><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17.284"
-                    height="10.73"
-                    viewBox="0 0 17.284 10.73"
-                    fill="none"
-                    strokeWidth="1.5"
-                  >
-                    <g transform="translate(-570.625 -853.857)">
-                      <path
-                        d="M576.989,860.911l4.3,4.3-4.3,4.3"
-                        transform="translate(5.865 -5.993)"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <line
-                        x1="15.783"
-                        transform="translate(571.375 859.222)"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </g>
-                  </svg></span>
-                <span className="content_nav_name">Midoco’s Travel Tech</span>
-              </div>
-            </a>
-            <a className="content_nav_link content_next" href="#">
-            <Scrivito.ContentTag
-                content={page}
-                attribute="next"
-                tag="p"
-                className="content_nav_direction"
-              />
-              <div className="content_nav_info">
-                <span className="content_nav_name">
-                  xClinical’s innovations
-                </span>
-                <span className="arrow_btn"><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="17.284"
-                    height="10.73"
-                    viewBox="0 0 17.284 10.73"
-                    fill="none"
-                    strokeWidth="1.5"
-                  >
-                    <g transform="translate(-570.625 -853.857)">
-                      <path
-                        d="M576.989,860.911l4.3,4.3-4.3,4.3"
-                        transform="translate(5.865 -5.993)"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                      <line
-                        x1="15.783"
-                        transform="translate(571.375 859.222)"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </g>
-                  </svg></span>
-              </div>
-            </a>
+          <PreviousLink type="PortfolioPost" currentPost={page} />
+            <NextLink type="PortfolioPost" currentPost={page} />
           </div>
           <div className="article_posts">
             
