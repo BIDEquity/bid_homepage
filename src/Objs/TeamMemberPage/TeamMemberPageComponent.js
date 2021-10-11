@@ -27,7 +27,7 @@ Scrivito.provideComponent("TeamMemberPage", ({ page }) => {
                 className="article_content_category"
               />
               <div className="article_content_soc">
-                <a href="#">
+                <Scrivito.LinkTag to={page.get("linkedIn")} href="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -39,7 +39,7 @@ Scrivito.provideComponent("TeamMemberPage", ({ page }) => {
                       d="M17.2,0H.748A.749.749,0,0,0,0,.748V17.2a.748.748,0,0,0,.748.748H17.2a.748.748,0,0,0,.748-.748V.748A.748.748,0,0,0,17.2,0M5.324,15.292H2.659V6.728H5.324ZM3.992,5.558A1.544,1.544,0,1,1,5.535,4.014,1.543,1.543,0,0,1,3.992,5.558m11.3,9.734H12.631V11.128c0-.993-.017-2.271-1.382-2.271-1.385,0-1.6,1.083-1.6,2.2v4.236H6.994V6.728H9.545V7.9h.036A2.8,2.8,0,0,1,12.1,6.516c2.695,0,3.193,1.773,3.193,4.08Z"
                     />
                   </svg>
-                </a>
+                </Scrivito.LinkTag>
               </div>
             </div>
             <div className="article_content_img">

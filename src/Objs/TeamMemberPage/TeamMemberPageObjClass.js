@@ -18,6 +18,7 @@ const TeamMemberPage = Scrivito.provideObjClass("TeamMemberPage", {
     content: "widgetlist",
     nextLabel: "string",
     prevLabel: "string",
+    linkedIn: "link",
     ...metadataAttributes,
   },
   extractTextAttributes: ["body"],

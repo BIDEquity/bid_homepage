@@ -20,7 +20,7 @@ Scrivito.provideEditingConfig("TeamMemberPage", {
     ...defaultPageEditingConfigAttributes,
     ...metadataEditingConfigAttributes,
   },
-  properties: ["date",...defaultPageProperties],
+  properties: ["date","linkedIn",...defaultPageProperties],
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
     ...defaultPageInitialContent,
