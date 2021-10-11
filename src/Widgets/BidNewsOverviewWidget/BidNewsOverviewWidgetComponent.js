@@ -84,7 +84,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
 
     tags = allTags([...initSearch]);
     
-
+    newsSearch = newsSearch.order("date", "desc")
     news = [...newsSearch];
 
     return (
