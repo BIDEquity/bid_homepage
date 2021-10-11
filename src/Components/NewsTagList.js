@@ -5,7 +5,7 @@ function NewsTagList({ showTags, tags, currentTag, setTag }) {
   if (!showTags) {
     return null;
   }
-console.log(tags)
+
   const onClick = (e, tag) => {
     e.preventDefault();
     e.stopPropagation();

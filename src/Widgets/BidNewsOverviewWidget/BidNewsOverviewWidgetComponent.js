@@ -13,7 +13,7 @@ import formatDate from "../../utils/formatDate";
 import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
 import Select from "react-select";
 
-const companies = [
+/*const companies = [
   { value: "evidentic", label: "Evidentic" },
   { value: "just-relate", label: "Just Relate" },
   { value: "kobold", label: "Kobold" },
@@ -21,7 +21,7 @@ const companies = [
   { value: "eSight-energy", label: "eSight Energy" },
   { value: "myneva", label: "myneva" },
   { value: "bid-equity", label: "BID Equity" },
-];
+];*/
 
 class BidNewsOverviewWidgetComponent extends React.Component {
   constructor(props) {
@@ -34,6 +34,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
       checkedPrivacy: false,
       formValue: "",
       error: "",
+      companies: null,
     };
 
     this.handleChange = (e) => this.setState({ formValue: e.target.value });
@@ -72,21 +73,40 @@ class BidNewsOverviewWidgetComponent extends React.Component {
     const widget = this.props.widget;
     let newsSearch = Scrivito.Obj.where("_objClass", "equals", "NewsPost");
     let initSearch = Scrivito.Obj.where("_objClass", "equals", "NewsPost");
-    let news, tags;
+    let news, tags, companies,companiesTmp,searchTmp;
+    
+    companies = [];
+    companiesTmp = [];
+    
     if (this.state.selectedCat !== "") {
       newsSearch = newsSearch.and("category", "equals", this.state.selectedCat);
     }
 
     if (this.state.selectedCompany) {
       let company = this.state.selectedCompany.label;
+      if(company !== "All")
       newsSearch = newsSearch.and("company", "equals", company);
     }
-
+    
     tags = allTags([...initSearch]);
     
     newsSearch = newsSearch.order("date", "desc")
     news = [...newsSearch];
+    searchTmp = [...initSearch]
 
+    
+    searchTmp.map((item) => {
+      companiesTmp.push(item.get("company"))
+    })
+
+    companiesTmp = [... new Set(companiesTmp)]
+    companiesTmp.map((item) => {
+      companies.push({value:item,label:item})
+    })
+
+    companies.unshift({value:"All", label:"All"})
+    
+    
     return (
       <div className="news_content">
         <div className="container">
@@ -273,3 +293,4 @@ function allTags(items) {
   // sort tags
   return uniqueTags;
 }
+
