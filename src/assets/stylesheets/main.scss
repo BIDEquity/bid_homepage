@@ -151,7 +151,7 @@ body {
     font-family: $base-font;
     letter-spacing: -0.008em;
     transition: all 0.3s;
-
+    pointer-events: auto;
     &:hover {
         background: #F77B71;
         border-color: #F77B71;
@@ -6746,9 +6746,6 @@ body {
 }
 
 .transaction_process_overview {
-    top: 0;
-    left: 0;
-    z-index: 30;
     width: 100%;
     padding-top: 80px;
 
@@ -9683,7 +9680,7 @@ body {
     list-style: none;
     padding: 0;
     /* Fix of Webkit flickering */
-    z-index: 1;
+    
 }
 
 .swiper-container-vertical > .swiper-wrapper {
@@ -9694,7 +9691,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    
     display: flex;
     transition-property: transform;
     box-sizing: content-box;
