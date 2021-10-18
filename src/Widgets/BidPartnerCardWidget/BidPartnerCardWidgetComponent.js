@@ -17,8 +17,8 @@ Scrivito.provideComponent("BidPartnerCardWidget", ({ widget }) => {
         <Scrivito.ImageTag content={widget} attribute="image" alt="" />
       </div>
       <div className="partners_post_info">
-        <div class="partners_post_row">
-          <div class="partners_post_left">
+        <div className="partners_post_row">
+          <div className="partners_post_left">
             <Scrivito.ContentTag
               content={widget}
               tag="p"
@@ -34,7 +34,7 @@ Scrivito.provideComponent("BidPartnerCardWidget", ({ widget }) => {
             />
           </div>
           <div className="partners_post_right">
-            <Scrivito.LinkTag class="arrow_btn" to={link}>
+            <Scrivito.LinkTag className="arrow_btn" to={link}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="17.284"

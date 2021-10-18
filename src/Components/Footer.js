@@ -14,6 +14,7 @@ function Footer() {
   }
 
   const lang = root.siteId();
+  
 
   return (
     <footer className={`footer ${altF === "yes" && "footer_alternative"}`}>
@@ -128,15 +129,15 @@ function Footer() {
               <p className="footer_box_title">Quick Links</p>
               <div className="footer_links">
                 
-                <a href="about">About</a>
-                <a href="portfolio">Portfolio</a>
-                <a href="entrepreneurs">Entrepreneurs</a>
-                <a href="advisors">M&amp;A Partners</a>
-                <a href="investors">Investors</a>
-                <a href="news">News</a>
-                <a href="contact">Contact</a>
-                <a href="privacy-policy">Privacy Policy</a>
-                <a href="imprint">Imprint</a>
+                <a href={`/${lang}/about`}>About</a>
+                <a href={`/${lang}/portfolio`}>Portfolio</a>
+                <a href={`/${lang}/entrepreneurs`}>Entrepreneurs</a>
+                <a href={`/${lang}/advisors`}>M&amp;A Partners</a>
+                <a href={`/${lang}/investors`}>Investors</a>
+                <a href={`/${lang}/news`}>News</a>
+                <a href={`/${lang}/contact`}>Contact</a>
+                <a href={`/${lang}/privacy-policy`}>Privacy Policy</a>
+                <a href={`/${lang}/imprint`}>Imprint</a>
               </div>
             </div>
           </div>
@@ -156,15 +157,15 @@ function Footer() {
               <div className="footer_box footer_box_links">
                 <p className="footer_box_title">Quick Links</p>
                 <div className="footer_links">
-                <a href="about">About</a>
-                <a href="portfolio">Portfolio</a>
-                <a href="entrepreneurs">Entrepreneurs</a>
-                <a href="advisors">M&amp;A Partners</a>
-                <a href="investors">Investors</a>
-                <a href="news">News</a>
-                <a href="contact">Contact</a>
-                <a href="privacy-policy">Privacy Policy</a>
-                <a href="imprint">Imprint</a>
+                <a href={`/${lang}/about`}>About</a>
+                <a href={`/${lang}/portfolio`}>Portfolio</a>
+                <a href={`/${lang}/entrepreneurs`}>Entrepreneurs</a>
+                <a href={`/${lang}/advisors`}>M&amp;A Partners</a>
+                <a href={`/${lang}/investors`}>Investors</a>
+                <a href={`/${lang}/news`}>News</a>
+                <a href={`/${lang}/contact`}>Contact</a>
+                <a href={`/${lang}/privacy-policy`}>Privacy Policy</a>
+                <a href={`/${lang}/imprint`}>Imprint</a>
                 </div>
               </div>
             </div>

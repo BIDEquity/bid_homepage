@@ -42,7 +42,7 @@ class TabbedBlocksComponent extends React.Component {
         clickable: true,
         
         renderBullet: function (index, className) {
-          return '<li class="tab ' + className + '">' + (items[index].get("tag")) + '</li>';
+          return '<li className="tab ' + className + '">' + (items[index].get("tag")) + '</li>';
         },
         
       }

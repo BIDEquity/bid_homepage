@@ -75,7 +75,7 @@ class PartnerSwiperComponent extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <div class="partners_slider_pagination slider_pagination"></div>
+                    <div className="partners_slider_pagination slider_pagination"></div>
                   </div>
                   
                 </div>
