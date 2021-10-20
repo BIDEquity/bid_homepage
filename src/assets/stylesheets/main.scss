@@ -6131,7 +6131,8 @@ body {
 
 .entrepreneurs_help_navbar {
     margin-bottom: 117px;
-    
+    position: relative;
+    z-index: 3000;
 
     @media screen and (max-width: 991px) {
         margin-bottom: 64px;
@@ -6143,8 +6144,7 @@ body {
     padding-bottom: 24px;
     overflow: auto;
     scrollbar-width: none;
-    position: relative;
-    z-index: 3000;
+    
     @media screen and (max-width: 991px) {
         margin: 0 -32px;
         padding: 0 32px 24px;
