@@ -6104,7 +6104,8 @@ body {
 .entrepreneurs_help {
     overflow: hidden;
     margin-bottom: -366px;
-
+    position: relative;
+    z-index: 3000;
     @media screen and (max-width: 991px) {
         margin-bottom: 0;
     }
