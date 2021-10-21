@@ -133,7 +133,7 @@ function Footer() {
                 <a href={`/${lang}/portfolio`}>Portfolio</a>
                 <a href={`/${lang}/entrepreneurs`}>Entrepreneurs</a>
                 <a href={`/${lang}/advisors`}>M&amp;A Partners</a>
-                <a href={`/${lang}/investors`}>Investors</a>
+                <a href={`/${lang}/news`}>Investors</a>
                 <a href={`/${lang}/news`}>News</a>
                 <a href={`/${lang}/contact`}>Contact</a>
                 <a href={`/${lang}/privacy-policy`}>Privacy Policy</a>
