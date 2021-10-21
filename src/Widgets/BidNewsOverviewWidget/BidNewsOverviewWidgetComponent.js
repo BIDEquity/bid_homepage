@@ -132,8 +132,9 @@ class BidNewsOverviewWidgetComponent extends React.Component {
           </div>
           <div className="posts_wrap">
             {news.map((news, index) => {
-              if (index === 8)
+              if (index === 8) {
                 return (
+                  <>
                   <div key={index} className="news_subscribe">
                     <div className="news_subscribe_description">
                       <Scrivito.ContentTag
@@ -216,7 +217,26 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       </div>
                     </form>
                   </div>
-                );
+                  <Scrivito.LinkTag key={index} className="post_item" to={news}>
+                  <div className="post_item_img">
+                    <Scrivito.ImageTag
+                      content={news}
+                      attribute="newsImage"
+                      alt=""
+                    />
+                  </div>
+                  <div className="post_item_info">
+                    <p className="post_item_date bottom_line">
+                      
+                      {formatDate(news.get("date"), "dd mmm yyyy")}
+                    </p>
+                    <div className="post_item_text">
+                      <p>{news.get("teaser")}</p>
+                    </div>
+                  </div>
+                </Scrivito.LinkTag>
+                </>
+                )};
               return (
                 <Scrivito.LinkTag key={index} className="post_item" to={news}>
                   <div className="post_item_img">

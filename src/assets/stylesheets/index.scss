@@ -2120,6 +2120,13 @@ transition: all .3s;
   background-color: transparent !important;
   transition: all 0.5 ease-out;
 }
+
+
+
+  .operational_value_btn:first-of-type,
+  .start .box_C,
+  .start .box_D,
+  .start .box_F,
   .company .box_C,
   .company .box_D,
   .company .box_F,
@@ -2138,6 +2145,7 @@ transition: all .3s;
   .win .box_C,
   .win .box_F {
     opacity: 0;
+    display: none;
   }
 
   .continue .box_C + .operational_value_info .operational_value_name,
