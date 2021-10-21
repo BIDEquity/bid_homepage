@@ -47,8 +47,9 @@ class ProcessSwiperComponent extends React.Component {
     return (
       <Swiper {...params}>
         {items.map((item, index) => {
-          const link = item.get("button");
-          const linktext = link && link.title();
+          let link = item.get("button");
+          let linktext = link && link.title();
+          
           return (
             <SwiperSlide key={index}>
               
@@ -86,7 +87,7 @@ class ProcessSwiperComponent extends React.Component {
                             
                             {
                               linktext &&
-                              <Scrivito.LinkTag className="btn" to={link}>{linktext}</Scrivito.LinkTag>
+                              <Scrivito.LinkTag className="btn test" to={link}>{linktext}</Scrivito.LinkTag>
                             }
                           </div>
                         </div>

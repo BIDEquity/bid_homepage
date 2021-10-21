@@ -21,7 +21,7 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
   const [showPopup, setShowPopUp] = React.useState(false);
 
   const onClick = () => setShowPopUp(!showPopup);
-
+  
   return (
     <>
       <div className="top_article top_entrepreneurs bg-grey">
