@@ -25,6 +25,8 @@ class LanguageSwitch extends React.Component {
     });
   }
 
+  
+
   render() {
     const onAllSites = Scrivito.Obj.onAllSites();
     const homepages = onAllSites.where(

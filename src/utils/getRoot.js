@@ -6,7 +6,7 @@ function getRoot() {
 
   const path = currentPage.siteId();
   
-  return Scrivito.Obj.getByPath(path);
+  return path;
 }
 
 export default getRoot;
