@@ -259,36 +259,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
               );
             })}
           </div>
-          <div className="posts_navigation">
-            <a className="posts_navigation_more" href="#">
-              <span className="posts_navigation_text">More News</span>
-              <span className="posts_navigation_arrow">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="17.783"
-                  height="11.437"
-                  viewBox="0 0 17.783 11.437"
-                  fill="none"
-                  strokeWidth="2"
-                >
-                  <g transform="translate(-10.109 -13.281)">
-                    <path
-                      d="M581.294,860.911l-4.3,4.3,4.3,4.3"
-                      transform="translate(-565.88 -846.216)"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <line
-                      x2="15.783"
-                      transform="translate(11.109 18.999)"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </g>
-                </svg>
-              </span>
-            </a>
-          </div>
+          
         </div>
       </div>
     );
