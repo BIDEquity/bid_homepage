@@ -11,7 +11,7 @@ class LeverBlocksComponent extends React.Component {
 
     this.state = {
       currentTag: tags[0],
-      companyBstep1: null,
+      companyStep1: null,
     };
 
     this.setTag = this.setTag.bind(this);
@@ -104,7 +104,7 @@ const TabbedContent = Scrivito.connect(({ widget, currentTag }) => {
 
   const classNames = ["squeezed"];
 
-  if (currentTag && company.includes(currentTag)) {
+  if (currentTag && title.includes(currentTag)) {
     classNames.pop("squeezed");
     classNames.push("active");
   }

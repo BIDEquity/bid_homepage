@@ -2120,27 +2120,32 @@ transition: all .3s;
   background-color: transparent !important;
   transition: all 0.5 ease-out;
 }
-
-.A .box_C,
-  .A .box_D,
-  .A .box_F,
+  .company .box_C,
+  .company .box_D,
+  .company .box_F,
+  .continue .box_C,
+  .continue .box_D,
+  .continue .box_F,
   .consolidate .box_D,
   .build .box_F,
   .transform .box_A,
   .transform .box_B,
   .transform .box_C,
+  .unleash .box_C,
+  .unleash .box_D,
+  .unleash .box_F,
   .win .box_B,
   .win .box_C,
   .win .box_F {
     opacity: 0;
   }
 
-  .A .box_C + .operational_value_info .operational_value_name,
-  .A .box_C + .operational_value_info .operational_value_level,
-  .A .box_D + .operational_value_info .operational_value_name,
-  .A .box_D + .operational_value_info .operational_value_level,
-  .A .box_F + .operational_value_info .operational_value_name,
-  .A .box_F + .operational_value_info .operational_value_level,
+  .continue .box_C + .operational_value_info .operational_value_name,
+  .continue .box_C + .operational_value_info .operational_value_level,
+  .continue .box_D + .operational_value_info .operational_value_name,
+  .continue .box_D + .operational_value_info .operational_value_level,
+  .continue .box_F + .operational_value_info .operational_value_name,
+  .continue .box_F + .operational_value_info .operational_value_level,
   .consolidate .box_D + .operational_value_info .operational_value_name,
   .consolidate .box_D + .operational_value_info .operational_value_level,
   .build .box_F + .operational_value_info .operational_value_name,
