@@ -87,7 +87,7 @@ class ProcessSwiperComponent extends React.Component {
                             
                             {
                               linktext &&
-                              <Scrivito.LinkTag className="btn test" to={link}>{linktext}</Scrivito.LinkTag>
+                              <Scrivito.LinkTag className="btn" to={link}>{linktext}</Scrivito.LinkTag>
                             }
                           </div>
                         </div>
