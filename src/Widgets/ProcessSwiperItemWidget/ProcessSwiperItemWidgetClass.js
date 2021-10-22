@@ -5,6 +5,7 @@ const ProcessSwiperItemWidget = Scrivito.provideWidgetClass('ProcessSwiperItemWi
   attributes: {
     stepTitle: 'string',
     content: 'html',
+    durationLabel: 'string',
     duration: 'string',
     media: "reference",
     button: "link"

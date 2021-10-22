@@ -5,6 +5,7 @@ Scrivito.provideEditingConfig('ProcessSwiperItemWidget', {
   properties: [
     "stepTitle",
     'content',
+    'durationLabel',
     'duration',
     "button",
     "media",

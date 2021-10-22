@@ -94,9 +94,14 @@ class ProcessSwiperComponent extends React.Component {
                         <div className="transaction_process_right">
                           <div className="transaction_duration">
                             {item.get("duration") &&
-                            <h3 className="transaction_duration_title">
-                              Duration
-                            </h3>
+                            
+                              <Scrivito.ContentTag
+                                content={item}
+                                attribute="durationLabel"
+                                tag="h3"
+                                className="transaction_duration_title"
+                              />
+                            
                             }
                             <Scrivito.ContentTag
                               content={item}
