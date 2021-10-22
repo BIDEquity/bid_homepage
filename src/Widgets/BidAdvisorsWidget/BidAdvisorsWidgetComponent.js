@@ -280,6 +280,12 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
                 className="section_title col_8 col_t_12"
               />
               <div className="transaction_process_section">
+              
+              <div className="transaction_process_line line_1"></div>
+        <div className="transaction_process_line line_2"></div>
+        <div className="transaction_process_line line_3"></div>
+        <div className="transaction_process_line line_4"></div>
+        <div className="transaction_process_line line_5"></div>
                 <Scrivito.ContentTag
                   content={widget}
                   attribute="processSlider"

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import * as Scrivito from "scrivito";
-import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder"
+import InPlaceEditingPlaceholder from "../../Components/InPlaceEditingPlaceholder";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Mousewheel, EffectFade, Pagination } from "swiper";
@@ -11,17 +11,21 @@ SwiperCore.use([Mousewheel, EffectFade, Pagination]);
 class ProcessSwiperComponent extends React.Component {
   constructor(props) {
     super(props);
+    this.widget = this.props.widget;
+    this.state = { items: "" };
+  }
+
+  componentDidMount() {
+    this.setState({ items: this.widget.get("items") });
   }
 
   render() {
-    const widget = this.props.widget;
-    const items = widget.get("items");
     const params = {
       loop: false,
       slidesPerView: 1,
       direction: "vertical",
       speed: 2000,
-      grabCursor:true,
+      grabCursor: false,
       pagination: {
         el: ".slider_pagination",
         clickable: true,
@@ -36,7 +40,7 @@ class ProcessSwiperComponent extends React.Component {
       },
     };
 
-    if (!items.length) {
+    if (!this.state.items.length) {
       return (
         <InPlaceEditingPlaceholder center>
           Add blocks in the widget properties.
@@ -46,26 +50,23 @@ class ProcessSwiperComponent extends React.Component {
     //
     return (
       <Swiper {...params}>
-        {items.map((item, index) => {
-          let link = item.get("button");
-          let linktext = link && link.title();
-          
+        
+        
+        
+        {this.state.items.map((item, index) => {
+          const link = item.get("button");
+          const linktext = link && link.title();
+
           return (
             <SwiperSlide key={index}>
+              <div className="slider_pagination transaction_process_dots"></div>
               
-              <div className="transaction_process_section">
-                <div className="slider_pagination transaction_process_dots"></div>
-
-                <div className="transaction_process_line line_1"></div>
-                <div className="transaction_process_line line_2"></div>
-                <div className="transaction_process_line line_3"></div>
-                <div className="transaction_process_line line_4"></div>
-                <div className="transaction_process_line line_5"></div>
                 <div className="transaction_process_slider swiper-container">
                   <div className="swiper-wrapper">
                     <div className="transaction_process_item swiper-slide">
-                    
-                      <div className={`transaction_process_content step_${index + 1}`}>
+                      <div
+                        className={`transaction_process_content step_${index}`}
+                      >
                         <div className="transaction_process_left">
                           <div className="transaction_process_box">
                             <Scrivito.ContentTag
@@ -84,25 +85,27 @@ class ProcessSwiperComponent extends React.Component {
                                 attribute="content"
                               />
                             </div>
-                            
-                            {
-                              linktext &&
-                              <Scrivito.LinkTag className="btn" to={link}>{linktext}</Scrivito.LinkTag>
+
+                            {linktext && 
+                              <Scrivito.LinkTag
+                                className="btn"
+                                to={item.get("button")}
+                              >
+                                {linktext}
+                              </Scrivito.LinkTag>
                             }
                           </div>
                         </div>
                         <div className="transaction_process_right">
                           <div className="transaction_duration">
-                            {item.get("duration") &&
-                            
+                            {item.get("duration") && (
                               <Scrivito.ContentTag
                                 content={item}
                                 attribute="durationLabel"
                                 tag="h3"
                                 className="transaction_duration_title"
                               />
-                            
-                            }
+                            )}
                             <Scrivito.ContentTag
                               content={item}
                               attribute="duration"
@@ -115,10 +118,11 @@ class ProcessSwiperComponent extends React.Component {
                     </div>
                   </div>
                 </div>
-              </div>
+              
             </SwiperSlide>
           );
         })}
+        
       </Swiper>
     );
   }
