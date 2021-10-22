@@ -2178,10 +2178,14 @@ body {
     }
 }
 
+.footer_alternative .footer_info {
+    padding-top: 24px;
+}
+
 .footer_info {
     display: flex;
     padding-right: 64px;
-
+    
     @media screen and (max-width: 1200px) {
         padding-right: 0;
     }

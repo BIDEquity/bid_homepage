@@ -128,16 +128,8 @@ function Footer() {
             <div className="footer_box_links">
               <p className="footer_box_title">Quick Links</p>
               <div className="footer_links">
+              <Scrivito.ContentTag content={root} attribute="footer" tag="footer" />
                 
-                <a href={`/${lang}/about`}>About</a>
-                <a href={`/${lang}/portfolio`}>Portfolio</a>
-                <a href={`/${lang}/entrepreneurs`}>Entrepreneurs</a>
-                <a href={`/${lang}/advisors`}>M&amp;A Partners</a>
-                <a href={`/${lang}/investors`}>Investors</a>
-                <a href={`/${lang}/news`}>News</a>
-                <a href={`/${lang}/contact`}>Contact</a>
-                <a href={`/${lang}/privacy-policy`}>Privacy Policy</a>
-                <a href={`/${lang}/imprint`}>Imprint</a>
               </div>
             </div>
           </div>
@@ -157,15 +149,7 @@ function Footer() {
               <div className="footer_box footer_box_links">
                 <p className="footer_box_title">Quick Links</p>
                 <div className="footer_links">
-                <a href={`/${lang}/about`}>About</a>
-                <a href={`/${lang}/portfolio`}>Portfolio</a>
-                <a href={`/${lang}/entrepreneurs`}>Entrepreneurs</a>
-                <a href={`/${lang}/advisors`}>M&amp;A Partners</a>
-                <a href={`/${lang}/investors`}>Investors</a>
-                <a href={`/${lang}/news`}>News</a>
-                <a href={`/${lang}/contact`}>Contact</a>
-                <a href={`/${lang}/privacy-policy`}>Privacy Policy</a>
-                <a href={`/${lang}/imprint`}>Imprint</a>
+                <Scrivito.ContentTag content={root} attribute="footer" tag="footer" />
                 </div>
               </div>
             </div>
