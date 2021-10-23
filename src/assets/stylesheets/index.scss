@@ -1748,6 +1748,11 @@ textarea {
   line-height: 24px;
 }
 
+.swiper-slide-active {
+  position: relative;
+  z-index: 10000;
+}
+
 @media (min-width: 992px) {
   .box_Start {
     position: relative;
