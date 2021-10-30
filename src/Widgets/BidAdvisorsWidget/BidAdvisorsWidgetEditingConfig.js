@@ -10,6 +10,6 @@ Scrivito.provideEditingConfig("BidAdvisorsWidget", {
     "infoBoxLink3",
     "infoBoxTitle2",
     "howItWorksButton",
-    
+    "popup1"
   ],
 });

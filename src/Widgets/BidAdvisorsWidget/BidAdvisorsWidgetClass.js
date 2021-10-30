@@ -46,6 +46,7 @@ const BidAdvisorsWidget = Scrivito.provideWidgetClass("BidAdvisorsWidget", {
     processSlider: "widgetlist",
     processTitle: "string",
     formWidget: "widgetlist",
+    popup1: "html",
   },
   
 });

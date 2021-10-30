@@ -19,6 +19,7 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
   let leverLinkText = leverLink && leverLink.title();
 
   const [showPopup, setShowPopUp] = React.useState(false);
+  const [popup, setPopup] = React.useState("");
 
   const onClick = () => setShowPopUp(!showPopup);
   
@@ -246,6 +247,18 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
               <div className="content_info_bottom">
                 <div className="content_info_box info_box left">
                   <div className="info_box_content">
+                  {popup === "popup1" &&
+                  <div className="info-popup-wrapper">
+                    <svg  onClick={() => setPopup("")} xmlns="http://www.w3.org/2000/svg" width="18.121" height="18.121" viewBox="0 0 18.121 18.121" fill="red" stroke="red" strokeWidth="1.5"><g transform="translate(-478.939 -846.939)"><line x1="16" y2="16" transform="translate(480 848)" strokeLinecap="round"/><line x1="16" y1="16" transform="translate(480 848)" strokeLinecap="round"/></g></svg>
+                  <Scrivito.ContentTag
+                      content={widget}
+                      attribute="popup1"
+                      className="info-popup"
+                    />
+
+                     
+                    </div>
+                  }
                     <Scrivito.ContentTag
                       content={widget}
                       attribute="infoBoxTitle2"
@@ -253,7 +266,7 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
                       tag="h2"
                     />
 
-                    <Scrivito.LinkTag className="info_box_link" to={infolink2}>
+                    <Scrivito.LinkTag className="info_box_link" onClick={() => setPopup("popup1")}>
                       {infolinktext2}
                     </Scrivito.LinkTag>
                   </div>
@@ -264,6 +277,7 @@ Scrivito.provideComponent("BidAdvisorsWidget", ({ widget }) => {
                     attribute="infoBoxImage2"
                   />
                 </div>
+                
               </div>
             </div>
           </div>
