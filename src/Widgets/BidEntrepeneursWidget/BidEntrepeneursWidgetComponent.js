@@ -23,10 +23,16 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
   return (
     <>
       <div className="top_article top_entrepreneurs bg-grey">
+      
+        
+        
         <div className="entrepreneurs_intro bg-grey">
           <div className="container">
+          
             <div className="entrepreneurs_intro_box info_box">
+            
               <div className="info_box_content">
+              
                 <Scrivito.ContentTag
                   content={widget}
                   attribute="topTitle"
@@ -44,6 +50,11 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
       </div>
       <div className="assist_entrepreneurs bg_blue_light">
         <div className="container">
+        <Scrivito.ContentTag
+          content={widget}
+          attribute="introduction"
+          className="introduction"
+        />
           <Scrivito.ContentTag
             content={widget}
             attribute="circleTitle"

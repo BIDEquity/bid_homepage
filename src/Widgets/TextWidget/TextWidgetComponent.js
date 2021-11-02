@@ -19,6 +19,14 @@ Scrivito.provideComponent("TextWidget", ({ widget }) => {
     classNames.push("b-bottom");
   }
 
+  if (widget.get("color") === "black") {
+    classNames.push("black");
+  }
+
+  if (widget.get("color") === "white") {
+    classNames.push("white");
+  }
+
   return (
     <Scrivito.ContentTag
       tag="p"

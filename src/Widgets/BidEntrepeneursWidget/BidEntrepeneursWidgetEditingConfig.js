@@ -4,6 +4,7 @@ Scrivito.provideEditingConfig("BidEntrepeneursWidget", {
   title: "Bid Entrepeneurs",
 
   properties: [
+    "introduction",
     "topLink",
     "infoLink1",
     "infoLink2",

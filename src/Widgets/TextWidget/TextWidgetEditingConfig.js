@@ -5,6 +5,15 @@ Scrivito.provideEditingConfig("TextWidget", {
   title: "Text",
   thumbnail: textWidgetIcon,
   attributes: {
+    color: {
+      title: "Text color",
+      
+      values: [
+        { value: "white", title: "White" },
+        { value: "black", title: "Black" },
+        
+      ],
+    },
     alignment: {
       title: "Alignment",
       description: "Default: Left",
@@ -48,7 +57,7 @@ Scrivito.provideEditingConfig("TextWidget", {
       description: "The actual source code of this text",
     },
   },
-  properties: ["alignment", "float", "width", "showDividingLine", "text"],
+  properties: ["color", "alignment", "float", "width", "showDividingLine", "text"],
   initialContent: {
     alignment: "left",
   },

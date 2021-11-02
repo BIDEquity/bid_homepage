@@ -676,6 +676,19 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+.black {
+  color: #000;
+}
+
+.white {
+  color: #fff
+}
+
+.introduction {
+  margin-top: -300px;
+  margin-bottom: 300px;
+}
+
 .info-popup-wrapper {
   position: relative;
   svg {

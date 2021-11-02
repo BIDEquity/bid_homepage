@@ -71,7 +71,7 @@ const BidEntrepeneursWidget = Scrivito.provideWidgetClass("BidEntrepeneursWidget
     popup6: "html",
     link: "link",
     icon: ["reference", {only: "Image"}],
-    
+    introduction: "widgetlist",
   },
   
 });
