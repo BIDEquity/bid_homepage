@@ -9207,8 +9207,8 @@ body {
 .contact_form_content {
     color: #3F5E67;
     font-weight: 300;
-    font-size: 60px;
-    line-height: 80px;
+    font-size: 30px;
+    
 
     @media screen and (max-width: 991px) {
         font-size: 30px;
@@ -9319,7 +9319,7 @@ body {
         border: none;
         border-bottom: 2px solid #F4544F;
         color: #FF5650;
-        font: 500 60px $base-font;
+        font: 300 30px $base-font;
 
         @include placeholder {
             color: #FF7873;

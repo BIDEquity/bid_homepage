@@ -1468,15 +1468,15 @@ nav .open .dropdown-menu.lang-switch a {
 .contact-select__placeholder,
 .contact-select__single-value {
   color: $primary !important;
-  font: 60px/37px "Swiss721 BT", sans-serif !important;
+  font: 30px/30px "Swiss721 BT", sans-serif !important;
   border-bottom: 2px solid $primary;
-  padding-bottom: 12px !important;
+  
 }
 
 .contact-select__single-value,
 .contact-select__placeholder {
   position: relative !important;
-  top: 12px !important;
+  top: 9px !important;
   left: auto !important;
   transform: none !important;
   max-width: none !important;

@@ -57,7 +57,7 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
                 options={positions}
                 className="contact_who select_style"
                 classNamePrefix="contact-select"
-                placeholder="Founder"
+                placeholder="Founder/Owner"
                 onChange={handleChange}
                 name="position"
               />
@@ -87,8 +87,7 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
               and my email address is
               <div className="contact_field contact_field_email">
                 <input name="email" type="email" required />
-              </div>
-              . You can also call me on
+              </div>. You can also call me on
               <div className="contact_field contact_field_tel">
                 <input
                   className="contact_tel_code"
@@ -98,8 +97,7 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
                   maxLength="5"
                 />
                 <input type="text" name="tel" />
-              </div>
-              .
+              </div>.
             </div>
           </div>
           <textarea
