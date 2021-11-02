@@ -6,6 +6,13 @@ Scrivito.provideComponent("BidWhatWeDoWidget", ({ widget }) => {
 
 return (
 <>
+      <div className="container">
+        <Scrivito.ContentTag
+          content={widget}
+          attribute="introduction"
+        />
+            
+		</div>
     <div className="content_section we_do_content">
 		<div className="container">
         <Scrivito.ContentTag
