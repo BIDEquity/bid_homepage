@@ -7319,6 +7319,10 @@ body {
     text-transform: uppercase;
 }
 
+.step_6 .transaction_process_center .transaction_process_block {
+    transform: translateY(700px);
+}
+
 .transaction_process_block {
     margin-bottom: 24px;
     transform: translateY(500px);
@@ -7440,6 +7444,7 @@ body {
     display: flex;
     height: 100%;
     margin: 0 -8px;
+    
 
     @media screen and (max-width: 991px) {
         margin-bottom: 24px;
@@ -7458,7 +7463,7 @@ body {
     margin: 0 8px;
     background-color: #1E2637;
     text-align: center;
-
+    max-height: 130px;
     @media screen and (max-width: 576px) {
         display: flex;
         align-items: center;
