@@ -1826,27 +1826,27 @@ textarea {
     width: 100% !important;
   }
 
-  .consolidate .box_A {
+  .consolidate .box_A, .konsolidierung .box_A {
     height: 10.4%;
     transform: translateY(-191px);
   }
 
-  .consolidate .box_B {
+  .consolidate .box_B, .konsolidierung .box_B {
     height: 11.7%;
     transform: translateY(-255px);
   }
 
-  .consolidate .box_C {
+  .consolidate .box_C, .konsolidierung .box_C {
     height: 13%;
     transform: translateY(-326.911px);
   }
 
-  .consolidate .box_E {
+  .consolidate .box_E, .konsolidierung .box_E {
     height: 15.6%;
     transform: translateY(-405.525px);
   }
 
-  .consolidate .box_F {
+  .consolidate .box_F, .konsolidierung .box_F {
     height: 18%;
     transform: translateY(-505.12px);
   }
@@ -1856,100 +1856,93 @@ textarea {
     transform: translateY(-328.506px);
   }
 
-  .build .box_A {
+  .build .box_A, .anbieter .box_A {
     height: 13.96%;
     transform: translateY(-140.452px);
   }
 
-  .build .box_B {
+  .build .box_B, .anbieter .box_B {
     height: 13.96%;
     transform: translateY(-225.253px);
   }
 
-  .build .box_C {
+  .build .box_C, .anbieter .box_C {
     height: 17.85%;
     transform: translateY(-316.278px);
   }
 
-  .build .box_D {
+  .build .box_D, .anbieter .box_D {
     height: 13.96%;
     transform: translateY(-426.655px);
   }
 
-  .build .box_E {
+  .build .box_E, .anbieter .box_E {
     height: 16.85%;
     transform: translateY(-512.204px);
   }
 
-  .build .box_E {
-    height: 16.85%;
-    transform: translateY(-512.204px);
-  }
 
-  .unleashed .box_A {
+  .unleashed .box_A, .entfesseln .box_A {
     height: 14.28%;
     transform: translateY(-137.289px);
   }
 
-  .unleashed .box_B {
+  .unleashed .box_B, .entfesseln .box_B {
     height: 6.49%;
     transform: translateY(-224.648px);
   }
 
-  .unleashed .box_C {
+  .unleashed .box_C, .entfesseln .box_C {
     height: 12.98%;
     transform: translateY(-273.382px);
   }
 
-  .unleashed .box_D {
+  .unleashed .box_D, .entfesseln .box_D {
     height: 8.92%;
     transform: translateY(-353.463px);
   }
 
-  .unleashed .box_E {
+  .unleashed .box_E, .entfesseln .box_E {
     height: 18.77%;
     transform: translateY(-410.309px);
   }
 
-  .unleashed .box_F {
+  .unleashed .box_F, .entfesseln .box_F {
     height: 14.28%;
     transform: translateY(-528.035px);
   }
 
-  .transform .box_D {
+  .transform .box_D, .transformieren .box_D {
     height: 24.67%;
     transform: translateY(-135px);
   }
 
-  .transform .box_E {
+  .transform .box_E, .transformieren .box_E {
     height: 24.67%;
     transform: translateY(-287.7px);
   }
 
-  .transform .box_F {
+  .transform .box_F, .transformieren .box_F {
     height: 28.57%;
     transform: translateY(-440.009px);
   }
 
-  .win .box_A {
+  .win .box_A, .technologie .box_A {
     height: 24.67%;
     transform: translateY(-137.818px);
   }
 
-  .win .box_D {
+  .win .box_D, .technologie .box_D {
     height: 24.67%;
     transform: translateY(-287.7px);
   }
 
-  .win .box_E {
+  .win .box_E, .technologie .box_E {
     height: 28.87%;
     transform: translateY(-438.161px);
   }
 
-  .box_E {
-    height: 23.378%;
-    transform: translateY(-471.992px);
-  }
+  
 
   .box_End {
     position: relative;
@@ -2171,6 +2164,18 @@ textarea {
 .konsolidierung .box_C,
 .konsolidierung .box_D,
 .konsolidierung .box_F,
+.transformieren .box_C,
+.transformieren .box_D,
+.transformieren .box_F,
+.technologie .box_C,
+.technologie .box_D,
+.technologie .box_F,
+.entfesseln .box_C,
+.entfesseln .box_D,
+.entfesseln .box_F,
+.anbieter .box_C,
+.anbieter .box_D,
+.anbieter .box_F,
 .wachstum .box_C,
 .wachstum .box_D,
 .wachstum .box_F,
@@ -2204,12 +2209,36 @@ textarea {
 .konsolidierung .box_C + .operational_value_info .operational_value_level,
 .konsolidierung .box_D + .operational_value_info .operational_value_level,
 .konsolidierung .box_F + .operational_value_info .operational_value_level,
+.transformieren .box_C + .operational_value_info .operational_value_level,
+.transformieren .box_D + .operational_value_info .operational_value_level,
+.transformieren .box_F + .operational_value_info .operational_value_level,
+.technologie .box_C + .operational_value_info .operational_value_level,
+.technologie .box_D + .operational_value_info .operational_value_level,
+.technologie .box_F + .operational_value_info .operational_value_level,
+.entfesseln .box_C + .operational_value_info .operational_value_level,
+.entfesseln .box_D + .operational_value_info .operational_value_level,
+.entfesseln .box_F + .operational_value_info .operational_value_level,
+.anbieter .box_C + .operational_value_info .operational_value_level,
+.anbieter .box_D + .operational_value_info .operational_value_level,
+.anbieter .box_F + .operational_value_info .operational_value_level,
 .wachstum .box_C + .operational_value_info .operational_value_level,
 .wachstum .box_D + .operational_value_info .operational_value_level,
 .wachstum .box_F + .operational_value_info .operational_value_level,
 .konsolidierung .box_C + .operational_value_info .operational_value_name,
 .konsolidierung .box_D + .operational_value_info .operational_value_name,
 .konsolidierung .box_F + .operational_value_info .operational_value_name,
+.transformieren .box_C + .operational_value_info .operational_value_name,
+.transformieren .box_D + .operational_value_info .operational_value_name,
+.transformieren .box_F + .operational_value_info .operational_value_name,
+.technologie .box_C + .operational_value_info .operational_value_name,
+.technologie .box_D + .operational_value_info .operational_value_name,
+.technologie .box_F + .operational_value_info .operational_value_name,
+.entfesseln .box_C + .operational_value_info .operational_value_name,
+.entfesseln .box_D + .operational_value_info .operational_value_name,
+.entfesseln .box_F + .operational_value_info .operational_value_name,
+.anbieter .box_C + .operational_value_info .operational_value_name,
+.anbieter .box_D + .operational_value_info .operational_value_name,
+.anbieter .box_F + .operational_value_info .operational_value_name,
 .wachstum .box_C + .operational_value_info .operational_value_name,
 .wachstum .box_D + .operational_value_info .operational_value_name,
 .wachstum .box_F + .operational_value_info .operational_value_name {

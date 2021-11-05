@@ -146,12 +146,7 @@ function Footer() {
                   </a>
                 </>
               )}
-              <div className="footer_box footer_box_links">
-                <p className="footer_box_title">Quick Links</p>
-                <div className="footer_links">
-                <Scrivito.ContentTag content={root} attribute="footer" tag="footer" />
-                </div>
-              </div>
+              
             </div>
             <div className="footer_info">
               <div className="footer_box">
