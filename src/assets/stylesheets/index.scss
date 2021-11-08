@@ -713,6 +713,8 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
   
 }
 
+
+
 .popup-wrapper {
   position: absolute;
   z-index: 10000;
@@ -734,6 +736,22 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
     left: 12px;
     cursor: pointer;
   }
+}
+
+.we_do_row .info-popup {
+  top: -350px !important;
+  width: 100% !important;
+  
+}
+
+.we_do_row .info-popup-wrapper svg {
+  position: absolute;
+    z-index: 11000;
+    width: 9px;
+    height: 9px;
+    top: -340px;
+    left: 12px;
+    cursor: pointer;
 }
 
 .close {
@@ -1559,6 +1577,7 @@ nav .open .dropdown-menu.lang-switch a {
 
 .we_do_row {
   margin: 0 -12px 88px !important;
+  position: relative;
 }
 
 p {

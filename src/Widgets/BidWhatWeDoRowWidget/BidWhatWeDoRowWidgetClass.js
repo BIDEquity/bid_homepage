@@ -7,7 +7,9 @@ const BidWhatWeDoRowWidget = Scrivito.provideWidgetClass("BidWhatWeDoRowWidget",
     description: "string",
     reverse: ["enum", { values: ["yes", "no"] }],
     text: "html",
-    link: "link"
+    link: "link",
+    popup1: "html",
+    showPopup: ["enum", { values: ["yes", "no"] }],
   },
   extractTextAttributes: ["headline"],
 });

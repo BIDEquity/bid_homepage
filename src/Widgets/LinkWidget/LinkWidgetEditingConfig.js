@@ -10,8 +10,9 @@ Scrivito.provideEditingConfig("LinkWidget", {
       description:
         "If no title is given, the obj's title or the external URl will be shown.",
     },
+    
   },
-  properties: ["link"],
+  properties: ["link","showPopup"],
   validations: [
     [
       "link",
