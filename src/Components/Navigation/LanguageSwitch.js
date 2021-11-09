@@ -7,23 +7,29 @@ class LanguageSwitch extends React.Component {
     super(props);
 
     this.toggleLanguage = this.toggleLanguage.bind(this);
-    this.showLanguage = this.showLanguage.bind(this);
+    
     this.state = {
-      language: false,
+      language: ["EN", "DE" ],
     };
   }
 
   toggleLanguage() {
+   
+    let arr = this.state.language;
+    let lang = this.rotateLeft(arr);
     this.setState({
-      language: !this.state.language,
+      language: lang,
     });
+    
   }
 
-  showLanguage() {
-    this.setState({
-      language: true,
-    });
-  }
+  rotateLeft(arr){
+    let first = arr.shift();
+    arr.push(first);
+    return arr;
+}
+
+  
 
   
 
@@ -37,24 +43,29 @@ class LanguageSwitch extends React.Component {
       
     return (
       
-          <ul
+          <ul className="language-switcher">
             
-            
-          >
-            {homepages.map((item) => (
-              
-              <li className="nav-item" key={item.id()}>
+              <li className="nav-item" >
+                {console.log(homepages)}
                 
+                  <span className="nav-link">{this.state.language[0]}</span>
+                <i className="fa fa-chevron-down" ></i>
+              </li>
+              
+                
+                <li className="nav-item" >
                 <Scrivito.LinkTag
-                  
-                  to={item}
+                
+                  onClick={this.toggleLanguage}
+                  to={this.state.language[0] === "EN" ? homepages[1] : homepages[0]}
                   className="nav-link"
+                  
                 >
-                  {item.id() === "c11fec265ccbf94d" ? "EN" : "DE"}
+                  {this.state.language[1]}
                 </Scrivito.LinkTag>
               </li>
               
-            ))}
+            
           </ul>
         
     );

@@ -29,7 +29,7 @@ Scrivito.configure({
   siteForUrl,
   baseUrlForSite,
   tenant: process.env.SCRIVITO_TENANT,
-  //homepage: () => Scrivito.Obj.getByPath("en"),
+  homepage: () => Scrivito.Obj.getByPath("en"),
   adoptUi: true,
   
   // other keys …

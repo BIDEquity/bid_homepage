@@ -1219,6 +1219,17 @@ nav .open .dropdown-menu.lang-switch a {
   display: none;
 }
 
+.language-switcher {
+  position: relative;
+  height: 33px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  &:hover {
+    padding-bottom: 33px !important;
+    overflow: visible;
+  }
+}
+
 .show-language {
   transition: all ease 0.5s;
   display: block;
@@ -1234,7 +1245,7 @@ nav .open .dropdown-menu.lang-switch a {
   }
 }
 
-.lang-switch .fa-chevron-down {
+.language-switcher .fa-chevron-down {
   color: $primary;
   font-size: 9px;
   position: absolute;
@@ -2440,6 +2451,7 @@ textarea {
     .fa-chevron-down {
       color: #fff;
       bottom: 12px;
+      
     }
   }
 

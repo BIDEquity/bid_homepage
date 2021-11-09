@@ -151,7 +151,7 @@
     margin: 0 22.75px 0 0;
     //padding: 0 !important;
     text-decoration: none;
-
+    color: #fff;
     font-size: 14px;
     line-height: 20px !important;
     letter-spacing: 0.3px !important;
@@ -461,6 +461,10 @@
     display: block !important;
   }
 
+  .language-switcher .nav-link:hover {
+    color: $primary !important;
+  }
+
   .nav {
     margin: 0 !important;
     //padding: 20px 15px;
@@ -468,7 +472,7 @@
     .dropdown-menu > li > a {
       text-align: left;
       //padding: 10px 20px;
-      color: #fff !important;
+      color: #fff;
     }
 
     > li {
