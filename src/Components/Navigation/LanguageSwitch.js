@@ -36,41 +36,27 @@ class LanguageSwitch extends React.Component {
     ).toArray();
       
     return (
-      <ul className="lang-switch" onMouseLeave={this.toggleLanguage}>
-        <li onMouseEnter={this.showLanguage} className={`nav-item ${this.state.language ? "open" : ""}`}>
-          <a
-            className="nav-link"
-            
-            onClick={this.toggleLanguage}
-          >
-            {getRoot() === "de" ? "DE" : "EN"}
-            <i className="fa fa-chevron-down" />
-          </a>
-
+      
           <ul
             
-            className={`dropdown-menu ${
-              this.state.language
-                ? "show-language menu-toggle"
-                : "hide-language"
-            }`}
+            
           >
-            {homepages.map((homepage) => (
+            {homepages.map((item) => (
               
-              <li className="nav-item" key={homepage.id()}>
+              <li className="nav-item" key={item.id()}>
+                
                 <Scrivito.LinkTag
-                  onClick={this.toggleLanguage}
-                  to={homepage}
+                  
+                  to={item}
                   className="nav-link"
                 >
-                  {homepage.id() === "c11fec265ccbf94d" ? "EN" : "DE"}
+                  {item.id() === "c11fec265ccbf94d" ? "EN" : "DE"}
                 </Scrivito.LinkTag>
               </li>
               
             ))}
           </ul>
-        </li>
-      </ul>
+        
     );
   }
 }
