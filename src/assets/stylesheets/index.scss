@@ -1816,12 +1816,12 @@ textarea {
     margin: 0 12px;
     background-color: #617aab;
     transition: all 0.3s;
-    height: 22.07%;
+    height: 29%;
   }
 
   .box_Start + .operational_value_info {
     position: absolute;
-    bottom: 12%;
+    bottom: 22%;
     left: 0;
     margin-bottom: 11px;
     text-align: center;
@@ -1850,35 +1850,40 @@ textarea {
     color: #b0bcd5 !important;
   }
 
-  .box_A {
+  .start .box_A, .continue .box_A, .company .box_A, .wachstum .box_A {
     height: 24.67%;
     transform: translateX(6px) translateY(-177px);
     width: 100% !important;
   }
 
+  .start .box_E, .continue .box_E, .company .box_E, .wachstum .box_E {
+    height: 23.378%;
+    transform: translateY(-471.992px);
+  }
+
   .consolidate .box_A, .konsolidierung .box_A {
     height: 10.4%;
-    transform: translateY(-191px);
+    transform: translateY(-181px);
   }
 
   .consolidate .box_B, .konsolidierung .box_B {
     height: 11.7%;
-    transform: translateY(-255px);
+    transform: translateY(-245px);
   }
 
   .consolidate .box_C, .konsolidierung .box_C {
     height: 13%;
-    transform: translateY(-326.911px);
+    transform: translateY(-316.911px);
   }
 
   .consolidate .box_E, .konsolidierung .box_E {
     height: 15.6%;
-    transform: translateY(-405.525px);
+    transform: translateY(-395.525px);
   }
 
   .consolidate .box_F, .konsolidierung .box_F {
-    height: 18%;
-    transform: translateY(-505.12px);
+    height: 19.85%;
+    transform: translateY(-495.12px);
   }
 
   .box_B {
@@ -1888,88 +1893,88 @@ textarea {
 
   .build .box_A, .anbieter .box_A {
     height: 13.96%;
-    transform: translateY(-140.452px);
+    transform: translateY(-175.452px);
   }
 
   .build .box_B, .anbieter .box_B {
     height: 13.96%;
-    transform: translateY(-225.253px);
+    transform: translateY(-260.253px);
   }
 
   .build .box_C, .anbieter .box_C {
     height: 17.85%;
-    transform: translateY(-316.278px);
+    transform: translateY(-351.278px);
   }
 
   .build .box_D, .anbieter .box_D {
     height: 13.96%;
-    transform: translateY(-426.655px);
+    transform: translateY(-461.655px);
   }
 
   .build .box_E, .anbieter .box_E {
-    height: 16.85%;
-    transform: translateY(-512.204px);
+    height: 10.85%;
+    transform: translateY(-547.204px);
   }
 
 
-  .unleashed .box_A, .entfesseln .box_A {
+  .unleash .box_A, .entfesseln .box_A {
     height: 14.28%;
-    transform: translateY(-137.289px);
+    transform: translateY(-177.289px);
   }
 
-  .unleashed .box_B, .entfesseln .box_B {
+  .unleash .box_B, .entfesseln .box_B {
     height: 6.49%;
-    transform: translateY(-224.648px);
+    transform: translateY(-264.648px);
   }
 
-  .unleashed .box_C, .entfesseln .box_C {
+  .unleash .box_C, .entfesseln .box_C {
     height: 12.98%;
-    transform: translateY(-273.382px);
+    transform: translateY(-313.382px);
   }
 
-  .unleashed .box_D, .entfesseln .box_D {
+  .unleash .box_D, .entfesseln .box_D {
     height: 8.92%;
-    transform: translateY(-353.463px);
+    transform: translateY(-393.463px);
   }
 
-  .unleashed .box_E, .entfesseln .box_E {
+  .unleash .box_E, .entfesseln .box_E {
     height: 18.77%;
-    transform: translateY(-410.309px);
+    transform: translateY(-450.309px);
   }
 
-  .unleashed .box_F, .entfesseln .box_F {
-    height: 14.28%;
-    transform: translateY(-528.035px);
+  .unleash .box_F, .entfesseln .box_F {
+    height: 7%;
+    transform: translateY(-568.035px);
   }
 
   .transform .box_D, .transformieren .box_D {
     height: 24.67%;
-    transform: translateY(-135px);
+    transform: translateY(-175px);
   }
 
   .transform .box_E, .transformieren .box_E {
     height: 24.67%;
-    transform: translateY(-287.7px);
+    transform: translateY(-327.7px);
   }
 
   .transform .box_F, .transformieren .box_F {
-    height: 28.57%;
-    transform: translateY(-440.009px);
+    height: 22%;
+    transform: translateY(-480.009px);
   }
 
   .win .box_A, .technologie .box_A {
     height: 24.67%;
-    transform: translateY(-137.818px);
+    transform: translateY(-177.818px);
   }
 
   .win .box_D, .technologie .box_D {
     height: 24.67%;
-    transform: translateY(-287.7px);
+    transform: translateY(-327.7px);
   }
 
   .win .box_E, .technologie .box_E {
-    height: 28.87%;
-    transform: translateY(-438.161px);
+    height: 21.87%;
+    transform: translateY(-478.161px);
   }
 
   
@@ -2062,7 +2067,7 @@ textarea {
 
   .consolidate .box_F {
     transform: translateX(274.7px);
-    width: 18%;
+    width: 19.7%;
   }
 
   .box_B {
@@ -2092,7 +2097,7 @@ textarea {
 
   .build .box_E {
     transform: translateX(278.553px);
-    width: 16.85%;
+    width: 11%;
   }
 
   .unleashed .box_A {
@@ -2122,23 +2127,10 @@ textarea {
 
   .unleashed .box_F {
     transform: translateX(287.162px);
-    width: 14.28%;
+    width: 6%;
   }
 
-  .transform .box_D {
-    transform: translateX(74.9496px);
-    width: 24.67%;
-  }
-
-  .transform .box_E {
-    transform: translateX(156.46px);
-    width: 24.67%;
-  }
-
-  .transform .box_F {
-    transform: translateX(239.291px);
-    width: 28.57%;
-  }
+  
 
   .win .box_A {
     transform: translateX(74.9496px);
@@ -2152,7 +2144,7 @@ textarea {
 
   .win .box_E {
     transform: translateX(238.286px);
-    width: 28.87%;
+    width: 22%;
   }
 
   .box_E {
@@ -2186,25 +2178,15 @@ textarea {
 .transform .box_A,
 .transform .box_B,
 .transform .box_C,
-.unleash .box_C,
-.unleash .box_D,
-.unleash .box_F,
 .win .box_B,
 .win .box_C,
-.konsolidierung .box_C,
 .konsolidierung .box_D,
-.konsolidierung .box_F,
+.transformieren .box_A,
+.transformieren .box_B,
 .transformieren .box_C,
-.transformieren .box_D,
-.transformieren .box_F,
+.technologie .box_B,
 .technologie .box_C,
-.technologie .box_D,
 .technologie .box_F,
-.entfesseln .box_C,
-.entfesseln .box_D,
-.entfesseln .box_F,
-.anbieter .box_C,
-.anbieter .box_D,
 .anbieter .box_F,
 .wachstum .box_C,
 .wachstum .box_D,
@@ -2214,6 +2196,18 @@ textarea {
   display: none;
 }
 
+.start .box_C + .operational_value_info .operational_value_name,
+.start .box_D + .operational_value_info .operational_value_name,
+.start .box_F + .operational_value_info .operational_value_name,
+.start .box_C + .operational_value_info .operational_value_level,
+.start .box_D + .operational_value_info .operational_value_level,
+.start .box_F + .operational_value_info .operational_value_level,
+.company .box_C + .operational_value_info .operational_value_name,
+.company .box_D + .operational_value_info .operational_value_name,
+.company .box_F + .operational_value_info .operational_value_name,
+.company .box_C + .operational_value_info .operational_value_level,
+.company .box_D + .operational_value_info .operational_value_level,
+.company .box_F + .operational_value_info .operational_value_level,
 .continue .box_C + .operational_value_info .operational_value_name,
 .continue .box_C + .operational_value_info .operational_value_level,
 .continue .box_D + .operational_value_info .operational_value_name,
@@ -2236,38 +2230,24 @@ textarea {
 .win .box_C + .operational_value_info .operational_value_level,
 .win .box_F + .operational_value_info .operational_value_name,
 .win .box_F + .operational_value_info .operational_value_level,
-.konsolidierung .box_C + .operational_value_info .operational_value_level,
 .konsolidierung .box_D + .operational_value_info .operational_value_level,
-.konsolidierung .box_F + .operational_value_info .operational_value_level,
+.transformieren .box_A + .operational_value_info .operational_value_level,
+.transformieren .box_B + .operational_value_info .operational_value_level,
 .transformieren .box_C + .operational_value_info .operational_value_level,
-.transformieren .box_D + .operational_value_info .operational_value_level,
-.transformieren .box_F + .operational_value_info .operational_value_level,
+.technologie .box_B + .operational_value_info .operational_value_level,
 .technologie .box_C + .operational_value_info .operational_value_level,
-.technologie .box_D + .operational_value_info .operational_value_level,
 .technologie .box_F + .operational_value_info .operational_value_level,
-.entfesseln .box_C + .operational_value_info .operational_value_level,
-.entfesseln .box_D + .operational_value_info .operational_value_level,
-.entfesseln .box_F + .operational_value_info .operational_value_level,
-.anbieter .box_C + .operational_value_info .operational_value_level,
-.anbieter .box_D + .operational_value_info .operational_value_level,
 .anbieter .box_F + .operational_value_info .operational_value_level,
 .wachstum .box_C + .operational_value_info .operational_value_level,
 .wachstum .box_D + .operational_value_info .operational_value_level,
 .wachstum .box_F + .operational_value_info .operational_value_level,
-.konsolidierung .box_C + .operational_value_info .operational_value_name,
 .konsolidierung .box_D + .operational_value_info .operational_value_name,
-.konsolidierung .box_F + .operational_value_info .operational_value_name,
+.transformieren .box_A + .operational_value_info .operational_value_name,
+.transformieren .box_B + .operational_value_info .operational_value_name,
 .transformieren .box_C + .operational_value_info .operational_value_name,
-.transformieren .box_D + .operational_value_info .operational_value_name,
-.transformieren .box_F + .operational_value_info .operational_value_name,
+.technologie .box_B + .operational_value_info .operational_value_name,
 .technologie .box_C + .operational_value_info .operational_value_name,
-.technologie .box_D + .operational_value_info .operational_value_name,
 .technologie .box_F + .operational_value_info .operational_value_name,
-.entfesseln .box_C + .operational_value_info .operational_value_name,
-.entfesseln .box_D + .operational_value_info .operational_value_name,
-.entfesseln .box_F + .operational_value_info .operational_value_name,
-.anbieter .box_C + .operational_value_info .operational_value_name,
-.anbieter .box_D + .operational_value_info .operational_value_name,
 .anbieter .box_F + .operational_value_info .operational_value_name,
 .wachstum .box_C + .operational_value_info .operational_value_name,
 .wachstum .box_D + .operational_value_info .operational_value_name,

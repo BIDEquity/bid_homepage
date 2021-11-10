@@ -29,6 +29,24 @@ class LanguageSwitch extends React.Component {
     return arr;
 }
 
+componentDidMount() {
+  Scrivito.load(() => {
+    const rootPage = Scrivito.Obj.root();
+    
+    if (!rootPage) {
+      return undefined;
+    }
+    return rootPage.get("intercomAppId");
+  }).then((intercomAppId) => {
+    if (intercomAppId) {
+      Scrivito.finishLoading().then(() => {
+        installIntercom(intercomAppId);
+        this.setState({ intercomAppId });
+      });
+    }
+  });
+}
+
   
 
   
@@ -46,7 +64,7 @@ class LanguageSwitch extends React.Component {
           <ul className="language-switcher">
             
               <li className="nav-item" >
-                {console.log(homepages)}
+                
                 
                   <span className="nav-link">{this.state.language[0]}</span>
                 <i className="fa fa-chevron-down" ></i>
@@ -54,6 +72,7 @@ class LanguageSwitch extends React.Component {
               
                 
                 <li className="nav-item" >
+                  
                 <Scrivito.LinkTag
                 
                   onClick={this.toggleLanguage}
