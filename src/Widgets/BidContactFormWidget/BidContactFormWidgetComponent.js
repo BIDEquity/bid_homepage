@@ -76,7 +76,7 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
               } `}
             >
               {position.position === "Berater" || position.position === "Gründer/Eigentümer" 
-              || position.position === "Founder/Owner" || position.position === "Management Advisor"
+              || position.position === "the Founder/Owner" || position.position === "the Management Advisor"
               ?
               <>
               <Scrivito.ContentTag
