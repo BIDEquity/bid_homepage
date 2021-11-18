@@ -10,6 +10,7 @@ https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-
 
 Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
   const [visible, setVisible] = React.useState(false);
+  const [position, setPosition] = React.useState("");
   const pos = widget.get("positions");
 
   const positions = pos.map((position) => ({
@@ -19,13 +20,15 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
 
   const handleChange = (selectedOption) => {
     setVisible({
-      visible: selectedOption.label !== "Founder", //||
-      //selectedOption.label === "Managing Director",
+      visible: selectedOption.label !== "Founder",
+    });
+    setPosition({
+      position: selectedOption.label,
     });
   };
   const urlParams = new URLSearchParams(window.location.search);
   const helpsection = urlParams.get("helpsection");
-
+  console.log(position.position)
   return (
     <div className="content_section contact_section">
       <div className="container">
@@ -57,55 +60,92 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
                 options={positions}
                 className="contact_who select_style"
                 classNamePrefix="contact-select"
-                placeholder="Founder/Owner"
+                placeholder={<Scrivito.ContentTag
+                  content={widget}
+                  attribute="founder"
+                  tag="span"
+                />}
                 onChange={handleChange}
                 name="position"
               />
             </div>
-            <Scrivito.ContentTag
-              content={widget}
-              attribute="company"
-              tag="span"
-            />
+            
             <div
               className={`contact_details ${
                 !visible.visible ? "hidden" : "show"
               } `}
             >
-              headquartered in
+              {position.position === "Berater" || position.position === "Gründer/Eigentümer" 
+              || position.position === "Founder/Owner" || position.position === "Management Advisor"
+              ?
+              <>
+              <Scrivito.ContentTag
+              content={widget}
+              attribute="company"
+              tag="span"
+            />
+              <Scrivito.ContentTag
+              content={widget}
+              attribute="headquarter"
+              tag="span"
+            />
+            
               <div className="contact_field contact_field_location">
                 <input name="location" type="text" required />
               </div>
-              with annual revenues of <br />€
-              <div className="contact_field contact_field_revenues">
-                <input name="revenues" type="text" required />
-              </div>
-              million. My name is
+              </>
+              : null }
+              <Scrivito.ContentTag
+              content={widget}
+              attribute="name"
+              tag="span"
+            />
               <div className="contact_field contact_field_name">
                 <input name="name" type="text" required />
               </div>
-              and my email address is
+
+              <Scrivito.ContentTag
+              content={widget}
+              attribute="mail"
+              tag="span"
+            />
               <div className="contact_field contact_field_email">
-                <input name="email" type="email" required />
-              </div>. You can also call me on
+                <input name="mail" type="text" required />
+              </div>
+              
+              <Scrivito.ContentTag
+              content={widget}
+              attribute="telNumber"
+              tag="span"
+            /> 
+
               <div className="contact_field contact_field_tel">
+              
                 <input
-                  className="contact_tel_code"
+                  className="contact_tel"
                   type="text"
                   required
                   name="phone"
-                  maxLength="5"
+                  
                 />
-                <input type="text" name="tel" />
-              </div>.
+               
+              </div><Scrivito.ContentTag
+              content={widget}
+              attribute="tel"
+              tag="span"
+            /> 
             </div>
           </div>
           <textarea
             className="contact_addition"
-            placeholder="Add addition information here"
+            placeholder={widget.get("addition")}
             name="addition"
           ></textarea>
-          <SubmitButton className="contact_form_send btn" label="Send my enquiry"/>
+          <SubmitButton className="contact_form_send btn" label={<Scrivito.ContentTag
+              content={widget}
+              attribute="submit"
+              tag="span"
+            />}/>
           
         </form>
       </div>
