@@ -4918,7 +4918,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 480px;
+    min-height: 400px;
     padding: 48px 40px 43px;
     width: 100%;
     max-width: calc(312px - 24px);
@@ -4981,7 +4981,7 @@ body {
 .portfolio_stats_text {
     p {
         color: #F7EDE1;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 24px;
 
         @media screen and (max-width: 991px) {

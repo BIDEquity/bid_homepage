@@ -84,9 +84,13 @@ Scrivito.provideComponent("BidInvestorsWidget", ({ widget }) => {
           </div>
         </div>
       </div>
+      
       <div className="investors_news">
         <div className="container">
-        
+        <Scrivito.ContentTag
+        content={widget}
+        attribute="rowWidget"
+      />
           <Scrivito.ContentTag 
             content={widget}
             attribute="newsTitle"
