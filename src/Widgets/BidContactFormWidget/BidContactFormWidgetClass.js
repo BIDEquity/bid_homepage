@@ -14,7 +14,8 @@ const BidContactFormWidget = Scrivito.provideWidgetClass("BidContactFormWidget",
     telNumber: "string",
     addition: "string",
     submit: "string",
-    positions: "stringlist"
+    positions: "stringlist",
+    legal: "string"
   },
 });
 

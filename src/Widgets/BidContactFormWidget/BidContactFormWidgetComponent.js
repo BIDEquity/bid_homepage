@@ -141,11 +141,13 @@ Scrivito.provideComponent("BidContactFormWidget", ({ widget }) => {
             placeholder={widget.get("addition")}
             name="addition"
           ></textarea>
-          <SubmitButton className="contact_form_send btn" label={<Scrivito.ContentTag
+          <Scrivito.ContentTag
               content={widget}
-              attribute="submit"
-              tag="span"
-            />}/>
+              attribute="legal"
+              tag="div"
+              class="legal"
+            /> 
+          <SubmitButton className="contact_form_send btn" label={widget.get('submit')}/>
           
         </form>
       </div>

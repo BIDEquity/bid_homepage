@@ -5,5 +5,5 @@ Scrivito.provideEditingConfig("BidContactFormWidget", {
   title: "Bid Contact Form",
   thumbnail: contactFormWidgetIcon,
   
-  properties:['positions', 'founder', 'addition']
+  properties:['positions', 'founder', 'addition', 'submit']
 });
