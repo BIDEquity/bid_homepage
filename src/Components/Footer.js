@@ -15,7 +15,7 @@ function Footer() {
 
   const lang = root.siteId();
   
-
+  
   return (
     <footer className={`footer ${altF === "yes" && "footer_alternative"}`}>
       <div className="container">
@@ -122,6 +122,7 @@ function Footer() {
                 </g>
               </svg>
             </a>
+            
             <p className="footer_cop bottom_line">
               © 2021 BID EQUITY GMBH. All rights reserved.
             </p>
@@ -137,6 +138,8 @@ function Footer() {
             <div className="footer_top bottom_line">
               {!altF && (
                 <>
+                { lang === "en" ?
+                <>
                   <h3 className="footer_title">
                     Get a reliable valuation for your business within 48 hours
                     from us.
@@ -144,13 +147,28 @@ function Footer() {
                   <a className="btn" href="#">
                     Let’s go!
                   </a>
+                  </>
+                  :
+                  <>
+                  <h3 className="footer_title">
+                  Erhalten Sie von uns binnen 48 Stunden eine zuverlässige Bewertung Ihres Unternehmens.
+                  </h3>
+                  <a className="btn" href="#">
+                    Los geht‘s!
+                  </a>
+                  </>
+                }
                 </>
               )}
               
             </div>
             <div className="footer_info">
               <div className="footer_box">
+                {lang === "en" ?
                 <p className="footer_box_title">Start a conversation</p>
+                :
+                <p className="footer_box_title">Nehmen Sie Kontakt zu uns auf</p>
+                }
                 <div className="footer_text">
                   <p>Phone +49 40 822 169 420</p>
                   <p>Fax +49 40 537 981 320</p>
@@ -158,7 +176,11 @@ function Footer() {
                 </div>
               </div>
               <div className="footer_box">
+                {lang === "en" ?
                 <p className="footer_box_title">Come and meet us</p>
+                :
+                <p className="footer_box_title">Treffen Sie uns vor Ort</p>
+                }
                 <div className="footer_text">
                   <p>
                     BID EQUITY GMBH <br />
@@ -168,22 +190,14 @@ function Footer() {
                 </div>
               </div>
               <div className="footer_box">
+                {lang === "en" ?
                 <p className="footer_box_title">Get social with us</p>
+                :
+                <p className="footer_box_title">Unsere Accounts</p>
+                }
                 <div className="footer_soc">
-                  <a href="#">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="18.216"
-                      height="14.804"
-                      viewBox="0 0 18.216 14.804"
-                    >
-                      <path
-                        d="M80.729,113.215a10.561,10.561,0,0,0,10.633-10.633c0-.162,0-.323-.011-.483a7.6,7.6,0,0,0,1.864-1.935,7.46,7.46,0,0,1-2.146.588,3.75,3.75,0,0,0,1.643-2.067,7.49,7.49,0,0,1-2.373.907A3.741,3.741,0,0,0,83.971,103a10.61,10.61,0,0,1-7.7-3.9,3.74,3.74,0,0,0,1.157,4.989,3.709,3.709,0,0,1-1.693-.468c0,.016,0,.031,0,.048a3.739,3.739,0,0,0,3,3.664,3.732,3.732,0,0,1-1.688.064,3.742,3.742,0,0,0,3.491,2.6,7.5,7.5,0,0,1-4.642,1.6,7.6,7.6,0,0,1-.891-.052,10.58,10.58,0,0,0,5.729,1.679"
-                        transform="translate(-75 -98.411)"
-                      />
-                    </svg>
-                  </a>
-                  <a href="#">
+                  
+                  <a href="https://www.linkedin.com/company/bid-equity/" target="_blank">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="17.946"
@@ -196,20 +210,7 @@ function Footer() {
                       />
                     </svg>
                   </a>
-                  <a href="#">
-                    <svg
-                      className="svg_soc_fb"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="17.946"
-                      height="17.946"
-                      viewBox="0 0 17.946 17.946"
-                    >
-                      <path
-                        d="M-1031.264,1h-15.526A1.21,1.21,0,0,0-1048,2.21V17.736a1.21,1.21,0,0,0,1.21,1.21h7.158v-6.28h-2.28v-2.6h2.28V8.091A3.17,3.17,0,0,1-1036.24,4.6a13.814,13.814,0,0,1,2.011.175v2.21h-1.133a1.3,1.3,0,0,0-1.464,1.4v1.685h2.491l-.4,2.6h-2.093v6.28h5.561a1.21,1.21,0,0,0,1.21-1.21V2.21A1.21,1.21,0,0,0-1031.264,1Z"
-                        transform="translate(1048 -1)"
-                      />
-                    </svg>
-                  </a>
+                  
                 </div>
               </div>
             </div>
