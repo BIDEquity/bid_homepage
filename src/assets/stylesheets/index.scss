@@ -854,6 +854,10 @@ section {
   }
 }
 
+.d-sm-none {
+  display: none;
+}
+
 .card-theme {
   background: transparent;
   box-shadow: none;
@@ -1230,6 +1234,21 @@ nav .open .dropdown-menu.lang-switch a {
   }
 }
 
+@media screen and (max-width: 1079px){
+  
+
+.language-switcher {
+  position: absolute;
+  height: 33px;
+  overflow:visible;
+  transition: all 0.5s ease;
+  margin-left: 18px;
+  top: 23px;
+  right: 24px;
+  display: flex;
+}
+
+}
 .show-language {
   transition: all ease 0.5s;
   display: block;
@@ -1260,7 +1279,7 @@ nav .open .dropdown-menu.lang-switch a {
   }
   to {
     opacity: 1;
-    width: 89.7vw;
+    width: 100vw;
   }
 }
 
@@ -1354,14 +1373,14 @@ nav .open .dropdown-menu.lang-switch a {
   }
 }
 
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
   .col-lg-3,
   .col-lg-4 {
     width: 50%;
   }
-}
+}*/
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 926px) {
   .col-lg-3,
   .col-lg-4 {
     width: 100%;
@@ -1786,8 +1805,11 @@ textarea {
   margin-bottom: 60px;
 }
 
+@media screen and (min-width: 1080px) {
+  
 .transaction_process_section .slider_pagination .swiper-pagination-bullet {
   margin: 0 0 10px 0 !important;
+}
 }
 
 .transaction_process_box,

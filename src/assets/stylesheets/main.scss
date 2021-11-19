@@ -1025,7 +1025,7 @@ body {
         line-height: 24px;
         letter-spacing: normal;
         padding: 0 0 18px;
-        margin: 39px 0 0 0;
+        margin: 0 0 0 0;
         border-radius: 0;
         border-bottom: 1px solid #F7EDE1;
     }
@@ -1803,6 +1803,9 @@ body {
 .posts_slider_wrap {
     @media screen and (max-width: 991px) {
         margin: 0 -32px;
+        .more_link {
+            margin-left: 32px;
+        }
     }
 }
 
@@ -2628,6 +2631,9 @@ body {
     text-transform: uppercase;
     margin-bottom: 32px;
     padding-bottom: 24px;
+    @media screen and (max-width: 576px) {
+     padding-right:24px;
+    }
 }
 
 .about_us_description {
@@ -2641,6 +2647,7 @@ body {
         font-size: 21px;
         line-height: 24px;
         margin-bottom: 16px;
+        
     }
 }
 
@@ -2653,6 +2660,7 @@ body {
         @media screen and (max-width: 576px) {
             font-size: 18px;
             line-height: 24px;
+            padding-right:24px;
         }
     }
 }
@@ -3401,6 +3409,7 @@ body {
 .valuation_process_slider {
     .swiper-slide {
         height: auto;
+        max-height: 100vh;
     }
 }
 
@@ -5498,14 +5507,14 @@ body {
 
     .mobile {
         display: none;
-
+        margin-left: 48px;
         @media screen and (max-width: 576px) {
             display: block;
         }
     }
 
     svg {
-        width: 100%;
+        width: 100vw;
         height: auto;
     }
 
@@ -6692,7 +6701,7 @@ body {
     padding: 510px 0 0;
 
     @media screen and (max-width: 991px) {
-        padding-top: 54px;
+        padding-top: 0;
     }
 
     .content_info {
@@ -6753,7 +6762,9 @@ body {
 .transaction_process_overview {
     width: 100%;
     padding-top: 80px;
-
+    @media screen and (max-width:428px){
+        padding-top:20px;
+    }
     &.fixed {
         position: fixed;
     }
@@ -7291,7 +7302,7 @@ body {
     transition: all 1.5s 4s;
 
     @media screen and (max-width: 991px) {
-        height: 176px;
+        height: 80px;
         margin: 0;
         transform: translateY(0);
         opacity: 1;
@@ -7349,7 +7360,7 @@ body {
 
     p {
         color: #F7EDE1;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 24px;
         margin-bottom: 24px;
 

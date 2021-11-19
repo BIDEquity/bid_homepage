@@ -197,7 +197,8 @@
     height: 66px;
     border: none !important;
     border-radius: 0;
-
+    position: relative;
+    z-index: 1000;
     &:hover,
     &:focus {
       background: transparent !important;
@@ -412,7 +413,7 @@
   .fixed-top,
   .fixed-bottom {
     .navbar-collapse {
-      //height: 100vh;
+      height: 100vh;
       width: 100%;
       //overflow-y: auto;
     }
