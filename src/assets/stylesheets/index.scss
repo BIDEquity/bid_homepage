@@ -686,7 +686,11 @@ $easing: cubic-bezier(0.7, 0, 0, 0.7);
 
 .introduction {
   margin-top: -300px;
-  margin-bottom: 300px;
+  margin-bottom: 150px;
+  opacity: 0.9;
+  color: #F7EDE1;
+  font: italic 24px/30px "Adobe Garamond Pro", serif;
+  letter-spacing: -0.01em;
 }
 
 .info-popup-wrapper {
