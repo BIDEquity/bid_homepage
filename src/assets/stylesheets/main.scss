@@ -112,9 +112,14 @@ $third-font: 'AcuminPro', sans-serif;
 $italic-font: 'Adobe Garamond Pro', serif;
 $italic-secondary-font: 'Cormorant Garamond', serif;
 
+html {
+    overflow-x: hidden;
+}
+
 html,
 body {
     height: 100%;
+    
 }
 
 body {
@@ -6155,12 +6160,14 @@ body {
 .entrepreneurs_help_nav {
     display: flex;
     padding-bottom: 24px;
-    overflow: auto;
+    overflow: hidden;
     scrollbar-width: none;
     
     @media screen and (max-width: 991px) {
         margin: 0 -32px;
         padding: 0 32px 24px;
+        display: flex;
+        flex-direction: column;
     }
 
     &::-webkit-scrollbar {
