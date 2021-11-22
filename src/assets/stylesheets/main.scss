@@ -7082,6 +7082,15 @@ body {
 
             @media screen and (max-width: 991px) {
                 padding-top: 0;
+        
+            }
+        }
+
+        .transaction_process_right {
+
+            @media screen and (max-width: 991px) {
+                margin-top: 110px;
+        
             }
         }
     }
@@ -7092,6 +7101,7 @@ body {
 
             @media screen and (max-width: 991px) {
                 margin-top: 0;
+                
             }
         }
 
@@ -7100,6 +7110,16 @@ body {
 
             @media screen and (max-width: 991px) {
                 padding-top: 0;
+                transform: translateY(-150%);
+                transition: all 2s;
+            }
+        }
+
+        .transaction_process_right {
+
+            @media screen and (max-width: 991px) {
+                margin-top: 110px;
+        
             }
         }
 
@@ -7126,6 +7146,8 @@ body {
 
             @media screen and (max-width: 991px) {
                 padding-top: 0;
+                transform: translateY(-100%);
+                transition: all 2s;
             }
         }
 
@@ -7152,6 +7174,16 @@ body {
 
             @media screen and (max-width: 991px) {
                 padding-top: 0;
+                transform: translateY(-75%);
+                transition: all 2s;
+            }
+        }
+
+        .transaction_process_right {
+
+            @media screen and (max-width: 991px) {
+                margin-top: 110px;
+        
             }
         }
 
@@ -7178,6 +7210,16 @@ body {
 
             @media screen and (max-width: 991px) {
                 padding-top: 0;
+                transform: translateY(-200%);
+                transition: all 2s;
+            }
+        }
+
+        .transaction_process_right {
+
+            @media screen and (max-width: 991px) {
+                margin-top: 110px;
+        
             }
         }
 
@@ -7204,6 +7246,8 @@ body {
 
             @media screen and (max-width: 991px) {
                 padding-top: 0;
+                transform: translateY(-100%);
+                transition: all 2s;
             }
         }
 
@@ -7247,6 +7291,7 @@ body {
         margin-bottom: 33px;
         transform: translateY(0);
         transition: none;
+        margin-bottom: 0;
     }
 }
 
@@ -7283,7 +7328,6 @@ body {
         width: 100%;
         padding: 0;
         margin-top: 33px;
-        transform: translateY(0);
         transition: none;
     }
 }

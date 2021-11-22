@@ -2071,8 +2071,18 @@ textarea {
     width: 100vw;
   }
 
-  .box_A {
+  .continue .box_A, .box_A {
     transform: translateX(100.107px);
+    width: 23.378%;
+  }
+
+  .continue .box_B, .box_B {
+    transform: translateX(178.652px);
+    width: 23.378%;
+  }
+
+  .continue .box_E, .box_E {
+    transform: translateX(256.684px);
     width: 23.378%;
   }
 
@@ -2101,11 +2111,6 @@ textarea {
     width: 19.7%;
   }
 
-  .box_B {
-    transform: translateX(178.652px);
-    width: 23.378%;
-  }
-
   .build .box_A {
     transform: translateX(76.382px);
     width: 13.96%;
@@ -2131,34 +2136,49 @@ textarea {
     width: 11%;
   }
 
-  .unleashed .box_A {
+  .unleash .box_A {
     transform: translateX(74.6621px);
     width: 14.28%;
   }
 
-  .unleashed .box_B {
+  .unleash .box_B {
     transform: translateX(122.171px);
     width: 6.49%;
   }
 
-  .unleashed .box_C {
+  .unleash .box_C {
     transform: translateX(148.674px);
     width: 12.98%;
   }
 
-  .unleashed .box_D {
+  .unleash .box_D {
     transform: translateX(192.224px);
     width: 8.92%;
   }
 
-  .unleashed .box_E {
+  .unleash .box_E {
     transform: translateX(223.139px);
     width: 18.77%;
   }
 
-  .unleashed .box_F {
+  .unleash .box_F {
     transform: translateX(287.162px);
     width: 6%;
+  }
+
+  .transform .box_D {
+    transform: translateX(74.9496px);
+    width: 24.67%;
+  }
+
+  .transform .box_E {
+    transform: translateX(156.46px);
+    width: 24.67%;
+  }
+
+  .transform .box_F {
+    transform: translateX(239.291px);
+    width: 28.57%;
   }
 
   
@@ -2178,10 +2198,137 @@ textarea {
     width: 22%;
   }
 
-  .box_E {
+  
+  .wachstum .box_A, .box_A {
+    transform: translateX(100.107px);
+    width: 23.378%;
+  }
+
+  .wachstum .box_B, .box_B {
+    transform: translateX(178.652px);
+    width: 23.378%;
+  }
+
+  .wachstum .box_E, .box_E {
     transform: translateX(256.684px);
     width: 23.378%;
   }
+
+  .konsolidierung .box_A {
+    transform: translateX(102.054px);
+    width: 10.4%;
+  }
+
+  .konsolidierung .box_B {
+    transform: translateX(136.07px);
+    width: 11.7%;
+  }
+
+  .konsolidierung .box_C {
+    transform: translateX(177.785px);
+    width: 13%;
+  }
+
+  .konsolidierung .box_E {
+    transform: translateX(220.537px);
+    width: 15.6%;
+  }
+
+  .konsolidierung .box_F {
+    transform: translateX(274.7px);
+    width: 19.7%;
+  }
+
+  .anbieter .box_A {
+    transform: translateX(76.382px);
+    width: 13.96%;
+  }
+
+  .anbieter .box_B {
+    transform: translateX(122.499px);
+    width: 13.96%;
+  }
+
+  .anbieter .box_C {
+    transform: translateX(172.002px);
+    width: 17.85%;
+  }
+
+  .anbieter .box_D {
+    transform: translateX(232.028px);
+    width: 13.96%;
+  }
+
+  .anbieter .box_E {
+    transform: translateX(278.553px);
+    width: 11%;
+  }
+
+  .entfesseln .box_A {
+    transform: translateX(74.6621px);
+    width: 14.28%;
+  }
+
+  .entfesseln .box_B {
+    transform: translateX(122.171px);
+    width: 6.49%;
+  }
+
+  .entfesseln .box_C {
+    transform: translateX(148.674px);
+    width: 12.98%;
+  }
+
+  .entfesseln .box_D {
+    transform: translateX(192.224px);
+    width: 8.92%;
+  }
+
+  .entfesseln .box_E {
+    transform: translateX(223.139px);
+    width: 18.77%;
+  }
+
+  .entfesseln .box_F {
+    transform: translateX(287.162px);
+    width: 6%;
+  }
+
+  .transformieren .box_D {
+    transform: translateX(74.9496px);
+    width: 24.67%;
+  }
+
+  .transformieren .box_E {
+    transform: translateX(156.46px);
+    width: 24.67%;
+  }
+
+  .transformieren .box_F {
+    transform: translateX(239.291px);
+    width: 28.57%;
+  }
+
+  
+
+  .technologie .box_A {
+    transform: translateX(74.9496px);
+    width: 24.67%;
+  }
+
+  .technologie .box_D {
+    transform: translateX(156.46px);
+    width: 24.67%;
+  }
+
+  .technologie .box_E {
+    transform: translateX(238.286px);
+    width: 22%;
+  }
+
+
+  //
+  
 
   .box_End {
     display: none;
@@ -2205,7 +2352,7 @@ textarea {
 .continue .box_D,
 .continue .box_F,
 .consolidate .box_D,
-.build .box_F,
+.anbieter .box_F,
 .transform .box_A,
 .transform .box_B,
 .transform .box_C,
