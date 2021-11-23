@@ -242,7 +242,7 @@ Scrivito.provideComponent("BidEntrepeneursWidget", ({ widget }) => {
         </div>
       </div>
       <div className="entrepreneurs_global">
-        <div className="xentrepreneurs_global_wrap">
+        <div className="entrepreneurs_global_wrap">
           <div className="container">
             <Scrivito.ContentTag
               content={widget}
