@@ -82,9 +82,13 @@ Scrivito.provideComponent("TeamMemberPage", ({ page }) => {
           <NextLink type="TeamMemberPage" currentPost={page} />
         </div>
         <div className="article_posts">
-          <h2 className="section_title bottom_line">
-            From {page.get("title")}’s desk
-          </h2>
+          
+          <Scrivito.ContentTag
+            content={page}
+            attribute="desk"
+            tag="h2"
+            className="section_title bottom_line"
+          />
 
           <Scrivito.ContentTag content={page} attribute="content" />
         </div>
