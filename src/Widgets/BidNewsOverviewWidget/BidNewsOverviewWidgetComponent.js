@@ -212,7 +212,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       </div>
                       <div className="news_subscribe_bottom">
                         <div className="send_loading">
-                          <SubmitButton label="Sign me on" />
+                          <SubmitButton label={widget.get("signUp")} />
                         </div>
                       </div>
                     </form>
