@@ -5699,6 +5699,43 @@ body {
     }
 }
 
+.button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #FF5650;
+    border-radius: 32px;
+	border: 2px solid #FF5650;
+    min-width: 280px;
+    padding: 19px 48px;
+    text-align: center;
+	text-decoration: none;
+	color: #ffffff !important;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: $base-font;
+    letter-spacing: -0.008em;
+    transition: all 0.3s;
+    @media screen and (max-width: 926px) {
+        width: 100%;
+    }
+    &:hover {
+        background: #F77B71;
+        border-color: #F77B71;
+    }
+
+    &.btn_secondary {
+        background: transparent;
+        color: #FF5650;
+
+        &:hover {
+            color: #ffffff !important;
+            border-color: #ffffff;
+        }
+    }
+}
+
 .operational_value_buttons {
     display: flex;
     margin: 0 -12px 32px;
