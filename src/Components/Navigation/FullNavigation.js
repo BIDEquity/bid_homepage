@@ -71,12 +71,13 @@ class FullNavigation extends React.Component {
                 closeExpanded={this.closeExpanded}
                 expanded={this.state.expanded}
               />
-            </div>
-            <ul className="nav navbar-nav sec-navbar-right">
+              <ul className="nav navbar-nav sec-navbar-right">
               <li className="nav-item">
                 <a className="nav-link header_login btn btn_secondary" href="#">Login</a>
               </li>
             </ul>
+            </div>
+            
             <LanguageSwitch />
           </Collapse>
           

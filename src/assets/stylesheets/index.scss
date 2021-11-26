@@ -2549,15 +2549,19 @@ textarea {
     background-color: $primary;
     color: #fff;
     padding: 32px 0 0 32px;
+    transition: all ease-out 0.5s;
   }
 
   .collapsed .sec-navbar-right {
-    padding: 0 23px 0 22px;
+    padding: 0;
     margin-left: 10px !important;
+    
+    margin-left: 32px !important;
   }
 
   .collapsed.navbar-transparent {
     background-color: $primary;
+    position: fixed;
   }
 
   .navbar-toggler:not(.collapsed) {
