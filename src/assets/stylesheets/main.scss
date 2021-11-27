@@ -8144,6 +8144,9 @@ body {
 
     li {
         margin-right: 44px;
+        @media screen and (max-width: 428px) {
+            margin-right: 12px;
+        }
 
         &:last-child {
             @media screen and (max-width: 1200px) {
