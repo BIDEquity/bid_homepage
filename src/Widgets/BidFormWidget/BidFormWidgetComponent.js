@@ -7,23 +7,33 @@ import SubmitButton from "../../Components/SubmitButton";
 class BidFormWidgetComponent extends React.Component {
   constructor(props) {
     super(props);
-
+    const widget = props.widget;
     this.state = {
       checkedTerms: false,
       checkedPrivacy: false,
-      formValue: "",
+      formValueName: "",
+      formValueMail: "",
       error: ""
     };
 
-    this.handleChange = (e) => this.setState({ formValue: e.target.value });
+    this.handleChangeName = (e) => this.setState({ formValueName: e.target.value });
+    this.handleChangeMail = (e) => this.setState({ formValueMail: e.target.value });
+
     this.handleSubmit = (e) => {
-      if(this.state.formValue === "") {
-        this.setState({error: "Please, enter an E-Mail address and your name"})
+      if(this.state.formValueMail === "") {
+        this.setState({error: widget.get("errorMail")})
         e.preventDefault();
+        return;
+      }
+      if(this.state.formValueName === "") {
+        this.setState({error: widget.get("errorName")})
+        e.preventDefault();
+        return;
       }
       if(!this.state.checkedTerms || !this.state.checkedPrivacy) {
-        this.setState({error: "Please confirm the T&C’s and Privacy policy have been read and understood."})
+        this.setState({error: widget.get("errorBoxes")})
         e.preventDefault();
+        return;
       }
       
      
@@ -78,8 +88,8 @@ class BidFormWidgetComponent extends React.Component {
               type="email"
               name="subscribe_email"
               placeholder="Email"
-              value={this.state.formValue}
-              onChange={this.handleChange}
+              value={this.state.formValueMail}
+              onChange={this.handleChangeMail}
             />
             
           </div>
@@ -89,8 +99,8 @@ class BidFormWidgetComponent extends React.Component {
               type="text"
               name="subscribe_name"
               placeholder="Name"
-              value={this.state.formValue}
-              onChange={this.handleChange}
+              value={this.state.formValueName}
+              onChange={this.handleChangeName}
             />
             
           </div>

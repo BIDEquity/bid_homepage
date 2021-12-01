@@ -7,6 +7,9 @@ const BidFormWidget = Scrivito.provideWidgetClass("BidFormWidget", {
     terms: "html",
     privacy: "html",
     signUp: "string",
+    errorMail: "string",
+    errorName: "string",
+    errorBoxes: "string",
   },
   
 });
