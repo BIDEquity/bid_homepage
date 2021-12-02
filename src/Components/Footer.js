@@ -144,7 +144,7 @@ function Footer() {
                     Get a reliable valuation for your business within 48 hours
                     from us.
                   </h3>
-                  <a className="btn" href="#">
+                  <a className="btn" target="_blank" href="https://vguwjmrvijm.typeform.com/to/hk2KG7fl">
                     Let’s go!
                   </a>
                   </>
@@ -153,7 +153,7 @@ function Footer() {
                   <h3 className="footer_title">
                   Erhalten Sie von uns binnen 48 Stunden eine zuverlässige Bewertung Ihres Unternehmens.
                   </h3>
-                  <a className="btn" href="#">
+                  <a className="btn" target="_blank" href="https://vguwjmrvijm.typeform.com/to/zNGIIY6L">
                     Los geht‘s!
                   </a>
                   </>
