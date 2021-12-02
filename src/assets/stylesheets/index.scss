@@ -1399,8 +1399,8 @@ nav .open .dropdown-menu.lang-switch a {
   text-transform: uppercase;
   margin-bottom: 64px;
 
-  @media screen and (max-width: 767px) {
-    font-size: 45px;
+  @media screen and (max-width: 961px) {
+    font-size: 28px;
     line-height: 48px;
     margin-bottom: 54px;
   }
@@ -2511,9 +2511,7 @@ textarea {
     }
   }
 
-  .about_us_info {
-    padding: 0 0 74px 32px;
-  }
+
 
   .we_do_content {
     padding: 112px 0 56px;
@@ -2525,12 +2523,48 @@ textarea {
     margin-left: -38px;
   }
 
-  @media screen and (max-width: 961px){
+
+  
+  @media screen and (max-width: 375px){
     
-  }
+  
   .entrepreneurs_intro_box {
-    margin-top: -605px;
+    margin-top: -550px;
   }
+}
+
+  @media screen and (max-width: 390px) and (min-width:376px ){
+    
+  
+  .entrepreneurs_intro_box {
+    margin-top: -515px;
+  }
+}
+
+  @media screen and (max-width: 414px) and (min-width:391px ){
+    
+  
+  .entrepreneurs_intro_box {
+    margin-top: -515px;
+  }
+}
+
+  @media screen and (max-width: 428px) and (min-width:415px ){
+    
+  
+  .entrepreneurs_intro_box {
+    margin-top: -515px;
+  }
+}
+
+
+  @media screen and (max-width: 961px) and (min-width:960px ){
+    
+  
+  .entrepreneurs_intro_box {
+    margin-top: -350px;
+  }
+}
 
   .entrepreneurs_post_info {
     padding: 44px 32px 48px 60px;

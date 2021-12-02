@@ -1319,7 +1319,7 @@ body {
     text-transform: uppercase;
 
     @media screen and (max-width: 991px) {
-        font-size: 45px;
+        font-size: 38px;
         line-height: 48px;
     }
 
@@ -4937,7 +4937,7 @@ body {
     width: 100%;
     max-width: calc(312px - 24px);
     margin: 0 12px;
-
+    position: relative;
     @media screen and (max-width: 991px) {
         max-width: none;
         margin: 0 0 32px;
@@ -5064,8 +5064,8 @@ body {
         margin-bottom: 0;
         padding-bottom: 28px;
 
-        @media screen and (max-width: 480px) {
-            font-size: 34px;
+        @media screen and (max-width: 961px) {
+            font-size: 30px;
             line-height: 40px;
         }
     }
@@ -6814,7 +6814,7 @@ body {
         position: fixed;
     }
     @media screen and (max-width: 991px) {
-        max-height: 1150px;
+        max-height: 1270px;
     }
 }
 
@@ -6830,6 +6830,7 @@ body {
 
         @media screen and (max-width: 991px) {
             margin-bottom: 49px;
+            font-size: 40px;
         }
     }
 }
@@ -7158,7 +7159,7 @@ body {
 
             @media screen and (max-width: 991px) {
                 padding-top: 0;
-                transform: translateY(-150%);
+                transform: translateY(-130%);
                 transition: all 2s;
             }
         }
@@ -7194,7 +7195,7 @@ body {
 
             @media screen and (max-width: 991px) {
                 padding-top: 0;
-                transform: translateY(-100%);
+                transform: translateY(-60%);
                 transition: all 2s;
             }
         }
