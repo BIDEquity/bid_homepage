@@ -145,6 +145,9 @@ body {
 	border: 2px solid #FF5650;
     min-width: 280px;
     padding: 19px 48px;
+    @media screen and (max-width: 991px) {
+        padding: 18px 18px;
+    }
     text-align: center;
 	text-decoration: none;
 	color: #ffffff;
@@ -6810,6 +6813,9 @@ body {
     &.fixed {
         position: fixed;
     }
+    @media screen and (max-width: 991px) {
+        max-height: 1150px;
+    }
 }
 
 .transaction_process_wrap {
@@ -7224,7 +7230,7 @@ body {
         .transaction_process_right {
 
             @media screen and (max-width: 991px) {
-                margin-top: 110px;
+                margin-top: 170px;
         
             }
         }
@@ -9793,6 +9799,7 @@ body {
 
 .swiper-container-vertical > .swiper-wrapper {
     flex-direction: column;
+    position: sticky;
 }
 
 .swiper-wrapper {
