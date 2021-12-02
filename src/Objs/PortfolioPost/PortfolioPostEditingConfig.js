@@ -28,7 +28,7 @@ Scrivito.provideEditingConfig("PortfolioPost", {
     ...defaultPageEditingConfigAttributes,
     ...metadataEditingConfigAttributes,
   },
-  properties: [...defaultPageProperties, "date","exited", "detailsButton"],
+  properties: [...defaultPageProperties, "date","exited", "detailsButton", "portfolioLink"],
   propertiesGroups: [...metadataPropertiesGroups],
   initialContent: {
     ...defaultPageInitialContent,

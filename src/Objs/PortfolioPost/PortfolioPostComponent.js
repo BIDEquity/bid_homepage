@@ -25,9 +25,9 @@ Scrivito.provideComponent("PortfolioPost", ({ page }) => {
     <div className="article_content article_portfolio">
       <div className="article_portfolio_top">
         <div className="container">
-          <a className="article_page_category more_link" href="portfolio">
+          <Scrivito.LinkTag className="article_page_category more_link" to={page.get("portfolioLink")}>
             Portfolio
-          </a>
+            </Scrivito.LinkTag>
           <div className="article_content_wrap">
             <div className="article_content_main">
               <div className="article_content_top">

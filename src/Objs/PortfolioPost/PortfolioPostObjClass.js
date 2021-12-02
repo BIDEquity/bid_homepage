@@ -32,6 +32,7 @@ const PortfolioPost = Scrivito.provideObjClass("PortfolioPost", {
       prev: "string",
       exited: ["enum", { values: ["yes", "no"] }],
       date: "date",
+      portfolioLink: "link",
     
     childOrder: "referencelist",
     ...metadataAttributes,
