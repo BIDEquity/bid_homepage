@@ -5499,29 +5499,16 @@ body {
     z-index: 2;
     margin: 0 -80px 0 -12px;
 
-    @media screen and (max-width: 576px) {
-        margin-left: -96px;
-        margin-right: -485px;
-        margin-top: -16px;
+    @media screen and (max-width: 961px) {
+        margin: 0;
     }
 
-    .desktop {
-        @media screen and (max-width: 576px) {
-            display: none;
-        }
-    }
-
-    .mobile {
-        display: none;
-        margin-left: 48px;
-        @media screen and (max-width: 576px) {
-            display: block;
-        }
-    }
+    
 
     svg {
-        width: 100%;
+        width: 600px;
         height: auto;
+        margin-left: -200px;
     }
 
     text {
@@ -5536,8 +5523,8 @@ body {
     max-width: 640px;
     margin: -50px auto 0;
 
-    @media screen and (max-width: 576px) {
-        margin-top: 56px;
+    @media screen and (max-width: 961px) {
+        margin-top: 24px;
     }
 }
 
