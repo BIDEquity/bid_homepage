@@ -5,8 +5,9 @@ import NextLink from "../../Components/NextLink";
 import PreviousLink from "../../Components/PreviousLink";
 
 Scrivito.provideComponent("NewsPost", ({ page }) => {
-  const categorylink = page.get("category");
-  
+
+  const categoryLink = page.get("headerLink");
+  let linkText = categoryLink && categoryLink.title();
 
   const morelink = page.get("more");
   let moretext = morelink && morelink.title();
@@ -16,12 +17,10 @@ Scrivito.provideComponent("NewsPost", ({ page }) => {
       <div className="article_content article_new">
         <div className="article_new_top">
           <div className="container">
-            <a
-              href={categorylink}
-              className="article_page_category more_link"
-            >
-              {categorylink}
-            </a>
+            
+            <Scrivito.LinkTag className="article_page_category more_link" to={categoryLink}>
+              {linkText}
+              </Scrivito.LinkTag>
             <div className="article_content_wrap">
               <div className="article_content_main">
                 <div className="article_content_top">
