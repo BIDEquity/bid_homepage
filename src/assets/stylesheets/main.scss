@@ -1014,6 +1014,7 @@ body {
     padding: 8px 16px;
     margin-left: 30px;
     transition: all 0.3s;
+    margin-top: 13px;
 
     @media screen and (max-width: 1200px) {
         min-width: 80px;
@@ -5501,15 +5502,16 @@ body {
 
     @media screen and (max-width: 961px) {
         margin: 0;
+        svg {
+            width: 600px;
+            height: auto;
+            margin-left: -200px;
+        }
     }
 
     
 
-    svg {
-        width: 600px;
-        height: auto;
-        margin-left: -200px;
-    }
+    
 
     text {
         font-weight: 700;
@@ -5533,17 +5535,15 @@ body {
     flex-wrap: wrap;
     margin: 0 -8px -16px;
 
-    @media screen and (max-width: 767px) {
-        margin: 0 -12px -24px;
-    }
-
-    @media screen and (max-width: 576px) {
-        margin-left: -40px;
-        margin-right: -40px;
-    }
+    
 }
 
 .entrepreneurs_strategy_box {
+    background-color: #F1E9DD;
+    padding: 9px;
+    @media screen and (min-width: 1080px) {
+        
+    
     display: flex;
     align-items: center;
     max-width: calc(33.33% - 16px);
@@ -5551,17 +5551,9 @@ body {
     min-height: 128px;
     margin: 0 8px 16px;
     padding: 24px 16px 24px 30px;
-    background-color: #F1E9DD;
-
-    @media screen and (max-width: 767px) {
-        max-width: calc(50% - 24px);
-        margin: 0 12px 24px;
+    
     }
-
-    @media screen and (max-width: 576px) {
-        justify-content: center;
-        padding: 26px;
-    }
+    
 }
 
 .entrepreneurs_strategy_icon {
@@ -8316,7 +8308,7 @@ body {
         width: 100%;
         margin: 0 0 80px;
         padding: 40px 0 0;
-        background-color: transparent;
+        
 
         &:last-child {
             margin-bottom: 0;

@@ -9,7 +9,7 @@ Scrivito.provideComponent("CardContainerWidget", ({ widget }) => {
 
   const params = {
     loop: false,
-    watchOverflow: true,
+    //watchOverflow: true,
     slidesPerView: "auto",
     spaceBetween: 24,
     speed: 500,
