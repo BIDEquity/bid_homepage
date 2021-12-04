@@ -7151,7 +7151,7 @@ body {
         .transaction_process_right {
 
             @media screen and (max-width: 991px) {
-                margin-top: 110px;
+                margin-top: 140px;
         
             }
         }
@@ -7182,6 +7182,12 @@ body {
                 transform: translateY(-60%);
                 transition: all 2s;
             }
+        }
+
+        .transaction_process_right {
+            @media screen and (max-width: 991px) {
+                margin-top: 100px;
+            } 
         }
 
         .transaction_duration {
