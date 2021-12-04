@@ -2549,10 +2549,13 @@ textarea {
 
   
   @media screen and (max-width: 428px){
-    
+   .entrepreneur_intro .container {
+     position: static;
+   }
   
   .entrepreneurs_intro_box {
-    position: sticky;
+    position: absolute;
+    top: 150px;
     align-items: flex-start;
     height: 90vh;
   }
