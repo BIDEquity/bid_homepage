@@ -2605,7 +2605,7 @@ textarea {
   .collapsed .nav.navbar-right {
     background-color: $primary;
     color: #fff;
-    padding: 32px 0 0 32px;
+    padding: 0 0 0 32px;
     transition: all ease-out 0.5s;
   }
 
@@ -2637,14 +2637,14 @@ textarea {
 
   .navbar-header {
     padding-top: 12px;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
   }
 
   .collapsed .navbar-nav li a {
     font-weight: 400;
     font-size: 18px;
     padding-bottom: 20px;
-    padding-top: 40px;
+    padding-top: 25px;
     color: #fff !important;
   }
 

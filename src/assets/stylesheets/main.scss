@@ -2630,6 +2630,9 @@ body {
 .about_us_info {
     position: relative;
     z-index: 3;
+    @media screen and(max-width: 428px) {
+        padding: 0 32px;
+    }
 }
 
 .about_us_title {
