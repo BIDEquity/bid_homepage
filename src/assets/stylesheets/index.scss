@@ -1686,13 +1686,13 @@ a.btn:hover {
   font-size: 18px;
 }
 
-@media screen and (min-width: 810px) {
+//@media screen and (min-width: 810px) {
   .entrepreneurs_intro_box {
     margin-top: -400px !important;
     height: 460px !important;
     min-height: 460px !important;
   }
-}
+//}
 
 .posts_slider {
   &.swiper-container {
@@ -2548,7 +2548,7 @@ textarea {
 
 
   
-  @media screen and (max-width: 428px){
+  /*@media screen and (max-width: 428px){
     
   
   .entrepreneurs_intro_box {
@@ -2556,7 +2556,7 @@ textarea {
     align-items: flex-start;
     height: 90vh;
   }
-}
+}*/
 
 
 
