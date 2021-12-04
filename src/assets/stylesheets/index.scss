@@ -1686,7 +1686,7 @@ a.btn:hover {
   font-size: 18px;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 810px) {
   .entrepreneurs_intro_box {
     margin-top: -400px !important;
     height: 460px !important;
@@ -2548,46 +2548,17 @@ textarea {
 
 
   
-  @media screen and (max-width: 375px){
+  @media screen and (max-width: 428px){
     
   
   .entrepreneurs_intro_box {
-    margin-top: -550px;
-  }
-}
-
-  @media screen and (max-width: 390px) and (min-width:376px ){
-    
-  
-  .entrepreneurs_intro_box {
-    margin-top: -515px;
-  }
-}
-
-  @media screen and (max-width: 414px) and (min-width:391px ){
-    
-  
-  .entrepreneurs_intro_box {
-    margin-top: -515px;
-  }
-}
-
-  @media screen and (max-width: 428px) and (min-width:415px ){
-    
-  
-  .entrepreneurs_intro_box {
-    margin-top: -515px;
+    margin-top: -500px;
   }
 }
 
 
-  @media screen and (max-width: 961px) and (min-width:960px ){
-    
-  
-  .entrepreneurs_intro_box {
-    margin-top: -350px;
-  }
-}
+
+ 
 
   .entrepreneurs_post_info {
     padding: 44px 32px 48px 60px;
