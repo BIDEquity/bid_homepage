@@ -2547,8 +2547,12 @@ textarea {
   }
 
 
-
- 
+  @media screen and (max-width: 991px)
+  {
+  .entrepreneurs_intro_box {
+    margin-top: -500px;
+  }
+}
 
   .entrepreneurs_post_info {
     padding: 44px 32px 48px 60px;
