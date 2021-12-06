@@ -2510,6 +2510,12 @@ textarea {
 }
 
 @media (max-width: 991px) {
+  .section-title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+
   .swiper-pagination-bullet:after {
     margin-left: 0 !important;
   }
