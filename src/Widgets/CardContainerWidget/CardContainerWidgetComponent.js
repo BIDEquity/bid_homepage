@@ -8,11 +8,12 @@ Scrivito.provideComponent("CardContainerWidget", ({ widget }) => {
   const linktext = link && link.title();
 
   const params = {
-    loop: false,
-    //watchOverflow: true,
+    loop: true,
+    watchOverflow: true,
     slidesPerView: "auto",
     spaceBetween: 24,
     speed: 500,
+    
     breakpoints: {
       992: {
         slidesPerView: 4,
