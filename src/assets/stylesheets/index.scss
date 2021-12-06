@@ -1257,7 +1257,7 @@ nav .open .dropdown-menu.lang-switch a {
   }
 }
 
-@media screen and (max-width: 1079px){
+@media screen and (max-width: 991px){
   
 
 .language-switcher {
@@ -2751,9 +2751,16 @@ textarea {
   
 }
 
+@media screen and (max-width: 1430px) {
+  .navbar .nav-item {
+    margin: 0 10px 0 0;
+}
+}
+
+
 @media screen and (max-height: 810px) {
   .navbar .nav-item {
-  margin: 0 15.75px 0 0;
+  margin: 0 10px 0 0;
 }
 }
 
