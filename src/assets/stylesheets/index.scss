@@ -2751,6 +2751,13 @@ textarea {
   
 }
 
+@media screen and (max-height: 810px) {
+  .navbar .nav-item {
+  margin: 0 15.75px 0 0;
+}
+}
+
+
 @media (max-width: $screen-sm-max) {
 }
 
