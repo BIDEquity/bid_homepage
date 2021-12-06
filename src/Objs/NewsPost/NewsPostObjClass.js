@@ -8,6 +8,7 @@ const NewsPost = Scrivito.provideObjClass("NewsPost", {
     childOrder: "referencelist",
     ...metadataAttributes,
     headerLink: "link",
+    category: "string",
     title: "string",
     teaser: "string",
     body: "html",

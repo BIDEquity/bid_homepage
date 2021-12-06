@@ -1438,6 +1438,7 @@ nav .open .dropdown-menu.lang-switch a {
   background: #253046 !important;
   border: none !important;
   box-shadow: none !important;
+  height: 20px;
 }
 
 .contact-select__control,
@@ -1446,6 +1447,7 @@ nav .open .dropdown-menu.lang-switch a {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
+ 
 }
 
 .contact-select__option--is-focused,
@@ -1540,6 +1542,9 @@ nav .open .dropdown-menu.lang-switch a {
 .contact-select__single-value {
   color: $primary !important;
   font: 30px/30px "Swiss721 BT", sans-serif !important;
+  @media screen and (max-width:961px) {
+    font: 18px/30px "Swiss721 BT", sans-serif !important;
+  }
   border-bottom: 2px solid $primary;
   
 }
@@ -1563,11 +1568,18 @@ nav .open .dropdown-menu.lang-switch a {
 .contact-select__dropdown-indicator {
   margin-left: -40px;
   margin-top: 30px;
+
 }
 
 .contact-select__dropdown-indicator svg {
   height: 40px !important;
   width: 40px;
+  @media screen and (max-width:991px){
+    height: 24px !important;
+    width: 24px;
+    margin-left: 14px;
+    margin-top: -6px;
+  }
 }
 
 .react-select__dropdown-indicator,
@@ -1810,9 +1822,13 @@ textarea {
   border: none;
 }
 
-.contact_field input {
-  margin: 0 12px;
+@media screen and (max-width:961px){
+  .contact_field input {
+    margin: 6px;
+    height: 18px;
+  }
 }
+
 
 .team_bottom .more_link {
   display: inline-block !important;

@@ -79,7 +79,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
     companiesTmp = [];
     
     if (this.state.selectedCat !== "") {
-      newsSearch = newsSearch.and("headerLink", "equals", this.state.selectedCat);
+      newsSearch = newsSearch.and("category", "equals", this.state.selectedCat);
     }
 
     if (this.state.selectedCompany) {
@@ -273,7 +273,7 @@ Scrivito.provideComponent(
 
 function allTags(items) {
   
-  const tagsArray = items.map((item) => item.get("headerLink").title());
+  const tagsArray = items.map((item) => item.get("category"));
 
   // flatten tags
   const tags = tagsArray.reduce((a, b) => a.concat(b), []);
