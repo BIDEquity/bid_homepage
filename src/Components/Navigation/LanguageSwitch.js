@@ -36,15 +36,9 @@ componentDidMount() {
     if (!rootPage) {
       return undefined;
     }
-    return rootPage.get("intercomAppId");
-  }).then((intercomAppId) => {
-    if (intercomAppId) {
-      Scrivito.finishLoading().then(() => {
-        installIntercom(intercomAppId);
-        this.setState({ intercomAppId });
-      });
-    }
-  });
+    
+    return rootPage;
+  }).then();
 }
 
   

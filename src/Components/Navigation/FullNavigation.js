@@ -73,7 +73,7 @@ class FullNavigation extends React.Component {
               />
               <ul className="nav navbar-nav sec-navbar-right">
               <li className="nav-item">
-                <a className="nav-link header_login btn btn_secondary" href="#">Login</a>
+                <a className="nav-link header_login btn btn_secondary" href="https://icx.efrontcloud.com/@2116/BIDEQUITY/login.aspx" target="_blank">Login</a>
               </li>
             </ul>
             </div>
