@@ -2102,6 +2102,11 @@ textarea {
     margin-bottom: 0;
   }
 
+  .box_Start + .operational_value_info p {
+    padding: 9px;
+    width: 117px;
+  }
+
   .box_End + .operational_value_info p {
     width: 94vw;
   }
@@ -2738,6 +2743,9 @@ textarea {
     position: absolute;
     top: -340px;
     right: 100px;
+    p {
+      width: 205px;
+    }
   }
 
   .box_3 {

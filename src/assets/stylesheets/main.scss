@@ -5641,6 +5641,10 @@ body {
 
     @media screen and (max-width: 991px) {
         padding: 134px 0 0;
+        .section_title {
+            font-size: 30px;
+            line-height: 40px;
+        }
     }
 
     .content_info {
@@ -5682,6 +5686,7 @@ body {
                 order: 1;
                 margin-bottom: 135px;
                 max-width: none;
+                
             }
         }
     }
@@ -7206,7 +7211,7 @@ body {
 
         .transaction_process_right {
             @media screen and (max-width: 991px) {
-                margin-top: 52px;
+                margin-top: 92px;
             } 
         }
 
@@ -7225,6 +7230,7 @@ body {
 
             @media screen and (max-width: 991px) {
                 margin-top: 0;
+                height: 94px;
             }
         }
 
@@ -7307,6 +7313,7 @@ body {
                 padding-top: 0;
                 transform: translateY(-100%);
                 transition: all 2s;
+                margin-top: 100px;
             }
         }
 
@@ -7449,8 +7456,9 @@ body {
     .btn {
         margin-top: 24px;
         @media screen and (max-width: 428px){
-            padding: 12px;
+            padding: 9px;
             margin-bottom: 12px;
+            max-width: 75vw;
         }
     }
 }
