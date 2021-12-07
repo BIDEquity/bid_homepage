@@ -6817,6 +6817,7 @@ body {
     }
     @media screen and (max-width: 991px) {
         max-height: 1270px;
+        gap: 32px;
     }
 }
 
@@ -7141,7 +7142,7 @@ body {
         .transaction_process_right {
 
             @media screen and (max-width: 991px) {
-                margin-top: 110px;
+                margin-top: 210px;
         
             }
         }
@@ -7170,7 +7171,7 @@ body {
         .transaction_process_right {
 
             @media screen and (max-width: 991px) {
-                margin-top: 140px;
+                margin-top: 230px;
         
             }
         }
@@ -7179,7 +7180,7 @@ body {
             margin-top: 148px;
 
             @media screen and (max-width: 991px) {
-                margin-top: 0;
+                margin-top: 250px;
             }
         }
     }
@@ -7205,7 +7206,7 @@ body {
 
         .transaction_process_right {
             @media screen and (max-width: 991px) {
-                margin-top: 100px;
+                margin-top: 52px;
             } 
         }
 
@@ -7213,7 +7214,7 @@ body {
             margin-top: 172px;
 
             @media screen and (max-width: 991px) {
-                margin-top: 0;
+                margin-top: 260px;
             }
         }
     }
@@ -7240,7 +7241,7 @@ body {
         .transaction_process_right {
 
             @media screen and (max-width: 991px) {
-                margin-top: 170px;
+                margin-top: 240px;
         
             }
         }
@@ -7276,7 +7277,7 @@ body {
         .transaction_process_right {
 
             @media screen and (max-width: 991px) {
-                margin-top: 110px;
+                margin-top: 180px;
         
             }
         }
@@ -7447,6 +7448,10 @@ body {
 
     .btn {
         margin-top: 24px;
+        @media screen and (max-width: 428px){
+            padding: 12px;
+            margin-bottom: 12px;
+        }
     }
 }
 

@@ -2568,20 +2568,23 @@ textarea {
     margin-left: -38px;
   }
 
-  @media screen and (max-height: 812px)
-  {
-  .entrepreneurs_intro_box {
-    margin-top: -475px;
-  }
-}
+  
 
 
   @media screen and (max-width: 991px)
   {
   .entrepreneurs_intro_box {
-    margin-top: -705px;
+    margin-top: -505px;
+    align-items: center;
   }
 }
+
+/*@media screen and (max-height: 812px)
+  {
+  .entrepreneurs_intro_box {
+    margin-top: -475px;
+  }
+}*/
 
   .entrepreneurs_post_info {
     padding: 44px 32px 48px 60px;
