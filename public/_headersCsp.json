@@ -9,7 +9,8 @@
     "https://assets.scrivito.com",
     "https://js.intercomcdn.com",
     "https://widget.intercom.io",
-    "https://www.google-analytics.com"
+    "https://www.google-analytics.com",
+    "https://sc.lfeeder.com/lftracker_v1_"
   ],
   "object-src": "'none'",
   "block-all-mixed-content": true,
