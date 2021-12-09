@@ -52,7 +52,7 @@ async function storePrerenderedContent() {
     log("🖥️️  Browser started");
 
     try {
-      const url = "https://localhost:8080/_prerender_content.html";
+      const url = "http://localhost:8080/_prerender_content.html";
       log(`🖥️️  Visiting ${url} ...`);
       const page = await visitUrl(browser, url);
 
