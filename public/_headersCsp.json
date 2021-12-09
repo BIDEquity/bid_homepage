@@ -10,7 +10,9 @@
     "https://js.intercomcdn.com",
     "https://widget.intercom.io",
     "https://www.google-analytics.com",
-    "https://sc.lfeeder.com/lftracker_v1_"
+    "https://sc.lfeeder.com/lftracker_v1_",
+    "https://*.lfeeder.com",
+    "https://*.leadfeeder.com"
   ],
   "object-src": "'none'",
   "block-all-mixed-content": true,
