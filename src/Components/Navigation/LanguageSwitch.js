@@ -34,8 +34,13 @@ class LanguageSwitch extends React.Component {
         return undefined;
       }
 
-      return rootPage;
-    }).then();
+      return rootPage.siteId();
+    }).then((siteId) => {
+      if (siteId === "de")
+        this.setState({
+          language: ["DE", "EN"],
+        });
+    });
   }
 
   render() {
