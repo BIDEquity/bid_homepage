@@ -43,7 +43,7 @@ export default async function prerenderObjs(
 }
 
 function allObjs(objClassesBlacklist) {
-  return Scrivito.Obj.all()
+  return Scrivito.Obj.onAllSites().all()
     .andNot("_objClass", "equals", objClassesBlacklist)
     .take();
 }
