@@ -5,9 +5,9 @@ import * as Scrivito from "scrivito";
 function baseUrlForSite(siteId) {
   switch (siteId) {
     case "en":
-      return `${window.location.origin}/en`;
+      return `${process.env.SCRIVITO_ORIGIN || window.location.origin}/en`;
     case "de":
-      return `${window.location.origin}/de`;
+      return `${process.env.SCRIVITO_ORIGIN || window.location.origin}/de`;
   }
 }
 
