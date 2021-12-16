@@ -1,7 +1,10 @@
 ##
 # Netlify redirect rules. See https://www.netlify.com/docs/redirects/ for details.
 ##
-https://bidequity.de/ https://bidequity.de/en
+
+/ /de 301 Language=de
+/ /de 301 Country=de
+/ /en 301
 
 # Single Page Application routes
 /* status-code=404-not-found /catch_all_index.html 404
