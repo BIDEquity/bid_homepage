@@ -161,6 +161,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                       onSubmit={this.handleSubmit}
                     >
                       <div className="news_subscribe_body">
+                      <input type="hidden" name="form-name" value="newsletter" />
                         <p className="hidden">
                           <label>
                             Don’t fill this out if you’re human:{" "}
