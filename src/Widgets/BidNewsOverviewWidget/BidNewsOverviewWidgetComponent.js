@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import Checkbox from "../../Components/Checkbox";
-import "file-loader?name=[name].[contenthash].[ext]!./newsForm.html";
+import "file-loader?name=[name].[contenthash].[ext]!./newsletterForm.html";
 import SubmitButton from "../../Components/SubmitButton";
 import NewsTagList from "../../Components/NewsTagList";
 /* This html file is needed for Netlify form handling. Updates to inputs in this file should also be
@@ -154,7 +154,7 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                     </div>
                     <form
                       className="news_subscribe_form"
-                      name="news"
+                      name="newsletter"
                       method="POST"
                       netlify-honeypot="bot-field"
                       data-netlify="true"
