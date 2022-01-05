@@ -155,7 +155,8 @@ class BidNewsOverviewWidgetComponent extends React.Component {
                     <form
                       className="news_subscribe_form"
                       name="newsletter"
-                      method="POST"
+                      method="post"
+                      action="/en/contact/complete"
                       netlify-honeypot="bot-field"
                       data-netlify="true"
                       onSubmit={this.handleSubmit}
