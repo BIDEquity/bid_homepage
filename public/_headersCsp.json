@@ -12,7 +12,8 @@
     "https://www.google-analytics.com",
     "https://sc.lfeeder.com/lftracker_v1_",
     "https://*.lfeeder.com",
-    "https://*.leadfeeder.com"
+    "https://*.leadfeeder.com",
+    "https://cdn.leadinfo.net/ping.js"
   ],
   "object-src": "'none'",
   "block-all-mixed-content": true,
