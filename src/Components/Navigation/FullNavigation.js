@@ -73,15 +73,27 @@ class FullNavigation extends React.Component {
               />
               <ul className="nav navbar-nav sec-navbar-right">
               <li className="nav-item">
-                <a className="nav-link header_login btn btn_secondary" href="https://icx.efrontcloud.com/@2116/BIDEQUITY/login.aspx" target="_blank">Login</a>
+                <div id="login-dropdown" class="nav-link header_login btn btn_secondary">
+                  <div class="dropbtn">Login</div>
+                    <div class="dropdown-content">
+                      <a href="https://icx.efrontcloud.com/@2116/BIDEQUITY/login.aspx">BID Fund II</a>
+                      <a href="https://auth.fundrbird.com/">BID Fund III</a>
+                    </div>
+                </div>
               </li>
+
+              <li className="only-show-on-mobile nav-item">
+                <a href="https://icx.efrontcloud.com/@2116/BIDEQUITY/login.aspx">BID Login Fund III</a>
+              </li>
+              <li className="only-show-on-mobile nav-item">
+                <a href="https://auth.fundrbird.com/">BID Login Fund III</a>
+              </li>
+                
             </ul>
             </div>
             
             <LanguageSwitch />
           </Collapse>
-          
-          
         </div>
       </nav>
     );
