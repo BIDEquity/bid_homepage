@@ -173,6 +173,7 @@ function Footer() {
                   <p>Phone +49 40 822 169 420</p>
                   <p>Fax +49 40 537 981 320</p>
                   <p>Mail contact@bidequity.de</p>
+                  <p>&emsp; &nbsp; career@bidequity.de</p> 
                 </div>
               </div>
               <div className="footer_box">
