@@ -185,8 +185,8 @@ function Footer() {
                 <div className="footer_text">
                   <p>
                     BID EQUITY GMBH <br />
-                    Große Johannisstraße 7 <br />
-                    20457 Hamburg, Germany
+                    Rathausmarkt 5 <br />
+                    20095 Hamburg, Germany
                   </p>
                 </div>
               </div>
