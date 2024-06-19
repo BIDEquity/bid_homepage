@@ -184,6 +184,20 @@ function Footer() {
                 }
                 <div className="footer_text">
                   <p>
+                    BID EQUITY Luxembourg S.à r.l. <br />
+                    6c, rue Gabriel Lippmann <br />
+                    5365 Luxembourg, Luxembourg
+                  </p>
+                </div>
+              </div>
+              <div className="footer_box">
+                {lang === "en" ?
+                <p className="footer_box_title">Come and meet us</p>
+                :
+                <p className="footer_box_title">Treffen Sie uns vor Ort</p>
+                }
+                <div className="footer_text">
+                  <p>
                     BID EQUITY GMBH <br />
                     Rathausmarkt 5 <br />
                     20095 Hamburg, Germany
