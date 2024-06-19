@@ -124,7 +124,7 @@ function Footer() {
             </a>
             
             <p className="footer_cop bottom_line">
-              © 2024 BID EQUITY GMBH. All rights reserved.
+              © 2024 BID EQUITY. All rights reserved.
             </p>
             <div className="footer_box_links">
               <p className="footer_box_title">Quick Links</p>

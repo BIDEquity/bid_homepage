@@ -8,6 +8,8 @@ function baseUrlForSite(siteId) {
       return `${process.env.SCRIVITO_ORIGIN || window.location.origin}/en`;
     case "de":
       return `${process.env.SCRIVITO_ORIGIN || window.location.origin}/de`;
+    default:
+      return `${process.env.SCRIVITO_ORIGIN || window.location.origin}/en`;
   }
 }
 
@@ -20,6 +22,9 @@ function siteForUrl(url) {
     case "en":
       siteId = "en";
       return { siteId, baseUrl: baseUrlForSite(siteId) };
+    case "lu":
+        siteId = "en";
+        return { siteId, baseUrl: baseUrlForSite(siteId) };
     default:
       return { siteId: "en", baseUrl: window.location.origin };
   }

@@ -29,17 +29,22 @@ class LanguageSwitch extends React.Component {
   componentDidMount() {
     Scrivito.load(() => {
       const rootPage = Scrivito.Obj.root();
-
+  
       if (!rootPage) {
         return undefined;
       }
-
+  
       return rootPage.siteId();
     }).then((siteId) => {
-      if (siteId === "de")
+      if (siteId === "de") {
         this.setState({
           language: ["DE", "EN"],
         });
+      } else if (siteId === "lu") {
+        this.setState({
+          language: ["DE", "EN"],
+        });
+      }
     });
   }
 
