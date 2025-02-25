@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import { HelmetProvider } from "react-helmet-async";
-import { Crisp } from "crisp-sdk-web";
+import CrispChat from "./Components/CrispChat";
 
 import CurrentPageMetadata from "./Components/CurrentPageMetadata";
 import ErrorBoundary from "./Components/ErrorBoundary";
@@ -72,6 +72,7 @@ export default function App() {
     <ErrorBoundary>
       <CookieConsentProvider>
         <HelmetProvider context={helmetContext}>
+          <CrispChat />
           <div>
             <div className="content-wrapper">
               <Navigation />
