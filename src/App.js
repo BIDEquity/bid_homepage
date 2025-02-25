@@ -13,13 +13,16 @@ import Tracking from "./Components/Tracking";
 import { CookieConsentProvider } from "./Components/CookieConsentContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Crisp } from "crisp-sdk-web";
+
+
+
 
 export const helmetContext = {};
 
 export default function App() {
   React.useEffect(() => {
     AOS.init();
+    
   })
 
   function offsetTop(el) {
@@ -67,7 +70,6 @@ export default function App() {
   return (
     <ErrorBoundary>
       <CookieConsentProvider>
-        <CrispChat />
         <HelmetProvider context={helmetContext}>
           <div>
             <div className="content-wrapper">
