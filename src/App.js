@@ -22,7 +22,7 @@ export default function App() {
     AOS.init();
 
     // Initialize Crisp chat widget
-    Crisp.configure("1c98242d-1098-4be6-a8ad-8b5c27d2fe0a");
+    // Crisp.configure("1c98242d-1098-4be6-a8ad-8b5c27d2fe0a");
   }, []);
 
   return (
