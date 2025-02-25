@@ -13,6 +13,7 @@ import Tracking from "./Components/Tracking";
 import { CookieConsentProvider } from "./Components/CookieConsentContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import CrispChat from "./CrispChat";
 
 
 
@@ -70,6 +71,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <CookieConsentProvider>
+        <CrispChat />
         <HelmetProvider context={helmetContext}>
           <div>
             <div className="content-wrapper">
