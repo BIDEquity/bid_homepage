@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as Scrivito from "scrivito";
 import { HelmetProvider } from "react-helmet-async";
+import { Crisp } from "crisp-sdk-web";
 
 import CurrentPageMetadata from "./Components/CurrentPageMetadata";
 import ErrorBoundary from "./Components/ErrorBoundary";
