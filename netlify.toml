@@ -5,6 +5,9 @@
 [build]
   command = "npm run prerender"
   publish = "buildPrerendered"
+  
+  [build.environment]
+  NODE_OPTIONS = "--openssl-legacy-provider"
 
 [[headers]]
 for = "/*"
