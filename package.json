@@ -89,6 +89,7 @@
     "prerender": "SCRIVITO_PRERENDER=true npm run build && node prerender/storePrerenderedContent.js",
     "start": "webpack serve",
     "eslint": "eslint --max-warnings 0 src/ prerender/",
-    "es-check": "npm run build && es-check es5 --not=build/assets/scrivito_extensions. './build/**/*.js'"
+    "es-check": "npm run build && es-check es5 --not=build/assets/scrivito_extensions. './build/**/*.js'",
+    "rebuild-allowed": "npm rebuild puppeteer --ignore-scripts=false"
   }
 }
